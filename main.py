@@ -69,7 +69,48 @@ reserved = {
   "LinkedList" : 'LINKEDLIST'           #Termina Alan Barco
 }
 
-
+tokens = [                          #Empieza Pamela Rugel
+  'AMPERSAND',
+  'PLUS',
+  'MINUS',
+  'TIMES',
+  'DAMPERSAND',
+  'DIVIDE',
+  'IGUAL',
+  'ARROWOPT',
+  'MAYORQUE',
+  'MENORQUE',
+  'LCOR',
+  'RCOR',
+  'LPAREN',
+  'RPAREN',
+  'LLLAVE',
+  'RLLAVE',
+  'COLON',
+  'ENDCHAR',
+  'COMA',
+  'INTERRO',
+  'EXCLAM',
+  'POINT',
+  'TRUE',
+  'FALSE',
+  'IDCHAR',
+  'NINTTYPE',
+  'INTTYPE',
+  'FLOATTYPE',
+  'IDSTRING',
+  'ID',
+  'DIFERENTE',
+  'SUMAASIGN',
+  'RESTAASIGN',
+  'DIVASIGN',
+  'MULTIASIGN',
+  'DOLAR',
+  'DOSDOBLEPUNTOS',
+  'PORCENTAJE'
+  
+  
+] + list(reserved.values())          #Termina Pamela Rugel
 
 
 
