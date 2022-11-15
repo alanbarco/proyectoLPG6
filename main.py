@@ -110,9 +110,104 @@ tokens = [                          #Empieza Pamela Rugel
   'PORCENTAJE'
   
   
+  
 ] + list(reserved.values())          #Termina Pamela Rugel
 
+                                  #Empieza José Jaramillo
 
+#Agregue sus Expresiones Regulares y o Funciones
+t_DAMPERSAND= r'&&'
+t_AMPERSAND = r'&'
+t_ARROWOPT = r'->'
+t_COLON = r':'
+t_COMA = r','
+t_DIVIDE = r'/'
+t_ENDCHAR = r';'
+t_EXCLAM = r'!'
+t_IDCHAR = r"('[^']?'|'\\'')"
+t_IDSTRING = r'"([^"]|\\")*"'
+t_IGUAL = r'='
+t_INTERRO = r'\?'
+t_LCOR = r'\['
+t_LLLAVE = r'\{'
+t_LPAREN = r'\('
+t_MAYORQUE = r'>'
+t_MENORQUE = r'<'
+t_MINUS = r'-'
+t_PLUS = r'\+'
+t_POINT = r'\.'
+t_RCOR = r'\]'
+t_RLLAVE = r'\}'
+t_RPAREN = r'\)'
+t_TIMES = r'\*'
+t_DIFERENTE = r'!='
+t_SUMAASIGN = r'\+='
+t_RESTAASIGN = r'-='
+t_DIVASIGN = r'/='
+t_MULTIASIGN = r'\*='
+t_DOLAR = r'\$'
+t_DOSDOBLEPUNTOS = r'\::'
+t_PORCENTAJE = r'%'                         
+
+
+
+def t_FLOATTYPE(t):                         
+  r"\d+\.\d*"
+  t.value = float(t.value)
+  return t
+
+
+def t_INTTYPE(t):
+  r'-\d+'
+  t.value = int(t.value)
+  return t
+
+
+def t_NINTTYPE(t):
+  r'\d+'
+  t.value = int(t.value)
+  return t
+
+
+def t_TRUE(t):
+  r"true"
+  t.value = True
+  return t
+
+
+def t_FALSE(t):
+  r"false"
+  t.value = False
+  return t
+
+
+def t_ID(t):
+  r'[a-zA-Z_][a-zA-Z_0-9]*'
+  t.type = reserved.get(t.value, 'ID')  # Check for reserved words
+  return t
+
+ #HASTA AQUI BORRE
+
+  
+# Define a rule so we can track line numbers
+def t_newline(t):
+  r'\n+'
+  t.lexer.lineno += len(t.value)
+
+
+# A string containing ignored characters (spaces and tabs)
+t_ignore = ' \t'
+
+
+# Error handling rule
+def t_error(t):
+  print("Illegal character '%s'" % t.value[0])
+  t.lexer.skip(1)
+
+
+def t_COMMENT(t):
+  r'(//.*|/\*(.*|\n*)*\*/)'
+  pass                             #Termina José Jaramillo
 
 # Build the lexer
 lexer = lex.lex()
@@ -123,7 +218,7 @@ cadena = file.read()
 file.close()
 lexer.input(cadena)
 
-output_file = open('result.txt', 'w')
+output_file = open('result.txt', 'w') 
 line_number = 1
 
 while True:

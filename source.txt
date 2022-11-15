@@ -1,9 +1,61 @@
-Algoritmo ejemplo Alan Barco
+//Algoritmo ejemplo Alan Barco*/
 
 
 
-Algoritmo ejemplo Jose Jaramillo
+//Algoritmo ejemplo Jose Jaramillo
+
+use std::io;
+
+fn main() {
+
+    let name:String= input("What is your name? ").expect("Something went wrong!!!");
+
+    let age:i32 = input("What is your age? ")
+        .expect("Failed to get age.")
+        .parse::<i32>()
+        .expect("Invalid age.");
+
+    let current_year:i32 = 2022;
+    let hundred_year:i32 = 100 - age + current_year;
+
+    let repeat:i32 = input("How many times do you want to repeat the message? ")
+        .expect("Failed to get repeat.")
+        .parse::<i32>()
+        .unwrap_or(1);
+
+    let finalMsg: &'static str = "Goodbye!"; 
+
+    for _ in 0..repeat {
+        if age > 100 {
+            println!(
+                "Hey, {}! You turned 100 in the year: {}.",
+                name, hundred_year
+            );
+        } else {
+            println!(
+                "Hey, {}! You'll turn 100 in the year: {}.",
+                name, hundred_year
+            );
+        }
+    }
+
+    println!("{}",finalMsg);
+
+}
 
 
+fn input(user_message: &str) -> io::Result<String> {
+    use std::io::Write;
 
-Algoritmo ejemplo Pamela Rugel
+    print!("{}", user_message);
+
+    io::stdout().flush()?;
+
+    let mut buffer: String = String::new();
+    io::stdin().read_line(&mut buffer)?;
+
+    Ok(buffer.trim_end().to_owned())
+}
+
+
+//Algoritmo ejemplo Pamela Rugel
