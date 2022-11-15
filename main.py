@@ -71,6 +71,7 @@ reserved = {
 
 tokens = [                          #Empieza Pamela Rugel
   'AMPERSAND',
+  'COMILLA',
   'PLUS',
   'MINUS',
   'TIMES',
@@ -118,6 +119,7 @@ tokens = [                          #Empieza Pamela Rugel
 #Agregue sus Expresiones Regulares y o Funciones
 t_DAMPERSAND= r'&&'
 t_AMPERSAND = r'&'
+t_COMILLA = r"'"
 t_ARROWOPT = r'->'
 t_COLON = r':'
 t_COMA = r','
