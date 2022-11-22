@@ -682,3 +682,440 @@ Error de sintaxis - Token: RLLAVE, Línea: 1, Col: 31
  
 Resultado: None
 -------------------------
+-------------------------
+Entrada: 'let mut vec = Vec::new();' Timestamp: 2022-11-21 23:01:42.944263-05:00
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'let mut map = Hashmap::new();' Timestamp: 2022-11-21 23:01:42.944263-05:00
+Error de sintaxis - Token: DOSDOBLEPUNTOS, L�nea: 1, Col: 21
+Error de sintaxis - Token: NEW, L�nea: 1, Col: 23
+Error de sintaxis - Token: LPAREN, L�nea: 1, Col: 26
+Error de sintaxis - Token: RPAREN, L�nea: 1, Col: 27
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'let mut map = Hashmap::new();' Timestamp: 2022-11-21 23:01:42.944263-05:00
+Error de sintaxis - Token: DOSDOBLEPUNTOS, L�nea: 1, Col: 21
+Error de sintaxis - Token: NEW, L�nea: 1, Col: 23
+Error de sintaxis - Token: LPAREN, L�nea: 1, Col: 26
+Error de sintaxis - Token: RPAREN, L�nea: 1, Col: 27
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'let mut map = HashMap::new();' Timestamp: 2022-11-21 23:01:42.944263-05:00
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'let mut lk = LinkedList::new();' Timestamp: 2022-11-21 23:01:42.944263-05:00
+Error de sintaxis - Token: LINKEDLIST, L�nea: 1, Col: 13
+Error de sintaxis - Token: DOSDOBLEPUNTOS, L�nea: 1, Col: 23
+Error de sintaxis - Token: NEW, L�nea: 1, Col: 25
+Error de sintaxis - Token: LPAREN, L�nea: 1, Col: 28
+Error de sintaxis - Token: RPAREN, L�nea: 1, Col: 29
+Error de sintaxis - Token: ENDCHAR, L�nea: 1, Col: 30
+ 
+Resultado: None
+-------------------------
+-------------------------
+
+Entrada: 'let mut lk = LinkedList::new();' Timestamp: 2022-11-21 23:01:42.944263-05:00
+Error de sintaxis - Token: LINKEDLIST, L�nea: 1, Col: 13
+Error de sintaxis - Token: DOSDOBLEPUNTOS, L�nea: 1, Col: 23
+Error de sintaxis - Token: NEW, L�nea: 1, Col: 25
+Error de sintaxis - Token: LPAREN, L�nea: 1, Col: 28
+Error de sintaxis - Token: RPAREN, L�nea: 1, Col: 29
+Error de sintaxis - Token: ENDCHAR, L�nea: 1, Col: 30
+ 
+Resultado: None
+-------------------------
+-------------------------
+
+Entrada: 'let mut lk = LinkedList::new();' Timestamp: 2022-11-21 23:06:16.112041-05:00
+ 
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'let mut lk = LinkedList::new();' Timestamp: 2022-11-21 23:06:35.688454-05:00
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'let suma = 5+5;' Timestamp: 2022-11-21 23:06:35.688454-05:00
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'let mut suma = 5+5;' Timestamp: 2022-11-21 23:06:35.688454-05:00
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'let suma = 5+5.4;' Timestamp: 2022-11-21 23:06:35.688454-05:00
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'let mut suma = 5+5.4;' Timestamp: 2022-11-21 23:06:35.688454-05:00
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'let suma = 5+-5;' Timestamp: 2022-11-21 23:06:35.688454-05:00
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'let mut suma = 5+-5;' Timestamp: 2022-11-21 23:06:35.688454-05:00
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'let suma = 5.9+5;' Timestamp: 2022-11-21 23:06:35.688454-05:00
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'let mut suma = 5.9+5;' Timestamp: 2022-11-21 23:06:35.688454-05:00
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'let suma = 5.9+-6.7;' Timestamp: 2022-11-21 23:06:35.688454-05:00
+Error de sintaxis - Token: POINT, L�nea: 1, Col: 17
+Error de sintaxis - Token: INTTYPE, L�nea: 1, Col: 18
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'let suma = 5.9 +- 6.7;' Timestamp: 2022-11-21 23:06:35.688454-05:00
+Error de sintaxis - Token: MINUS, L�nea: 1, Col: 16
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'let suma = 5.9 + -6.7;' Timestamp: 2022-11-21 23:06:35.688454-05:00
+Error de sintaxis - Token: POINT, L�nea: 1, Col: 19
+Error de sintaxis - Token: INTTYPE, L�nea: 1, Col: 20
+Resultado: None
+
+-------------------------
+-------------------------
+Entrada: 'let suma = 5.9 + -6.7;' Timestamp: 2022-11-21 23:13:49.467353-05:00
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'let neg = -6.7;' Timestamp: 2022-11-21 23:13:49.467353-05:00
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'let suma = 5.9 + -6;' Timestamp: 2022-11-21 23:13:49.467353-05:00
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'let suma = 5.9 + 4.4;' Timestamp: 2022-11-21 23:13:49.467353-05:00
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'let suma = 5 + -4.4;' Timestamp: 2022-11-21 23:13:49.467353-05:00
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'let suma = -5 + 4;' Timestamp: 2022-11-21 23:13:49.467353-05:00
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'let suma = -5 + 4.6;' Timestamp: 2022-11-21 23:13:49.467353-05:00
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'let suma = -5 + -6;' Timestamp: 2022-11-21 23:13:49.467353-05:00
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'let suma = -5 + -6.7;' Timestamp: 2022-11-21 23:13:49.467353-05:00
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'let suma = -6.7 + 4;' Timestamp: 2022-11-21 23:13:49.467353-05:00
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'let suma = -6.7 + 4.6;' Timestamp: 2022-11-21 23:13:49.467353-05:00
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'let suma = -6.7 + -10;' Timestamp: 2022-11-21 23:13:49.467353-05:00
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'let suma = -6.7 + -45.6;' Timestamp: 2022-11-21 23:13:49.467353-05:00
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'let op = 5 + 4;' Timestamp: 2022-11-21 23:13:49.467353-05:00
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'let op = 5 - 4;' Timestamp: 2022-11-21 23:13:49.467353-05:00
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'let op = 5 * 4;' Timestamp: 2022-11-21 23:13:49.467353-05:00
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'let op = 5 / 4;' Timestamp: 2022-11-21 23:13:49.467353-05:00
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'let op = 5 % 4;' Timestamp: 2022-11-21 23:13:49.467353-05:00
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'let mut op = 5 + 4;' Timestamp: 2022-11-21 23:13:49.467353-05:00
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'let mut op = 5 - 4;' Timestamp: 2022-11-21 23:13:49.467353-05:00
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'let mut op = 5 * 4;' Timestamp: 2022-11-21 23:13:49.467353-05:00
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'let mut op = 5 / 4;' Timestamp: 2022-11-21 23:13:49.467353-05:00
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'let mut op = 5 % 4;' Timestamp: 2022-11-21 23:13:49.467353-05:00
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'let mut op = 5 + 4.3;' Timestamp: 2022-11-21 23:13:49.467353-05:00
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'let mut op = 5 - 4.3;' Timestamp: 2022-11-21 23:13:49.467353-05:00
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'let mut op = 5 * 4.3;' Timestamp: 2022-11-21 23:13:49.467353-05:00
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'let mut op = 5 / 4.3;' Timestamp: 2022-11-21 23:13:49.467353-05:00
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'let mut op = 5 % 4.3;' Timestamp: 2022-11-21 23:13:49.467353-05:00
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'let op = 5 + 4.3;' Timestamp: 2022-11-21 23:13:49.467353-05:00
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'let op = 5 - 4.3;' Timestamp: 2022-11-21 23:13:49.467353-05:00
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'let op = 5 * 4.3;' Timestamp: 2022-11-21 23:13:49.467353-05:00
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'let op = 5 / 4.3;' Timestamp: 2022-11-21 23:13:49.467353-05:00
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'let op = 5 % 4.3;' Timestamp: 2022-11-21 23:13:49.467353-05:00
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'stdin().read_line(&mut input);' Timestamp: 2022-11-21 23:13:49.467353-05:00
+Error de sintaxis - Token: INPUT, L�nea: 1, Col: 23
+Error de sintaxis - Token: RPAREN, L�nea: 1, Col: 28
+Error de sintaxis - Token: ENDCHAR, L�nea: 1, Col: 29
+ 
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'stdin().read_line(&mut variable);' Timestamp: 2022-11-21 23:13:49.467353-05:00
+Resultado: None
+
+-------------------------
+-------------------------
+Entrada: 'io::stdin().read_line(&mut variable);' Timestamp: 2022-11-21 23:24:46.312931-05:00
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'io::stdin().read_line(&mut variable).expect("Error al leer de teclado");' Timestamp: 2022-11-21 23:24:46.312931-05:00
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'while n<6 { println("Hola");}' Timestamp: 2022-11-21 23:24:46.312931-05:00
+Error de sintaxis - Token: INTTYPE, L�nea: 1, Col: 8
+Error de sintaxis - Token: LLLAVE, L�nea: 1, Col: 10
+Error de sintaxis - Token: LPAREN, L�nea: 1, Col: 19
+Error de sintaxis - Token: IDSTRING, L�nea: 1, Col: 20
+Error de sintaxis - Token: ENDCHAR, L�nea: 1, Col: 27
+Error de sintaxis - Token: RLLAVE, L�nea: 1, Col: 28
+ 
+Resultado: None
+-------------------------
+-------------------------
+Entrada: '& C:/Users/pamel/AppData/Local/Microsoft/WindowsApps/python3.10.exe c:/Users/pamel/Desktop/proyectoLPG6/main.py' Timestamp: 2022-11-21 23:24:46.312931-05:00
+Error de sintaxis - Token: AMPERSAND, L�nea: 1, Col: 0
+Error de sintaxis - Token: COLON, L�nea: 1, Col: 3
+Error de sintaxis - Token: DIVIDE, L�nea: 1, Col: 4
+Error de sintaxis - Token: ID, L�nea: 1, Col: 5
+Error de sintaxis - Token: DIVIDE, L�nea: 1, Col: 10
+Error de sintaxis - Token: ID, L�nea: 1, Col: 11
+Error de sintaxis - Token: DIVIDE, L�nea: 1, Col: 16
+Error de sintaxis - Token: ID, L�nea: 1, Col: 17
+Error de sintaxis - Token: DIVIDE, L�nea: 1, Col: 24
+Error de sintaxis - Token: ID, L�nea: 1, Col: 25
+Error de sintaxis - Token: DIVIDE, L�nea: 1, Col: 30
+Error de sintaxis - Token: ID, L�nea: 1, Col: 31
+Error de sintaxis - Token: DIVIDE, L�nea: 1, Col: 40
+Error de sintaxis - Token: ID, L�nea: 1, Col: 41
+Error de sintaxis - Token: DIVIDE, L�nea: 1, Col: 52
+Error de sintaxis - Token: ID, L�nea: 1, Col: 53
+Error de sintaxis - Token: POINT, L�nea: 1, Col: 60
+Error de sintaxis - Token: FLOATTYPE, L�nea: 1, Col: 61
+Error de sintaxis - Token: ID, L�nea: 1, Col: 64
+Error de sintaxis - Token: ID, L�nea: 1, Col: 68
+Error de sintaxis - Token: COLON, L�nea: 1, Col: 69
+Error de sintaxis - Token: DIVIDE, L�nea: 1, Col: 70
+Error de sintaxis - Token: ID, L�nea: 1, Col: 71
+Error de sintaxis - Token: DIVIDE, L�nea: 1, Col: 76
+Error de sintaxis - Token: ID, L�nea: 1, Col: 77
+Error de sintaxis - Token: DIVIDE, L�nea: 1, Col: 82
+Error de sintaxis - Token: ID, L�nea: 1, Col: 83
+Error de sintaxis - Token: DIVIDE, L�nea: 1, Col: 90
+Error de sintaxis - Token: ID, L�nea: 1, Col: 91
+Error de sintaxis - Token: DIVIDE, L�nea: 1, Col: 103
+Error de sintaxis - Token: MAINFN, L�nea: 1, Col: 104
+Error de sintaxis - Token: POINT, L�nea: 1, Col: 108
+Error de sintaxis - Token: ID, L�nea: 1, Col: 109
+ 
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'while n<6 { println("Hola");}' Timestamp: 2022-11-21 23:32:50.786278-05:00
+Error de sintaxis - Token: LLLAVE, L�nea: 1, Col: 10
+Error de sintaxis - Token: ID, L�nea: 1, Col: 12
+Error de sintaxis - Token: LPAREN, L�nea: 1, Col: 19
+Error de sintaxis - Token: IDSTRING, L�nea: 1, Col: 20
+Error de sintaxis - Token: ENDCHAR, L�nea: 1, Col: 27
+Error de sintaxis - Token: RLLAVE, L�nea: 1, Col: 28
+ 
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'while n<6 { println!("Hola");}' Timestamp: 2022-11-21 23:32:50.786278-05:00
+Error de sintaxis - Token: LLLAVE, L�nea: 1, Col: 10
+Error de sintaxis - Token: PRINTLN, L�nea: 1, Col: 12
+Error de sintaxis - Token: LPAREN, L�nea: 1, Col: 20
+Error de sintaxis - Token: IDSTRING, L�nea: 1, Col: 21
+Error de sintaxis - Token: ENDCHAR, L�nea: 1, Col: 28
+Error de sintaxis - Token: RLLAVE, L�nea: 1, Col: 29
+ 
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'while n<6 { println!("Hola");}' Timestamp: 2022-11-21 23:32:50.786278-05:00
+Error de sintaxis - Token: LLLAVE, L�nea: 1, Col: 10
+Error de sintaxis - Token: PRINTLN, L�nea: 1, Col: 12
+Error de sintaxis - Token: LPAREN, L�nea: 1, Col: 20
+Error de sintaxis - Token: IDSTRING, L�nea: 1, Col: 21
+Error de sintaxis - Token: ENDCHAR, L�nea: 1, Col: 28
+Error de sintaxis - Token: RLLAVE, L�nea: 1, Col: 29
+ 
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'while n<6 { println("Hola");}' Timestamp: 2022-11-21 23:32:50.786278-05:00
+Error de sintaxis - Token: LLLAVE, L�nea: 1, Col: 10
+Error de sintaxis - Token: ID, L�nea: 1, Col: 12
+Error de sintaxis - Token: LPAREN, L�nea: 1, Col: 19
+Error de sintaxis - Token: IDSTRING, L�nea: 1, Col: 20
+Error de sintaxis - Token: ENDCHAR, L�nea: 1, Col: 27
+Error de sintaxis - Token: RLLAVE, L�nea: 1, Col: 28
+ 
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'while (n<6) { println("Hola");}' Timestamp: 2022-11-21 23:32:50.786278-05:00
+Error de sintaxis - Token: LLLAVE, L�nea: 1, Col: 12
+Error de sintaxis - Token: ID, L�nea: 1, Col: 14
+Error de sintaxis - Token: LPAREN, L�nea: 1, Col: 21
+Error de sintaxis - Token: IDSTRING, L�nea: 1, Col: 22
+Error de sintaxis - Token: ENDCHAR, L�nea: 1, Col: 29
+Error de sintaxis - Token: RLLAVE, L�nea: 1, Col: 30
+ 
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'while (n<6) { println("Hola");}' Timestamp: 2022-11-21 23:39:29.513940-05:00
+Error de sintaxis - Token: LLLAVE, L�nea: 1, Col: 12
+Error de sintaxis - Token: ID, L�nea: 1, Col: 14
+Error de sintaxis - Token: LPAREN, L�nea: 1, Col: 21
+Error de sintaxis - Token: IDSTRING, L�nea: 1, Col: 22
+Error de sintaxis - Token: ENDCHAR, L�nea: 1, Col: 29
+Error de sintaxis - Token: RLLAVE, L�nea: 1, Col: 30
+ 
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'while n<6 { println("Hola");}' Timestamp: 2022-11-21 23:39:29.513940-05:00
+Error de sintaxis - Token: LLLAVE, L�nea: 1, Col: 10
+Error de sintaxis - Token: ID, L�nea: 1, Col: 12
+Error de sintaxis - Token: LPAREN, L�nea: 1, Col: 19
+Error de sintaxis - Token: IDSTRING, L�nea: 1, Col: 20
+Error de sintaxis - Token: ENDCHAR, L�nea: 1, Col: 27
+Error de sintaxis - Token: RLLAVE, L�nea: 1, Col: 28
+ 
+Resultado: None
+-------------------------
+-------------------------
+
+Entrada: 'while n<6 { println("Hola");}' Timestamp: 2022-11-21 23:40:45.403119-05:00
+Error de sintaxis - Token: LLLAVE, L�nea: 1, Col: 10
+Error de sintaxis - Token: ID, L�nea: 1, Col: 12
+Error de sintaxis - Token: LPAREN, L�nea: 1, Col: 19
+Error de sintaxis - Token: IDSTRING, L�nea: 1, Col: 20
+Error de sintaxis - Token: ENDCHAR, L�nea: 1, Col: 27
+Error de sintaxis - Token: RLLAVE, L�nea: 1, Col: 28
+ 
+Resultado: None
+-------------------------
+-------------------------
+
+Entrada: 'while n<6 { println("Hola");}' Timestamp: 2022-11-21 23:41:33.892994-05:00
+Error de sintaxis - Token: LLLAVE, L�nea: 1, Col: 10
+Error de sintaxis - Token: ID, L�nea: 1, Col: 12
+Error de sintaxis - Token: IDSTRING, L�nea: 1, Col: 20
+Error de sintaxis - Token: RPAREN, L�nea: 1, Col: 26
+Error de sintaxis - Token: ENDCHAR, L�nea: 1, Col: 27
+Error de sintaxis - Token: RLLAVE, L�nea: 1, Col: 28
+ 
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'while n<6 { println("Hola");}' Timestamp: 2022-11-21 23:42:00.478514-05:00
+Error de sintaxis - Token: ID, L�nea: 1, Col: 12
+Error de sintaxis - Token: LPAREN, L�nea: 1, Col: 19
+Error de sintaxis - Token: IDSTRING, L�nea: 1, Col: 20
+Error de sintaxis - Token: RPAREN, L�nea: 1, Col: 26
+Error de sintaxis - Token: ENDCHAR, L�nea: 1, Col: 27
+Error de sintaxis - Token: RLLAVE, L�nea: 1, Col: 28
+ 
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'while n<6 { println!("Hola");}' Timestamp: 2022-11-21 23:42:00.478514-05:00
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'while (n<6) { println!("Hola");}' Timestamp: 2022-11-21 23:42:00.478514-05:00
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'while (n<p) { println!("Hola");}' Timestamp: 2022-11-21 23:42:00.478514-05:00
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'while (n<3.9) { println!("Hola");}' Timestamp: 2022-11-21 23:42:00.478514-05:00
+Resultado: None
+-------------------------

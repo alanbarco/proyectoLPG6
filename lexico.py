@@ -43,6 +43,11 @@ reserved = {  #Empieza Alan Barco
   "move": 'MOVE',
   "where": 'WHERE',
   "new" : "NEW",
+  "while" : 'WHILE',
+  "stdin" : 'STDIN',
+  "read_line": 'READLINE',
+  "io" : 'IO',
+  
 
   #Control statements
   "if": 'IF',
@@ -74,7 +79,7 @@ reserved = {  #Empieza Alan Barco
   "Err": 'ERR',
   "println!": 'PRINTLN',
   "input": 'INPUT',
-  "excpect": 'EXPECT',
+  "expect": 'EXPECT',
   "parse": 'PARSE',
   "unwrap_or": "UNWRAPOR",
   "Ok": 'OK',
@@ -91,7 +96,7 @@ tokens = [  #Empieza ..........
   'AMPERSAND', 'PLUS', 'MINUS', 'TIMES', 'DAMPERSAND', 'DIVIDE', 'IGUAL',
   'ARROWOPT', 'MAYORQUE', 'MENORQUE', 'LCOR', 'RCOR', 'LPAREN', 'RPAREN',
   'LLLAVE', 'RLLAVE', 'COLON', 'ENDCHAR', 'COMA', 'COMILLA' ,'INTERRO', 'EXCLAM', 'POINT',
-  'TRUE', 'FALSE', 'IDCHAR', 'NINTTYPE', 'INTTYPE', 'FLOATTYPE', 'IDSTRING',
+  'TRUE', 'FALSE', 'IDCHAR', 'NFLOATTYPE','NINTTYPE', 'INTTYPE', 'FLOATTYPE', 'IDSTRING',
   'ID', 'DIFERENTE', 'SUMAASIGN', 'RESTAASIGN', 'DIVASIGN', 'MULTIASIGN',
   'DOLAR', 'DOSDOBLEPUNTOS', 'PORCENTAJE','IDENTICO', 'OR'
 ] + list(reserved.values())
@@ -136,6 +141,11 @@ t_OR = r'\|\|'
 
 def t_FLOATTYPE(t):  
   r"\d+\.\d*"
+  t.value = float(t.value)
+  return t
+
+def t_NFLOATTYPE(t):  
+  r"-\d+\.\d*"
   t.value = float(t.value)
   return t
 
