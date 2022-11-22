@@ -1,5 +1,3 @@
-import ply.yacc as yacc
-
 
 def p_cuerpo(p):
   '''cuerpo : metodo
@@ -12,6 +10,9 @@ def p_metodo(p):
   | linkedlist
   | loop
   | conectores
+  | ifblock
+  | elseifblock
+  | elseblock
   '''
 
 def p_asignacion(p):
@@ -22,7 +23,7 @@ def p_asignacion(p):
 
 def p_comparacion_id(p):
   '''comparacion : ID signocompar ID
-  | IDCHAR signocompar IDCHAR 
+  | IDCHAR signocompar IDCHAR
   | IDSTRING signocompar IDSTRING'''
   
 def p_comparacion_int(p):
@@ -71,10 +72,10 @@ def p_loop(p):
   'loop : LOOP LLLAVE metodo RLLAVE'
 
 def p_params(p):
-  '''params : ID COLON INT16 
-  | ID COLON INT16 COMA params'''
+  '''params : ID COLON datatype 
+  | ID COLON datatype COMA params'''
 
-def p_funcion(p):
+def p_funcion_sinreturn(p):
   'funcion : FN ID LPAREN params RPAREN LLLAVE metodo RLLAVE'
 
 def p_impresion(p):

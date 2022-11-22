@@ -10,7 +10,7 @@ import ply.lex as lex
 
 #Agregue todas las palabras reservadas necesarias
 # List of token names
-reserved = {  
+reserved = {  #Empieza Alan Barco
   "async": 'ASYNC',
   "await": 'AWAIT',
   "break": 'BREAK',
@@ -84,10 +84,10 @@ reserved = {
   "Vec": 'VEC',
   "HashMap": 'HASHMAP',
   "LinkedList": 'LINKEDLIST'
-}  
+}  #Termina Alan Barco
 
-
-tokens = [  
+#DESDE AQUI BORRE
+tokens = [  #Empieza ..........
   'AMPERSAND', 'PLUS', 'MINUS', 'TIMES', 'DAMPERSAND', 'DIVIDE', 'IGUAL',
   'ARROWOPT', 'MAYORQUE', 'MENORQUE', 'LCOR', 'RCOR', 'LPAREN', 'RPAREN',
   'LLLAVE', 'RLLAVE', 'COLON', 'ENDCHAR', 'COMA', 'COMILLA' ,'INTERRO', 'EXCLAM', 'POINT',
@@ -170,6 +170,7 @@ def t_ID(t):
   return t
 
 
+#HASTA AQUI BORRE
 
 
 # Define a rule so we can track line numbers
@@ -190,7 +191,7 @@ def t_error(t):
 
 def t_COMMENT(t):
   r'(//.*|/\*(.*|\n*)*\*/)'
-  pass  
+  pass  #Termina .........
 
 
 # Build the lexer

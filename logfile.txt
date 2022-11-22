@@ -69,3 +69,616 @@ Error de sintaxis - Token: FALSE, Línea: 1, Col: 7
  
 Resultado: None
 -------------------------
+-------------------------
+Entrada: 'const numero: i32 = 20;' Timestamp: 2022-11-21 20:20:51.792019-05:00
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'const numero: i8 = 20;' Timestamp: 2022-11-21 20:20:51.792019-05:00
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'const numero: i16 = 20;' Timestamp: 2022-11-21 20:20:51.792019-05:00
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'const numero: i54 = 20;' Timestamp: 2022-11-21 20:20:51.792019-05:00
+Error de sintaxis - Token: ID, Línea: 1, Col: 14
+Error de sintaxis - Token: IGUAL, Línea: 1, Col: 18
+Error de sintaxis - Token: INTTYPE, Línea: 1, Col: 20
+Error de sintaxis - Token: ENDCHAR, Línea: 1, Col: 22
+ 
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'const numero: i64 = 20;' Timestamp: 2022-11-21 20:20:51.792019-05:00
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'const numero: i128 = 20;' Timestamp: 2022-11-21 20:20:51.792019-05:00
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'const numero: i128 = hola;' Timestamp: 2022-11-21 20:20:51.792019-05:00
+Error de sintaxis - Token: ID, Línea: 1, Col: 21
+Error de sintaxis - Token: ENDCHAR, Línea: 1, Col: 25
+ 
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'const numero: i128 = 4.5;' Timestamp: 2022-11-21 20:20:51.792019-05:00
+Error de sintaxis - Token: FLOATTYPE, Línea: 1, Col: 21
+Error de sintaxis - Token: ENDCHAR, Línea: 1, Col: 24
+ 
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'const numero: u8 = -1;' Timestamp: 2022-11-21 20:20:51.792019-05:00
+Error de sintaxis - Token: UINT8, Línea: 1, Col: 14
+Error de sintaxis - Token: IGUAL, Línea: 1, Col: 17
+Error de sintaxis - Token: NINTTYPE, Línea: 1, Col: 19
+Error de sintaxis - Token: ENDCHAR, Línea: 1, Col: 21
+ 
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'const numero: u8 = 8;' Timestamp: 2022-11-21 20:20:51.792019-05:00
+Error de sintaxis - Token: UINT8, Línea: 1, Col: 14
+Error de sintaxis - Token: IGUAL, Línea: 1, Col: 17
+Error de sintaxis - Token: INTTYPE, Línea: 1, Col: 19
+Error de sintaxis - Token: ENDCHAR, Línea: 1, Col: 20
+ 
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'const num: u8 = 8;' Timestamp: 2022-11-21 20:23:23.502058-05:00
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'const num: u16 = 8;' Timestamp: 2022-11-21 20:23:23.502058-05:00
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'const num: u32 = 8;' Timestamp: 2022-11-21 20:23:23.502058-05:00
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'const num: u64 = 8;' Timestamp: 2022-11-21 20:23:23.502058-05:00
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'const num: u128 = 8;' Timestamp: 2022-11-21 20:23:23.502058-05:00
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'const num: u128 = hola;' Timestamp: 2022-11-21 20:23:23.502058-05:00
+Error de sintaxis - Token: ID, Línea: 1, Col: 18
+Error de sintaxis - Token: ENDCHAR, Línea: 1, Col: 22
+ 
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'const num: u128 = 4.5;' Timestamp: 2022-11-21 20:23:23.502058-05:00
+Error de sintaxis - Token: FLOATTYPE, Línea: 1, Col: 18
+Error de sintaxis - Token: ENDCHAR, Línea: 1, Col: 21
+ 
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'const num: u128 = ture;' Timestamp: 2022-11-21 20:23:23.502058-05:00
+Error de sintaxis - Token: ID, Línea: 1, Col: 18
+Error de sintaxis - Token: ENDCHAR, Línea: 1, Col: 22
+ 
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'const num: u128 = true;' Timestamp: 2022-11-21 20:23:23.502058-05:00
+Error de sintaxis - Token: TRUE, Línea: 1, Col: 18
+Error de sintaxis - Token: ENDCHAR, Línea: 1, Col: 22
+ 
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'const cadena: &str = "Prueba JJ";' Timestamp: 2022-11-21 20:23:23.502058-05:00
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'const cadena: &'staticstr = "Prueba JJ";' Timestamp: 2022-11-21 20:23:23.502058-05:00
+Error de sintaxis - Token: ID, Línea: 1, Col: 16
+Error de sintaxis - Token: IGUAL, Línea: 1, Col: 26
+Error de sintaxis - Token: IDSTRING, Línea: 1, Col: 28
+Error de sintaxis - Token: ENDCHAR, Línea: 1, Col: 39
+ 
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'const cadena: &'static str = "Prueba JJ";' Timestamp: 2022-11-21 20:23:23.502058-05:00
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'const cadena: str = "Prueba JJ";' Timestamp: 2022-11-21 20:23:23.502058-05:00
+Error de sintaxis - Token: STR, Línea: 1, Col: 14
+Error de sintaxis - Token: IGUAL, Línea: 1, Col: 18
+Error de sintaxis - Token: IDSTRING, Línea: 1, Col: 20
+Error de sintaxis - Token: ENDCHAR, Línea: 1, Col: 31
+ 
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'const cadena: String  = "Prueba JJ";' Timestamp: 2022-11-21 20:23:23.502058-05:00
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'const cadena: String  = String::from("Prueba JJ");' Timestamp: 2022-11-21 20:23:23.502058-05:00
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'const char : char  = "h";' Timestamp: 2022-11-21 20:23:23.502058-05:00
+Error de sintaxis - Token: CHAR, Línea: 1, Col: 6
+Error de sintaxis - Token: COLON, Línea: 1, Col: 11
+Error de sintaxis - Token: CHAR, Línea: 1, Col: 13
+Error de sintaxis - Token: IGUAL, Línea: 1, Col: 19
+Error de sintaxis - Token: IDSTRING, Línea: 1, Col: 21
+Error de sintaxis - Token: ENDCHAR, Línea: 1, Col: 24
+ 
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'const char : char  = 'h';' Timestamp: 2022-11-21 20:23:23.502058-05:00
+Error de sintaxis - Token: CHAR, Línea: 1, Col: 6
+Error de sintaxis - Token: COLON, Línea: 1, Col: 11
+Error de sintaxis - Token: CHAR, Línea: 1, Col: 13
+Error de sintaxis - Token: IGUAL, Línea: 1, Col: 19
+Error de sintaxis - Token: IDCHAR, Línea: 1, Col: 21
+Error de sintaxis - Token: ENDCHAR, Línea: 1, Col: 24
+ 
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'const chars : char  = 'h';' Timestamp: 2022-11-21 20:23:23.502058-05:00
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'const chars : char  = "h";' Timestamp: 2022-11-21 20:23:23.502058-05:00
+Error de sintaxis - Token: IDSTRING, Línea: 1, Col: 22
+Error de sintaxis - Token: ENDCHAR, Línea: 1, Col: 25
+ 
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'const chars : &char  = "h";' Timestamp: 2022-11-21 20:23:23.502058-05:00
+Error de sintaxis - Token: CHAR, Línea: 1, Col: 15
+Error de sintaxis - Token: IGUAL, Línea: 1, Col: 21
+Error de sintaxis - Token: IDSTRING, Línea: 1, Col: 23
+Error de sintaxis - Token: ENDCHAR, Línea: 1, Col: 26
+ 
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'float decimal : float32  = hola;' Timestamp: 2022-11-21 20:23:23.502058-05:00
+Error de sintaxis - Token: ID, Línea: 1, Col: 6
+Error de sintaxis - Token: COLON, Línea: 1, Col: 14
+Error de sintaxis - Token: ID, Línea: 1, Col: 16
+Error de sintaxis - Token: IGUAL, Línea: 1, Col: 25
+Error de sintaxis - Token: ID, Línea: 1, Col: 27
+Error de sintaxis - Token: ENDCHAR, Línea: 1, Col: 31
+ 
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'float decimal : float32  = 4.5;' Timestamp: 2022-11-21 20:23:23.502058-05:00
+Error de sintaxis - Token: ID, Línea: 1, Col: 6
+Error de sintaxis - Token: COLON, Línea: 1, Col: 14
+Error de sintaxis - Token: ID, Línea: 1, Col: 16
+Error de sintaxis - Token: IGUAL, Línea: 1, Col: 25
+Error de sintaxis - Token: FLOATTYPE, Línea: 1, Col: 27
+Error de sintaxis - Token: ENDCHAR, Línea: 1, Col: 30
+ 
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'const  decimal : float32  = 4.5;' Timestamp: 2022-11-21 20:23:23.502058-05:00
+Error de sintaxis - Token: ID, Línea: 1, Col: 17
+Error de sintaxis - Token: IGUAL, Línea: 1, Col: 26
+Error de sintaxis - Token: FLOATTYPE, Línea: 1, Col: 28
+Error de sintaxis - Token: ENDCHAR, Línea: 1, Col: 31
+ 
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'const decimal : f32  = 4.5;' Timestamp: 2022-11-21 20:23:23.502058-05:00
+Error de sintaxis - Token: FLOATTYPE, Línea: 1, Col: 23
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'const num : f32 = 4.5;' Timestamp: 2022-11-21 20:32:25.027697-05:00
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'const num : f64 = 4.5;' Timestamp: 2022-11-21 20:32:25.027697-05:00
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'const num : f64 = 60;' Timestamp: 2022-11-21 20:32:25.027697-05:00
+Error de sintaxis - Token: INTTYPE, Línea: 1, Col: 18
+Error de sintaxis - Token: ENDCHAR, Línea: 1, Col: 20
+ 
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'const condic:bool = true;' Timestamp: 2022-11-21 20:32:25.027697-05:00
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'const condic:bool = frue;' Timestamp: 2022-11-21 20:32:25.027697-05:00
+Error de sintaxis - Token: ID, Línea: 1, Col: 20
+Error de sintaxis - Token: ENDCHAR, Línea: 1, Col: 24
+ 
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'const condic:bool = false;' Timestamp: 2022-11-21 20:32:25.027697-05:00
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'const condic:bool = 20;' Timestamp: 2022-11-21 20:32:25.027697-05:00
+Error de sintaxis - Token: INTTYPE, Línea: 1, Col: 20
+Error de sintaxis - Token: ENDCHAR, Línea: 1, Col: 22
+ 
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'const condic:bool = "hola;' Timestamp: 2022-11-21 20:32:25.027697-05:00
+Error de sintaxis - Token: ID, Línea: 1, Col: 21
+Error de sintaxis - Token: ENDCHAR, Línea: 1, Col: 25
+ 
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'const condic:bool = "hola";' Timestamp: 2022-11-21 20:32:25.027697-05:00
+Error de sintaxis - Token: IDSTRING, Línea: 1, Col: 20
+Error de sintaxis - Token: ENDCHAR, Línea: 1, Col: 26
+ 
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'if true {}' Timestamp: 2022-11-21 20:32:25.027697-05:00
+Error de sintaxis - Token: RLLAVE, Línea: 1, Col: 9
+ 
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'if true {const a:i32 = 20;}' Timestamp: 2022-11-21 20:32:25.027697-05:00
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'if booleano {const a:i32 = 20;}' Timestamp: 2022-11-21 20:32:25.027697-05:00
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'if a<b {const a:i32 = 20;}' Timestamp: 2022-11-21 20:32:25.027697-05:00
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'if a<b && a<c {const a:i32 = 20;}' Timestamp: 2022-11-21 20:32:25.027697-05:00
+Error de sintaxis - Token: DAMPERSAND, Línea: 1, Col: 7
+Error de sintaxis - Token: MENORQUE, Línea: 1, Col: 11
+Error de sintaxis - Token: ID, Línea: 1, Col: 12
+Error de sintaxis - Token: LLLAVE, Línea: 1, Col: 14
+Error de sintaxis - Token: CONST, Línea: 1, Col: 15
+Error de sintaxis - Token: ID, Línea: 1, Col: 21
+Error de sintaxis - Token: COLON, Línea: 1, Col: 22
+Error de sintaxis - Token: INT32, Línea: 1, Col: 23
+Error de sintaxis - Token: IGUAL, Línea: 1, Col: 27
+Error de sintaxis - Token: INTTYPE, Línea: 1, Col: 29
+Error de sintaxis - Token: ENDCHAR, Línea: 1, Col: 31
+Error de sintaxis - Token: RLLAVE, Línea: 1, Col: 32
+ 
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'if a<b & a<c {const a:i32 = 20;}' Timestamp: 2022-11-21 20:32:25.027697-05:00
+Error de sintaxis - Token: AMPERSAND, Línea: 1, Col: 7
+Error de sintaxis - Token: MENORQUE, Línea: 1, Col: 10
+Error de sintaxis - Token: ID, Línea: 1, Col: 11
+Error de sintaxis - Token: LLLAVE, Línea: 1, Col: 13
+Error de sintaxis - Token: CONST, Línea: 1, Col: 14
+Error de sintaxis - Token: ID, Línea: 1, Col: 20
+Error de sintaxis - Token: COLON, Línea: 1, Col: 21
+Error de sintaxis - Token: INT32, Línea: 1, Col: 22
+Error de sintaxis - Token: IGUAL, Línea: 1, Col: 26
+Error de sintaxis - Token: INTTYPE, Línea: 1, Col: 28
+Error de sintaxis - Token: ENDCHAR, Línea: 1, Col: 30
+Error de sintaxis - Token: RLLAVE, Línea: 1, Col: 31
+ 
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'if a<b && a<c { println!("Hola Mundo"); }' Timestamp: 2022-11-21 20:37:06.702166-05:00
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'if a<b | a<c { println!("Hola Mundo"); }' Timestamp: 2022-11-21 20:37:06.702166-05:00
+Error de sintaxis - Token: ID, Línea: 1, Col: 9
+Error de sintaxis - Token: MENORQUE, Línea: 1, Col: 10
+Error de sintaxis - Token: ID, Línea: 1, Col: 11
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'if a<b || a<c { println!("Hola Mundo"); }' Timestamp: 2022-11-21 20:37:06.702166-05:00
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'if a<b || !a { println!("Hola Mundo"); }' Timestamp: 2022-11-21 20:37:06.702166-05:00
+Error de sintaxis - Token: EXCLAM, Línea: 1, Col: 10
+Error de sintaxis - Token: LLLAVE, Línea: 1, Col: 13
+Error de sintaxis - Token: PRINTLN, Línea: 1, Col: 15
+Error de sintaxis - Token: LPAREN, Línea: 1, Col: 23
+Error de sintaxis - Token: IDSTRING, Línea: 1, Col: 24
+Error de sintaxis - Token: RPAREN, Línea: 1, Col: 36
+Error de sintaxis - Token: ENDCHAR, Línea: 1, Col: 37
+Error de sintaxis - Token: RLLAVE, Línea: 1, Col: 39
+ 
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'if a<b || a!=0 { println!("Hola Mundo"); }' Timestamp: 2022-11-21 20:37:06.702166-05:00
+Error de sintaxis - Token: IGUAL, Línea: 1, Col: 12
+Error de sintaxis - Token: INTTYPE, Línea: 1, Col: 13
+Error de sintaxis - Token: LLLAVE, Línea: 1, Col: 15
+Error de sintaxis - Token: PRINTLN, Línea: 1, Col: 17
+Error de sintaxis - Token: LPAREN, Línea: 1, Col: 25
+Error de sintaxis - Token: IDSTRING, Línea: 1, Col: 26
+Error de sintaxis - Token: RPAREN, Línea: 1, Col: 38
+Error de sintaxis - Token: ENDCHAR, Línea: 1, Col: 39
+Error de sintaxis - Token: RLLAVE, Línea: 1, Col: 41
+ 
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'if (a<b) & ((a<b) & b>c) { println!("Hola Mundo"); }' Timestamp: 2022-11-21 20:37:06.702166-05:00
+Error de sintaxis - Token: AMPERSAND, Línea: 1, Col: 9
+Error de sintaxis - Token: LPAREN, Línea: 1, Col: 11
+Error de sintaxis - Token: LPAREN, Línea: 1, Col: 12
+Error de sintaxis - Token: ID, Línea: 1, Col: 13
+Error de sintaxis - Token: MENORQUE, Línea: 1, Col: 14
+Error de sintaxis - Token: ID, Línea: 1, Col: 15
+Error de sintaxis - Token: RPAREN, Línea: 1, Col: 16
+Error de sintaxis - Token: AMPERSAND, Línea: 1, Col: 18
+Error de sintaxis - Token: ID, Línea: 1, Col: 20
+Error de sintaxis - Token: MAYORQUE, Línea: 1, Col: 21
+Error de sintaxis - Token: ID, Línea: 1, Col: 22
+Error de sintaxis - Token: RPAREN, Línea: 1, Col: 23
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'if (a<b) && ((a<b) && b>c) { println!("Hola Mundo"); }' Timestamp: 2022-11-21 20:37:06.702166-05:00
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'if (a<b) && ((a<b) && b>c) { println!("Hola Mundo"); } else if x < y {println!("Chao Mundo");}' Timestamp: 2022-11-21 20:37:06.702166-05:00
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'if (a<b) && ((a<b) && b>c) { println!("Hola Mundo"); } else if x < y {println!("Chao Mundo");} else {println!("Pruebas");}' Timestamp: 2022-11-21 20:37:06.702166-05:00
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'if (a<b) && ((a<b) && b>c) { println!("Hola Mundo"); } else if x < y {println!("Chao Mundo");} else { if x< 8 { x = x}}' Timestamp: 2022-11-21 20:37:06.702166-05:00
+Error de sintaxis - Token: INTTYPE, Línea: 1, Col: 108
+Error de sintaxis - Token: LLLAVE, Línea: 1, Col: 110
+Error de sintaxis - Token: IGUAL, Línea: 1, Col: 114
+Error de sintaxis - Token: ID, Línea: 1, Col: 116
+Error de sintaxis - Token: RLLAVE, Línea: 1, Col: 117
+Error de sintaxis - Token: RLLAVE, Línea: 1, Col: 118
+ 
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'if (a<b) && ((a<b) && b>c) { println!("Hola Mundo"); } else if x < y {println!("Chao Mundo");} else { if x< 8 { const y:i32 = 54}}' Timestamp: 2022-11-21 20:37:06.702166-05:00
+Error de sintaxis - Token: INTTYPE, Línea: 1, Col: 108
+Error de sintaxis - Token: LLLAVE, Línea: 1, Col: 110
+Error de sintaxis - Token: CONST, Línea: 1, Col: 112
+Error de sintaxis - Token: COLON, Línea: 1, Col: 119
+Error de sintaxis - Token: INT32, Línea: 1, Col: 120
+Error de sintaxis - Token: IGUAL, Línea: 1, Col: 124
+Error de sintaxis - Token: INTTYPE, Línea: 1, Col: 126
+Error de sintaxis - Token: RLLAVE, Línea: 1, Col: 128
+Error de sintaxis - Token: RLLAVE, Línea: 1, Col: 129
+ 
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'if (a<b) && ((a<b) && b>c) { println!("Hola Mundo"); } else if x < y {println!("Chao Mundo");} else { if x< 8 { const y:i32 = 54;}}' Timestamp: 2022-11-21 20:37:06.702166-05:00
+Error de sintaxis - Token: INTTYPE, Línea: 1, Col: 108
+Error de sintaxis - Token: LLLAVE, Línea: 1, Col: 110
+Error de sintaxis - Token: CONST, Línea: 1, Col: 112
+Error de sintaxis - Token: COLON, Línea: 1, Col: 119
+Error de sintaxis - Token: INT32, Línea: 1, Col: 120
+Error de sintaxis - Token: IGUAL, Línea: 1, Col: 124
+Error de sintaxis - Token: INTTYPE, Línea: 1, Col: 126
+Error de sintaxis - Token: ENDCHAR, Línea: 1, Col: 128
+Error de sintaxis - Token: RLLAVE, Línea: 1, Col: 129
+Error de sintaxis - Token: RLLAVE, Línea: 1, Col: 130
+ 
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'if (a<b) && ((a<b) && b>c) { println!("Hola Mundo"); } else if x < y {println!("Chao Mundo");} else { if 10 < 8 { const y: i32 = 54;}}' Timestamp: 2022-11-21 20:37:06.702166-05:00
+Resultado: None
+-------------------------
+-------------------------
+Entrada: '"COMPARACIONES CHECK x < 8  @ALAN"' Timestamp: 2022-11-21 20:37:06.702166-05:00
+ 
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'fn hola(a:32) {}' Timestamp: 2022-11-21 20:37:06.702166-05:00
+Error de sintaxis - Token: INTTYPE, Línea: 1, Col: 10
+Error de sintaxis - Token: RPAREN, Línea: 1, Col: 12
+Error de sintaxis - Token: LLLAVE, Línea: 1, Col: 14
+Error de sintaxis - Token: RLLAVE, Línea: 1, Col: 15
+ 
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'fn hola(a:32)->i32 { const a:i32 = 70; return a;}' Timestamp: 2022-11-21 20:37:06.702166-05:00
+Error de sintaxis - Token: INTTYPE, Línea: 1, Col: 10
+Error de sintaxis - Token: RPAREN, Línea: 1, Col: 12
+Error de sintaxis - Token: ARROWOPT, Línea: 1, Col: 13
+Error de sintaxis - Token: LLLAVE, Línea: 1, Col: 19
+Error de sintaxis - Token: CONST, Línea: 1, Col: 21
+Error de sintaxis - Token: ID, Línea: 1, Col: 27
+Error de sintaxis - Token: COLON, Línea: 1, Col: 28
+Error de sintaxis - Token: INT32, Línea: 1, Col: 29
+Error de sintaxis - Token: IGUAL, Línea: 1, Col: 33
+Error de sintaxis - Token: INTTYPE, Línea: 1, Col: 35
+Error de sintaxis - Token: ENDCHAR, Línea: 1, Col: 37
+Error de sintaxis - Token: RETURN, Línea: 1, Col: 39
+Error de sintaxis - Token: ID, Línea: 1, Col: 46
+Error de sintaxis - Token: ENDCHAR, Línea: 1, Col: 47
+Error de sintaxis - Token: RLLAVE, Línea: 1, Col: 48
+ 
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'fn hola(a:32) -> i32 { const a:i32 = 70; return a;}' Timestamp: 2022-11-21 20:37:06.702166-05:00
+Error de sintaxis - Token: INTTYPE, Línea: 1, Col: 10
+Error de sintaxis - Token: RPAREN, Línea: 1, Col: 12
+Error de sintaxis - Token: ARROWOPT, Línea: 1, Col: 14
+Error de sintaxis - Token: LLLAVE, Línea: 1, Col: 21
+Error de sintaxis - Token: CONST, Línea: 1, Col: 23
+Error de sintaxis - Token: ID, Línea: 1, Col: 29
+Error de sintaxis - Token: COLON, Línea: 1, Col: 30
+Error de sintaxis - Token: INT32, Línea: 1, Col: 31
+Error de sintaxis - Token: IGUAL, Línea: 1, Col: 35
+Error de sintaxis - Token: INTTYPE, Línea: 1, Col: 37
+Error de sintaxis - Token: ENDCHAR, Línea: 1, Col: 39
+Error de sintaxis - Token: RETURN, Línea: 1, Col: 41
+Error de sintaxis - Token: ID, Línea: 1, Col: 48
+Error de sintaxis - Token: ENDCHAR, Línea: 1, Col: 49
+Error de sintaxis - Token: RLLAVE, Línea: 1, Col: 50
+ 
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'fn hola(a:i32) -> i32 { const a:i32 = 70; return a;}' Timestamp: 2022-11-21 20:37:06.702166-05:00
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'fn hola(a:i32) -> i64 { const a:i32 = 70; return a;}' Timestamp: 2022-11-21 20:37:06.702166-05:00
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'fn hola(a:i32) -> i64 { const a:i32 = 70; const b:f32=5.6;  return a;}' Timestamp: 2022-11-21 20:37:06.702166-05:00
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'fn hola(a:i32) -> i64 { const a:i32 = 70; const b:f32=5.6;  a}' Timestamp: 2022-11-21 20:37:06.702166-05:00
+Error de sintaxis - Token: RLLAVE, Línea: 1, Col: 61
+ 
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'fn hola(a:i32) -> i64 { const a:i32 = 70; const b:f32=5.6; a}' Timestamp: 2022-11-21 20:37:06.702166-05:00
+Error de sintaxis - Token: RLLAVE, Línea: 1, Col: 60
+ 
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'fn hola(a:i32) -> i64 { const a:i32 = 70; const b:f32=5.6; true}' Timestamp: 2022-11-21 20:37:06.702166-05:00
+Error de sintaxis - Token: RLLAVE, Línea: 1, Col: 63
+ 
+Resultado: None
+-------------------------
+-------------------------
+Entrada: '' Timestamp: 2022-11-21 20:37:06.702166-05:00
+-------------------------
+Entrada: 'fn hola(a:i32) -> i64 { const a:i32 = 70; const b:f32 = 5.6; true}' Timestamp: 2022-11-21 20:37:06.702166-05:00
+Error de sintaxis - Token: RLLAVE, Línea: 1, Col: 65
+ 
+Resultado: None
+-------------------------
+-------------------------
+Entrada: '' Timestamp: 2022-11-21 20:37:06.702166-05:00
+-------------------------
+Entrada: 'fn func (a:i64) -> i32 {const a:i32 = 32; a}' Timestamp: 2022-11-21 20:48:57.928397-05:00
+Error de sintaxis - Token: RLLAVE, Línea: 1, Col: 43
+ 
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'fn func (a:i64) -> i32 {const a:i32 = 32; a;}' Timestamp: 2022-11-21 20:48:57.928397-05:00
+Error de sintaxis - Token: ENDCHAR, Línea: 1, Col: 43
+Error de sintaxis - Token: RLLAVE, Línea: 1, Col: 44
+ 
+Resultado: None
+-------------------------
+-------------------------
+Entrada: '' Timestamp: 2022-11-21 20:48:57.928397-05:00
+-------------------------
+Entrada: '' Timestamp: 2022-11-21 20:48:57.928397-05:00
+-------------------------
+Entrada: 'fn func' Timestamp: 2022-11-21 20:48:57.928397-05:00
+ 
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'fn yac(st:i32)->{let a= 20; a}' Timestamp: 2022-11-21 20:48:57.928397-05:00
+Error de sintaxis - Token: LLLAVE, Línea: 1, Col: 16
+Error de sintaxis - Token: LET, Línea: 1, Col: 17
+Error de sintaxis - Token: ID, Línea: 1, Col: 21
+Error de sintaxis - Token: IGUAL, Línea: 1, Col: 22
+Error de sintaxis - Token: INTTYPE, Línea: 1, Col: 24
+Error de sintaxis - Token: ENDCHAR, Línea: 1, Col: 26
+Error de sintaxis - Token: ID, Línea: 1, Col: 28
+Error de sintaxis - Token: RLLAVE, Línea: 1, Col: 29
+ 
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'fn yac(st:i32)->{const a:i32 = 20; a}' Timestamp: 2022-11-21 20:48:57.928397-05:00
+Error de sintaxis - Token: LLLAVE, Línea: 1, Col: 16
+Error de sintaxis - Token: CONST, Línea: 1, Col: 17
+Error de sintaxis - Token: ID, Línea: 1, Col: 23
+Error de sintaxis - Token: COLON, Línea: 1, Col: 24
+Error de sintaxis - Token: IGUAL, Línea: 1, Col: 29
+Error de sintaxis - Token: INTTYPE, Línea: 1, Col: 31
+Error de sintaxis - Token: ENDCHAR, Línea: 1, Col: 33
+Error de sintaxis - Token: ID, Línea: 1, Col: 35
+Error de sintaxis - Token: RLLAVE, Línea: 1, Col: 36
+ 
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'fn yac(st:i32)-> i32 {const a:i32 = 20; a}' Timestamp: 2022-11-21 20:48:57.928397-05:00
+Error de sintaxis - Token: RLLAVE, Línea: 1, Col: 41
+ 
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'fn yac(st:i32)-> i32 {let a =20;  a}' Timestamp: 2022-11-21 20:48:57.928397-05:00
+Error de sintaxis - Token: RLLAVE, Línea: 1, Col: 35
+ 
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'fn goal(st:i32)->i32{let a =20; a}' Timestamp: 2022-11-21 20:51:56.684581-05:00
+Error de sintaxis - Token: RLLAVE, Línea: 1, Col: 33
+ 
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'fn yc(st:i32)->i32{let b =20; b}' Timestamp: 2022-11-21 20:52:55.307150-05:00
+Error de sintaxis - Token: RLLAVE, Línea: 1, Col: 31
+ 
+Resultado: None
+-------------------------
+-------------------------
+Entrada: '' Timestamp: 2022-11-21 20:54:23.612895-05:00
+-------------------------
+Entrada: 'fn halo(u:i32)->i32{let a=20; a}' Timestamp: 2022-11-21 20:54:23.612895-05:00
+Error de sintaxis - Token: RLLAVE, Línea: 1, Col: 31
+ 
+Resultado: None
+-------------------------
