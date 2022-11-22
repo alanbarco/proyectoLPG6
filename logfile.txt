@@ -39,3 +39,33 @@ Resultado: None
 Entrada: '"cadena " > "cadena "' Timestamp: 2022-11-21 18:49:16.005050-05:00
 Resultado: None
 -------------------------
+-------------------------
+Entrada: 'let var = "hola";' Timestamp: 2022-11-21 18:49:16.005050-05:00
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'true > false' Timestamp: 2022-11-21 18:49:16.005050-05:00
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'let mut lista  = LinkedList :: new();' Timestamp: 2022-11-21 18:49:16.005050-05:00
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'let mut lista  = Linkedlist :: new();' Timestamp: 2022-11-21 18:49:16.005050-05:00
+Error de sintaxis - Token: DOSDOBLEPUNTOS, Línea: 1, Col: 28
+Error de sintaxis - Token: NEW, Línea: 1, Col: 31
+Error de sintaxis - Token: LPAREN, Línea: 1, Col: 34
+Error de sintaxis - Token: RPAREN, Línea: 1, Col: 35
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'true && false' Timestamp: 2022-11-21 18:49:16.005050-05:00
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'true | false' Timestamp: 2022-11-21 18:49:16.005050-05:00
+Error de sintaxis - Token: FALSE, Línea: 1, Col: 7
+ 
+Resultado: None
+-------------------------

@@ -1,0 +1,1297 @@
+Created by PLY version 3.11 (http://www.dabeaz.com/ply)
+
+Unused terminals:
+
+    AMPERSAND
+    ARROWOPT
+    ASYNC
+    AWAIT
+    BOOL
+    BREAK
+    CHAR
+    COMILLA
+    CONTINUE
+    DIVASIGN
+    DIVIDE
+    DOLAR
+    DYN
+    ELSE
+    ENUM
+    ERR
+    EXPECT
+    FINAL
+    FLOAT32
+    FLOAT64
+    FOR
+    FORMAT
+    FROM
+    HASHMAP
+    IF
+    IMPL
+    IN
+    INPUT
+    INT128
+    INT32
+    INT64
+    INT8
+    INTERRO
+    LCOR
+    MAINFN
+    MATCH
+    MINUS
+    MOVE
+    MULTIASIGN
+    OK
+    PARSE
+    PLUS
+    POINT
+    POINTERSIZE
+    PORCENTAJE
+    PRIV
+    PUB
+    RCOR
+    REF
+    RESTAASIGN
+    RETURN
+    SELF
+    SIZEOF
+    STATIC
+    STR
+    STRING
+    STRUCT
+    SUMAASIGN
+    SUPER
+    TIMES
+    TYPE
+    TYPEOF
+    UINT128
+    UINT16
+    UINT32
+    UINT64
+    UINT8
+    UNSAFE
+    UNWRAPOR
+    USE
+    VEC
+    WHERE
+
+Grammar
+
+Rule 0     S' -> cuerpo
+Rule 1     cuerpo -> metodo
+Rule 2     cuerpo -> funcion
+Rule 3     metodo -> asignacion
+Rule 4     metodo -> impresion
+Rule 5     metodo -> comparacion
+Rule 6     metodo -> linkedlist
+Rule 7     metodo -> loop
+Rule 8     metodo -> conectores
+Rule 9     asignacion -> LET MUT ID IGUAL valor ENDCHAR
+Rule 10    asignacion -> LET ID IGUAL valor ENDCHAR
+Rule 11    asignacion -> CONST ID IGUAL valor ENDCHAR
+Rule 12    comparacion -> ID signocompar ID
+Rule 13    comparacion -> IDCHAR signocompar IDCHAR
+Rule 14    comparacion -> IDSTRING signocompar IDSTRING
+Rule 15    comparacion -> INTTYPE signocompar INTTYPE
+Rule 16    comparacion -> NINTTYPE signocompar NINTTYPE
+Rule 17    comparacion -> FLOATTYPE signocompar FLOATTYPE
+Rule 18    comparacion -> boolean signocompar boolean
+Rule 19    valor -> INTTYPE
+Rule 20    valor -> FLOATTYPE
+Rule 21    valor -> NINTTYPE
+Rule 22    valor -> ID
+Rule 23    valor -> TRUE
+Rule 24    valor -> FALSE
+Rule 25    valor -> IDCHAR
+Rule 26    valor -> IDSTRING
+Rule 27    signocompar -> MAYORQUE
+Rule 28    signocompar -> MENORQUE
+Rule 29    signocompar -> DIFERENTE
+Rule 30    signocompar -> IDENTICO
+Rule 31    linkedlist -> LET MUT ID IGUAL LINKEDLIST DOSDOBLEPUNTOS NEW LPAREN RPAREN ENDCHAR
+Rule 32    conectores -> boolean signoconect boolean
+Rule 33    conectores -> EXCLAM boolean
+Rule 34    conectores -> ID signoconect ID
+Rule 35    signoconect -> DAMPERSAND
+Rule 36    signoconect -> OR
+Rule 37    boolean -> TRUE
+Rule 38    boolean -> FALSE
+Rule 39    loop -> LOOP LLLAVE metodo RLLAVE
+Rule 40    params -> ID COLON INT16
+Rule 41    params -> ID COLON INT16 COMA params
+Rule 42    funcion -> FN ID LPAREN params RPAREN LLLAVE metodo RLLAVE
+Rule 43    impresion -> PRINTLN LPAREN valor RPAREN ENDCHAR
+
+Terminals, with rules where they appear
+
+AMPERSAND            : 
+ARROWOPT             : 
+ASYNC                : 
+AWAIT                : 
+BOOL                 : 
+BREAK                : 
+CHAR                 : 
+COLON                : 40 41
+COMA                 : 41
+COMILLA              : 
+CONST                : 11
+CONTINUE             : 
+DAMPERSAND           : 35
+DIFERENTE            : 29
+DIVASIGN             : 
+DIVIDE               : 
+DOLAR                : 
+DOSDOBLEPUNTOS       : 31
+DYN                  : 
+ELSE                 : 
+ENDCHAR              : 9 10 11 31 43
+ENUM                 : 
+ERR                  : 
+EXCLAM               : 33
+EXPECT               : 
+FALSE                : 24 38
+FINAL                : 
+FLOAT32              : 
+FLOAT64              : 
+FLOATTYPE            : 17 17 20
+FN                   : 42
+FOR                  : 
+FORMAT               : 
+FROM                 : 
+HASHMAP              : 
+ID                   : 9 10 11 12 12 22 31 34 34 40 41 42
+IDCHAR               : 13 13 25
+IDENTICO             : 30
+IDSTRING             : 14 14 26
+IF                   : 
+IGUAL                : 9 10 11 31
+IMPL                 : 
+IN                   : 
+INPUT                : 
+INT128               : 
+INT16                : 40 41
+INT32                : 
+INT64                : 
+INT8                 : 
+INTERRO              : 
+INTTYPE              : 15 15 19
+LCOR                 : 
+LET                  : 9 10 31
+LINKEDLIST           : 31
+LLLAVE               : 39 42
+LOOP                 : 39
+LPAREN               : 31 42 43
+MAINFN               : 
+MATCH                : 
+MAYORQUE             : 27
+MENORQUE             : 28
+MINUS                : 
+MOVE                 : 
+MULTIASIGN           : 
+MUT                  : 9 31
+NEW                  : 31
+NINTTYPE             : 16 16 21
+OK                   : 
+OR                   : 36
+PARSE                : 
+PLUS                 : 
+POINT                : 
+POINTERSIZE          : 
+PORCENTAJE           : 
+PRINTLN              : 43
+PRIV                 : 
+PUB                  : 
+RCOR                 : 
+REF                  : 
+RESTAASIGN           : 
+RETURN               : 
+RLLAVE               : 39 42
+RPAREN               : 31 42 43
+SELF                 : 
+SIZEOF               : 
+STATIC               : 
+STR                  : 
+STRING               : 
+STRUCT               : 
+SUMAASIGN            : 
+SUPER                : 
+TIMES                : 
+TRUE                 : 23 37
+TYPE                 : 
+TYPEOF               : 
+UINT128              : 
+UINT16               : 
+UINT32               : 
+UINT64               : 
+UINT8                : 
+UNSAFE               : 
+UNWRAPOR             : 
+USE                  : 
+VEC                  : 
+WHERE                : 
+error                : 
+
+Nonterminals, with rules where they appear
+
+asignacion           : 3
+boolean              : 18 18 32 32 33
+comparacion          : 5
+conectores           : 8
+cuerpo               : 0
+funcion              : 2
+impresion            : 4
+linkedlist           : 6
+loop                 : 7
+metodo               : 1 39 42
+params               : 41 42
+signocompar          : 12 13 14 15 16 17 18
+signoconect          : 32 34
+valor                : 9 10 11 43
+
+Parsing method: LALR
+
+state 0
+
+    (0) S' -> . cuerpo
+    (1) cuerpo -> . metodo
+    (2) cuerpo -> . funcion
+    (3) metodo -> . asignacion
+    (4) metodo -> . impresion
+    (5) metodo -> . comparacion
+    (6) metodo -> . linkedlist
+    (7) metodo -> . loop
+    (8) metodo -> . conectores
+    (42) funcion -> . FN ID LPAREN params RPAREN LLLAVE metodo RLLAVE
+    (9) asignacion -> . LET MUT ID IGUAL valor ENDCHAR
+    (10) asignacion -> . LET ID IGUAL valor ENDCHAR
+    (11) asignacion -> . CONST ID IGUAL valor ENDCHAR
+    (43) impresion -> . PRINTLN LPAREN valor RPAREN ENDCHAR
+    (12) comparacion -> . ID signocompar ID
+    (13) comparacion -> . IDCHAR signocompar IDCHAR
+    (14) comparacion -> . IDSTRING signocompar IDSTRING
+    (15) comparacion -> . INTTYPE signocompar INTTYPE
+    (16) comparacion -> . NINTTYPE signocompar NINTTYPE
+    (17) comparacion -> . FLOATTYPE signocompar FLOATTYPE
+    (18) comparacion -> . boolean signocompar boolean
+    (31) linkedlist -> . LET MUT ID IGUAL LINKEDLIST DOSDOBLEPUNTOS NEW LPAREN RPAREN ENDCHAR
+    (39) loop -> . LOOP LLLAVE metodo RLLAVE
+    (32) conectores -> . boolean signoconect boolean
+    (33) conectores -> . EXCLAM boolean
+    (34) conectores -> . ID signoconect ID
+    (37) boolean -> . TRUE
+    (38) boolean -> . FALSE
+
+    FN              shift and go to state 10
+    LET             shift and go to state 12
+    CONST           shift and go to state 13
+    PRINTLN         shift and go to state 14
+    ID              shift and go to state 11
+    IDCHAR          shift and go to state 15
+    IDSTRING        shift and go to state 16
+    INTTYPE         shift and go to state 17
+    NINTTYPE        shift and go to state 18
+    FLOATTYPE       shift and go to state 19
+    LOOP            shift and go to state 21
+    EXCLAM          shift and go to state 22
+    TRUE            shift and go to state 23
+    FALSE           shift and go to state 24
+
+    cuerpo                         shift and go to state 1
+    metodo                         shift and go to state 2
+    funcion                        shift and go to state 3
+    asignacion                     shift and go to state 4
+    impresion                      shift and go to state 5
+    comparacion                    shift and go to state 6
+    linkedlist                     shift and go to state 7
+    loop                           shift and go to state 8
+    conectores                     shift and go to state 9
+    boolean                        shift and go to state 20
+
+state 1
+
+    (0) S' -> cuerpo .
+
+
+
+state 2
+
+    (1) cuerpo -> metodo .
+
+    $end            reduce using rule 1 (cuerpo -> metodo .)
+
+
+state 3
+
+    (2) cuerpo -> funcion .
+
+    $end            reduce using rule 2 (cuerpo -> funcion .)
+
+
+state 4
+
+    (3) metodo -> asignacion .
+
+    $end            reduce using rule 3 (metodo -> asignacion .)
+    RLLAVE          reduce using rule 3 (metodo -> asignacion .)
+
+
+state 5
+
+    (4) metodo -> impresion .
+
+    $end            reduce using rule 4 (metodo -> impresion .)
+    RLLAVE          reduce using rule 4 (metodo -> impresion .)
+
+
+state 6
+
+    (5) metodo -> comparacion .
+
+    $end            reduce using rule 5 (metodo -> comparacion .)
+    RLLAVE          reduce using rule 5 (metodo -> comparacion .)
+
+
+state 7
+
+    (6) metodo -> linkedlist .
+
+    $end            reduce using rule 6 (metodo -> linkedlist .)
+    RLLAVE          reduce using rule 6 (metodo -> linkedlist .)
+
+
+state 8
+
+    (7) metodo -> loop .
+
+    $end            reduce using rule 7 (metodo -> loop .)
+    RLLAVE          reduce using rule 7 (metodo -> loop .)
+
+
+state 9
+
+    (8) metodo -> conectores .
+
+    $end            reduce using rule 8 (metodo -> conectores .)
+    RLLAVE          reduce using rule 8 (metodo -> conectores .)
+
+
+state 10
+
+    (42) funcion -> FN . ID LPAREN params RPAREN LLLAVE metodo RLLAVE
+
+    ID              shift and go to state 25
+
+
+state 11
+
+    (12) comparacion -> ID . signocompar ID
+    (34) conectores -> ID . signoconect ID
+    (27) signocompar -> . MAYORQUE
+    (28) signocompar -> . MENORQUE
+    (29) signocompar -> . DIFERENTE
+    (30) signocompar -> . IDENTICO
+    (35) signoconect -> . DAMPERSAND
+    (36) signoconect -> . OR
+
+    MAYORQUE        shift and go to state 28
+    MENORQUE        shift and go to state 29
+    DIFERENTE       shift and go to state 30
+    IDENTICO        shift and go to state 31
+    DAMPERSAND      shift and go to state 32
+    OR              shift and go to state 33
+
+    signocompar                    shift and go to state 26
+    signoconect                    shift and go to state 27
+
+state 12
+
+    (9) asignacion -> LET . MUT ID IGUAL valor ENDCHAR
+    (10) asignacion -> LET . ID IGUAL valor ENDCHAR
+    (31) linkedlist -> LET . MUT ID IGUAL LINKEDLIST DOSDOBLEPUNTOS NEW LPAREN RPAREN ENDCHAR
+
+    MUT             shift and go to state 34
+    ID              shift and go to state 35
+
+
+state 13
+
+    (11) asignacion -> CONST . ID IGUAL valor ENDCHAR
+
+    ID              shift and go to state 36
+
+
+state 14
+
+    (43) impresion -> PRINTLN . LPAREN valor RPAREN ENDCHAR
+
+    LPAREN          shift and go to state 37
+
+
+state 15
+
+    (13) comparacion -> IDCHAR . signocompar IDCHAR
+    (27) signocompar -> . MAYORQUE
+    (28) signocompar -> . MENORQUE
+    (29) signocompar -> . DIFERENTE
+    (30) signocompar -> . IDENTICO
+
+    MAYORQUE        shift and go to state 28
+    MENORQUE        shift and go to state 29
+    DIFERENTE       shift and go to state 30
+    IDENTICO        shift and go to state 31
+
+    signocompar                    shift and go to state 38
+
+state 16
+
+    (14) comparacion -> IDSTRING . signocompar IDSTRING
+    (27) signocompar -> . MAYORQUE
+    (28) signocompar -> . MENORQUE
+    (29) signocompar -> . DIFERENTE
+    (30) signocompar -> . IDENTICO
+
+    MAYORQUE        shift and go to state 28
+    MENORQUE        shift and go to state 29
+    DIFERENTE       shift and go to state 30
+    IDENTICO        shift and go to state 31
+
+    signocompar                    shift and go to state 39
+
+state 17
+
+    (15) comparacion -> INTTYPE . signocompar INTTYPE
+    (27) signocompar -> . MAYORQUE
+    (28) signocompar -> . MENORQUE
+    (29) signocompar -> . DIFERENTE
+    (30) signocompar -> . IDENTICO
+
+    MAYORQUE        shift and go to state 28
+    MENORQUE        shift and go to state 29
+    DIFERENTE       shift and go to state 30
+    IDENTICO        shift and go to state 31
+
+    signocompar                    shift and go to state 40
+
+state 18
+
+    (16) comparacion -> NINTTYPE . signocompar NINTTYPE
+    (27) signocompar -> . MAYORQUE
+    (28) signocompar -> . MENORQUE
+    (29) signocompar -> . DIFERENTE
+    (30) signocompar -> . IDENTICO
+
+    MAYORQUE        shift and go to state 28
+    MENORQUE        shift and go to state 29
+    DIFERENTE       shift and go to state 30
+    IDENTICO        shift and go to state 31
+
+    signocompar                    shift and go to state 41
+
+state 19
+
+    (17) comparacion -> FLOATTYPE . signocompar FLOATTYPE
+    (27) signocompar -> . MAYORQUE
+    (28) signocompar -> . MENORQUE
+    (29) signocompar -> . DIFERENTE
+    (30) signocompar -> . IDENTICO
+
+    MAYORQUE        shift and go to state 28
+    MENORQUE        shift and go to state 29
+    DIFERENTE       shift and go to state 30
+    IDENTICO        shift and go to state 31
+
+    signocompar                    shift and go to state 42
+
+state 20
+
+    (18) comparacion -> boolean . signocompar boolean
+    (32) conectores -> boolean . signoconect boolean
+    (27) signocompar -> . MAYORQUE
+    (28) signocompar -> . MENORQUE
+    (29) signocompar -> . DIFERENTE
+    (30) signocompar -> . IDENTICO
+    (35) signoconect -> . DAMPERSAND
+    (36) signoconect -> . OR
+
+    MAYORQUE        shift and go to state 28
+    MENORQUE        shift and go to state 29
+    DIFERENTE       shift and go to state 30
+    IDENTICO        shift and go to state 31
+    DAMPERSAND      shift and go to state 32
+    OR              shift and go to state 33
+
+    signocompar                    shift and go to state 43
+    signoconect                    shift and go to state 44
+
+state 21
+
+    (39) loop -> LOOP . LLLAVE metodo RLLAVE
+
+    LLLAVE          shift and go to state 45
+
+
+state 22
+
+    (33) conectores -> EXCLAM . boolean
+    (37) boolean -> . TRUE
+    (38) boolean -> . FALSE
+
+    TRUE            shift and go to state 23
+    FALSE           shift and go to state 24
+
+    boolean                        shift and go to state 46
+
+state 23
+
+    (37) boolean -> TRUE .
+
+    MAYORQUE        reduce using rule 37 (boolean -> TRUE .)
+    MENORQUE        reduce using rule 37 (boolean -> TRUE .)
+    DIFERENTE       reduce using rule 37 (boolean -> TRUE .)
+    IDENTICO        reduce using rule 37 (boolean -> TRUE .)
+    DAMPERSAND      reduce using rule 37 (boolean -> TRUE .)
+    OR              reduce using rule 37 (boolean -> TRUE .)
+    $end            reduce using rule 37 (boolean -> TRUE .)
+    RLLAVE          reduce using rule 37 (boolean -> TRUE .)
+
+
+state 24
+
+    (38) boolean -> FALSE .
+
+    MAYORQUE        reduce using rule 38 (boolean -> FALSE .)
+    MENORQUE        reduce using rule 38 (boolean -> FALSE .)
+    DIFERENTE       reduce using rule 38 (boolean -> FALSE .)
+    IDENTICO        reduce using rule 38 (boolean -> FALSE .)
+    DAMPERSAND      reduce using rule 38 (boolean -> FALSE .)
+    OR              reduce using rule 38 (boolean -> FALSE .)
+    $end            reduce using rule 38 (boolean -> FALSE .)
+    RLLAVE          reduce using rule 38 (boolean -> FALSE .)
+
+
+state 25
+
+    (42) funcion -> FN ID . LPAREN params RPAREN LLLAVE metodo RLLAVE
+
+    LPAREN          shift and go to state 47
+
+
+state 26
+
+    (12) comparacion -> ID signocompar . ID
+
+    ID              shift and go to state 48
+
+
+state 27
+
+    (34) conectores -> ID signoconect . ID
+
+    ID              shift and go to state 49
+
+
+state 28
+
+    (27) signocompar -> MAYORQUE .
+
+    ID              reduce using rule 27 (signocompar -> MAYORQUE .)
+    IDCHAR          reduce using rule 27 (signocompar -> MAYORQUE .)
+    IDSTRING        reduce using rule 27 (signocompar -> MAYORQUE .)
+    INTTYPE         reduce using rule 27 (signocompar -> MAYORQUE .)
+    NINTTYPE        reduce using rule 27 (signocompar -> MAYORQUE .)
+    FLOATTYPE       reduce using rule 27 (signocompar -> MAYORQUE .)
+    TRUE            reduce using rule 27 (signocompar -> MAYORQUE .)
+    FALSE           reduce using rule 27 (signocompar -> MAYORQUE .)
+
+
+state 29
+
+    (28) signocompar -> MENORQUE .
+
+    ID              reduce using rule 28 (signocompar -> MENORQUE .)
+    IDCHAR          reduce using rule 28 (signocompar -> MENORQUE .)
+    IDSTRING        reduce using rule 28 (signocompar -> MENORQUE .)
+    INTTYPE         reduce using rule 28 (signocompar -> MENORQUE .)
+    NINTTYPE        reduce using rule 28 (signocompar -> MENORQUE .)
+    FLOATTYPE       reduce using rule 28 (signocompar -> MENORQUE .)
+    TRUE            reduce using rule 28 (signocompar -> MENORQUE .)
+    FALSE           reduce using rule 28 (signocompar -> MENORQUE .)
+
+
+state 30
+
+    (29) signocompar -> DIFERENTE .
+
+    ID              reduce using rule 29 (signocompar -> DIFERENTE .)
+    IDCHAR          reduce using rule 29 (signocompar -> DIFERENTE .)
+    IDSTRING        reduce using rule 29 (signocompar -> DIFERENTE .)
+    INTTYPE         reduce using rule 29 (signocompar -> DIFERENTE .)
+    NINTTYPE        reduce using rule 29 (signocompar -> DIFERENTE .)
+    FLOATTYPE       reduce using rule 29 (signocompar -> DIFERENTE .)
+    TRUE            reduce using rule 29 (signocompar -> DIFERENTE .)
+    FALSE           reduce using rule 29 (signocompar -> DIFERENTE .)
+
+
+state 31
+
+    (30) signocompar -> IDENTICO .
+
+    ID              reduce using rule 30 (signocompar -> IDENTICO .)
+    IDCHAR          reduce using rule 30 (signocompar -> IDENTICO .)
+    IDSTRING        reduce using rule 30 (signocompar -> IDENTICO .)
+    INTTYPE         reduce using rule 30 (signocompar -> IDENTICO .)
+    NINTTYPE        reduce using rule 30 (signocompar -> IDENTICO .)
+    FLOATTYPE       reduce using rule 30 (signocompar -> IDENTICO .)
+    TRUE            reduce using rule 30 (signocompar -> IDENTICO .)
+    FALSE           reduce using rule 30 (signocompar -> IDENTICO .)
+
+
+state 32
+
+    (35) signoconect -> DAMPERSAND .
+
+    ID              reduce using rule 35 (signoconect -> DAMPERSAND .)
+    TRUE            reduce using rule 35 (signoconect -> DAMPERSAND .)
+    FALSE           reduce using rule 35 (signoconect -> DAMPERSAND .)
+
+
+state 33
+
+    (36) signoconect -> OR .
+
+    ID              reduce using rule 36 (signoconect -> OR .)
+    TRUE            reduce using rule 36 (signoconect -> OR .)
+    FALSE           reduce using rule 36 (signoconect -> OR .)
+
+
+state 34
+
+    (9) asignacion -> LET MUT . ID IGUAL valor ENDCHAR
+    (31) linkedlist -> LET MUT . ID IGUAL LINKEDLIST DOSDOBLEPUNTOS NEW LPAREN RPAREN ENDCHAR
+
+    ID              shift and go to state 50
+
+
+state 35
+
+    (10) asignacion -> LET ID . IGUAL valor ENDCHAR
+
+    IGUAL           shift and go to state 51
+
+
+state 36
+
+    (11) asignacion -> CONST ID . IGUAL valor ENDCHAR
+
+    IGUAL           shift and go to state 52
+
+
+state 37
+
+    (43) impresion -> PRINTLN LPAREN . valor RPAREN ENDCHAR
+    (19) valor -> . INTTYPE
+    (20) valor -> . FLOATTYPE
+    (21) valor -> . NINTTYPE
+    (22) valor -> . ID
+    (23) valor -> . TRUE
+    (24) valor -> . FALSE
+    (25) valor -> . IDCHAR
+    (26) valor -> . IDSTRING
+
+    INTTYPE         shift and go to state 54
+    FLOATTYPE       shift and go to state 55
+    NINTTYPE        shift and go to state 56
+    ID              shift and go to state 57
+    TRUE            shift and go to state 58
+    FALSE           shift and go to state 59
+    IDCHAR          shift and go to state 60
+    IDSTRING        shift and go to state 61
+
+    valor                          shift and go to state 53
+
+state 38
+
+    (13) comparacion -> IDCHAR signocompar . IDCHAR
+
+    IDCHAR          shift and go to state 62
+
+
+state 39
+
+    (14) comparacion -> IDSTRING signocompar . IDSTRING
+
+    IDSTRING        shift and go to state 63
+
+
+state 40
+
+    (15) comparacion -> INTTYPE signocompar . INTTYPE
+
+    INTTYPE         shift and go to state 64
+
+
+state 41
+
+    (16) comparacion -> NINTTYPE signocompar . NINTTYPE
+
+    NINTTYPE        shift and go to state 65
+
+
+state 42
+
+    (17) comparacion -> FLOATTYPE signocompar . FLOATTYPE
+
+    FLOATTYPE       shift and go to state 66
+
+
+state 43
+
+    (18) comparacion -> boolean signocompar . boolean
+    (37) boolean -> . TRUE
+    (38) boolean -> . FALSE
+
+    TRUE            shift and go to state 23
+    FALSE           shift and go to state 24
+
+    boolean                        shift and go to state 67
+
+state 44
+
+    (32) conectores -> boolean signoconect . boolean
+    (37) boolean -> . TRUE
+    (38) boolean -> . FALSE
+
+    TRUE            shift and go to state 23
+    FALSE           shift and go to state 24
+
+    boolean                        shift and go to state 68
+
+state 45
+
+    (39) loop -> LOOP LLLAVE . metodo RLLAVE
+    (3) metodo -> . asignacion
+    (4) metodo -> . impresion
+    (5) metodo -> . comparacion
+    (6) metodo -> . linkedlist
+    (7) metodo -> . loop
+    (8) metodo -> . conectores
+    (9) asignacion -> . LET MUT ID IGUAL valor ENDCHAR
+    (10) asignacion -> . LET ID IGUAL valor ENDCHAR
+    (11) asignacion -> . CONST ID IGUAL valor ENDCHAR
+    (43) impresion -> . PRINTLN LPAREN valor RPAREN ENDCHAR
+    (12) comparacion -> . ID signocompar ID
+    (13) comparacion -> . IDCHAR signocompar IDCHAR
+    (14) comparacion -> . IDSTRING signocompar IDSTRING
+    (15) comparacion -> . INTTYPE signocompar INTTYPE
+    (16) comparacion -> . NINTTYPE signocompar NINTTYPE
+    (17) comparacion -> . FLOATTYPE signocompar FLOATTYPE
+    (18) comparacion -> . boolean signocompar boolean
+    (31) linkedlist -> . LET MUT ID IGUAL LINKEDLIST DOSDOBLEPUNTOS NEW LPAREN RPAREN ENDCHAR
+    (39) loop -> . LOOP LLLAVE metodo RLLAVE
+    (32) conectores -> . boolean signoconect boolean
+    (33) conectores -> . EXCLAM boolean
+    (34) conectores -> . ID signoconect ID
+    (37) boolean -> . TRUE
+    (38) boolean -> . FALSE
+
+    LET             shift and go to state 12
+    CONST           shift and go to state 13
+    PRINTLN         shift and go to state 14
+    ID              shift and go to state 11
+    IDCHAR          shift and go to state 15
+    IDSTRING        shift and go to state 16
+    INTTYPE         shift and go to state 17
+    NINTTYPE        shift and go to state 18
+    FLOATTYPE       shift and go to state 19
+    LOOP            shift and go to state 21
+    EXCLAM          shift and go to state 22
+    TRUE            shift and go to state 23
+    FALSE           shift and go to state 24
+
+    metodo                         shift and go to state 69
+    asignacion                     shift and go to state 4
+    impresion                      shift and go to state 5
+    comparacion                    shift and go to state 6
+    linkedlist                     shift and go to state 7
+    loop                           shift and go to state 8
+    conectores                     shift and go to state 9
+    boolean                        shift and go to state 20
+
+state 46
+
+    (33) conectores -> EXCLAM boolean .
+
+    $end            reduce using rule 33 (conectores -> EXCLAM boolean .)
+    RLLAVE          reduce using rule 33 (conectores -> EXCLAM boolean .)
+
+
+state 47
+
+    (42) funcion -> FN ID LPAREN . params RPAREN LLLAVE metodo RLLAVE
+    (40) params -> . ID COLON INT16
+    (41) params -> . ID COLON INT16 COMA params
+
+    ID              shift and go to state 70
+
+    params                         shift and go to state 71
+
+state 48
+
+    (12) comparacion -> ID signocompar ID .
+
+    $end            reduce using rule 12 (comparacion -> ID signocompar ID .)
+    RLLAVE          reduce using rule 12 (comparacion -> ID signocompar ID .)
+
+
+state 49
+
+    (34) conectores -> ID signoconect ID .
+
+    $end            reduce using rule 34 (conectores -> ID signoconect ID .)
+    RLLAVE          reduce using rule 34 (conectores -> ID signoconect ID .)
+
+
+state 50
+
+    (9) asignacion -> LET MUT ID . IGUAL valor ENDCHAR
+    (31) linkedlist -> LET MUT ID . IGUAL LINKEDLIST DOSDOBLEPUNTOS NEW LPAREN RPAREN ENDCHAR
+
+    IGUAL           shift and go to state 72
+
+
+state 51
+
+    (10) asignacion -> LET ID IGUAL . valor ENDCHAR
+    (19) valor -> . INTTYPE
+    (20) valor -> . FLOATTYPE
+    (21) valor -> . NINTTYPE
+    (22) valor -> . ID
+    (23) valor -> . TRUE
+    (24) valor -> . FALSE
+    (25) valor -> . IDCHAR
+    (26) valor -> . IDSTRING
+
+    INTTYPE         shift and go to state 54
+    FLOATTYPE       shift and go to state 55
+    NINTTYPE        shift and go to state 56
+    ID              shift and go to state 57
+    TRUE            shift and go to state 58
+    FALSE           shift and go to state 59
+    IDCHAR          shift and go to state 60
+    IDSTRING        shift and go to state 61
+
+    valor                          shift and go to state 73
+
+state 52
+
+    (11) asignacion -> CONST ID IGUAL . valor ENDCHAR
+    (19) valor -> . INTTYPE
+    (20) valor -> . FLOATTYPE
+    (21) valor -> . NINTTYPE
+    (22) valor -> . ID
+    (23) valor -> . TRUE
+    (24) valor -> . FALSE
+    (25) valor -> . IDCHAR
+    (26) valor -> . IDSTRING
+
+    INTTYPE         shift and go to state 54
+    FLOATTYPE       shift and go to state 55
+    NINTTYPE        shift and go to state 56
+    ID              shift and go to state 57
+    TRUE            shift and go to state 58
+    FALSE           shift and go to state 59
+    IDCHAR          shift and go to state 60
+    IDSTRING        shift and go to state 61
+
+    valor                          shift and go to state 74
+
+state 53
+
+    (43) impresion -> PRINTLN LPAREN valor . RPAREN ENDCHAR
+
+    RPAREN          shift and go to state 75
+
+
+state 54
+
+    (19) valor -> INTTYPE .
+
+    RPAREN          reduce using rule 19 (valor -> INTTYPE .)
+    ENDCHAR         reduce using rule 19 (valor -> INTTYPE .)
+
+
+state 55
+
+    (20) valor -> FLOATTYPE .
+
+    RPAREN          reduce using rule 20 (valor -> FLOATTYPE .)
+    ENDCHAR         reduce using rule 20 (valor -> FLOATTYPE .)
+
+
+state 56
+
+    (21) valor -> NINTTYPE .
+
+    RPAREN          reduce using rule 21 (valor -> NINTTYPE .)
+    ENDCHAR         reduce using rule 21 (valor -> NINTTYPE .)
+
+
+state 57
+
+    (22) valor -> ID .
+
+    RPAREN          reduce using rule 22 (valor -> ID .)
+    ENDCHAR         reduce using rule 22 (valor -> ID .)
+
+
+state 58
+
+    (23) valor -> TRUE .
+
+    RPAREN          reduce using rule 23 (valor -> TRUE .)
+    ENDCHAR         reduce using rule 23 (valor -> TRUE .)
+
+
+state 59
+
+    (24) valor -> FALSE .
+
+    RPAREN          reduce using rule 24 (valor -> FALSE .)
+    ENDCHAR         reduce using rule 24 (valor -> FALSE .)
+
+
+state 60
+
+    (25) valor -> IDCHAR .
+
+    RPAREN          reduce using rule 25 (valor -> IDCHAR .)
+    ENDCHAR         reduce using rule 25 (valor -> IDCHAR .)
+
+
+state 61
+
+    (26) valor -> IDSTRING .
+
+    RPAREN          reduce using rule 26 (valor -> IDSTRING .)
+    ENDCHAR         reduce using rule 26 (valor -> IDSTRING .)
+
+
+state 62
+
+    (13) comparacion -> IDCHAR signocompar IDCHAR .
+
+    $end            reduce using rule 13 (comparacion -> IDCHAR signocompar IDCHAR .)
+    RLLAVE          reduce using rule 13 (comparacion -> IDCHAR signocompar IDCHAR .)
+
+
+state 63
+
+    (14) comparacion -> IDSTRING signocompar IDSTRING .
+
+    $end            reduce using rule 14 (comparacion -> IDSTRING signocompar IDSTRING .)
+    RLLAVE          reduce using rule 14 (comparacion -> IDSTRING signocompar IDSTRING .)
+
+
+state 64
+
+    (15) comparacion -> INTTYPE signocompar INTTYPE .
+
+    $end            reduce using rule 15 (comparacion -> INTTYPE signocompar INTTYPE .)
+    RLLAVE          reduce using rule 15 (comparacion -> INTTYPE signocompar INTTYPE .)
+
+
+state 65
+
+    (16) comparacion -> NINTTYPE signocompar NINTTYPE .
+
+    $end            reduce using rule 16 (comparacion -> NINTTYPE signocompar NINTTYPE .)
+    RLLAVE          reduce using rule 16 (comparacion -> NINTTYPE signocompar NINTTYPE .)
+
+
+state 66
+
+    (17) comparacion -> FLOATTYPE signocompar FLOATTYPE .
+
+    $end            reduce using rule 17 (comparacion -> FLOATTYPE signocompar FLOATTYPE .)
+    RLLAVE          reduce using rule 17 (comparacion -> FLOATTYPE signocompar FLOATTYPE .)
+
+
+state 67
+
+    (18) comparacion -> boolean signocompar boolean .
+
+    $end            reduce using rule 18 (comparacion -> boolean signocompar boolean .)
+    RLLAVE          reduce using rule 18 (comparacion -> boolean signocompar boolean .)
+
+
+state 68
+
+    (32) conectores -> boolean signoconect boolean .
+
+    $end            reduce using rule 32 (conectores -> boolean signoconect boolean .)
+    RLLAVE          reduce using rule 32 (conectores -> boolean signoconect boolean .)
+
+
+state 69
+
+    (39) loop -> LOOP LLLAVE metodo . RLLAVE
+
+    RLLAVE          shift and go to state 76
+
+
+state 70
+
+    (40) params -> ID . COLON INT16
+    (41) params -> ID . COLON INT16 COMA params
+
+    COLON           shift and go to state 77
+
+
+state 71
+
+    (42) funcion -> FN ID LPAREN params . RPAREN LLLAVE metodo RLLAVE
+
+    RPAREN          shift and go to state 78
+
+
+state 72
+
+    (9) asignacion -> LET MUT ID IGUAL . valor ENDCHAR
+    (31) linkedlist -> LET MUT ID IGUAL . LINKEDLIST DOSDOBLEPUNTOS NEW LPAREN RPAREN ENDCHAR
+    (19) valor -> . INTTYPE
+    (20) valor -> . FLOATTYPE
+    (21) valor -> . NINTTYPE
+    (22) valor -> . ID
+    (23) valor -> . TRUE
+    (24) valor -> . FALSE
+    (25) valor -> . IDCHAR
+    (26) valor -> . IDSTRING
+
+    LINKEDLIST      shift and go to state 80
+    INTTYPE         shift and go to state 54
+    FLOATTYPE       shift and go to state 55
+    NINTTYPE        shift and go to state 56
+    ID              shift and go to state 57
+    TRUE            shift and go to state 58
+    FALSE           shift and go to state 59
+    IDCHAR          shift and go to state 60
+    IDSTRING        shift and go to state 61
+
+    valor                          shift and go to state 79
+
+state 73
+
+    (10) asignacion -> LET ID IGUAL valor . ENDCHAR
+
+    ENDCHAR         shift and go to state 81
+
+
+state 74
+
+    (11) asignacion -> CONST ID IGUAL valor . ENDCHAR
+
+    ENDCHAR         shift and go to state 82
+
+
+state 75
+
+    (43) impresion -> PRINTLN LPAREN valor RPAREN . ENDCHAR
+
+    ENDCHAR         shift and go to state 83
+
+
+state 76
+
+    (39) loop -> LOOP LLLAVE metodo RLLAVE .
+
+    $end            reduce using rule 39 (loop -> LOOP LLLAVE metodo RLLAVE .)
+    RLLAVE          reduce using rule 39 (loop -> LOOP LLLAVE metodo RLLAVE .)
+
+
+state 77
+
+    (40) params -> ID COLON . INT16
+    (41) params -> ID COLON . INT16 COMA params
+
+    INT16           shift and go to state 84
+
+
+state 78
+
+    (42) funcion -> FN ID LPAREN params RPAREN . LLLAVE metodo RLLAVE
+
+    LLLAVE          shift and go to state 85
+
+
+state 79
+
+    (9) asignacion -> LET MUT ID IGUAL valor . ENDCHAR
+
+    ENDCHAR         shift and go to state 86
+
+
+state 80
+
+    (31) linkedlist -> LET MUT ID IGUAL LINKEDLIST . DOSDOBLEPUNTOS NEW LPAREN RPAREN ENDCHAR
+
+    DOSDOBLEPUNTOS  shift and go to state 87
+
+
+state 81
+
+    (10) asignacion -> LET ID IGUAL valor ENDCHAR .
+
+    $end            reduce using rule 10 (asignacion -> LET ID IGUAL valor ENDCHAR .)
+    RLLAVE          reduce using rule 10 (asignacion -> LET ID IGUAL valor ENDCHAR .)
+
+
+state 82
+
+    (11) asignacion -> CONST ID IGUAL valor ENDCHAR .
+
+    $end            reduce using rule 11 (asignacion -> CONST ID IGUAL valor ENDCHAR .)
+    RLLAVE          reduce using rule 11 (asignacion -> CONST ID IGUAL valor ENDCHAR .)
+
+
+state 83
+
+    (43) impresion -> PRINTLN LPAREN valor RPAREN ENDCHAR .
+
+    $end            reduce using rule 43 (impresion -> PRINTLN LPAREN valor RPAREN ENDCHAR .)
+    RLLAVE          reduce using rule 43 (impresion -> PRINTLN LPAREN valor RPAREN ENDCHAR .)
+
+
+state 84
+
+    (40) params -> ID COLON INT16 .
+    (41) params -> ID COLON INT16 . COMA params
+
+    RPAREN          reduce using rule 40 (params -> ID COLON INT16 .)
+    COMA            shift and go to state 88
+
+
+state 85
+
+    (42) funcion -> FN ID LPAREN params RPAREN LLLAVE . metodo RLLAVE
+    (3) metodo -> . asignacion
+    (4) metodo -> . impresion
+    (5) metodo -> . comparacion
+    (6) metodo -> . linkedlist
+    (7) metodo -> . loop
+    (8) metodo -> . conectores
+    (9) asignacion -> . LET MUT ID IGUAL valor ENDCHAR
+    (10) asignacion -> . LET ID IGUAL valor ENDCHAR
+    (11) asignacion -> . CONST ID IGUAL valor ENDCHAR
+    (43) impresion -> . PRINTLN LPAREN valor RPAREN ENDCHAR
+    (12) comparacion -> . ID signocompar ID
+    (13) comparacion -> . IDCHAR signocompar IDCHAR
+    (14) comparacion -> . IDSTRING signocompar IDSTRING
+    (15) comparacion -> . INTTYPE signocompar INTTYPE
+    (16) comparacion -> . NINTTYPE signocompar NINTTYPE
+    (17) comparacion -> . FLOATTYPE signocompar FLOATTYPE
+    (18) comparacion -> . boolean signocompar boolean
+    (31) linkedlist -> . LET MUT ID IGUAL LINKEDLIST DOSDOBLEPUNTOS NEW LPAREN RPAREN ENDCHAR
+    (39) loop -> . LOOP LLLAVE metodo RLLAVE
+    (32) conectores -> . boolean signoconect boolean
+    (33) conectores -> . EXCLAM boolean
+    (34) conectores -> . ID signoconect ID
+    (37) boolean -> . TRUE
+    (38) boolean -> . FALSE
+
+    LET             shift and go to state 12
+    CONST           shift and go to state 13
+    PRINTLN         shift and go to state 14
+    ID              shift and go to state 11
+    IDCHAR          shift and go to state 15
+    IDSTRING        shift and go to state 16
+    INTTYPE         shift and go to state 17
+    NINTTYPE        shift and go to state 18
+    FLOATTYPE       shift and go to state 19
+    LOOP            shift and go to state 21
+    EXCLAM          shift and go to state 22
+    TRUE            shift and go to state 23
+    FALSE           shift and go to state 24
+
+    metodo                         shift and go to state 89
+    asignacion                     shift and go to state 4
+    impresion                      shift and go to state 5
+    comparacion                    shift and go to state 6
+    linkedlist                     shift and go to state 7
+    loop                           shift and go to state 8
+    conectores                     shift and go to state 9
+    boolean                        shift and go to state 20
+
+state 86
+
+    (9) asignacion -> LET MUT ID IGUAL valor ENDCHAR .
+
+    $end            reduce using rule 9 (asignacion -> LET MUT ID IGUAL valor ENDCHAR .)
+    RLLAVE          reduce using rule 9 (asignacion -> LET MUT ID IGUAL valor ENDCHAR .)
+
+
+state 87
+
+    (31) linkedlist -> LET MUT ID IGUAL LINKEDLIST DOSDOBLEPUNTOS . NEW LPAREN RPAREN ENDCHAR
+
+    NEW             shift and go to state 90
+
+
+state 88
+
+    (41) params -> ID COLON INT16 COMA . params
+    (40) params -> . ID COLON INT16
+    (41) params -> . ID COLON INT16 COMA params
+
+    ID              shift and go to state 70
+
+    params                         shift and go to state 91
+
+state 89
+
+    (42) funcion -> FN ID LPAREN params RPAREN LLLAVE metodo . RLLAVE
+
+    RLLAVE          shift and go to state 92
+
+
+state 90
+
+    (31) linkedlist -> LET MUT ID IGUAL LINKEDLIST DOSDOBLEPUNTOS NEW . LPAREN RPAREN ENDCHAR
+
+    LPAREN          shift and go to state 93
+
+
+state 91
+
+    (41) params -> ID COLON INT16 COMA params .
+
+    RPAREN          reduce using rule 41 (params -> ID COLON INT16 COMA params .)
+
+
+state 92
+
+    (42) funcion -> FN ID LPAREN params RPAREN LLLAVE metodo RLLAVE .
+
+    $end            reduce using rule 42 (funcion -> FN ID LPAREN params RPAREN LLLAVE metodo RLLAVE .)
+
+
+state 93
+
+    (31) linkedlist -> LET MUT ID IGUAL LINKEDLIST DOSDOBLEPUNTOS NEW LPAREN . RPAREN ENDCHAR
+
+    RPAREN          shift and go to state 94
+
+
+state 94
+
+    (31) linkedlist -> LET MUT ID IGUAL LINKEDLIST DOSDOBLEPUNTOS NEW LPAREN RPAREN . ENDCHAR
+
+    ENDCHAR         shift and go to state 95
+
+
+state 95
+
+    (31) linkedlist -> LET MUT ID IGUAL LINKEDLIST DOSDOBLEPUNTOS NEW LPAREN RPAREN ENDCHAR .
+
+    $end            reduce using rule 31 (linkedlist -> LET MUT ID IGUAL LINKEDLIST DOSDOBLEPUNTOS NEW LPAREN RPAREN ENDCHAR .)
+    RLLAVE          reduce using rule 31 (linkedlist -> LET MUT ID IGUAL LINKEDLIST DOSDOBLEPUNTOS NEW LPAREN RPAREN ENDCHAR .)
+

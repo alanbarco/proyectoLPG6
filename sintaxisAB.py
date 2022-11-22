@@ -22,7 +22,7 @@ def p_asignacion(p):
 
 def p_comparacion_id(p):
   '''comparacion : ID signocompar ID
-  | IDCHAR signocompar IDCHAR
+  | IDCHAR signocompar IDCHAR 
   | IDSTRING signocompar IDSTRING'''
   
 def p_comparacion_int(p):
