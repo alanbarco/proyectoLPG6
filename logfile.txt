@@ -1,0 +1,41 @@
+-------------------------
+Entrada: 'let' Timestamp: 2022-11-21 18:43:09.951520-05:00
+ 
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'let a = false 20 true' Timestamp: 2022-11-21 18:43:09.951520-05:00
+Error de sintaxis - Token: INTTYPE, Línea: 1, Col: 14
+Error de sintaxis - Token: TRUE, Línea: 1, Col: 17
+ 
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'loop{let mut a=20;}' Timestamp: 2022-11-21 18:43:09.951520-05:00
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'hola > hola' Timestamp: 2022-11-21 18:49:16.005050-05:00
+Resultado: None
+-------------------------
+-------------------------
+Entrada: '' Timestamp: 2022-11-21 18:49:16.005050-05:00
+-------------------------
+Entrada: ''cadena' <'cadena' Timestamp: 2022-11-21 18:49:16.005050-05:00
+Error de sintaxis - Token: COMILLA, Línea: 1, Col: 0
+Error de sintaxis - Token: COMILLA, Línea: 1, Col: 7
+Error de sintaxis - Token: COMILLA, Línea: 1, Col: 10
+Resultado: None
+-------------------------
+-------------------------
+Entrada: ''cadena' < 'cadena'' Timestamp: 2022-11-21 18:49:16.005050-05:00
+Error de sintaxis - Token: COMILLA, Línea: 1, Col: 0
+Error de sintaxis - Token: COMILLA, Línea: 1, Col: 7
+Error de sintaxis - Token: COMILLA, Línea: 1, Col: 11
+Error de sintaxis - Token: COMILLA, Línea: 1, Col: 18
+Resultado: None
+-------------------------
+-------------------------
+Entrada: '"cadena " > "cadena "' Timestamp: 2022-11-21 18:49:16.005050-05:00
+Resultado: None
+-------------------------
