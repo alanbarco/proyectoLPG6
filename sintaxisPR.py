@@ -2,16 +2,16 @@
 
 #Asignacion con let mut
 def p_asignacion_let_mut(p):
-  '''asignacion : LET MUT ID IGUAL valor ENDCHAR
+  '''asignacion : LET MUT ID IGUAL valorPam ENDCHAR
   | LET MUT ID IGUAL estructuras ENDCHAR'''
 
 #Asignacion con let
 def p_asignacion_let(p):
-  '''asignacion : LET ID IGUAL valor ENDCHAR'''
+  '''asignacion : LET ID IGUAL valorPam ENDCHAR'''
 
 #Conjunto de tipos de datos de asignacion
-def p_valor(p):
-  '''valor : valornumerico
+def p_valorPam(p):
+  '''valorPam : valornumerico
   | TRUE
   | FALSE
   | ID

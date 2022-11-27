@@ -1119,3 +1119,250 @@ Resultado: None
 Entrada: 'while (n<3.9) { println!("Hola");}' Timestamp: 2022-11-21 23:42:00.478514-05:00
 Resultado: None
 -------------------------
+-------------------------
+Entrada: '2>2' Timestamp: 2022-11-25 09:01:26.614529-05:00
+Error de sintaxis - Token: INTTYPE, Línea: 1, Col: 0
+Error de sintaxis - Token: MAYORQUE, Línea: 1, Col: 1
+Error de sintaxis - Token: INTTYPE, Línea: 1, Col: 2
+ 
+Resultado: None
+-------------------------
+-------------------------
+Entrada: '2>2;' Timestamp: 2022-11-25 09:01:26.614529-05:00
+Error de sintaxis - Token: INTTYPE, Línea: 1, Col: 0
+Error de sintaxis - Token: MAYORQUE, Línea: 1, Col: 1
+Error de sintaxis - Token: INTTYPE, Línea: 1, Col: 2
+Error de sintaxis - Token: ENDCHAR, Línea: 1, Col: 3
+ 
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'let mut a =20;' Timestamp: 2022-11-25 09:01:26.614529-05:00
+Resultado: None
+-------------------------
+-------------------------
+Entrada: '3 < 3' Timestamp: 2022-11-25 09:01:26.614529-05:00
+Error de sintaxis - Token: INTTYPE, Línea: 1, Col: 0
+Error de sintaxis - Token: MENORQUE, Línea: 1, Col: 2
+Error de sintaxis - Token: INTTYPE, Línea: 1, Col: 4
+ 
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'true < false' Timestamp: 2022-11-25 09:01:26.614529-05:00
+Error de sintaxis - Token: TRUE, Línea: 1, Col: 0
+Error de sintaxis - Token: MENORQUE, Línea: 1, Col: 5
+Error de sintaxis - Token: FALSE, Línea: 1, Col: 7
+ 
+Resultado: None
+-------------------------
+-------------------------
+Entrada: '2 < 2' Timestamp: 2022-11-25 09:01:26.614529-05:00
+Error de sintaxis - Token: INTTYPE, Línea: 1, Col: 0
+Error de sintaxis - Token: MENORQUE, Línea: 1, Col: 2
+Error de sintaxis - Token: INTTYPE, Línea: 1, Col: 4
+ 
+Resultado: None
+-------------------------
+-------------------------
+Entrada: '2>2' Timestamp: 2022-11-25 09:01:26.614529-05:00
+Error de sintaxis - Token: INTTYPE, Línea: 1, Col: 0
+Error de sintaxis - Token: MAYORQUE, Línea: 1, Col: 1
+Error de sintaxis - Token: INTTYPE, Línea: 1, Col: 2
+ 
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'python -u "c:\Users\DARIO\Desktop\Universidad\SEMESTRE VII\Lenguajes Programación\proyectoLPG6\sintaxisAB.py"' Timestamp: 2022-11-25 09:01:26.614529-05:00
+Error de sintaxis - Token: ID, Línea: 1, Col: 0
+Error de sintaxis - Token: MINUS, Línea: 1, Col: 7
+Error de sintaxis - Token: ID, Línea: 1, Col: 8
+Error de sintaxis - Token: IDSTRING, Línea: 1, Col: 10
+ 
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'python -u "c:\Users\DARIO\Desktop\Universidad\SEMESTRE VII\Lenguajes Programación\proyectoLPG6\sintaxisAB.py"' Timestamp: 2022-11-25 09:01:26.614529-05:00
+Error de sintaxis - Token: ID, Línea: 1, Col: 0
+Error de sintaxis - Token: MINUS, Línea: 1, Col: 7
+Error de sintaxis - Token: ID, Línea: 1, Col: 8
+Error de sintaxis - Token: IDSTRING, Línea: 1, Col: 10
+ 
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'python -u "c:\Users\DARIO\Desktop\Universidad\SEMESTRE VII\Lenguajes Programación\proyectoLPG6\sintaxisAB.py"' Timestamp: 2022-11-25 09:01:26.614529-05:00
+Error de sintaxis - Token: ID, Línea: 1, Col: 0
+Error de sintaxis - Token: MINUS, Línea: 1, Col: 7
+Error de sintaxis - Token: ID, Línea: 1, Col: 8
+Error de sintaxis - Token: IDSTRING, Línea: 1, Col: 10
+ 
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'python -u "c:\Users\DARIO\Desktop\Universidad\SEMESTRE VII\Lenguajes Programación\proyectoLPG6\main.py"' Timestamp: 2022-11-25 09:07:27.344033-05:00
+Error de sintaxis - Token: ID, Línea: 1, Col: 0
+Error de sintaxis - Token: MINUS, Línea: 1, Col: 7
+Error de sintaxis - Token: ID, Línea: 1, Col: 8
+Error de sintaxis - Token: IDSTRING, Línea: 1, Col: 10
+ 
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'python -u "c:\Users\DARIO\Desktop\Universidad\SEMESTRE VII\Lenguajes Programación\proyectoLPG6\main.py"' Timestamp: 2022-11-25 09:07:27.344033-05:00
+Error de sintaxis - Token: ID, Línea: 1, Col: 0
+Error de sintaxis - Token: MINUS, Línea: 1, Col: 7
+Error de sintaxis - Token: ID, Línea: 1, Col: 8
+Error de sintaxis - Token: IDSTRING, Línea: 1, Col: 10
+ 
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'python -u "c:\Users\DARIO\Desktop\Universidad\SEMESTRE VII\Lenguajes Programación\proyectoLPG6\main.py"' Timestamp: 2022-11-25 09:07:27.344033-05:00
+Error de sintaxis - Token: ID, Línea: 1, Col: 0
+Error de sintaxis - Token: MINUS, Línea: 1, Col: 7
+Error de sintaxis - Token: ID, Línea: 1, Col: 8
+Error de sintaxis - Token: IDSTRING, Línea: 1, Col: 10
+ 
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'python -u "c:\Users\DARIO\Desktop\Universidad\SEMESTRE VII\Lenguajes Programación\proyectoLPG6\main.py"' Timestamp: 2022-11-25 09:07:27.344033-05:00
+Error de sintaxis - Token: ID, Línea: 1, Col: 0
+Error de sintaxis - Token: MINUS, Línea: 1, Col: 7
+Error de sintaxis - Token: ID, Línea: 1, Col: 8
+Error de sintaxis - Token: IDSTRING, Línea: 1, Col: 10
+ 
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'python -u "c:\Users\DARIO\Desktop\Universidad\SEMESTRE VII\Lenguajes Programación\proyectoLPG6\main.py"' Timestamp: 2022-11-25 09:07:27.344033-05:00
+Error de sintaxis - Token: ID, Línea: 1, Col: 0
+Error de sintaxis - Token: MINUS, Línea: 1, Col: 7
+Error de sintaxis - Token: ID, Línea: 1, Col: 8
+Error de sintaxis - Token: IDSTRING, Línea: 1, Col: 10
+ 
+Resultado: None
+-------------------------
+-------------------------
+Entrada: '2>2' Timestamp: 2022-11-25 09:07:27.344033-05:00
+Error de sintaxis - Token: INTTYPE, Línea: 1, Col: 0
+Error de sintaxis - Token: MAYORQUE, Línea: 1, Col: 1
+Error de sintaxis - Token: INTTYPE, Línea: 1, Col: 2
+ 
+Resultado: None
+-------------------------
+-------------------------
+Entrada: '2>2' Timestamp: 2022-11-25 09:07:27.344033-05:00
+Error de sintaxis - Token: INTTYPE, Línea: 1, Col: 0
+Error de sintaxis - Token: MAYORQUE, Línea: 1, Col: 1
+Error de sintaxis - Token: INTTYPE, Línea: 1, Col: 2
+ 
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'python -u "c:\Users\DARIO\Desktop\Universidad\SEMESTRE VII\Lenguajes Programación\proyectoLPG6\main.py"' Timestamp: 2022-11-25 09:07:27.344033-05:00
+Error de sintaxis - Token: ID, Línea: 1, Col: 0
+Error de sintaxis - Token: MINUS, Línea: 1, Col: 7
+Error de sintaxis - Token: ID, Línea: 1, Col: 8
+Error de sintaxis - Token: IDSTRING, Línea: 1, Col: 10
+ 
+Resultado: None
+-------------------------
+-------------------------
+Entrada: '2>2' Timestamp: 2022-11-25 09:09:27.582725-05:00
+Error de sintaxis - Token: INTTYPE, Línea: 1, Col: 0
+Error de sintaxis - Token: MAYORQUE, Línea: 1, Col: 1
+Error de sintaxis - Token: INTTYPE, Línea: 1, Col: 2
+ 
+Resultado: None
+-------------------------
+-------------------------
+Entrada: '2<2' Timestamp: 2022-11-25 09:09:27.582725-05:00
+Error de sintaxis - Token: INTTYPE, Línea: 1, Col: 0
+Error de sintaxis - Token: MENORQUE, Línea: 1, Col: 1
+Error de sintaxis - Token: INTTYPE, Línea: 1, Col: 2
+ 
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'let mut a=20;' Timestamp: 2022-11-25 09:09:27.582725-05:00
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'LinkedList :: new()' Timestamp: 2022-11-25 09:09:27.582725-05:00
+Error de sintaxis - Token: LINKEDLIST, Línea: 1, Col: 0
+Error de sintaxis - Token: DOSDOBLEPUNTOS, Línea: 1, Col: 11
+Error de sintaxis - Token: NEW, Línea: 1, Col: 14
+Error de sintaxis - Token: LPAREN, Línea: 1, Col: 17
+Error de sintaxis - Token: RPAREN, Línea: 1, Col: 18
+ 
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'python -u "c:\Users\DARIO\Desktop\Universidad\SEMESTRE VII\Lenguajes Programación\proyectoLPG6\tempCodeRunnerFile.py"' Timestamp: 2022-11-25 09:09:27.582725-05:00
+Error de sintaxis - Token: ID, Línea: 1, Col: 0
+Error de sintaxis - Token: MINUS, Línea: 1, Col: 7
+Error de sintaxis - Token: ID, Línea: 1, Col: 8
+Error de sintaxis - Token: IDSTRING, Línea: 1, Col: 10
+ 
+Resultado: None
+-------------------------
+-------------------------
+Entrada: '2>2' Timestamp: 2022-11-25 09:14:52.418151-05:00
+Error de sintaxis - Token: INTTYPE, Línea: 1, Col: 0
+Error de sintaxis - Token: MAYORQUE, Línea: 1, Col: 1
+Error de sintaxis - Token: INTTYPE, Línea: 1, Col: 2
+ 
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'loop{let mut a =20;}' Timestamp: 2022-11-25 09:14:52.418151-05:00
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'true' Timestamp: 2022-11-25 09:14:52.418151-05:00
+Error de sintaxis - Token: TRUE, Línea: 1, Col: 0
+ 
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'TRUE' Timestamp: 2022-11-25 09:14:52.418151-05:00
+Error de sintaxis - Token: ID, Línea: 1, Col: 0
+ 
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'false' Timestamp: 2022-11-25 09:14:52.418151-05:00
+Error de sintaxis - Token: FALSE, Línea: 1, Col: 0
+ 
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'let mut id = LinkedList :: new();' Timestamp: 2022-11-25 09:14:52.418151-05:00
+Error de sintaxis - Token: LINKEDLIST, Línea: 1, Col: 13
+Error de sintaxis - Token: DOSDOBLEPUNTOS, Línea: 1, Col: 24
+Error de sintaxis - Token: NEW, Línea: 1, Col: 27
+Error de sintaxis - Token: LPAREN, Línea: 1, Col: 30
+Error de sintaxis - Token: RPAREN, Línea: 1, Col: 31
+Error de sintaxis - Token: ENDCHAR, Línea: 1, Col: 32
+ 
+Resultado: None
+-------------------------
+Error de sintaxis - Token: ID, Línea: 1, Col: 2
+ 
+Error de sintaxis - Token: HASHMAP, Línea: 1, Col: 0
+Error de sintaxis - Token: DOSDOBLEPUNTOS, Línea: 1, Col: 8
+Error de sintaxis - Token: NEW, Línea: 1, Col: 11
+Error de sintaxis - Token: LPAREN, Línea: 1, Col: 14
+Error de sintaxis - Token: RPAREN, Línea: 1, Col: 15
+ 
+ 
+Error de sintaxis - Token: MINUS, Línea: 1, Col: 7
+Error de sintaxis - Token: ID, Línea: 1, Col: 8
+Error de sintaxis - Token: IDSTRING, Línea: 1, Col: 10
+ 
+ 
+ 
+ 
+ 

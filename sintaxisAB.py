@@ -6,16 +6,37 @@ def p_cuerpo(p):
 def p_metodo(p):
   '''metodo : asignacion
   | impresion
+  | comparacion
+  | linkedlist
   | loop
+  | conectores
   | ifblock
   | elseifblock
   | elseblock
-  | entrada
-  | while
   '''
 
-def p_comparacion(p):
-  'comparacion : valorescomp signocompar valorescomp'
+def p_comparacion_id(p):
+  '''comparacion : ID signocompar ID
+  | IDCHAR signocompar IDCHAR
+  | IDSTRING signocompar IDSTRING'''
+  
+def p_comparacion_int(p):
+  '''comparacion : INTTYPE signocompar INTTYPE
+  | NINTTYPE signocompar NINTTYPE
+  | FLOATTYPE signocompar FLOATTYPE
+  '''
+def p_comparacion_bool(p):
+  'comparacion : boolean signocompar boolean'
+  
+def p_valor(p):
+  '''valor : INTTYPE
+  | FLOATTYPE
+  | NINTTYPE
+  | ID
+  | TRUE
+  | FALSE
+  | IDCHAR
+  | IDSTRING'''
 
 def p_signocompar(p):
   '''signocompar : MAYORQUE 
@@ -23,20 +44,9 @@ def p_signocompar(p):
   | DIFERENTE
   | IDENTICO
   '''
-
-def p_valorecomp(p):
-  '''valorescomp : ID
-  | IDCHAR
-  | IDSTRING
-  | INTTYPE
-  | NINTTYPE
-  | FLOATTYPE
-  | NFLOATTYPE
-  | boolean
-  '''
   
 def p_linkedlist(p):
-  'linkedlist : LINKEDLIST DOSDOBLEPUNTOS NEW LPAREN RPAREN'
+  'linkedlist : LET MUT ID IGUAL LINKEDLIST DOSDOBLEPUNTOS NEW LPAREN RPAREN ENDCHAR'
 
 def p_conectores(p):
   '''conectores : boolean signoconect boolean 
@@ -63,6 +73,6 @@ def p_funcion_sinreturn(p):
   'funcion : FN ID LPAREN params RPAREN LLLAVE metodo RLLAVE'
 
 def p_impresion(p):
-  'impresion : PRINTLN LPAREN IDSTRING RPAREN ENDCHAR'
+  'impresion : PRINTLN LPAREN valor RPAREN ENDCHAR'
  
- # Build the parser
+

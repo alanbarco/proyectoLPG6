@@ -27,7 +27,7 @@ def validaRegla(s):
   print(result)
   return result
 
-while True:
+'''while True:
   try:
     s = input('calc > ')
     with open('logfile.txt', 'a') as file:
@@ -37,7 +37,8 @@ while True:
   except EOFError:
     break
   if not s: continue
+  validaRegla(s)
   with open('logfile.txt', 'a') as file:
       file.write("Resultado: "+ str(validaRegla(s)) + "\n")
-      file.write("-------------------------\n")
+      file.write("-------------------------\n")'''
 
