@@ -1376,3 +1376,18 @@ Error de sintaxis - Token: IDSTRING, Línea: 1, Col: 10
  
 Error de sintaxis - Token: LINKEDLIST, Línea: 1, Col: 0
  
+Error de sintaxis - Token: ID, Línea: 1, Col: 4
+Error de sintaxis - Token: IGUAL, Línea: 1, Col: 5
+Error de sintaxis - Token: INTTYPE, Línea: 1, Col: 6
+Error de sintaxis - Token: ENDCHAR, Línea: 1, Col: 8
+ 
+Error de sintaxis - Token: ID, Línea: 1, Col: 4
+Error de sintaxis - Token: IGUAL, Línea: 1, Col: 5
+Error de sintaxis - Token: INTTYPE, Línea: 1, Col: 6
+Error de sintaxis - Token: ENDCHAR, Línea: 1, Col: 8
+ 
+Error de sintaxis - Token: ID, Línea: 1, Col: 4
+Error de sintaxis - Token: IGUAL, Línea: 1, Col: 5
+Error de sintaxis - Token: INTTYPE, Línea: 1, Col: 6
+Error de sintaxis - Token: ENDCHAR, Línea: 1, Col: 8
+ 

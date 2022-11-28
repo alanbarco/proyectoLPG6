@@ -139,24 +139,19 @@ t_IDENTICO = r'=='
 t_OR = r'\|\|'
 
 
-def t_FLOATTYPE(t):  
+def t_FLOATTYPE(t):                 #Empieza .........
   r"\d+\.\d*"
   t.value = float(t.value)
   return t
 
-def t_NFLOATTYPE(t):  
-  r"-\d+\.\d*"
-  t.value = float(t.value)
-  return t
 
-
-def t_NINTTYPE(t):
+def t_INTTYPE(t):
   r'-\d+'
   t.value = int(t.value)
   return t
 
 
-def t_INTTYPE(t):
+def t_NINTTYPE(t):
   r'\d+'
   t.value = int(t.value)
   return t
@@ -175,12 +170,9 @@ def t_FALSE(t):
 
 
 def t_ID(t):
-  r'[a-zA-Z_][a-zA-Z_0-9]*!?'
+  r'[a-zA-Z_][a-zA-Z_0-9]*'
   t.type = reserved.get(t.value, 'ID')  # Check for reserved words
   return t
-
-
-#HASTA AQUI BORRE
 
 
 # Define a rule so we can track line numbers
@@ -201,22 +193,21 @@ def t_error(t):
 
 def t_COMMENT(t):
   r'(//.*|/\*(.*|\n*)*\*/)'
-  pass  #Termina .........
-
+  pass
 
 # Build the lexer
 lexer = lex.lex()
 
 # Tokenize
-file = open("source.txt")
-cadena = file.read()
-file.close()
-lexer.input(cadena)
+if __name__ == '__main__':
+  file = open("source.txt")
+  cadena = file.read()
+  file.close()
+  lexer.input(cadena)
 
-output_file = open('result.txt', 'w')
-line_number = 1
+  output_file = open('result.txt', 'w')
+  line_number = 1
 
-if __name__ == "__main__":
   while True:
     tok = lexer.token()
     if not tok:
@@ -228,16 +219,16 @@ if __name__ == "__main__":
     output_file.write(tok.type)
     output_file.write("  ")
 
-    output_file.close()
+  output_file.close()
 
-    print("Ingreso de Tokens por consola")
-    linea = " "
-    while linea != "":
-      linea = input(">>")
-      lexer.input(linea)
-      tok = lexer.token()
-      if not tok:
-        break  # No more input
-      print(tok)
-    # Tokenize
-    print("Succesfull")
+  print("Ingreso de Tokens por consola")
+  linea = " "
+  while linea != "":
+    linea = input(">>")
+    lexer.input(linea)
+    tok = lexer.token()
+    if not tok:
+      break  # No more input
+    print(tok)
+  # Tokenize
+  print("Succesfull")

@@ -1,4 +1,4 @@
-//Algoritmo ejemplo Alan Barco*/
+//Algoritmo ejemplo Alan Barco
 let n = 5;
     if n < 0 {
         print!("{} is negative", n);
@@ -160,3 +160,9 @@ fn main() {
         }
     }
 }
+
+/*
+Comentario de varias lineas
+aqui se comenta la primera
+aqui la segunda
+*/
