@@ -1366,3 +1366,13 @@ Error de sintaxis - Token: IDSTRING, Línea: 1, Col: 10
  
  
  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Error de sintaxis - Token: LINKEDLIST, Línea: 1, Col: 0
+ 
