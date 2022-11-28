@@ -144,14 +144,18 @@ def t_FLOATTYPE(t):                 #Empieza .........
   t.value = float(t.value)
   return t
 
+def t_NFLOATTYPE(t):  
+  r"-\d+\.\d*"
+  t.value = float(t.value)
+  return t
 
-def t_INTTYPE(t):
+def t_NINTTYPE(t):
   r'-\d+'
   t.value = int(t.value)
   return t
 
 
-def t_NINTTYPE(t):
+def t_INTTYPE(t):
   r'\d+'
   t.value = int(t.value)
   return t
@@ -170,7 +174,7 @@ def t_FALSE(t):
 
 
 def t_ID(t):
-  r'[a-zA-Z_][a-zA-Z_0-9]*'
+  r'[a-zA-Z_][a-zA-Z_0-9]*!?'
   t.type = reserved.get(t.value, 'ID')  # Check for reserved words
   return t
 
