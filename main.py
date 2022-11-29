@@ -120,9 +120,36 @@ def p_asignacion_let(p):
 
 
 #==================PARTE SEMANTICO ALAN===============================
+def p_asignacion_let_mut_ll(p):
+  '''asignacion : LET MUT ID IGUAL LINKEDLIST DOSDOBLEPUNTOS NEW LPAREN RPAREN ENDCHAR'''
+  global dicc
+  dicc[p[3]] = p[5]
 
-#SUMA VARIABLES
+def p_llpushfront(p):
+  '''
+  llpushfront : ID POINT PUSH_FRONT LPAREN INTTYPE RPAREN ENDCHAR
+  '''
+  global res_sintactico , dicc, errorSemantico
+  if dicc.get(p[1],False):
+    if dicc.get(p[1]) != "LinkedList":
+      errorSemantico = True
+      res_sintactico.append( "ERROR SEMÁNTICO: TIPO DE VARIABLE NO ES LINKEDLIST")
+  else:
+    errorSemantico = True
+    res_sintactico.append("ERROR SEMÁNTICO: ID NO DECLARADO")
 
+def p_llpopback(p):
+  '''
+  llpopback : ID POINT POP_BACK LPAREN RPAREN ENDCHAR
+  '''
+  global res_sintactico , dicc, errorSemantico
+  if dicc.get(p[1],False):
+    if dicc.get(p[1]) != "LinkedList":
+      errorSemantico = True
+      res_sintactico.append( "ERROR SEMÁNTICO: TIPO DE VARIABLE NO ES LINKEDLIST")
+  else:
+    errorSemantico = True
+    res_sintactico.append("ERROR SEMÁNTICO: ID NO DECLARADO")
 #=======================================================================
 
 def p_error(p):
@@ -200,24 +227,36 @@ def limpiar():
 
 root = tk.Tk()
 root.title("Ventana")
-root.geometry("800x800")
+root.geometry("720x800")
+
+main_frame = tk.Frame(root)
+main_frame.pack(fill="both", expand=1)
+my_canvas = tk.Canvas(main_frame)
+my_canvas.pack(side="left", fill="both", expand=1)
+sb = tk.Scrollbar(main_frame, orient="vertical", command=my_canvas.yview)  
+sb.pack(side = "right", fill = "y")  
+my_canvas.configure(yscrollcommand=sb.set)
+my_canvas.bind('<Configure>', lambda e:my_canvas.configure(scrollregion= my_canvas.bbox("all")))
+second_frame = tk.Frame(my_canvas)
+my_canvas.create_window((0,0), window=second_frame, anchor="nw")
 
 #Elementos del GUI
-titulo = tk.Label(root, text="Intérprete de Rust",  bg="#93d4c5", font="Helvetica 30", fg="black")
-titulo.pack(fill=tk.X, ipady=20)
-input = tk.Text(root, font="Helvetica 18",highlightthickness=2)
-input.config(width=55, height=15, font=("Consolas",12),pady=20)
-input.pack(ipadx=10,ipady=10, pady=20)
-resultado = tk.Label(root,  bg="#67948a", font="Helvetica 15", fg="#ffffff", text="Resultado...")
-resultado.pack(padx=60, pady=30)
+titulo = tk.Label(second_frame, text="Intérprete de Rust",  bg="#93d4c5", font="Helvetica 30", fg="black")
+titulo.pack(fill=tk.X)
+input = tk.Text(second_frame, font="Helvetica 18",highlightthickness=2)
+input.config(width=80, height=15, font=("Consolas",12),pady=20)
+input.pack()
+resultado = tk.Label(second_frame,  bg="#67948a", font="Helvetica 15", fg="#ffffff", text="Resultado...")
+resultado.pack()
 
-botonSemantic = tk.Button(root, text = "Análisis semántico", padx=60,pady=10, command=sintactico, bg="#3b554f", fg="#d4eee8", font="Helvetica 12") #pasar funcion sin parentesis con command =
+
+botonSemantic = tk.Button(second_frame, text = "Análisis semántico", padx=60,pady=10, command=sintactico, bg="#3b554f", fg="#d4eee8", font="Helvetica 12") #pasar funcion sin parentesis con command =
 botonSemantic.pack()
-botonSintac = tk.Button(root, text = "Análisis sintáctico", padx=60,pady=10, command=sintactico, bg="#3b554f", fg="#d4eee8", font="Helvetica 12") #pasar funcion sin parentesis con command =
+botonSintac = tk.Button(second_frame, text = "Análisis sintáctico", padx=60,pady=10, command=sintactico, bg="#3b554f", fg="#d4eee8", font="Helvetica 12") #pasar funcion sin parentesis con command =
 botonSintac.pack()
-botonLex = tk.Button(root, text = "Análisis léxico", padx=60,pady=10, command=lex, bg="#3b554f", fg="#d4eee8", font="Helvetica 12") #pasar funcion sin parentesis con command =
+botonLex = tk.Button(second_frame, text = "Análisis léxico", padx=60,pady=10, command=lex, bg="#3b554f", fg="#d4eee8", font="Helvetica 12") #pasar funcion sin parentesis con command =
 botonLex.pack()
-botonDicc = tk.Button(root, text = "Limpiar Variables", padx=60,pady=10, command=limpiar, bg="#3b554f", fg="#d4eee8", font="Helvetica 12") 
+botonDicc = tk.Button(second_frame, text = "Limpiar Variables", padx=60,pady=10, command=limpiar, bg="#3b554f", fg="#d4eee8", font="Helvetica 12") 
 botonDicc.pack()
 root.title("bg attribute")
 root['bg'] = '#f4fbf9'

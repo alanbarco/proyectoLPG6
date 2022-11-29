@@ -1391,114 +1391,170 @@ Error de sintaxis - Token: IGUAL, Lï¿½nea: 1, Col: 5
 Error de sintaxis - Token: INTTYPE, Lï¿½nea: 1, Col: 6
 Error de sintaxis - Token: ENDCHAR, Lï¿½nea: 1, Col: 8
  
-Error de sintaxis - Token: ID, Línea: 2, Col: 31
-Error de sintaxis - Token: POINT, Línea: 2, Col: 39
-Error de sintaxis - Token: PUSH, Línea: 2, Col: 40
-Error de sintaxis - Token: LPAREN, Línea: 2, Col: 44
-Error de sintaxis - Token: INTTYPE, Línea: 2, Col: 45
-Error de sintaxis - Token: RPAREN, Línea: 2, Col: 47
-Error de sintaxis - Token: ENDCHAR, Línea: 2, Col: 48
-Error de sintaxis - Token: ID, Línea: 3, Col: 31
-Error de sintaxis - Token: POINT, Línea: 3, Col: 39
-Error de sintaxis - Token: PUSH, Línea: 3, Col: 40
-Error de sintaxis - Token: LPAREN, Línea: 3, Col: 44
-Error de sintaxis - Token: INTTYPE, Línea: 3, Col: 45
-Error de sintaxis - Token: RPAREN, Línea: 3, Col: 47
-Error de sintaxis - Token: ENDCHAR, Línea: 3, Col: 48
-Error de sintaxis - Token: ID, Línea: 4, Col: 31
-Error de sintaxis - Token: POINT, Línea: 4, Col: 39
-Error de sintaxis - Token: PUSH, Línea: 4, Col: 40
-Error de sintaxis - Token: LPAREN, Línea: 4, Col: 44
-Error de sintaxis - Token: INTTYPE, Línea: 4, Col: 45
-Error de sintaxis - Token: RPAREN, Línea: 4, Col: 47
-Error de sintaxis - Token: ENDCHAR, Línea: 4, Col: 48
-Error de sintaxis - Token: ID, Línea: 5, Col: 31
-Error de sintaxis - Token: POINT, Línea: 5, Col: 39
-Error de sintaxis - Token: PUSH, Línea: 5, Col: 40
-Error de sintaxis - Token: LPAREN, Línea: 5, Col: 44
-Error de sintaxis - Token: INTTYPE, Línea: 5, Col: 45
-Error de sintaxis - Token: RPAREN, Línea: 5, Col: 47
-Error de sintaxis - Token: ENDCHAR, Línea: 5, Col: 48
-Error de sintaxis - Token: ID, Línea: 2, Col: 22
-Error de sintaxis - Token: POINT, Línea: 2, Col: 30
-Error de sintaxis - Token: PUSH, Línea: 2, Col: 31
-Error de sintaxis - Token: LPAREN, Línea: 2, Col: 35
-Error de sintaxis - Token: INTTYPE, Línea: 2, Col: 36
-Error de sintaxis - Token: RPAREN, Línea: 2, Col: 38
-Error de sintaxis - Token: ENDCHAR, Línea: 2, Col: 39
+Error de sintaxis - Token: ID, Lï¿½nea: 2, Col: 31
+Error de sintaxis - Token: POINT, Lï¿½nea: 2, Col: 39
+Error de sintaxis - Token: PUSH, Lï¿½nea: 2, Col: 40
+Error de sintaxis - Token: LPAREN, Lï¿½nea: 2, Col: 44
+Error de sintaxis - Token: INTTYPE, Lï¿½nea: 2, Col: 45
+Error de sintaxis - Token: RPAREN, Lï¿½nea: 2, Col: 47
+Error de sintaxis - Token: ENDCHAR, Lï¿½nea: 2, Col: 48
+Error de sintaxis - Token: ID, Lï¿½nea: 3, Col: 31
+Error de sintaxis - Token: POINT, Lï¿½nea: 3, Col: 39
+Error de sintaxis - Token: PUSH, Lï¿½nea: 3, Col: 40
+Error de sintaxis - Token: LPAREN, Lï¿½nea: 3, Col: 44
+Error de sintaxis - Token: INTTYPE, Lï¿½nea: 3, Col: 45
+Error de sintaxis - Token: RPAREN, Lï¿½nea: 3, Col: 47
+Error de sintaxis - Token: ENDCHAR, Lï¿½nea: 3, Col: 48
+Error de sintaxis - Token: ID, Lï¿½nea: 4, Col: 31
+Error de sintaxis - Token: POINT, Lï¿½nea: 4, Col: 39
+Error de sintaxis - Token: PUSH, Lï¿½nea: 4, Col: 40
+Error de sintaxis - Token: LPAREN, Lï¿½nea: 4, Col: 44
+Error de sintaxis - Token: INTTYPE, Lï¿½nea: 4, Col: 45
+Error de sintaxis - Token: RPAREN, Lï¿½nea: 4, Col: 47
+Error de sintaxis - Token: ENDCHAR, Lï¿½nea: 4, Col: 48
+Error de sintaxis - Token: ID, Lï¿½nea: 5, Col: 31
+Error de sintaxis - Token: POINT, Lï¿½nea: 5, Col: 39
+Error de sintaxis - Token: PUSH, Lï¿½nea: 5, Col: 40
+Error de sintaxis - Token: LPAREN, Lï¿½nea: 5, Col: 44
+Error de sintaxis - Token: INTTYPE, Lï¿½nea: 5, Col: 45
+Error de sintaxis - Token: RPAREN, Lï¿½nea: 5, Col: 47
+Error de sintaxis - Token: ENDCHAR, Lï¿½nea: 5, Col: 48
+Error de sintaxis - Token: ID, Lï¿½nea: 2, Col: 22
+Error de sintaxis - Token: POINT, Lï¿½nea: 2, Col: 30
+Error de sintaxis - Token: PUSH, Lï¿½nea: 2, Col: 31
+Error de sintaxis - Token: LPAREN, Lï¿½nea: 2, Col: 35
+Error de sintaxis - Token: INTTYPE, Lï¿½nea: 2, Col: 36
+Error de sintaxis - Token: RPAREN, Lï¿½nea: 2, Col: 38
+Error de sintaxis - Token: ENDCHAR, Lï¿½nea: 2, Col: 39
  
  
-Error de sintaxis - Token: VEC, Línea: 1, Col: 10
-Error de sintaxis - Token: DOSDOBLEPUNTOS, Línea: 1, Col: 13
-Error de sintaxis - Token: NEW, Línea: 1, Col: 15
-Error de sintaxis - Token: LPAREN, Línea: 1, Col: 18
-Error de sintaxis - Token: RPAREN, Línea: 1, Col: 19
-Error de sintaxis - Token: ENDCHAR, Línea: 1, Col: 20
+Error de sintaxis - Token: VEC, Lï¿½nea: 1, Col: 10
+Error de sintaxis - Token: DOSDOBLEPUNTOS, Lï¿½nea: 1, Col: 13
+Error de sintaxis - Token: NEW, Lï¿½nea: 1, Col: 15
+Error de sintaxis - Token: LPAREN, Lï¿½nea: 1, Col: 18
+Error de sintaxis - Token: RPAREN, Lï¿½nea: 1, Col: 19
+Error de sintaxis - Token: ENDCHAR, Lï¿½nea: 1, Col: 20
  
  
  
-Error de sintaxis - Token: ID, Línea: 1, Col: 5
-Error de sintaxis - Token: COLON, Línea: 1, Col: 7
-Error de sintaxis - Token: INT32, Línea: 1, Col: 8
-Error de sintaxis - Token: IGUAL, Línea: 1, Col: 12
-Error de sintaxis - Token: INTTYPE, Línea: 1, Col: 13
-Error de sintaxis - Token: ENDCHAR, Línea: 1, Col: 15
+Error de sintaxis - Token: ID, Lï¿½nea: 1, Col: 5
+Error de sintaxis - Token: COLON, Lï¿½nea: 1, Col: 7
+Error de sintaxis - Token: INT32, Lï¿½nea: 1, Col: 8
+Error de sintaxis - Token: IGUAL, Lï¿½nea: 1, Col: 12
+Error de sintaxis - Token: INTTYPE, Lï¿½nea: 1, Col: 13
+Error de sintaxis - Token: ENDCHAR, Lï¿½nea: 1, Col: 15
  
 const a:i32 = 20;
------Análisis Sintáctico/Semántico - Timestamp: 2022-11-29 13:40:54.017719-05:00
+-----Anï¿½lisis Sintï¿½ctico/Semï¿½ntico - Timestamp: 2022-11-29 13:40:54.017719-05:00
 Entrada:  Linea: 1 Correctoconst a:i32 = 20;
 let a  = 20;
------Análisis Sintáctico/Semántico - Timestamp: 2022-11-29 13:41:07.469876-05:00
+-----Anï¿½lisis Sintï¿½ctico/Semï¿½ntico - Timestamp: 2022-11-29 13:41:07.469876-05:00
 Entrada:  Linea: 1 Correcto
-ERROR SEMÁNTICO: REASIGNACIÓN DE CONSTANTEd awd kwdad awd ad afea fadad;ad
+ERROR SEMï¿½NTICO: REASIGNACIï¿½N DE CONSTANTEd awd kwdad awd ad afea fadad;ad
 awdad; awd;ad;a daw;
 ;; ad a
------Análisis Sintáctico/Semántico - Timestamp: 2022-11-29 13:41:21.594491-05:00
-Entrada: Error de sintaxis - Token: ID, Línea: 1, Col: 2
-Error de sintaxis - Token: ID, Línea: 1, Col: 6
-Error de sintaxis - Token: ID, Línea: 1, Col: 12
-Error de sintaxis - Token: ID, Línea: 1, Col: 16
-Error de sintaxis - Token: ID, Línea: 1, Col: 19
-Error de sintaxis - Token: ID, Línea: 1, Col: 24
-Error de sintaxis - Token: ENDCHAR, Línea: 1, Col: 29
-Error de sintaxis - Token: ID, Línea: 1, Col: 30
+-----Anï¿½lisis Sintï¿½ctico/Semï¿½ntico - Timestamp: 2022-11-29 13:41:21.594491-05:00
+Entrada: Error de sintaxis - Token: ID, Lï¿½nea: 1, Col: 2
+Error de sintaxis - Token: ID, Lï¿½nea: 1, Col: 6
+Error de sintaxis - Token: ID, Lï¿½nea: 1, Col: 12
+Error de sintaxis - Token: ID, Lï¿½nea: 1, Col: 16
+Error de sintaxis - Token: ID, Lï¿½nea: 1, Col: 19
+Error de sintaxis - Token: ID, Lï¿½nea: 1, Col: 24
+Error de sintaxis - Token: ENDCHAR, Lï¿½nea: 1, Col: 29
+Error de sintaxis - Token: ID, Lï¿½nea: 1, Col: 30
 Error de sintaxis Fin de Linea
  Linea: 1 Correcto
-Error de sintaxis - Token: ENDCHAR, Línea: 1, Col: 5
-Error de sintaxis - Token: ID, Línea: 1, Col: 7
-Error de sintaxis - Token: ENDCHAR, Línea: 1, Col: 10
-Error de sintaxis - Token: ID, Línea: 1, Col: 11
-Error de sintaxis - Token: ENDCHAR, Línea: 1, Col: 13
-Error de sintaxis - Token: ID, Línea: 1, Col: 14
-Error de sintaxis - Token: ID, Línea: 1, Col: 16
-Error de sintaxis - Token: ENDCHAR, Línea: 1, Col: 19
+Error de sintaxis - Token: ENDCHAR, Lï¿½nea: 1, Col: 5
+Error de sintaxis - Token: ID, Lï¿½nea: 1, Col: 7
+Error de sintaxis - Token: ENDCHAR, Lï¿½nea: 1, Col: 10
+Error de sintaxis - Token: ID, Lï¿½nea: 1, Col: 11
+Error de sintaxis - Token: ENDCHAR, Lï¿½nea: 1, Col: 13
+Error de sintaxis - Token: ID, Lï¿½nea: 1, Col: 14
+Error de sintaxis - Token: ID, Lï¿½nea: 1, Col: 16
+Error de sintaxis - Token: ENDCHAR, Lï¿½nea: 1, Col: 19
 Error de sintaxis Fin de Linea
  Linea: 2 Correcto
-Error de sintaxis - Token: ENDCHAR, Línea: 1, Col: 0
-Error de sintaxis - Token: ENDCHAR, Línea: 1, Col: 1
-Error de sintaxis - Token: ID, Línea: 1, Col: 6
+Error de sintaxis - Token: ENDCHAR, Lï¿½nea: 1, Col: 0
+Error de sintaxis - Token: ENDCHAR, Lï¿½nea: 1, Col: 1
+Error de sintaxis - Token: ID, Lï¿½nea: 1, Col: 6
 Error de sintaxis Fin de Linea
  Linea: 3 Correctofawf awda aw dad af;a faw
 faf
 a; fa;f
  fa
------Análisis Sintáctico/Semántico - Timestamp: 2022-11-29 13:58:26.175751-05:00
-Entrada: Error de sintaxis - Token: ID, Línea: 1, Col: 5
-Error de sintaxis - Token: ID, Línea: 1, Col: 10
-Error de sintaxis - Token: ID, Línea: 1, Col: 13
-Error de sintaxis - Token: ID, Línea: 1, Col: 17
-Error de sintaxis - Token: ENDCHAR, Línea: 1, Col: 19
-Error de sintaxis - Token: ID, Línea: 1, Col: 20
-Error de sintaxis - Token: ID, Línea: 1, Col: 22
+-----Anï¿½lisis Sintï¿½ctico/Semï¿½ntico - Timestamp: 2022-11-29 13:58:26.175751-05:00
+Entrada: Error de sintaxis - Token: ID, Lï¿½nea: 1, Col: 5
+Error de sintaxis - Token: ID, Lï¿½nea: 1, Col: 10
+Error de sintaxis - Token: ID, Lï¿½nea: 1, Col: 13
+Error de sintaxis - Token: ID, Lï¿½nea: 1, Col: 17
+Error de sintaxis - Token: ENDCHAR, Lï¿½nea: 1, Col: 19
+Error de sintaxis - Token: ID, Lï¿½nea: 1, Col: 20
+Error de sintaxis - Token: ID, Lï¿½nea: 1, Col: 22
 Error de sintaxis Fin de Linea
  Linea: 1 Correcto
 Error de sintaxis Fin de Linea
  Linea: 2 Correcto
-Error de sintaxis - Token: ENDCHAR, Línea: 1, Col: 1
-Error de sintaxis - Token: ID, Línea: 1, Col: 3
-Error de sintaxis - Token: ENDCHAR, Línea: 1, Col: 5
-Error de sintaxis - Token: ID, Línea: 1, Col: 6
+Error de sintaxis - Token: ENDCHAR, Lï¿½nea: 1, Col: 1
+Error de sintaxis - Token: ID, Lï¿½nea: 1, Col: 3
+Error de sintaxis - Token: ENDCHAR, Lï¿½nea: 1, Col: 5
+Error de sintaxis - Token: ID, Lï¿½nea: 1, Col: 6
 Error de sintaxis Fin de Linea
  Linea: 3 Correcto
 Error de sintaxis Fin de Linea
  Linea: 4 Correcto
+Error de sintaxis - Token: ID, Lï¿½nea: 1, Col: 3
+Error de sintaxis - Token: LPAREN, Lï¿½nea: 1, Col: 12
+Error de sintaxis - Token: INTTYPE, Lï¿½nea: 1, Col: 13
+Error de sintaxis - Token: RPAREN, Lï¿½nea: 1, Col: 15
+Error de sintaxis - Token: ENDCHAR, Lï¿½nea: 1, Col: 16
+ 
+Error de sintaxis - Token: PUSH_FRONT, Lï¿½nea: 1, Col: 3
+Error de sintaxis - Token: LPAREN, Lï¿½nea: 1, Col: 13
+Error de sintaxis - Token: INTTYPE, Lï¿½nea: 1, Col: 14
+Error de sintaxis - Token: RPAREN, Lï¿½nea: 1, Col: 15
+Error de sintaxis - Token: ENDCHAR, Lï¿½nea: 1, Col: 16
+ 
+Error de sintaxis - Token: DOSDOBLEPUNTOS, Lï¿½nea: 1, Col: 23
+Error de sintaxis - Token: NEW, Lï¿½nea: 1, Col: 25
+Error de sintaxis - Token: LPAREN, Lï¿½nea: 1, Col: 28
+Error de sintaxis - Token: RPAREN, Lï¿½nea: 1, Col: 29
+Error de sintaxis - Token: POP_BACK, Lï¿½nea: 1, Col: 3
+Error de sintaxis - Token: LPAREN, Lï¿½nea: 1, Col: 11
+Error de sintaxis - Token: RPAREN, Lï¿½nea: 1, Col: 12
+Error de sintaxis - Token: ENDCHAR, Lï¿½nea: 1, Col: 13
+ 
+Error de sintaxis - Token: ID, Lï¿½nea: 1, Col: 2
+Error de sintaxis - Token: LPAREN, Lï¿½nea: 1, Col: 5
+Error de sintaxis - Token: RPAREN, Lï¿½nea: 1, Col: 6
+Error de sintaxis - Token: ENDCHAR, Lï¿½nea: 1, Col: 7
+ 
+Error de sintaxis - Token: ID, Lï¿½nea: 1, Col: 2
+Error de sintaxis - Token: LPAREN, Lï¿½nea: 1, Col: 11
+Error de sintaxis - Token: INTTYPE, Lï¿½nea: 1, Col: 12
+Error de sintaxis - Token: RPAREN, Lï¿½nea: 1, Col: 13
+Error de sintaxis - Token: ENDCHAR, Lï¿½nea: 1, Col: 14
+ 
+Error de sintaxis - Token: IGUAL, Lï¿½nea: 1, Col: 2
+Error de sintaxis - Token: INTTYPE, Lï¿½nea: 1, Col: 3
+ 
+Error de sintaxis - Token: ID, Lï¿½nea: 1, Col: 2
+Error de sintaxis - Token: LPAREN, Lï¿½nea: 1, Col: 11
+Error de sintaxis - Token: INTTYPE, Lï¿½nea: 1, Col: 12
+Error de sintaxis - Token: RPAREN, Lï¿½nea: 1, Col: 13
+Error de sintaxis - Token: ENDCHAR, Lï¿½nea: 1, Col: 14
+ 
+Error de sintaxis - Token: IGUAL, Lï¿½nea: 1, Col: 2
+Error de sintaxis - Token: ID, Lï¿½nea: 1, Col: 4
+Error de sintaxis - Token: ENDCHAR, Lï¿½nea: 1, Col: 5
+ 
+Error de sintaxis - Token: PUSH_FRONT, Lï¿½nea: 1, Col: 2
+Error de sintaxis - Token: LPAREN, Lï¿½nea: 1, Col: 12
+Error de sintaxis - Token: INTTYPE, Lï¿½nea: 1, Col: 13
+Error de sintaxis - Token: RPAREN, Lï¿½nea: 1, Col: 14
+Error de sintaxis - Token: ENDCHAR, Lï¿½nea: 1, Col: 15
+ 
+Error de sintaxis - Token: POP_BACK, Lï¿½nea: 1, Col: 2
+Error de sintaxis - Token: LPAREN, Lï¿½nea: 1, Col: 10
+Error de sintaxis - Token: RPAREN, Lï¿½nea: 1, Col: 11
+Error de sintaxis - Token: ENDCHAR, Lï¿½nea: 1, Col: 12
+ 
