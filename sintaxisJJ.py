@@ -37,12 +37,6 @@ def p_asignacion_const_char(p):
   'asignacion : CONST ID COLON CHAR IGUAL IDCHAR ENDCHAR'
 
 
-
-
-
-
-
-
 def p_datatype(p):
   '''
   datatype : intsize

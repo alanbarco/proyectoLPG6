@@ -24,9 +24,9 @@ def p_vectorpush(p):
   global dicc
   if dicc.get(p[1],False):
     if dicc.get(p[1]) != "Vec":
-      res_sintactico.append( "ERROR SEMANTICO: TIPO DE VARIABLE NO ES VEC")
+      res_sintactico.append( "ERROR SEMÁNTICO: TIPO DE VARIABLE NO ES VEC")
   else:
-   res_sintactico.append("ERROR SEMANTICO: ID NO DECLARADO")
+   res_sintactico.append("ERROR SEMÁNTICO: ID NO DECLARADO")
 
 #======================================================================
 
@@ -34,13 +34,13 @@ def p_vectorpush(p):
 
 #==================PARTE SEMANTICO PAMELA===============================
 
-#Asignacion con let mut
-def p_asignacion_let_mut(p):
-  '''asignacion : LET MUT ID IGUAL valorPam ENDCHAR
-  | LET MUT ID IGUAL estructuras ENDCHAR
-  '''
-  global dicc
-  dicc[p[3]] = p[5]
+
+
+#=======================================================================
+
+
+#==================PARTE SEMANTICO ALAN===============================
+
 
 
 #=======================================================================
@@ -113,7 +113,7 @@ root.title("bg attribute")
 root['bg'] = '#f4fbf9'
 root.mainloop()
 
-
+''' 
 while True:
   try:
     s = input('calc > ')
@@ -127,4 +127,5 @@ while True:
   with open('logfile.txt', 'a') as file:
       file.write("Resultado: "+ str(validaRegla(s)) + "\n")
       file.write("-------------------------\n")
+'''
 

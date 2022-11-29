@@ -38,10 +38,6 @@ def p_while(p):
 def p_hashmap(p):
   'hashmap : HASHMAP DOSDOBLEPUNTOS NEW LPAREN RPAREN'
 
-#Estructura VEC
-def p_vec(p):
-  'vec : VEC DOSDOBLEPUNTOS NEW LPAREN RPAREN'
-
 #Expresiones aritméticas
 def p_expresion(p):
   'expresion :  valornumerico signo valornumerico'
