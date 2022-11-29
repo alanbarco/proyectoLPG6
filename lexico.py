@@ -84,6 +84,7 @@ reserved = {  #Empieza Alan Barco
   "unwrap_or": "UNWRAPOR",
   "Ok": 'OK',
   "main": 'MAINFN',
+  "push": 'PUSH',
 
   #Data structures
   "Vec": 'VEC',

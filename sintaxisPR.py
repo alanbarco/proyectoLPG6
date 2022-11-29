@@ -1,10 +1,5 @@
 #Analizador Sintactico: Pamela Rugel
 
-#Asignacion con let mut
-def p_asignacion_let_mut(p):
-  '''asignacion : LET MUT ID IGUAL valorPam ENDCHAR
-  | LET MUT ID IGUAL estructuras ENDCHAR'''
-
 #Asignacion con let
 def p_asignacion_let(p):
   '''asignacion : LET ID IGUAL valorPam ENDCHAR'''
@@ -27,7 +22,6 @@ def p_estructuras(p):
     '''
     estructuras : linkedlist
     | hashmap
-    | vec
     '''
 
 # Estructura de control While

@@ -13,6 +13,7 @@ def p_metodo(p):
   | ifblock
   | elseifblock
   | elseblock
+  | vectorpush
   '''
 
 def p_comparacion_id(p):

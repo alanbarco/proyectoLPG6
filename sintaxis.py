@@ -4,7 +4,7 @@ from sintaxisAB  import *
 from sintaxisJJ  import *
 from sintaxisPR  import *
 
-parser = yacc.yacc()
+
 
 
 
