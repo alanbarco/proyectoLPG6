@@ -1121,18 +1121,18 @@ Resultado: None
 -------------------------
 -------------------------
 Entrada: '2>2' Timestamp: 2022-11-25 09:01:26.614529-05:00
-Error de sintaxis - Token: INTTYPE, Línea: 1, Col: 0
-Error de sintaxis - Token: MAYORQUE, Línea: 1, Col: 1
-Error de sintaxis - Token: INTTYPE, Línea: 1, Col: 2
+Error de sintaxis - Token: INTTYPE, Lï¿½nea: 1, Col: 0
+Error de sintaxis - Token: MAYORQUE, Lï¿½nea: 1, Col: 1
+Error de sintaxis - Token: INTTYPE, Lï¿½nea: 1, Col: 2
  
 Resultado: None
 -------------------------
 -------------------------
 Entrada: '2>2;' Timestamp: 2022-11-25 09:01:26.614529-05:00
-Error de sintaxis - Token: INTTYPE, Línea: 1, Col: 0
-Error de sintaxis - Token: MAYORQUE, Línea: 1, Col: 1
-Error de sintaxis - Token: INTTYPE, Línea: 1, Col: 2
-Error de sintaxis - Token: ENDCHAR, Línea: 1, Col: 3
+Error de sintaxis - Token: INTTYPE, Lï¿½nea: 1, Col: 0
+Error de sintaxis - Token: MAYORQUE, Lï¿½nea: 1, Col: 1
+Error de sintaxis - Token: INTTYPE, Lï¿½nea: 1, Col: 2
+Error de sintaxis - Token: ENDCHAR, Lï¿½nea: 1, Col: 3
  
 Resultado: None
 -------------------------
@@ -1142,146 +1142,146 @@ Resultado: None
 -------------------------
 -------------------------
 Entrada: '3 < 3' Timestamp: 2022-11-25 09:01:26.614529-05:00
-Error de sintaxis - Token: INTTYPE, Línea: 1, Col: 0
-Error de sintaxis - Token: MENORQUE, Línea: 1, Col: 2
-Error de sintaxis - Token: INTTYPE, Línea: 1, Col: 4
+Error de sintaxis - Token: INTTYPE, Lï¿½nea: 1, Col: 0
+Error de sintaxis - Token: MENORQUE, Lï¿½nea: 1, Col: 2
+Error de sintaxis - Token: INTTYPE, Lï¿½nea: 1, Col: 4
  
 Resultado: None
 -------------------------
 -------------------------
 Entrada: 'true < false' Timestamp: 2022-11-25 09:01:26.614529-05:00
-Error de sintaxis - Token: TRUE, Línea: 1, Col: 0
-Error de sintaxis - Token: MENORQUE, Línea: 1, Col: 5
-Error de sintaxis - Token: FALSE, Línea: 1, Col: 7
+Error de sintaxis - Token: TRUE, Lï¿½nea: 1, Col: 0
+Error de sintaxis - Token: MENORQUE, Lï¿½nea: 1, Col: 5
+Error de sintaxis - Token: FALSE, Lï¿½nea: 1, Col: 7
  
 Resultado: None
 -------------------------
 -------------------------
 Entrada: '2 < 2' Timestamp: 2022-11-25 09:01:26.614529-05:00
-Error de sintaxis - Token: INTTYPE, Línea: 1, Col: 0
-Error de sintaxis - Token: MENORQUE, Línea: 1, Col: 2
-Error de sintaxis - Token: INTTYPE, Línea: 1, Col: 4
+Error de sintaxis - Token: INTTYPE, Lï¿½nea: 1, Col: 0
+Error de sintaxis - Token: MENORQUE, Lï¿½nea: 1, Col: 2
+Error de sintaxis - Token: INTTYPE, Lï¿½nea: 1, Col: 4
  
 Resultado: None
 -------------------------
 -------------------------
 Entrada: '2>2' Timestamp: 2022-11-25 09:01:26.614529-05:00
-Error de sintaxis - Token: INTTYPE, Línea: 1, Col: 0
-Error de sintaxis - Token: MAYORQUE, Línea: 1, Col: 1
-Error de sintaxis - Token: INTTYPE, Línea: 1, Col: 2
+Error de sintaxis - Token: INTTYPE, Lï¿½nea: 1, Col: 0
+Error de sintaxis - Token: MAYORQUE, Lï¿½nea: 1, Col: 1
+Error de sintaxis - Token: INTTYPE, Lï¿½nea: 1, Col: 2
  
 Resultado: None
 -------------------------
 -------------------------
-Entrada: 'python -u "c:\Users\DARIO\Desktop\Universidad\SEMESTRE VII\Lenguajes Programación\proyectoLPG6\sintaxisAB.py"' Timestamp: 2022-11-25 09:01:26.614529-05:00
-Error de sintaxis - Token: ID, Línea: 1, Col: 0
-Error de sintaxis - Token: MINUS, Línea: 1, Col: 7
-Error de sintaxis - Token: ID, Línea: 1, Col: 8
-Error de sintaxis - Token: IDSTRING, Línea: 1, Col: 10
+Entrada: 'python -u "c:\Users\DARIO\Desktop\Universidad\SEMESTRE VII\Lenguajes Programaciï¿½n\proyectoLPG6\sintaxisAB.py"' Timestamp: 2022-11-25 09:01:26.614529-05:00
+Error de sintaxis - Token: ID, Lï¿½nea: 1, Col: 0
+Error de sintaxis - Token: MINUS, Lï¿½nea: 1, Col: 7
+Error de sintaxis - Token: ID, Lï¿½nea: 1, Col: 8
+Error de sintaxis - Token: IDSTRING, Lï¿½nea: 1, Col: 10
  
 Resultado: None
 -------------------------
 -------------------------
-Entrada: 'python -u "c:\Users\DARIO\Desktop\Universidad\SEMESTRE VII\Lenguajes Programación\proyectoLPG6\sintaxisAB.py"' Timestamp: 2022-11-25 09:01:26.614529-05:00
-Error de sintaxis - Token: ID, Línea: 1, Col: 0
-Error de sintaxis - Token: MINUS, Línea: 1, Col: 7
-Error de sintaxis - Token: ID, Línea: 1, Col: 8
-Error de sintaxis - Token: IDSTRING, Línea: 1, Col: 10
+Entrada: 'python -u "c:\Users\DARIO\Desktop\Universidad\SEMESTRE VII\Lenguajes Programaciï¿½n\proyectoLPG6\sintaxisAB.py"' Timestamp: 2022-11-25 09:01:26.614529-05:00
+Error de sintaxis - Token: ID, Lï¿½nea: 1, Col: 0
+Error de sintaxis - Token: MINUS, Lï¿½nea: 1, Col: 7
+Error de sintaxis - Token: ID, Lï¿½nea: 1, Col: 8
+Error de sintaxis - Token: IDSTRING, Lï¿½nea: 1, Col: 10
  
 Resultado: None
 -------------------------
 -------------------------
-Entrada: 'python -u "c:\Users\DARIO\Desktop\Universidad\SEMESTRE VII\Lenguajes Programación\proyectoLPG6\sintaxisAB.py"' Timestamp: 2022-11-25 09:01:26.614529-05:00
-Error de sintaxis - Token: ID, Línea: 1, Col: 0
-Error de sintaxis - Token: MINUS, Línea: 1, Col: 7
-Error de sintaxis - Token: ID, Línea: 1, Col: 8
-Error de sintaxis - Token: IDSTRING, Línea: 1, Col: 10
+Entrada: 'python -u "c:\Users\DARIO\Desktop\Universidad\SEMESTRE VII\Lenguajes Programaciï¿½n\proyectoLPG6\sintaxisAB.py"' Timestamp: 2022-11-25 09:01:26.614529-05:00
+Error de sintaxis - Token: ID, Lï¿½nea: 1, Col: 0
+Error de sintaxis - Token: MINUS, Lï¿½nea: 1, Col: 7
+Error de sintaxis - Token: ID, Lï¿½nea: 1, Col: 8
+Error de sintaxis - Token: IDSTRING, Lï¿½nea: 1, Col: 10
  
 Resultado: None
 -------------------------
 -------------------------
-Entrada: 'python -u "c:\Users\DARIO\Desktop\Universidad\SEMESTRE VII\Lenguajes Programación\proyectoLPG6\main.py"' Timestamp: 2022-11-25 09:07:27.344033-05:00
-Error de sintaxis - Token: ID, Línea: 1, Col: 0
-Error de sintaxis - Token: MINUS, Línea: 1, Col: 7
-Error de sintaxis - Token: ID, Línea: 1, Col: 8
-Error de sintaxis - Token: IDSTRING, Línea: 1, Col: 10
+Entrada: 'python -u "c:\Users\DARIO\Desktop\Universidad\SEMESTRE VII\Lenguajes Programaciï¿½n\proyectoLPG6\main.py"' Timestamp: 2022-11-25 09:07:27.344033-05:00
+Error de sintaxis - Token: ID, Lï¿½nea: 1, Col: 0
+Error de sintaxis - Token: MINUS, Lï¿½nea: 1, Col: 7
+Error de sintaxis - Token: ID, Lï¿½nea: 1, Col: 8
+Error de sintaxis - Token: IDSTRING, Lï¿½nea: 1, Col: 10
  
 Resultado: None
 -------------------------
 -------------------------
-Entrada: 'python -u "c:\Users\DARIO\Desktop\Universidad\SEMESTRE VII\Lenguajes Programación\proyectoLPG6\main.py"' Timestamp: 2022-11-25 09:07:27.344033-05:00
-Error de sintaxis - Token: ID, Línea: 1, Col: 0
-Error de sintaxis - Token: MINUS, Línea: 1, Col: 7
-Error de sintaxis - Token: ID, Línea: 1, Col: 8
-Error de sintaxis - Token: IDSTRING, Línea: 1, Col: 10
+Entrada: 'python -u "c:\Users\DARIO\Desktop\Universidad\SEMESTRE VII\Lenguajes Programaciï¿½n\proyectoLPG6\main.py"' Timestamp: 2022-11-25 09:07:27.344033-05:00
+Error de sintaxis - Token: ID, Lï¿½nea: 1, Col: 0
+Error de sintaxis - Token: MINUS, Lï¿½nea: 1, Col: 7
+Error de sintaxis - Token: ID, Lï¿½nea: 1, Col: 8
+Error de sintaxis - Token: IDSTRING, Lï¿½nea: 1, Col: 10
  
 Resultado: None
 -------------------------
 -------------------------
-Entrada: 'python -u "c:\Users\DARIO\Desktop\Universidad\SEMESTRE VII\Lenguajes Programación\proyectoLPG6\main.py"' Timestamp: 2022-11-25 09:07:27.344033-05:00
-Error de sintaxis - Token: ID, Línea: 1, Col: 0
-Error de sintaxis - Token: MINUS, Línea: 1, Col: 7
-Error de sintaxis - Token: ID, Línea: 1, Col: 8
-Error de sintaxis - Token: IDSTRING, Línea: 1, Col: 10
+Entrada: 'python -u "c:\Users\DARIO\Desktop\Universidad\SEMESTRE VII\Lenguajes Programaciï¿½n\proyectoLPG6\main.py"' Timestamp: 2022-11-25 09:07:27.344033-05:00
+Error de sintaxis - Token: ID, Lï¿½nea: 1, Col: 0
+Error de sintaxis - Token: MINUS, Lï¿½nea: 1, Col: 7
+Error de sintaxis - Token: ID, Lï¿½nea: 1, Col: 8
+Error de sintaxis - Token: IDSTRING, Lï¿½nea: 1, Col: 10
  
 Resultado: None
 -------------------------
 -------------------------
-Entrada: 'python -u "c:\Users\DARIO\Desktop\Universidad\SEMESTRE VII\Lenguajes Programación\proyectoLPG6\main.py"' Timestamp: 2022-11-25 09:07:27.344033-05:00
-Error de sintaxis - Token: ID, Línea: 1, Col: 0
-Error de sintaxis - Token: MINUS, Línea: 1, Col: 7
-Error de sintaxis - Token: ID, Línea: 1, Col: 8
-Error de sintaxis - Token: IDSTRING, Línea: 1, Col: 10
+Entrada: 'python -u "c:\Users\DARIO\Desktop\Universidad\SEMESTRE VII\Lenguajes Programaciï¿½n\proyectoLPG6\main.py"' Timestamp: 2022-11-25 09:07:27.344033-05:00
+Error de sintaxis - Token: ID, Lï¿½nea: 1, Col: 0
+Error de sintaxis - Token: MINUS, Lï¿½nea: 1, Col: 7
+Error de sintaxis - Token: ID, Lï¿½nea: 1, Col: 8
+Error de sintaxis - Token: IDSTRING, Lï¿½nea: 1, Col: 10
  
 Resultado: None
 -------------------------
 -------------------------
-Entrada: 'python -u "c:\Users\DARIO\Desktop\Universidad\SEMESTRE VII\Lenguajes Programación\proyectoLPG6\main.py"' Timestamp: 2022-11-25 09:07:27.344033-05:00
-Error de sintaxis - Token: ID, Línea: 1, Col: 0
-Error de sintaxis - Token: MINUS, Línea: 1, Col: 7
-Error de sintaxis - Token: ID, Línea: 1, Col: 8
-Error de sintaxis - Token: IDSTRING, Línea: 1, Col: 10
- 
-Resultado: None
--------------------------
--------------------------
-Entrada: '2>2' Timestamp: 2022-11-25 09:07:27.344033-05:00
-Error de sintaxis - Token: INTTYPE, Línea: 1, Col: 0
-Error de sintaxis - Token: MAYORQUE, Línea: 1, Col: 1
-Error de sintaxis - Token: INTTYPE, Línea: 1, Col: 2
+Entrada: 'python -u "c:\Users\DARIO\Desktop\Universidad\SEMESTRE VII\Lenguajes Programaciï¿½n\proyectoLPG6\main.py"' Timestamp: 2022-11-25 09:07:27.344033-05:00
+Error de sintaxis - Token: ID, Lï¿½nea: 1, Col: 0
+Error de sintaxis - Token: MINUS, Lï¿½nea: 1, Col: 7
+Error de sintaxis - Token: ID, Lï¿½nea: 1, Col: 8
+Error de sintaxis - Token: IDSTRING, Lï¿½nea: 1, Col: 10
  
 Resultado: None
 -------------------------
 -------------------------
 Entrada: '2>2' Timestamp: 2022-11-25 09:07:27.344033-05:00
-Error de sintaxis - Token: INTTYPE, Línea: 1, Col: 0
-Error de sintaxis - Token: MAYORQUE, Línea: 1, Col: 1
-Error de sintaxis - Token: INTTYPE, Línea: 1, Col: 2
+Error de sintaxis - Token: INTTYPE, Lï¿½nea: 1, Col: 0
+Error de sintaxis - Token: MAYORQUE, Lï¿½nea: 1, Col: 1
+Error de sintaxis - Token: INTTYPE, Lï¿½nea: 1, Col: 2
  
 Resultado: None
 -------------------------
 -------------------------
-Entrada: 'python -u "c:\Users\DARIO\Desktop\Universidad\SEMESTRE VII\Lenguajes Programación\proyectoLPG6\main.py"' Timestamp: 2022-11-25 09:07:27.344033-05:00
-Error de sintaxis - Token: ID, Línea: 1, Col: 0
-Error de sintaxis - Token: MINUS, Línea: 1, Col: 7
-Error de sintaxis - Token: ID, Línea: 1, Col: 8
-Error de sintaxis - Token: IDSTRING, Línea: 1, Col: 10
+Entrada: '2>2' Timestamp: 2022-11-25 09:07:27.344033-05:00
+Error de sintaxis - Token: INTTYPE, Lï¿½nea: 1, Col: 0
+Error de sintaxis - Token: MAYORQUE, Lï¿½nea: 1, Col: 1
+Error de sintaxis - Token: INTTYPE, Lï¿½nea: 1, Col: 2
+ 
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'python -u "c:\Users\DARIO\Desktop\Universidad\SEMESTRE VII\Lenguajes Programaciï¿½n\proyectoLPG6\main.py"' Timestamp: 2022-11-25 09:07:27.344033-05:00
+Error de sintaxis - Token: ID, Lï¿½nea: 1, Col: 0
+Error de sintaxis - Token: MINUS, Lï¿½nea: 1, Col: 7
+Error de sintaxis - Token: ID, Lï¿½nea: 1, Col: 8
+Error de sintaxis - Token: IDSTRING, Lï¿½nea: 1, Col: 10
  
 Resultado: None
 -------------------------
 -------------------------
 Entrada: '2>2' Timestamp: 2022-11-25 09:09:27.582725-05:00
-Error de sintaxis - Token: INTTYPE, Línea: 1, Col: 0
-Error de sintaxis - Token: MAYORQUE, Línea: 1, Col: 1
-Error de sintaxis - Token: INTTYPE, Línea: 1, Col: 2
+Error de sintaxis - Token: INTTYPE, Lï¿½nea: 1, Col: 0
+Error de sintaxis - Token: MAYORQUE, Lï¿½nea: 1, Col: 1
+Error de sintaxis - Token: INTTYPE, Lï¿½nea: 1, Col: 2
  
 Resultado: None
 -------------------------
 -------------------------
 Entrada: '2<2' Timestamp: 2022-11-25 09:09:27.582725-05:00
-Error de sintaxis - Token: INTTYPE, Línea: 1, Col: 0
-Error de sintaxis - Token: MENORQUE, Línea: 1, Col: 1
-Error de sintaxis - Token: INTTYPE, Línea: 1, Col: 2
+Error de sintaxis - Token: INTTYPE, Lï¿½nea: 1, Col: 0
+Error de sintaxis - Token: MENORQUE, Lï¿½nea: 1, Col: 1
+Error de sintaxis - Token: INTTYPE, Lï¿½nea: 1, Col: 2
  
 Resultado: None
 -------------------------
@@ -1291,28 +1291,28 @@ Resultado: None
 -------------------------
 -------------------------
 Entrada: 'LinkedList :: new()' Timestamp: 2022-11-25 09:09:27.582725-05:00
-Error de sintaxis - Token: LINKEDLIST, Línea: 1, Col: 0
-Error de sintaxis - Token: DOSDOBLEPUNTOS, Línea: 1, Col: 11
-Error de sintaxis - Token: NEW, Línea: 1, Col: 14
-Error de sintaxis - Token: LPAREN, Línea: 1, Col: 17
-Error de sintaxis - Token: RPAREN, Línea: 1, Col: 18
+Error de sintaxis - Token: LINKEDLIST, Lï¿½nea: 1, Col: 0
+Error de sintaxis - Token: DOSDOBLEPUNTOS, Lï¿½nea: 1, Col: 11
+Error de sintaxis - Token: NEW, Lï¿½nea: 1, Col: 14
+Error de sintaxis - Token: LPAREN, Lï¿½nea: 1, Col: 17
+Error de sintaxis - Token: RPAREN, Lï¿½nea: 1, Col: 18
  
 Resultado: None
 -------------------------
 -------------------------
-Entrada: 'python -u "c:\Users\DARIO\Desktop\Universidad\SEMESTRE VII\Lenguajes Programación\proyectoLPG6\tempCodeRunnerFile.py"' Timestamp: 2022-11-25 09:09:27.582725-05:00
-Error de sintaxis - Token: ID, Línea: 1, Col: 0
-Error de sintaxis - Token: MINUS, Línea: 1, Col: 7
-Error de sintaxis - Token: ID, Línea: 1, Col: 8
-Error de sintaxis - Token: IDSTRING, Línea: 1, Col: 10
+Entrada: 'python -u "c:\Users\DARIO\Desktop\Universidad\SEMESTRE VII\Lenguajes Programaciï¿½n\proyectoLPG6\tempCodeRunnerFile.py"' Timestamp: 2022-11-25 09:09:27.582725-05:00
+Error de sintaxis - Token: ID, Lï¿½nea: 1, Col: 0
+Error de sintaxis - Token: MINUS, Lï¿½nea: 1, Col: 7
+Error de sintaxis - Token: ID, Lï¿½nea: 1, Col: 8
+Error de sintaxis - Token: IDSTRING, Lï¿½nea: 1, Col: 10
  
 Resultado: None
 -------------------------
 -------------------------
 Entrada: '2>2' Timestamp: 2022-11-25 09:14:52.418151-05:00
-Error de sintaxis - Token: INTTYPE, Línea: 1, Col: 0
-Error de sintaxis - Token: MAYORQUE, Línea: 1, Col: 1
-Error de sintaxis - Token: INTTYPE, Línea: 1, Col: 2
+Error de sintaxis - Token: INTTYPE, Lï¿½nea: 1, Col: 0
+Error de sintaxis - Token: MAYORQUE, Lï¿½nea: 1, Col: 1
+Error de sintaxis - Token: INTTYPE, Lï¿½nea: 1, Col: 2
  
 Resultado: None
 -------------------------
@@ -1322,47 +1322,45 @@ Resultado: None
 -------------------------
 -------------------------
 Entrada: 'true' Timestamp: 2022-11-25 09:14:52.418151-05:00
-Error de sintaxis - Token: TRUE, Línea: 1, Col: 0
+Error de sintaxis - Token: TRUE, Lï¿½nea: 1, Col: 0
  
 Resultado: None
 -------------------------
 -------------------------
 Entrada: 'TRUE' Timestamp: 2022-11-25 09:14:52.418151-05:00
-Error de sintaxis - Token: ID, Línea: 1, Col: 0
+Error de sintaxis - Token: ID, Lï¿½nea: 1, Col: 0
  
 Resultado: None
 -------------------------
 -------------------------
 Entrada: 'false' Timestamp: 2022-11-25 09:14:52.418151-05:00
-Error de sintaxis - Token: FALSE, Línea: 1, Col: 0
+Error de sintaxis - Token: FALSE, Lï¿½nea: 1, Col: 0
  
 Resultado: None
 -------------------------
 -------------------------
 Entrada: 'let mut id = LinkedList :: new();' Timestamp: 2022-11-25 09:14:52.418151-05:00
-Error de sintaxis - Token: LINKEDLIST, Línea: 1, Col: 13
-Error de sintaxis - Token: DOSDOBLEPUNTOS, Línea: 1, Col: 24
-Error de sintaxis - Token: NEW, Línea: 1, Col: 27
-Error de sintaxis - Token: LPAREN, Línea: 1, Col: 30
-Error de sintaxis - Token: RPAREN, Línea: 1, Col: 31
-Error de sintaxis - Token: ENDCHAR, Línea: 1, Col: 32
+Error de sintaxis - Token: LINKEDLIST, Lï¿½nea: 1, Col: 13
+Error de sintaxis - Token: DOSDOBLEPUNTOS, Lï¿½nea: 1, Col: 24
+Error de sintaxis - Token: NEW, Lï¿½nea: 1, Col: 27
+Error de sintaxis - Token: LPAREN, Lï¿½nea: 1, Col: 30
+Error de sintaxis - Token: RPAREN, Lï¿½nea: 1, Col: 31
+Error de sintaxis - Token: ENDCHAR, Lï¿½nea: 1, Col: 32
  
 Resultado: None
 -------------------------
-Error de sintaxis - Token: ID, Línea: 1, Col: 2
+Error de sintaxis - Token: ID, Lï¿½nea: 1, Col: 2
  
-Error de sintaxis - Token: HASHMAP, Línea: 1, Col: 0
-Error de sintaxis - Token: DOSDOBLEPUNTOS, Línea: 1, Col: 8
-Error de sintaxis - Token: NEW, Línea: 1, Col: 11
-Error de sintaxis - Token: LPAREN, Línea: 1, Col: 14
-Error de sintaxis - Token: RPAREN, Línea: 1, Col: 15
- 
- 
-Error de sintaxis - Token: MINUS, Línea: 1, Col: 7
-Error de sintaxis - Token: ID, Línea: 1, Col: 8
-Error de sintaxis - Token: IDSTRING, Línea: 1, Col: 10
+Error de sintaxis - Token: HASHMAP, Lï¿½nea: 1, Col: 0
+Error de sintaxis - Token: DOSDOBLEPUNTOS, Lï¿½nea: 1, Col: 8
+Error de sintaxis - Token: NEW, Lï¿½nea: 1, Col: 11
+Error de sintaxis - Token: LPAREN, Lï¿½nea: 1, Col: 14
+Error de sintaxis - Token: RPAREN, Lï¿½nea: 1, Col: 15
  
  
+Error de sintaxis - Token: MINUS, Lï¿½nea: 1, Col: 7
+Error de sintaxis - Token: ID, Lï¿½nea: 1, Col: 8
+Error de sintaxis - Token: IDSTRING, Lï¿½nea: 1, Col: 10
  
  
  
@@ -1374,166 +1372,22 @@ Error de sintaxis - Token: IDSTRING, Línea: 1, Col: 10
  
  
  
-Error de sintaxis - Token: LINKEDLIST, Línea: 1, Col: 0
- 
-Error de sintaxis - Token: ID, Línea: 1, Col: 4
-Error de sintaxis - Token: IGUAL, Línea: 1, Col: 5
-Error de sintaxis - Token: INTTYPE, Línea: 1, Col: 6
-Error de sintaxis - Token: ENDCHAR, Línea: 1, Col: 8
- 
-Error de sintaxis - Token: ID, Línea: 1, Col: 4
-Error de sintaxis - Token: IGUAL, Línea: 1, Col: 5
-Error de sintaxis - Token: INTTYPE, Línea: 1, Col: 6
-Error de sintaxis - Token: ENDCHAR, Línea: 1, Col: 8
- 
-Error de sintaxis - Token: ID, Línea: 1, Col: 4
-Error de sintaxis - Token: IGUAL, Línea: 1, Col: 5
-Error de sintaxis - Token: INTTYPE, Línea: 1, Col: 6
-Error de sintaxis - Token: ENDCHAR, Línea: 1, Col: 8
- 
-Error de sintaxis - Token: BOOL, Línea: 1, Col: 14
-Error de sintaxis - Token: RPAREN, Línea: 1, Col: 18
-Error de sintaxis - Token: ARROWOPT, Línea: 1, Col: 20
-Error de sintaxis - Token: LLLAVE, Línea: 1, Col: 27
-Error de sintaxis - Token: IF, Línea: 2, Col: 33
-Error de sintaxis - Token: ID, Línea: 2, Col: 36
-Error de sintaxis - Token: LLLAVE, Línea: 2, Col: 42
-Error de sintaxis - Token: INTTYPE, Línea: 2, Col: 44
-Error de sintaxis - Token: RLLAVE, Línea: 2, Col: 46
-Error de sintaxis - Token: ENDCHAR, Línea: 2, Col: 47
-Error de sintaxis - Token: PRINTLN, Línea: 4, Col: 54
-Error de sintaxis - Token: LPAREN, Línea: 4, Col: 62
-Error de sintaxis - Token: IDSTRING, Línea: 4, Col: 63
-Error de sintaxis - Token: RPAREN, Línea: 4, Col: 86
-Error de sintaxis - Token: ENDCHAR, Línea: 4, Col: 87
-Error de sintaxis - Token: INTTYPE, Línea: 6, Col: 94
-Error de sintaxis - Token: RLLAVE, Línea: 7, Col: 96
- 
-Error de sintaxis - Token: RLLAVE, Línea: 2, Col: 46
-Error de sintaxis - Token: ENDCHAR, Línea: 2, Col: 47
-Error de sintaxis - Token: PRINTLN, Línea: 4, Col: 54
-Error de sintaxis - Token: LPAREN, Línea: 4, Col: 62
-Error de sintaxis - Token: IDSTRING, Línea: 4, Col: 63
-Error de sintaxis - Token: COMA, Línea: 4, Col: 79
-Error de sintaxis - Token: ID, Línea: 4, Col: 81
-Error de sintaxis - Token: RPAREN, Línea: 4, Col: 86
-Error de sintaxis - Token: ENDCHAR, Línea: 4, Col: 87
-Error de sintaxis - Token: INTTYPE, Línea: 6, Col: 94
-Error de sintaxis - Token: RLLAVE, Línea: 7, Col: 96
- 
-Error de sintaxis - Token: RLLAVE, Línea: 1, Col: 41
-Error de sintaxis - Token: ENDCHAR, Línea: 1, Col: 42
-Error de sintaxis - Token: PRINTLN, Línea: 1, Col: 43
-Error de sintaxis - Token: LPAREN, Línea: 1, Col: 51
-Error de sintaxis - Token: IDSTRING, Línea: 1, Col: 52
-Error de sintaxis - Token: COMA, Línea: 1, Col: 68
-Error de sintaxis - Token: ID, Línea: 1, Col: 70
-Error de sintaxis - Token: RPAREN, Línea: 1, Col: 75
-Error de sintaxis - Token: ENDCHAR, Línea: 1, Col: 76
-Error de sintaxis - Token: INTTYPE, Línea: 1, Col: 77
-Error de sintaxis - Token: RLLAVE, Línea: 1, Col: 78
- 
-Error de sintaxis - Token: COMA, Línea: 1, Col: 53
-Error de sintaxis - Token: ID, Línea: 1, Col: 55
-Error de sintaxis - Token: RLLAVE, Línea: 1, Col: 63
- 
-Error de sintaxis - Token: RLLAVE, Línea: 1, Col: 56
- 
-Error de sintaxis - Token: RLLAVE, Línea: 1, Col: 57
- 
-Error de sintaxis - Token: RLLAVE, Línea: 1, Col: 56
- 
-Error de sintaxis - Token: ID, Línea: 1, Col: 2
-Error de sintaxis - Token: ID, Línea: 1, Col: 6
-Error de sintaxis - Token: ID, Línea: 1, Col: 9
-Error de sintaxis - Token: ENDCHAR, Línea: 1, Col: 10
  
  
+Error de sintaxis - Token: LINKEDLIST, Lï¿½nea: 1, Col: 0
  
+Error de sintaxis - Token: ID, Lï¿½nea: 1, Col: 4
+Error de sintaxis - Token: IGUAL, Lï¿½nea: 1, Col: 5
+Error de sintaxis - Token: INTTYPE, Lï¿½nea: 1, Col: 6
+Error de sintaxis - Token: ENDCHAR, Lï¿½nea: 1, Col: 8
  
+Error de sintaxis - Token: ID, Lï¿½nea: 1, Col: 4
+Error de sintaxis - Token: IGUAL, Lï¿½nea: 1, Col: 5
+Error de sintaxis - Token: INTTYPE, Lï¿½nea: 1, Col: 6
+Error de sintaxis - Token: ENDCHAR, Lï¿½nea: 1, Col: 8
  
- 
-Error de sintaxis - Token: INTTYPE, Línea: 1, Col: 8
- 
- 
-Error de sintaxis - Token: HASHMAP, Línea: 1, Col: 0
-Error de sintaxis - Token: MAYORQUE, Línea: 1, Col: 8
- 
-Error de sintaxis - Token: ENDCHAR, Línea: 1, Col: 7
-Error de sintaxis - Token: INTERRO, Línea: 1, Col: 0
- 
-Error de sintaxis - Token: POINT, Línea: 1, Col: 3
-Error de sintaxis - Token: PUSH, Línea: 1, Col: 4
-Error de sintaxis - Token: LPAREN, Línea: 1, Col: 8
-Error de sintaxis - Token: INTTYPE, Línea: 1, Col: 9
-Error de sintaxis - Token: RPAREN, Línea: 1, Col: 11
-Error de sintaxis - Token: ENDCHAR, Línea: 1, Col: 12
- 
-Error de sintaxis - Token: VEC, Línea: 1, Col: 14
-Error de sintaxis - Token: DOSDOBLEPUNTOS, Línea: 1, Col: 17
-Error de sintaxis - Token: NEW, Línea: 1, Col: 19
-Error de sintaxis - Token: LPAREN, Línea: 1, Col: 22
-Error de sintaxis - Token: RPAREN, Línea: 1, Col: 23
-Error de sintaxis - Token: ENDCHAR, Línea: 1, Col: 24
- 
-Error de sintaxis - Token: VEC, Línea: 1, Col: 14
-Error de sintaxis - Token: DOSDOBLEPUNTOS, Línea: 1, Col: 17
-Error de sintaxis - Token: NEW, Línea: 1, Col: 19
-Error de sintaxis - Token: LPAREN, Línea: 1, Col: 22
-Error de sintaxis - Token: RPAREN, Línea: 1, Col: 23
-Error de sintaxis - Token: ENDCHAR, Línea: 1, Col: 24
- 
-Error de sintaxis - Token: VEC, Línea: 1, Col: 14
-Error de sintaxis - Token: DOSDOBLEPUNTOS, Línea: 1, Col: 17
-Error de sintaxis - Token: NEW, Línea: 1, Col: 19
-Error de sintaxis - Token: LPAREN, Línea: 1, Col: 22
-Error de sintaxis - Token: RPAREN, Línea: 1, Col: 23
-Error de sintaxis - Token: ENDCHAR, Línea: 1, Col: 24
- 
-Error de sintaxis - Token: VEC, Línea: 1, Col: 14
-Error de sintaxis - Token: DOSDOBLEPUNTOS, Línea: 1, Col: 17
-Error de sintaxis - Token: NEW, Línea: 1, Col: 19
-Error de sintaxis - Token: LPAREN, Línea: 1, Col: 22
-Error de sintaxis - Token: RPAREN, Línea: 1, Col: 23
-Error de sintaxis - Token: ENDCHAR, Línea: 1, Col: 24
- 
-Error de sintaxis - Token: VEC, Línea: 1, Col: 14
-Error de sintaxis - Token: DOSDOBLEPUNTOS, Línea: 1, Col: 17
-Error de sintaxis - Token: NEW, Línea: 1, Col: 19
-Error de sintaxis - Token: LPAREN, Línea: 1, Col: 22
-Error de sintaxis - Token: RPAREN, Línea: 1, Col: 23
-Error de sintaxis - Token: ENDCHAR, Línea: 1, Col: 24
- 
-Error de sintaxis - Token: VEC, Línea: 1, Col: 14
-Error de sintaxis - Token: DOSDOBLEPUNTOS, Línea: 1, Col: 17
-Error de sintaxis - Token: NEW, Línea: 1, Col: 19
-Error de sintaxis - Token: LPAREN, Línea: 1, Col: 22
-Error de sintaxis - Token: RPAREN, Línea: 1, Col: 23
-Error de sintaxis - Token: ENDCHAR, Línea: 1, Col: 24
- 
-Error de sintaxis - Token: VEC, Línea: 1, Col: 14
-Error de sintaxis - Token: DOSDOBLEPUNTOS, Línea: 1, Col: 17
-Error de sintaxis - Token: NEW, Línea: 1, Col: 19
-Error de sintaxis - Token: LPAREN, Línea: 1, Col: 22
-Error de sintaxis - Token: RPAREN, Línea: 1, Col: 23
-Error de sintaxis - Token: ENDCHAR, Línea: 1, Col: 24
- 
-Error de sintaxis - Token: COLON, Línea: 1, Col: 9
-Error de sintaxis - Token: INT32, Línea: 1, Col: 10
-Error de sintaxis - Token: VEC, Línea: 1, Col: 14
-Error de sintaxis - Token: DOSDOBLEPUNTOS, Línea: 1, Col: 17
-Error de sintaxis - Token: NEW, Línea: 1, Col: 19
-Error de sintaxis - Token: LPAREN, Línea: 1, Col: 22
-Error de sintaxis - Token: RPAREN, Línea: 1, Col: 23
-Error de sintaxis - Token: ENDCHAR, Línea: 1, Col: 24
- 
-Error de sintaxis - Token: ENDCHAR, Línea: 1, Col: 24
-Error de sintaxis - Token: ID, Línea: 1, Col: 24
-Error de sintaxis - Token: ID, Línea: 1, Col: 26
-Error de sintaxis - Token: POINT, Línea: 1, Col: 27
-Error de sintaxis - Token: PUSH, Línea: 1, Col: 28
-Error de sintaxis - Token: LPAREN, Línea: 1, Col: 32
-Error de sintaxis - Token: INTTYPE, Línea: 1, Col: 33
-Error de sintaxis - Token: RPAREN, Línea: 1, Col: 35
-Error de sintaxis - Token: ENDCHAR, Línea: 1, Col: 36
+Error de sintaxis - Token: ID, Lï¿½nea: 1, Col: 4
+Error de sintaxis - Token: IGUAL, Lï¿½nea: 1, Col: 5
+Error de sintaxis - Token: INTTYPE, Lï¿½nea: 1, Col: 6
+Error de sintaxis - Token: ENDCHAR, Lï¿½nea: 1, Col: 8
  

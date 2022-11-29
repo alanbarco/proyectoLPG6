@@ -1,12 +1,17 @@
 #Analizador Sintactico: Pamela Rugel
 
+#Asignacion con let mut
+def p_asignacion_let_mut(p):
+  '''asignacion : LET MUT ID IGUAL valor ENDCHAR
+  | LET MUT ID IGUAL estructuras ENDCHAR'''
+
 #Asignacion con let
 def p_asignacion_let(p):
-  '''asignacion : LET ID IGUAL valorPam ENDCHAR'''
+  '''asignacion : LET ID IGUAL valor ENDCHAR'''
 
 #Conjunto de tipos de datos de asignacion
-def p_valorPam(p):
-  '''valorPam : valornumerico
+def p_valor(p):
+  '''valor : valornumerico
   | TRUE
   | FALSE
   | ID
