@@ -1391,3 +1391,45 @@ Error de sintaxis - Token: IGUAL, Línea: 1, Col: 5
 Error de sintaxis - Token: INTTYPE, Línea: 1, Col: 6
 Error de sintaxis - Token: ENDCHAR, Línea: 1, Col: 8
  
+-------------------------
+Entrada: '//comentario' Timestamp: 2022-11-28 20:19:08.178540-05:00
+ 
+ 
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'let var=5' Timestamp: 2022-11-28 20:19:08.178540-05:00
+ 
+ 
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'let var=5;' Timestamp: 2022-11-28 20:19:08.178540-05:00
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'let var=5;' Timestamp: 2022-11-28 20:28:43.942574-05:00
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'let mut vaer=5;' Timestamp: 2022-11-28 20:28:43.942574-05:00
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'let mut var=5;' Timestamp: 2022-11-28 20:28:43.942574-05:00
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'const var:i32;' Timestamp: 2022-11-28 20:28:43.942574-05:00
+Error de sintaxis - Token: ENDCHAR, Línea: 1, Col: 13
+ 
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'const var:i32=10;' Timestamp: 2022-11-28 20:28:43.942574-05:00
+Resultado: None
+-------------------------
+-------------------------
+Entrada: 'let mut variable = 10>30;' Timestamp: 2022-11-28 20:28:43.942574-05:00
+Resultado: None
+-------------------------
