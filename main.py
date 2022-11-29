@@ -78,6 +78,33 @@ def p_llpopback(p):
   else:
     errorSemantico = True
     res_sintactico.append("ERROR SEMÁNTICO: ID NO DECLARADO")
+
+def p_asignacion_const_i32(p):
+  '''
+  asignacion : CONST ID COLON INT32 IGUAL INTTYPE ENDCHAR
+  '''
+  global dicc
+  dicc[p[2]] = p[4]
+
+def p_asignacion_const_i64(p):
+  '''
+  asignacion : CONST ID COLON INT64 IGUAL INTTYPE ENDCHAR
+  '''
+  global dicc
+  dicc[p[2]] = p[4]
+
+
+def p_sumaint(p):
+  'sumaint : ID PLUS ID'
+  global res_sintactico
+  global dicc
+  global errorSemantico
+  if dicc.get(p[1])!=dicc.get(p[3]):
+    errorSemantico = True
+    res_sintactico.append( "ERROR SEMÁNTICO: NO SE PUEDE SUMAR ENTEROS DIFERENTES TAMAÑOS")
+
+
+
 #=======================================================================
 
 def p_error(p):
@@ -103,6 +130,7 @@ def validacion():
     global errorSemantico
     entrada = input.get("1.0","end-1c")
     print(entrada)
+    print(dicc)
     numeroLinea=1
 
     for linea in entrada.split("\n"):        

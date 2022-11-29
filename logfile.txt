@@ -1484,3 +1484,53 @@ Error de sintaxis - Token: LPAREN, Línea: 1, Col: 10
 Error de sintaxis - Token: RPAREN, Línea: 1, Col: 11
 Error de sintaxis - Token: ENDCHAR, Línea: 1, Col: 12
  
+ 
+ 
+Error de sintaxis - Token: COLON, Línea: 1, Col: 6
+Error de sintaxis - Token: INT32, Línea: 1, Col: 8
+ 
+ 
+Error de sintaxis - Token: ID, Línea: 1, Col: 5
+Error de sintaxis - Token: COLON, Línea: 1, Col: 7
+Error de sintaxis - Token: INT32, Línea: 1, Col: 9
+Error de sintaxis - Token: IGUAL, Línea: 1, Col: 12
+Error de sintaxis - Token: INTTYPE, Línea: 1, Col: 13
+ 
+Error de sintaxis - Token: ID, Línea: 1, Col: 5
+Error de sintaxis - Token: COLON, Línea: 1, Col: 7
+Error de sintaxis - Token: INT32, Línea: 1, Col: 9
+Error de sintaxis - Token: IGUAL, Línea: 1, Col: 12
+Error de sintaxis - Token: INTTYPE, Línea: 1, Col: 13
+Error de sintaxis - Token: ENDCHAR, Línea: 1, Col: 14
+ 
+ 
+ 
+ 
+ 
+ 
+Error de sintaxis - Token: PLUS, Línea: 1, Col: 1
+Error de sintaxis - Token: ID, Línea: 1, Col: 2
+ 
+Error de sintaxis - Token: PLUS, Línea: 1, Col: 1
+Error de sintaxis - Token: ID, Línea: 1, Col: 2
+ 
+ 
+Error de sintaxis - Token: PLUS, Línea: 1, Col: 1
+Error de sintaxis - Token: ID, Línea: 1, Col: 2
+ 
+Error de sintaxis - Token: PLUS, Línea: 1, Col: 1
+Error de sintaxis - Token: ID, Línea: 1, Col: 2
+ 
+Error de sintaxis - Token: PLUS, Línea: 1, Col: 1
+Error de sintaxis - Token: ID, Línea: 1, Col: 2
+ 
+Error de sintaxis - Token: PLUS, Línea: 1, Col: 1
+Error de sintaxis - Token: ID, Línea: 1, Col: 2
+ 
+Error de sintaxis - Token: ID, Línea: 1, Col: 5
+Error de sintaxis - Token: COLON, Línea: 1, Col: 6
+Error de sintaxis - Token: INT32, Línea: 1, Col: 7
+Error de sintaxis - Token: IGUAL, Línea: 1, Col: 10
+Error de sintaxis - Token: INTTYPE, Línea: 1, Col: 11
+Error de sintaxis - Token: ENDCHAR, Línea: 1, Col: 13
+ 
