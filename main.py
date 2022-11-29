@@ -166,12 +166,11 @@ def p_error(p):
 parser = yacc.yacc()
 
 #Llama las funciones del analizador, y lo que recibe el input como cadena de entrada
-def validacion():
+def validacion(f):
     global res_sintactico, errorSemantico
     entrada = input.get("1.0","end-1c")
     numeroLinea=1
-    with open('logfile.txt', 'a') as file:
-      file.write(entrada + "\n") 
+    f.write(entrada + "\n") 
 
     for linea in entrada.split("\n"):  
         estructura = str(parser.parse(linea))
@@ -183,11 +182,11 @@ def validacion():
 
 #Llama la funcion validacion() y muestra el resultado del analizador
 def sintactico():
-    now = datetime.now(timezone('EST')) 
     global res_sintactico
+    now = datetime.now(timezone('EST')) 
     file = open('logfile.txt', 'a')
-    file.write("-----Análisis Sintáctico/Semántico - Timestamp: " + str(now) +"\nEntrada: ")   
-    validacion()
+    file.write("\n-----Análisis Sintáctico/Semántico - Timestamp: " + str(now) +"\nEntrada: ")   
+    validacion(file)
     resultado["text"] = "\n".join(res_sintactico)
     file.write("\n".join(res_sintactico))
     res_sintactico = []
@@ -196,7 +195,7 @@ def sintactico():
 def lex():
     now = datetime.now(timezone('EST')) 
     file = open('logfile.txt', 'a')
-    file.write("----------Análisis Léxico - Timestamp: "+  str(now) + "\n Entrada: ")
+    file.write("\n----------Análisis Léxico - Timestamp: "+  str(now) + "\n Entrada: ")
     entrada = input.get("1.0","end-1c")
     file.write(entrada)
     entrada = entrada.split("\n")
