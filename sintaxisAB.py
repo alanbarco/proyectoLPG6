@@ -11,6 +11,8 @@ def p_metodo(p):
   | elseifblock
   | elseblock
   | vectorpush
+  | llpushfront
+  | llpopback
   | entrada
   | while
   '''

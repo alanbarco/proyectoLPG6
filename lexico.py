@@ -85,6 +85,8 @@ reserved = {  #Empieza Alan Barco
   "Ok": 'OK',
   "main": 'MAINFN',
   "push": 'PUSH',
+  "push_front" : "PUSH_FRONT",
+  "pop_back" : "POP_BACK",
 
   #Data structures
   "Vec": 'VEC',

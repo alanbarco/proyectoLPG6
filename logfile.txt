@@ -1428,3 +1428,59 @@ Error de sintaxis - Token: RPAREN, Línea: 2, Col: 38
 Error de sintaxis - Token: ENDCHAR, Línea: 2, Col: 39
  
  
+Error de sintaxis - Token: ID, Línea: 1, Col: 3
+Error de sintaxis - Token: LPAREN, Línea: 1, Col: 12
+Error de sintaxis - Token: INTTYPE, Línea: 1, Col: 13
+Error de sintaxis - Token: RPAREN, Línea: 1, Col: 15
+Error de sintaxis - Token: ENDCHAR, Línea: 1, Col: 16
+ 
+Error de sintaxis - Token: PUSH_FRONT, Línea: 1, Col: 3
+Error de sintaxis - Token: LPAREN, Línea: 1, Col: 13
+Error de sintaxis - Token: INTTYPE, Línea: 1, Col: 14
+Error de sintaxis - Token: RPAREN, Línea: 1, Col: 15
+Error de sintaxis - Token: ENDCHAR, Línea: 1, Col: 16
+ 
+Error de sintaxis - Token: DOSDOBLEPUNTOS, Línea: 1, Col: 23
+Error de sintaxis - Token: NEW, Línea: 1, Col: 25
+Error de sintaxis - Token: LPAREN, Línea: 1, Col: 28
+Error de sintaxis - Token: RPAREN, Línea: 1, Col: 29
+Error de sintaxis - Token: POP_BACK, Línea: 1, Col: 3
+Error de sintaxis - Token: LPAREN, Línea: 1, Col: 11
+Error de sintaxis - Token: RPAREN, Línea: 1, Col: 12
+Error de sintaxis - Token: ENDCHAR, Línea: 1, Col: 13
+ 
+Error de sintaxis - Token: ID, Línea: 1, Col: 2
+Error de sintaxis - Token: LPAREN, Línea: 1, Col: 5
+Error de sintaxis - Token: RPAREN, Línea: 1, Col: 6
+Error de sintaxis - Token: ENDCHAR, Línea: 1, Col: 7
+ 
+Error de sintaxis - Token: ID, Línea: 1, Col: 2
+Error de sintaxis - Token: LPAREN, Línea: 1, Col: 11
+Error de sintaxis - Token: INTTYPE, Línea: 1, Col: 12
+Error de sintaxis - Token: RPAREN, Línea: 1, Col: 13
+Error de sintaxis - Token: ENDCHAR, Línea: 1, Col: 14
+ 
+Error de sintaxis - Token: IGUAL, Línea: 1, Col: 2
+Error de sintaxis - Token: INTTYPE, Línea: 1, Col: 3
+ 
+Error de sintaxis - Token: ID, Línea: 1, Col: 2
+Error de sintaxis - Token: LPAREN, Línea: 1, Col: 11
+Error de sintaxis - Token: INTTYPE, Línea: 1, Col: 12
+Error de sintaxis - Token: RPAREN, Línea: 1, Col: 13
+Error de sintaxis - Token: ENDCHAR, Línea: 1, Col: 14
+ 
+Error de sintaxis - Token: IGUAL, Línea: 1, Col: 2
+Error de sintaxis - Token: ID, Línea: 1, Col: 4
+Error de sintaxis - Token: ENDCHAR, Línea: 1, Col: 5
+ 
+Error de sintaxis - Token: PUSH_FRONT, Línea: 1, Col: 2
+Error de sintaxis - Token: LPAREN, Línea: 1, Col: 12
+Error de sintaxis - Token: INTTYPE, Línea: 1, Col: 13
+Error de sintaxis - Token: RPAREN, Línea: 1, Col: 14
+Error de sintaxis - Token: ENDCHAR, Línea: 1, Col: 15
+ 
+Error de sintaxis - Token: POP_BACK, Línea: 1, Col: 2
+Error de sintaxis - Token: LPAREN, Línea: 1, Col: 10
+Error de sintaxis - Token: RPAREN, Línea: 1, Col: 11
+Error de sintaxis - Token: ENDCHAR, Línea: 1, Col: 12
+ 
