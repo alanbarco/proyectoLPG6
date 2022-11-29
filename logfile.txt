@@ -1391,3 +1391,40 @@ Error de sintaxis - Token: IGUAL, Lï¿½nea: 1, Col: 5
 Error de sintaxis - Token: INTTYPE, Lï¿½nea: 1, Col: 6
 Error de sintaxis - Token: ENDCHAR, Lï¿½nea: 1, Col: 8
  
+Error de sintaxis - Token: ID, Línea: 2, Col: 31
+Error de sintaxis - Token: POINT, Línea: 2, Col: 39
+Error de sintaxis - Token: PUSH, Línea: 2, Col: 40
+Error de sintaxis - Token: LPAREN, Línea: 2, Col: 44
+Error de sintaxis - Token: INTTYPE, Línea: 2, Col: 45
+Error de sintaxis - Token: RPAREN, Línea: 2, Col: 47
+Error de sintaxis - Token: ENDCHAR, Línea: 2, Col: 48
+Error de sintaxis - Token: ID, Línea: 3, Col: 31
+Error de sintaxis - Token: POINT, Línea: 3, Col: 39
+Error de sintaxis - Token: PUSH, Línea: 3, Col: 40
+Error de sintaxis - Token: LPAREN, Línea: 3, Col: 44
+Error de sintaxis - Token: INTTYPE, Línea: 3, Col: 45
+Error de sintaxis - Token: RPAREN, Línea: 3, Col: 47
+Error de sintaxis - Token: ENDCHAR, Línea: 3, Col: 48
+Error de sintaxis - Token: ID, Línea: 4, Col: 31
+Error de sintaxis - Token: POINT, Línea: 4, Col: 39
+Error de sintaxis - Token: PUSH, Línea: 4, Col: 40
+Error de sintaxis - Token: LPAREN, Línea: 4, Col: 44
+Error de sintaxis - Token: INTTYPE, Línea: 4, Col: 45
+Error de sintaxis - Token: RPAREN, Línea: 4, Col: 47
+Error de sintaxis - Token: ENDCHAR, Línea: 4, Col: 48
+Error de sintaxis - Token: ID, Línea: 5, Col: 31
+Error de sintaxis - Token: POINT, Línea: 5, Col: 39
+Error de sintaxis - Token: PUSH, Línea: 5, Col: 40
+Error de sintaxis - Token: LPAREN, Línea: 5, Col: 44
+Error de sintaxis - Token: INTTYPE, Línea: 5, Col: 45
+Error de sintaxis - Token: RPAREN, Línea: 5, Col: 47
+Error de sintaxis - Token: ENDCHAR, Línea: 5, Col: 48
+Error de sintaxis - Token: ID, Línea: 2, Col: 22
+Error de sintaxis - Token: POINT, Línea: 2, Col: 30
+Error de sintaxis - Token: PUSH, Línea: 2, Col: 31
+Error de sintaxis - Token: LPAREN, Línea: 2, Col: 35
+Error de sintaxis - Token: INTTYPE, Línea: 2, Col: 36
+Error de sintaxis - Token: RPAREN, Línea: 2, Col: 38
+Error de sintaxis - Token: ENDCHAR, Línea: 2, Col: 39
+ 
+ 

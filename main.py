@@ -9,6 +9,7 @@ import tkinter as tk
 
 res_sintactico = []
 dicc = {}
+errorSemantico = False
 
 #=========================PARTE SEMANTICO JJ=============================
 def p_asignacion_let_mut_vec(p):
@@ -22,11 +23,14 @@ def p_vectorpush(p):
   '''
   global res_sintactico
   global dicc
+  global errorSemantico
   if dicc.get(p[1],False):
     if dicc.get(p[1]) != "Vec":
+      errorSemantico = True
       res_sintactico.append( "ERROR SEMÁNTICO: TIPO DE VARIABLE NO ES VEC")
   else:
-   res_sintactico.append("ERROR SEMÁNTICO: ID NO DECLARADO")
+    errorSemantico = True
+    res_sintactico.append("ERROR SEMÁNTICO: ID NO DECLARADO")
 
 #======================================================================
 
@@ -65,9 +69,19 @@ parser = yacc.yacc()
 #Llama las funciones del analizador, y lo que recibe el input como cadena de entrada
 def validacion():
     global res_sintactico
-    entrada = input.get()
-    cadena = str(parser.parse(entrada))
-    res_sintactico.append(cadena)
+    global errorSemantico
+    entrada = input.get("1.0","end-1c")
+    print(entrada)
+
+    numeroLinea=1
+
+    for linea in entrada.split("\n"):        
+        estructura = str(parser.parse(linea))
+        if estructura == "None" and not errorSemantico:
+            estructura = " Linea: " + str(numeroLinea) + " Correcto"
+            res_sintactico.append(estructura)
+        numeroLinea+=1
+        errorSemantico = False
 
 #Llama la funcion validacion() y muestra el resultado del analizador
 def sintactico():
@@ -93,13 +107,14 @@ def lex():
 
 root = tk.Tk()
 root.title("Ventana")
-root.geometry("600x600")
+root.geometry("800x800")
 
 #Elementos del GUI
 titulo = tk.Label(root, text="Intérprete de Rust",  bg="#93d4c5", font="Helvetica 30", fg="black")
 titulo.pack(fill=tk.X, ipady=20)
-input = tk.Entry(root, font="Helvetica 18",highlightthickness=2)
-input.pack(ipadx=60,ipady=40, pady=20)
+input = tk.Text(root, font="Helvetica 18",highlightthickness=2)
+input.config(width=55, height=15, font=("Consolas",12),pady=20)
+input.pack(ipadx=10,ipady=10, pady=20)
 resultado = tk.Label(root,  bg="#67948a", font="Helvetica 15", fg="#ffffff", text="Resultado...")
 resultado.pack(padx=60, pady=30)
 
