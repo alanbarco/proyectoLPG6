@@ -10,7 +10,7 @@ import ply.lex as lex
 
 #Agregue todas las palabras reservadas necesarias
 # List of token names
-reserved = {  #Empieza Alan Barco
+reserved = {  
   "async": 'ASYNC',
   "as": 'AS',
   "await": 'AWAIT',
@@ -94,10 +94,10 @@ reserved = {  #Empieza Alan Barco
   "Vec": 'VEC',
   "HashMap": 'HASHMAP',
   "LinkedList": 'LINKEDLIST'
-}  #Termina Alan Barco
+}  
 
-#DESDE AQUI BORRE
-tokens = [  #Empieza ..........
+
+tokens = [ 
   'AMPERSAND', 'PLUS', 'MINUS', 'TIMES', 'DAMPERSAND', 'DIVIDE', 'IGUAL',
   'ARROWOPT', 'MAYORQUE', 'MENORQUE', 'LCOR', 'RCOR', 'LPAREN', 'RPAREN',
   'LLLAVE', 'RLLAVE', 'COLON', 'ENDCHAR', 'COMA', 'COMILLA' ,'INTERRO', 'EXCLAM', 'POINT',
@@ -144,7 +144,7 @@ t_IDENTICO = r'=='
 t_OR = r'\|\|'
 
 
-def t_FLOATTYPE(t):                 #Empieza .........
+def t_FLOATTYPE(t):                 
   r"\d+\.\d*"
   t.value = float(t.value)
   return t

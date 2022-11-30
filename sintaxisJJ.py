@@ -1,5 +1,4 @@
 #Analizador Sintactico: José Jaramillo
-#Asignacion   #const
 
 def p_cuerpof(p):
   '''
