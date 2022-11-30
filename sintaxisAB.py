@@ -39,6 +39,7 @@ def p_valor(p):
   | FALSE
   | IDCHAR
   | IDSTRING'''
+  p[0] = p[1]
 
 def p_signocompar(p):
   '''signocompar : MAYORQUE 
@@ -64,6 +65,8 @@ def p_boolean(p):
   boolean : TRUE
   | FALSE
   '''
+  p[0] =  p[1]
+  
 def p_loop(p):
   'loop : LOOP LLLAVE metodo RLLAVE'
 

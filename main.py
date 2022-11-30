@@ -26,7 +26,7 @@ def p_asignacion_let_mut_vec(p):
   '''asignacion : LET MUT ID IGUAL VEC DOSDOBLEPUNTOS NEW LPAREN RPAREN ENDCHAR'''
   global dicc
   if asignacionConstCheck(p[3]):
-    dicc[p[3]] = {"asig":p[2], "tipo": p[5]}
+    dicc[p[3]] = {"asig":p[2], "tipo": p[5], "valor": "["}
 
 def p_asignacion_const_int(p):
   '''
@@ -36,48 +36,48 @@ def p_asignacion_const_int(p):
   global dicc
 
   if asignacionConstCheck(p[2]):
-    dicc[p[2]] = {"asig":p[1], "valor": "int"}
+    dicc[p[2]] = {"asig":p[1], "tipo": p[4], "valor" : p[6]}
 
 def p_asignacion_const_uint(p):
   'asignacion : CONST ID COLON uintsize IGUAL INTTYPE ENDCHAR'
   global dicc
   if asignacionConstCheck(p[2]):
-    dicc[p[2]] = {"asig":p[1], "tipo": "uint"}
+    dicc[p[2]] = {"asig":p[1], "tipo": p[4] , "valor": p[6]}
   
 def p_asignacion_const_float(p):
   'asignacion : CONST ID COLON floatsize IGUAL FLOATTYPE ENDCHAR'
   if asignacionConstCheck(p[2]):
-    dicc[p[2]] = {"asig":p[1], "tipo": "float"}
+    dicc[p[2]] = {"asig":p[1], "tipo": p[4] , "valor": p[6]}
 
 def p_asignacion_const_str(p):
   'asignacion : CONST ID COLON strsize IGUAL IDSTRING ENDCHAR'
   global dicc
   if asignacionConstCheck(p[2]):
-    dicc[p[2]] = {"asig":p[1], "tipo": "str"}
+    dicc[p[2]] = {"asig":p[1], "tipo": "str", "valor": p[6]}
 
 def p_asignacion_const_string(p):
   'asignacion : CONST ID COLON STRING IGUAL STRING DOSDOBLEPUNTOS FROM LPAREN IDSTRING RPAREN ENDCHAR'
   global dicc
   if asignacionConstCheck(p[2]):
-    dicc[p[2]] = {"asig":p[1], "tipo": "string"}
+    dicc[p[2]] = {"asig":p[1], "tipo": "string", "valor": p[6]}
 
 def p_asignacion_const_string2(p):
   'asignacion : CONST ID COLON STRING IGUAL IDSTRING ENDCHAR'
   global dicc  
   if asignacionConstCheck(p[2]):
-    dicc[p[2]] = {"asig":p[1], "tipo": "string"}
+    dicc[p[2]] = {"asig":p[1], "tipo": "string", "valor": p[6]}
 
 def p_asignacion_const_bool(p):
   'asignacion : CONST ID COLON BOOL IGUAL boolean ENDCHAR'
   global dicc
   if asignacionConstCheck(p[2]):
-    dicc[p[2]] = {"asig":p[1], "tipo": "bool"}
+    dicc[p[2]] = {"asig":p[1], "tipo": "bool" , "valor": p[6]}
 
 def p_asignacion_const_char(p):
   'asignacion : CONST ID COLON CHAR IGUAL IDCHAR ENDCHAR'
   global dicc
   if asignacionConstCheck(p[2]):
-    dicc[p[2]] = {"asig":p[1], "tipo": "char"}
+    dicc[p[2]] = {"asig":p[1], "tipo": "char", "valor": p[6]}
 
 def p_vectorpush(p):
   '''
@@ -107,15 +107,15 @@ def p_asignacion_let_mut(p):
   | LET MUT ID IGUAL estructuras ENDCHAR'''
   global dicc
   if asignacionConstCheck(p[3]):
-    dicc[p[3]] = p[2]
+    dicc[p[3]] = {"asig":"mut", "tipo": "nd","valor": p[5]}
   
-
 #Asignacion con let
-def p_asignacion_let(p):
+def p_asignacion_let_int(p):
   '''asignacion : LET ID IGUAL valor ENDCHAR'''
   global dicc
   if asignacionConstCheck(p[2]):
-    dicc[p[2]] = {"asig":"let", "tipo": p[4]}
+    dicc[p[2]] = {"asig":"let", "tipo": "i32" , "valor" : p[4]}
+
 #=======================================================================
 
 
@@ -123,7 +123,8 @@ def p_asignacion_let(p):
 def p_asignacion_let_mut_ll(p):
   '''asignacion : LET MUT ID IGUAL LINKEDLIST DOSDOBLEPUNTOS NEW LPAREN RPAREN ENDCHAR'''
   global dicc
-  dicc[p[3]] = p[5]
+  if asignacionConstCheck(p[2]):
+    dicc[p[3]] = {"asig":"mut", "tipo": p[5]}
 
 def p_llpushfront(p):
   '''
@@ -131,7 +132,7 @@ def p_llpushfront(p):
   '''
   global res_sintactico , dicc, errorSemantico
   if dicc.get(p[1],False):
-    if dicc.get(p[1]) != "LinkedList":
+    if dicc.get(p[1]).get("tipo") != "LinkedList":
       errorSemantico = True
       res_sintactico.append( "ERROR SEMÁNTICO: TIPO DE VARIABLE NO ES LINKEDLIST")
   else:
@@ -144,7 +145,7 @@ def p_llpopback(p):
   '''
   global res_sintactico , dicc, errorSemantico
   if dicc.get(p[1],False):
-    if dicc.get(p[1]) != "LinkedList":
+    if dicc.get(p[1]).get("tipo") != "LinkedList":
       errorSemantico = True
       res_sintactico.append( "ERROR SEMÁNTICO: TIPO DE VARIABLE NO ES LINKEDLIST")
   else:
@@ -223,6 +224,7 @@ def lex():
 def limpiar():
   global dicc
   dicc = {}
+  resultado["text"] = "Memoria limpiada"
 
 root = tk.Tk()
 root.title("Ventana")

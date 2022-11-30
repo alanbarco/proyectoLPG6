@@ -76,11 +76,11 @@ Rule 27    datatype -> floatsize
 Rule 28    datatype -> strsize
 Rule 29    datatype -> STRING
 Rule 30    datatype -> BOOL
-Rule 31    estructuras -> linkedlist
-Rule 32    estructuras -> hashmap
-Rule 33    comparacion -> ID signocompar ID
-Rule 34    comparacion -> IDCHAR signocompar IDCHAR
-Rule 35    comparacion -> IDSTRING signocompar IDSTRING
+Rule 31    comparacion -> ID signocompar ID
+Rule 32    comparacion -> IDCHAR signocompar IDCHAR
+Rule 33    comparacion -> IDSTRING signocompar IDSTRING
+Rule 34    estructuras -> linkedlist
+Rule 35    estructuras -> hashmap
 Rule 36    intsize -> INT8
 Rule 37    intsize -> INT16
 Rule 38    intsize -> INT32
@@ -91,9 +91,9 @@ Rule 42    comparacion -> INTTYPE signocompar INTTYPE
 Rule 43    comparacion -> NINTTYPE signocompar NINTTYPE
 Rule 44    comparacion -> FLOATTYPE signocompar FLOATTYPE
 Rule 45    while -> WHILE ifparams LLLAVE cuerpof RLLAVE
-Rule 46    floatsize -> FLOAT32
-Rule 47    floatsize -> FLOAT64
-Rule 48    comparacion -> boolean signocompar boolean
+Rule 46    comparacion -> boolean signocompar boolean
+Rule 47    floatsize -> FLOAT32
+Rule 48    floatsize -> FLOAT64
 Rule 49    asignacion -> CONST ID COLON intsize IGUAL INTTYPE ENDCHAR
 Rule 50    asignacion -> CONST ID COLON intsize IGUAL NINTTYPE ENDCHAR
 Rule 51    hashmap -> HASHMAP DOSDOBLEPUNTOS NEW LPAREN RPAREN
@@ -103,58 +103,58 @@ Rule 54    uintsize -> UINT32
 Rule 55    uintsize -> UINT64
 Rule 56    uintsize -> UINT128
 Rule 57    expresion -> valornumerico signo valornumerico
-Rule 58    valornumerico -> NINTTYPE
-Rule 59    valornumerico -> INTTYPE
-Rule 60    valornumerico -> FLOATTYPE
-Rule 61    valornumerico -> NFLOATTYPE
-Rule 62    asignacion -> CONST ID COLON uintsize IGUAL INTTYPE ENDCHAR
-Rule 63    strsize -> AMPERSAND COMILLA STATIC STR
-Rule 64    strsize -> AMPERSAND STR
-Rule 65    signocompar -> MAYORQUE
-Rule 66    signocompar -> MENORQUE
-Rule 67    signocompar -> DIFERENTE
-Rule 68    signocompar -> IDENTICO
-Rule 69    boolean -> TRUE
-Rule 70    boolean -> FALSE
-Rule 71    asignacion -> CONST ID COLON floatsize IGUAL FLOATTYPE ENDCHAR
-Rule 72    signo -> PLUS
-Rule 73    signo -> TIMES
-Rule 74    signo -> MINUS
-Rule 75    signo -> PORCENTAJE
-Rule 76    signo -> DIVIDE
-Rule 77    linkedlist -> LINKEDLIST DOSDOBLEPUNTOS NEW LPAREN RPAREN ENDCHAR
+Rule 58    asignacion -> CONST ID COLON uintsize IGUAL INTTYPE ENDCHAR
+Rule 59    valornumerico -> NINTTYPE
+Rule 60    valornumerico -> INTTYPE
+Rule 61    valornumerico -> FLOATTYPE
+Rule 62    valornumerico -> NFLOATTYPE
+Rule 63    signocompar -> MAYORQUE
+Rule 64    signocompar -> MENORQUE
+Rule 65    signocompar -> DIFERENTE
+Rule 66    signocompar -> IDENTICO
+Rule 67    strsize -> AMPERSAND COMILLA STATIC STR
+Rule 68    strsize -> AMPERSAND STR
+Rule 69    asignacion -> CONST ID COLON floatsize IGUAL FLOATTYPE ENDCHAR
+Rule 70    signo -> PLUS
+Rule 71    signo -> TIMES
+Rule 72    signo -> MINUS
+Rule 73    signo -> PORCENTAJE
+Rule 74    signo -> DIVIDE
+Rule 75    linkedlist -> LINKEDLIST DOSDOBLEPUNTOS NEW LPAREN RPAREN ENDCHAR
+Rule 76    boolean -> TRUE
+Rule 77    boolean -> FALSE
 Rule 78    asignacion -> CONST ID COLON strsize IGUAL IDSTRING ENDCHAR
 Rule 79    conectores -> boolean signoconect boolean
 Rule 80    conectores -> EXCLAM boolean
 Rule 81    conectores -> ID signoconect ID
-Rule 82    ifparams -> ifcondicion
-Rule 83    ifparams -> boolean
-Rule 84    ifparams -> ID
+Rule 82    asignacion -> CONST ID COLON STRING IGUAL STRING DOSDOBLEPUNTOS FROM LPAREN IDSTRING RPAREN ENDCHAR
+Rule 83    signoconect -> DAMPERSAND
+Rule 84    signoconect -> OR
 Rule 85    entrada -> IO DOSDOBLEPUNTOS STDIN LPAREN RPAREN POINT READLINE LPAREN AMPERSAND MUT ID RPAREN ENDCHAR
 Rule 86    entrada -> IO DOSDOBLEPUNTOS STDIN LPAREN RPAREN POINT READLINE LPAREN AMPERSAND MUT ID RPAREN POINT EXPECT LPAREN IDSTRING RPAREN ENDCHAR
-Rule 87    asignacion -> CONST ID COLON STRING IGUAL STRING DOSDOBLEPUNTOS FROM LPAREN IDSTRING RPAREN ENDCHAR
-Rule 88    signoconect -> DAMPERSAND
-Rule 89    signoconect -> OR
-Rule 90    elseblock -> ifblock ELSE LLLAVE cuerpof RLLAVE
-Rule 91    elseblock -> elseifblock ELSE LLLAVE cuerpof RLLAVE
-Rule 92    asignacion -> CONST ID COLON STRING IGUAL IDSTRING ENDCHAR
-Rule 93    loop -> LOOP LLLAVE metodo RLLAVE
-Rule 94    elseifblock -> ifblock ELSE IF LPAREN ifparams RPAREN LLLAVE cuerpof RLLAVE
-Rule 95    elseifblock -> ifblock ELSE IF ifparams LLLAVE cuerpof RLLAVE
-Rule 96    asignacion -> CONST ID COLON BOOL IGUAL boolean ENDCHAR
-Rule 97    params -> ID COLON datatype
-Rule 98    params -> ID COLON datatype COMA params
-Rule 99    funcion -> FN ID LPAREN params RPAREN LLLAVE metodo RLLAVE
-Rule 100   ifblock -> IF LPAREN ifparams RPAREN LLLAVE cuerpof RLLAVE
-Rule 101   ifblock -> IF ifparams LLLAVE cuerpof RLLAVE
-Rule 102   asignacion -> CONST ID COLON CHAR IGUAL IDCHAR ENDCHAR
+Rule 87    ifparams -> ifcondicion
+Rule 88    ifparams -> boolean
+Rule 89    ifparams -> ID
+Rule 90    asignacion -> CONST ID COLON STRING IGUAL IDSTRING ENDCHAR
+Rule 91    elseblock -> ifblock ELSE LLLAVE cuerpof RLLAVE
+Rule 92    elseblock -> elseifblock ELSE LLLAVE cuerpof RLLAVE
+Rule 93    asignacion -> CONST ID COLON BOOL IGUAL boolean ENDCHAR
+Rule 94    loop -> LOOP LLLAVE metodo RLLAVE
+Rule 95    params -> ID COLON datatype
+Rule 96    params -> ID COLON datatype COMA params
+Rule 97    elseifblock -> ifblock ELSE IF LPAREN ifparams RPAREN LLLAVE cuerpof RLLAVE
+Rule 98    elseifblock -> ifblock ELSE IF ifparams LLLAVE cuerpof RLLAVE
+Rule 99    asignacion -> CONST ID COLON CHAR IGUAL IDCHAR ENDCHAR
+Rule 100   funcion -> FN ID LPAREN params RPAREN LLLAVE metodo RLLAVE
+Rule 101   ifblock -> IF LPAREN ifparams RPAREN LLLAVE cuerpof RLLAVE
+Rule 102   ifblock -> IF ifparams LLLAVE cuerpof RLLAVE
 Rule 103   impresion -> PRINTLN LPAREN IDSTRING RPAREN ENDCHAR
-Rule 104   ifcondicion -> comparacion
-Rule 105   ifcondicion -> comparacion signoconect ifcondicion
-Rule 106   ifcondicion -> LPAREN comparacion RPAREN
-Rule 107   ifcondicion -> LPAREN comparacion RPAREN signoconect ifcondicion
-Rule 108   ifcondicion -> LPAREN ifcondicion RPAREN
-Rule 109   vectorpush -> ID POINT PUSH LPAREN INTTYPE RPAREN ENDCHAR
+Rule 104   vectorpush -> ID POINT PUSH LPAREN INTTYPE RPAREN ENDCHAR
+Rule 105   ifcondicion -> comparacion
+Rule 106   ifcondicion -> comparacion signoconect ifcondicion
+Rule 107   ifcondicion -> LPAREN comparacion RPAREN
+Rule 108   ifcondicion -> LPAREN comparacion RPAREN signoconect ifcondicion
+Rule 109   ifcondicion -> LPAREN ifcondicion RPAREN
 Rule 110   funcion -> FN ID LPAREN params RPAREN ARROWOPT datatype LLLAVE cuerpof RETURN ifparams ENDCHAR RLLAVE
 Rule 111   funcion -> FN ID LPAREN params RPAREN ARROWOPT datatype LLLAVE cuerpof ID RLLAVE
 Rule 112   asignacion -> LET MUT ID IGUAL valor ENDCHAR
@@ -166,47 +166,47 @@ Rule 117   llpopback -> ID POINT POP_BACK LPAREN RPAREN ENDCHAR
 
 Terminals, with rules where they appear
 
-AMPERSAND            : 63 64 85 86
+AMPERSAND            : 67 68 85 86
 ARROWOPT             : 110 111
 ASYNC                : 
 AWAIT                : 
-BOOL                 : 30 96
+BOOL                 : 30 93
 BREAK                : 
-CHAR                 : 102
-COLON                : 49 50 62 71 78 87 92 96 97 98 102
-COMA                 : 98
-COMILLA              : 63
-CONST                : 49 50 62 71 78 87 92 96 102
+CHAR                 : 99
+COLON                : 49 50 58 69 78 82 90 93 95 96 99
+COMA                 : 96
+COMILLA              : 67
+CONST                : 49 50 58 69 78 82 90 93 99
 CONTINUE             : 
-DAMPERSAND           : 88
-DIFERENTE            : 67
+DAMPERSAND           : 83
+DIFERENTE            : 65
 DIVASIGN             : 
-DIVIDE               : 76
+DIVIDE               : 74
 DOLAR                : 
-DOSDOBLEPUNTOS       : 41 51 77 85 86 87 115
+DOSDOBLEPUNTOS       : 41 51 75 82 85 86 115
 DYN                  : 
-ELSE                 : 90 91 94 95
-ENDCHAR              : 41 49 50 62 71 77 78 85 86 87 92 96 102 103 109 110 112 113 114 115 116 117
+ELSE                 : 91 92 97 98
+ENDCHAR              : 41 49 50 58 69 75 78 82 85 86 90 93 99 103 104 110 112 113 114 115 116 117
 ENUM                 : 
 ERR                  : 
 EXCLAM               : 80
 EXPECT               : 86
-FALSE                : 18 70
+FALSE                : 18 77
 FINAL                : 
-FLOAT32              : 46
-FLOAT64              : 47
-FLOATTYPE            : 44 44 60 71
-FN                   : 99 110 111
+FLOAT32              : 47
+FLOAT64              : 48
+FLOATTYPE            : 44 44 61 69
+FN                   : 100 110 111
 FOR                  : 
 FORMAT               : 
-FROM                 : 87
+FROM                 : 82
 HASHMAP              : 51
-ID                   : 19 33 33 41 49 50 62 71 78 81 81 84 85 86 87 92 96 97 98 99 102 109 110 111 111 112 113 114 115 116 117
-IDCHAR               : 20 34 34 102
-IDENTICO             : 68
-IDSTRING             : 21 35 35 78 86 87 92 103
-IF                   : 94 95 100 101
-IGUAL                : 41 49 50 62 71 78 87 92 96 102 112 113 114 115
+ID                   : 19 31 31 41 49 50 58 69 78 81 81 82 85 86 89 90 93 95 96 99 100 104 110 111 111 112 113 114 115 116 117
+IDCHAR               : 20 32 32 99
+IDENTICO             : 66
+IDSTRING             : 21 33 33 78 82 86 90 103
+IF                   : 97 98 101 102
+IGUAL                : 41 49 50 58 69 78 82 90 93 99 112 113 114 115
 IMPL                 : 
 IN                   : 
 INPUT                : 
@@ -216,56 +216,56 @@ INT32                : 38
 INT64                : 39
 INT8                 : 36
 INTERRO              : 
-INTTYPE              : 42 42 49 59 62 109 116
+INTTYPE              : 42 42 49 58 60 104 116
 IO                   : 85 86
 LCOR                 : 
 LET                  : 41 112 113 114 115
-LINKEDLIST           : 77 115
-LLLAVE               : 45 90 91 93 94 95 99 100 101 110 111
-LOOP                 : 93
-LPAREN               : 41 51 77 85 85 86 86 86 87 94 99 100 103 106 107 108 109 110 111 115 116 117
+LINKEDLIST           : 75 115
+LLLAVE               : 45 91 92 94 97 98 100 101 102 110 111
+LOOP                 : 94
+LPAREN               : 41 51 75 82 85 85 86 86 86 97 100 101 103 104 107 108 109 110 111 115 116 117
 MAINFN               : 
 MATCH                : 
-MAYORQUE             : 65
-MENORQUE             : 66
-MINUS                : 74
+MAYORQUE             : 63
+MENORQUE             : 64
+MINUS                : 72
 MOVE                 : 
 MULTIASIGN           : 
 MUT                  : 41 85 86 112 113 115
-NEW                  : 41 51 77 115
-NFLOATTYPE           : 61
-NINTTYPE             : 43 43 50 58
+NEW                  : 41 51 75 115
+NFLOATTYPE           : 62
+NINTTYPE             : 43 43 50 59
 OK                   : 
-OR                   : 89
+OR                   : 84
 PARSE                : 
-PLUS                 : 72
-POINT                : 85 86 86 109 116 117
+PLUS                 : 70
+POINT                : 85 86 86 104 116 117
 POINTERSIZE          : 
 POP_BACK             : 117
-PORCENTAJE           : 75
+PORCENTAJE           : 73
 PRINTLN              : 103
 PRIV                 : 
 PUB                  : 
-PUSH                 : 109
+PUSH                 : 104
 PUSH_FRONT           : 116
 RCOR                 : 
 READLINE             : 85 86
 REF                  : 
 RESTAASIGN           : 
 RETURN               : 110
-RLLAVE               : 45 90 91 93 94 95 99 100 101 110 111
-RPAREN               : 41 51 77 85 85 86 86 86 87 94 99 100 103 106 107 108 109 110 111 115 116 117
+RLLAVE               : 45 91 92 94 97 98 100 101 102 110 111
+RPAREN               : 41 51 75 82 85 85 86 86 86 97 100 101 103 104 107 108 109 110 111 115 116 117
 SELF                 : 
 SIZEOF               : 
-STATIC               : 63
+STATIC               : 67
 STDIN                : 85 86
-STR                  : 63 64
-STRING               : 29 87 87 92
+STR                  : 67 68
+STRING               : 29 82 82 90
 STRUCT               : 
 SUMAASIGN            : 
 SUPER                : 
-TIMES                : 73
-TRUE                 : 17 69
+TIMES                : 71
+TRUE                 : 17 76
 TYPE                 : 
 TYPEOF               : 
 UINT128              : 56
@@ -284,36 +284,36 @@ error                :
 Nonterminals, with rules where they appear
 
 asignacion           : 5
-boolean              : 48 48 79 79 80 83 96
-comparacion          : 24 104 105 106 107
+boolean              : 46 46 79 79 80 88 93
+comparacion          : 24 105 106 107 108
 conectores           : 23
 cuerpo               : 0
-cuerpof              : 4 45 90 91 94 95 100 101 110 111
-datatype             : 97 98 110 111
+cuerpof              : 4 45 91 92 97 98 101 102 110 111
+datatype             : 95 96 110 111
 elseblock            : 10
-elseifblock          : 9 91
+elseifblock          : 9 92
 entrada              : 14
 estructuras          : 113
 expresion            : 22
-floatsize            : 27 71
+floatsize            : 27 69
 funcion              : 2
-hashmap              : 32
-ifblock              : 8 90 94 95
-ifcondicion          : 82 105 107 108
-ifparams             : 45 94 95 100 101 110
+hashmap              : 35
+ifblock              : 8 91 97 98
+ifcondicion          : 87 106 108 109
+ifparams             : 45 97 98 101 102 110
 impresion            : 6
 intsize              : 25 49 50
-linkedlist           : 31
+linkedlist           : 34
 llpopback            : 13
 llpushfront          : 12
 loop                 : 7
-metodo               : 1 3 4 93 99
-params               : 98 99 110 111
+metodo               : 1 3 4 94 100
+params               : 96 100 110 111
 signo                : 57
-signocompar          : 33 34 35 42 43 44 48
-signoconect          : 79 81 105 107
+signocompar          : 31 32 33 42 43 44 46
+signoconect          : 79 81 106 108
 strsize              : 28 78
-uintsize             : 26 62
+uintsize             : 26 58
 valor                : 112 114
 valornumerico        : 16 57 57
 vectorpush           : 11
@@ -337,32 +337,32 @@ state 0
     (13) metodo -> . llpopback
     (14) metodo -> . entrada
     (15) metodo -> . while
-    (99) funcion -> . FN ID LPAREN params RPAREN LLLAVE metodo RLLAVE
+    (100) funcion -> . FN ID LPAREN params RPAREN LLLAVE metodo RLLAVE
     (110) funcion -> . FN ID LPAREN params RPAREN ARROWOPT datatype LLLAVE cuerpof RETURN ifparams ENDCHAR RLLAVE
     (111) funcion -> . FN ID LPAREN params RPAREN ARROWOPT datatype LLLAVE cuerpof ID RLLAVE
     (41) asignacion -> . LET MUT ID IGUAL VEC DOSDOBLEPUNTOS NEW LPAREN RPAREN ENDCHAR
     (49) asignacion -> . CONST ID COLON intsize IGUAL INTTYPE ENDCHAR
     (50) asignacion -> . CONST ID COLON intsize IGUAL NINTTYPE ENDCHAR
-    (62) asignacion -> . CONST ID COLON uintsize IGUAL INTTYPE ENDCHAR
-    (71) asignacion -> . CONST ID COLON floatsize IGUAL FLOATTYPE ENDCHAR
+    (58) asignacion -> . CONST ID COLON uintsize IGUAL INTTYPE ENDCHAR
+    (69) asignacion -> . CONST ID COLON floatsize IGUAL FLOATTYPE ENDCHAR
     (78) asignacion -> . CONST ID COLON strsize IGUAL IDSTRING ENDCHAR
-    (87) asignacion -> . CONST ID COLON STRING IGUAL STRING DOSDOBLEPUNTOS FROM LPAREN IDSTRING RPAREN ENDCHAR
-    (92) asignacion -> . CONST ID COLON STRING IGUAL IDSTRING ENDCHAR
-    (96) asignacion -> . CONST ID COLON BOOL IGUAL boolean ENDCHAR
-    (102) asignacion -> . CONST ID COLON CHAR IGUAL IDCHAR ENDCHAR
+    (82) asignacion -> . CONST ID COLON STRING IGUAL STRING DOSDOBLEPUNTOS FROM LPAREN IDSTRING RPAREN ENDCHAR
+    (90) asignacion -> . CONST ID COLON STRING IGUAL IDSTRING ENDCHAR
+    (93) asignacion -> . CONST ID COLON BOOL IGUAL boolean ENDCHAR
+    (99) asignacion -> . CONST ID COLON CHAR IGUAL IDCHAR ENDCHAR
     (112) asignacion -> . LET MUT ID IGUAL valor ENDCHAR
     (113) asignacion -> . LET MUT ID IGUAL estructuras ENDCHAR
     (114) asignacion -> . LET ID IGUAL valor ENDCHAR
     (115) asignacion -> . LET MUT ID IGUAL LINKEDLIST DOSDOBLEPUNTOS NEW LPAREN RPAREN ENDCHAR
     (103) impresion -> . PRINTLN LPAREN IDSTRING RPAREN ENDCHAR
-    (93) loop -> . LOOP LLLAVE metodo RLLAVE
-    (100) ifblock -> . IF LPAREN ifparams RPAREN LLLAVE cuerpof RLLAVE
-    (101) ifblock -> . IF ifparams LLLAVE cuerpof RLLAVE
-    (94) elseifblock -> . ifblock ELSE IF LPAREN ifparams RPAREN LLLAVE cuerpof RLLAVE
-    (95) elseifblock -> . ifblock ELSE IF ifparams LLLAVE cuerpof RLLAVE
-    (90) elseblock -> . ifblock ELSE LLLAVE cuerpof RLLAVE
-    (91) elseblock -> . elseifblock ELSE LLLAVE cuerpof RLLAVE
-    (109) vectorpush -> . ID POINT PUSH LPAREN INTTYPE RPAREN ENDCHAR
+    (94) loop -> . LOOP LLLAVE metodo RLLAVE
+    (101) ifblock -> . IF LPAREN ifparams RPAREN LLLAVE cuerpof RLLAVE
+    (102) ifblock -> . IF ifparams LLLAVE cuerpof RLLAVE
+    (97) elseifblock -> . ifblock ELSE IF LPAREN ifparams RPAREN LLLAVE cuerpof RLLAVE
+    (98) elseifblock -> . ifblock ELSE IF ifparams LLLAVE cuerpof RLLAVE
+    (91) elseblock -> . ifblock ELSE LLLAVE cuerpof RLLAVE
+    (92) elseblock -> . elseifblock ELSE LLLAVE cuerpof RLLAVE
+    (104) vectorpush -> . ID POINT PUSH LPAREN INTTYPE RPAREN ENDCHAR
     (116) llpushfront -> . ID POINT PUSH_FRONT LPAREN INTTYPE RPAREN ENDCHAR
     (117) llpopback -> . ID POINT POP_BACK LPAREN RPAREN ENDCHAR
     (85) entrada -> . IO DOSDOBLEPUNTOS STDIN LPAREN RPAREN POINT READLINE LPAREN AMPERSAND MUT ID RPAREN ENDCHAR
@@ -468,9 +468,9 @@ state 6
 state 7
 
     (8) metodo -> ifblock .
-    (94) elseifblock -> ifblock . ELSE IF LPAREN ifparams RPAREN LLLAVE cuerpof RLLAVE
-    (95) elseifblock -> ifblock . ELSE IF ifparams LLLAVE cuerpof RLLAVE
-    (90) elseblock -> ifblock . ELSE LLLAVE cuerpof RLLAVE
+    (97) elseifblock -> ifblock . ELSE IF LPAREN ifparams RPAREN LLLAVE cuerpof RLLAVE
+    (98) elseifblock -> ifblock . ELSE IF ifparams LLLAVE cuerpof RLLAVE
+    (91) elseblock -> ifblock . ELSE LLLAVE cuerpof RLLAVE
 
     $end            reduce using rule 8 (metodo -> ifblock .)
     RLLAVE          reduce using rule 8 (metodo -> ifblock .)
@@ -489,7 +489,7 @@ state 7
 state 8
 
     (9) metodo -> elseifblock .
-    (91) elseblock -> elseifblock . ELSE LLLAVE cuerpof RLLAVE
+    (92) elseblock -> elseifblock . ELSE LLLAVE cuerpof RLLAVE
 
     $end            reduce using rule 9 (metodo -> elseifblock .)
     RLLAVE          reduce using rule 9 (metodo -> elseifblock .)
@@ -609,7 +609,7 @@ state 14
 
 state 15
 
-    (99) funcion -> FN . ID LPAREN params RPAREN LLLAVE metodo RLLAVE
+    (100) funcion -> FN . ID LPAREN params RPAREN LLLAVE metodo RLLAVE
     (110) funcion -> FN . ID LPAREN params RPAREN ARROWOPT datatype LLLAVE cuerpof RETURN ifparams ENDCHAR RLLAVE
     (111) funcion -> FN . ID LPAREN params RPAREN ARROWOPT datatype LLLAVE cuerpof ID RLLAVE
 
@@ -618,7 +618,7 @@ state 15
 
 state 16
 
-    (109) vectorpush -> ID . POINT PUSH LPAREN INTTYPE RPAREN ENDCHAR
+    (104) vectorpush -> ID . POINT PUSH LPAREN INTTYPE RPAREN ENDCHAR
     (116) llpushfront -> ID . POINT PUSH_FRONT LPAREN INTTYPE RPAREN ENDCHAR
     (117) llpopback -> ID . POINT POP_BACK LPAREN RPAREN ENDCHAR
 
@@ -641,13 +641,13 @@ state 18
 
     (49) asignacion -> CONST . ID COLON intsize IGUAL INTTYPE ENDCHAR
     (50) asignacion -> CONST . ID COLON intsize IGUAL NINTTYPE ENDCHAR
-    (62) asignacion -> CONST . ID COLON uintsize IGUAL INTTYPE ENDCHAR
-    (71) asignacion -> CONST . ID COLON floatsize IGUAL FLOATTYPE ENDCHAR
+    (58) asignacion -> CONST . ID COLON uintsize IGUAL INTTYPE ENDCHAR
+    (69) asignacion -> CONST . ID COLON floatsize IGUAL FLOATTYPE ENDCHAR
     (78) asignacion -> CONST . ID COLON strsize IGUAL IDSTRING ENDCHAR
-    (87) asignacion -> CONST . ID COLON STRING IGUAL STRING DOSDOBLEPUNTOS FROM LPAREN IDSTRING RPAREN ENDCHAR
-    (92) asignacion -> CONST . ID COLON STRING IGUAL IDSTRING ENDCHAR
-    (96) asignacion -> CONST . ID COLON BOOL IGUAL boolean ENDCHAR
-    (102) asignacion -> CONST . ID COLON CHAR IGUAL IDCHAR ENDCHAR
+    (82) asignacion -> CONST . ID COLON STRING IGUAL STRING DOSDOBLEPUNTOS FROM LPAREN IDSTRING RPAREN ENDCHAR
+    (90) asignacion -> CONST . ID COLON STRING IGUAL IDSTRING ENDCHAR
+    (93) asignacion -> CONST . ID COLON BOOL IGUAL boolean ENDCHAR
+    (99) asignacion -> CONST . ID COLON CHAR IGUAL IDCHAR ENDCHAR
 
     ID              shift and go to state 30
 
@@ -661,32 +661,32 @@ state 19
 
 state 20
 
-    (93) loop -> LOOP . LLLAVE metodo RLLAVE
+    (94) loop -> LOOP . LLLAVE metodo RLLAVE
 
     LLLAVE          shift and go to state 32
 
 
 state 21
 
-    (100) ifblock -> IF . LPAREN ifparams RPAREN LLLAVE cuerpof RLLAVE
-    (101) ifblock -> IF . ifparams LLLAVE cuerpof RLLAVE
-    (82) ifparams -> . ifcondicion
-    (83) ifparams -> . boolean
-    (84) ifparams -> . ID
-    (104) ifcondicion -> . comparacion
-    (105) ifcondicion -> . comparacion signoconect ifcondicion
-    (106) ifcondicion -> . LPAREN comparacion RPAREN
-    (107) ifcondicion -> . LPAREN comparacion RPAREN signoconect ifcondicion
-    (108) ifcondicion -> . LPAREN ifcondicion RPAREN
-    (69) boolean -> . TRUE
-    (70) boolean -> . FALSE
-    (33) comparacion -> . ID signocompar ID
-    (34) comparacion -> . IDCHAR signocompar IDCHAR
-    (35) comparacion -> . IDSTRING signocompar IDSTRING
+    (101) ifblock -> IF . LPAREN ifparams RPAREN LLLAVE cuerpof RLLAVE
+    (102) ifblock -> IF . ifparams LLLAVE cuerpof RLLAVE
+    (87) ifparams -> . ifcondicion
+    (88) ifparams -> . boolean
+    (89) ifparams -> . ID
+    (105) ifcondicion -> . comparacion
+    (106) ifcondicion -> . comparacion signoconect ifcondicion
+    (107) ifcondicion -> . LPAREN comparacion RPAREN
+    (108) ifcondicion -> . LPAREN comparacion RPAREN signoconect ifcondicion
+    (109) ifcondicion -> . LPAREN ifcondicion RPAREN
+    (76) boolean -> . TRUE
+    (77) boolean -> . FALSE
+    (31) comparacion -> . ID signocompar ID
+    (32) comparacion -> . IDCHAR signocompar IDCHAR
+    (33) comparacion -> . IDSTRING signocompar IDSTRING
     (42) comparacion -> . INTTYPE signocompar INTTYPE
     (43) comparacion -> . NINTTYPE signocompar NINTTYPE
     (44) comparacion -> . FLOATTYPE signocompar FLOATTYPE
-    (48) comparacion -> . boolean signocompar boolean
+    (46) comparacion -> . boolean signocompar boolean
 
     LPAREN          shift and go to state 33
     ID              shift and go to state 37
@@ -714,23 +714,23 @@ state 22
 state 23
 
     (45) while -> WHILE . ifparams LLLAVE cuerpof RLLAVE
-    (82) ifparams -> . ifcondicion
-    (83) ifparams -> . boolean
-    (84) ifparams -> . ID
-    (104) ifcondicion -> . comparacion
-    (105) ifcondicion -> . comparacion signoconect ifcondicion
-    (106) ifcondicion -> . LPAREN comparacion RPAREN
-    (107) ifcondicion -> . LPAREN comparacion RPAREN signoconect ifcondicion
-    (108) ifcondicion -> . LPAREN ifcondicion RPAREN
-    (69) boolean -> . TRUE
-    (70) boolean -> . FALSE
-    (33) comparacion -> . ID signocompar ID
-    (34) comparacion -> . IDCHAR signocompar IDCHAR
-    (35) comparacion -> . IDSTRING signocompar IDSTRING
+    (87) ifparams -> . ifcondicion
+    (88) ifparams -> . boolean
+    (89) ifparams -> . ID
+    (105) ifcondicion -> . comparacion
+    (106) ifcondicion -> . comparacion signoconect ifcondicion
+    (107) ifcondicion -> . LPAREN comparacion RPAREN
+    (108) ifcondicion -> . LPAREN comparacion RPAREN signoconect ifcondicion
+    (109) ifcondicion -> . LPAREN ifcondicion RPAREN
+    (76) boolean -> . TRUE
+    (77) boolean -> . FALSE
+    (31) comparacion -> . ID signocompar ID
+    (32) comparacion -> . IDCHAR signocompar IDCHAR
+    (33) comparacion -> . IDSTRING signocompar IDSTRING
     (42) comparacion -> . INTTYPE signocompar INTTYPE
     (43) comparacion -> . NINTTYPE signocompar NINTTYPE
     (44) comparacion -> . FLOATTYPE signocompar FLOATTYPE
-    (48) comparacion -> . boolean signocompar boolean
+    (46) comparacion -> . boolean signocompar boolean
 
     ID              shift and go to state 37
     LPAREN          shift and go to state 48
@@ -749,9 +749,9 @@ state 23
 
 state 24
 
-    (94) elseifblock -> ifblock ELSE . IF LPAREN ifparams RPAREN LLLAVE cuerpof RLLAVE
-    (95) elseifblock -> ifblock ELSE . IF ifparams LLLAVE cuerpof RLLAVE
-    (90) elseblock -> ifblock ELSE . LLLAVE cuerpof RLLAVE
+    (97) elseifblock -> ifblock ELSE . IF LPAREN ifparams RPAREN LLLAVE cuerpof RLLAVE
+    (98) elseifblock -> ifblock ELSE . IF ifparams LLLAVE cuerpof RLLAVE
+    (91) elseblock -> ifblock ELSE . LLLAVE cuerpof RLLAVE
 
     IF              shift and go to state 49
     LLLAVE          shift and go to state 50
@@ -759,14 +759,14 @@ state 24
 
 state 25
 
-    (91) elseblock -> elseifblock ELSE . LLLAVE cuerpof RLLAVE
+    (92) elseblock -> elseifblock ELSE . LLLAVE cuerpof RLLAVE
 
     LLLAVE          shift and go to state 51
 
 
 state 26
 
-    (99) funcion -> FN ID . LPAREN params RPAREN LLLAVE metodo RLLAVE
+    (100) funcion -> FN ID . LPAREN params RPAREN LLLAVE metodo RLLAVE
     (110) funcion -> FN ID . LPAREN params RPAREN ARROWOPT datatype LLLAVE cuerpof RETURN ifparams ENDCHAR RLLAVE
     (111) funcion -> FN ID . LPAREN params RPAREN ARROWOPT datatype LLLAVE cuerpof ID RLLAVE
 
@@ -775,7 +775,7 @@ state 26
 
 state 27
 
-    (109) vectorpush -> ID POINT . PUSH LPAREN INTTYPE RPAREN ENDCHAR
+    (104) vectorpush -> ID POINT . PUSH LPAREN INTTYPE RPAREN ENDCHAR
     (116) llpushfront -> ID POINT . PUSH_FRONT LPAREN INTTYPE RPAREN ENDCHAR
     (117) llpopback -> ID POINT . POP_BACK LPAREN RPAREN ENDCHAR
 
@@ -805,13 +805,13 @@ state 30
 
     (49) asignacion -> CONST ID . COLON intsize IGUAL INTTYPE ENDCHAR
     (50) asignacion -> CONST ID . COLON intsize IGUAL NINTTYPE ENDCHAR
-    (62) asignacion -> CONST ID . COLON uintsize IGUAL INTTYPE ENDCHAR
-    (71) asignacion -> CONST ID . COLON floatsize IGUAL FLOATTYPE ENDCHAR
+    (58) asignacion -> CONST ID . COLON uintsize IGUAL INTTYPE ENDCHAR
+    (69) asignacion -> CONST ID . COLON floatsize IGUAL FLOATTYPE ENDCHAR
     (78) asignacion -> CONST ID . COLON strsize IGUAL IDSTRING ENDCHAR
-    (87) asignacion -> CONST ID . COLON STRING IGUAL STRING DOSDOBLEPUNTOS FROM LPAREN IDSTRING RPAREN ENDCHAR
-    (92) asignacion -> CONST ID . COLON STRING IGUAL IDSTRING ENDCHAR
-    (96) asignacion -> CONST ID . COLON BOOL IGUAL boolean ENDCHAR
-    (102) asignacion -> CONST ID . COLON CHAR IGUAL IDCHAR ENDCHAR
+    (82) asignacion -> CONST ID . COLON STRING IGUAL STRING DOSDOBLEPUNTOS FROM LPAREN IDSTRING RPAREN ENDCHAR
+    (90) asignacion -> CONST ID . COLON STRING IGUAL IDSTRING ENDCHAR
+    (93) asignacion -> CONST ID . COLON BOOL IGUAL boolean ENDCHAR
+    (99) asignacion -> CONST ID . COLON CHAR IGUAL IDCHAR ENDCHAR
 
     COLON           shift and go to state 58
 
@@ -825,7 +825,7 @@ state 31
 
 state 32
 
-    (93) loop -> LOOP LLLAVE . metodo RLLAVE
+    (94) loop -> LOOP LLLAVE . metodo RLLAVE
     (5) metodo -> . asignacion
     (6) metodo -> . impresion
     (7) metodo -> . loop
@@ -840,26 +840,26 @@ state 32
     (41) asignacion -> . LET MUT ID IGUAL VEC DOSDOBLEPUNTOS NEW LPAREN RPAREN ENDCHAR
     (49) asignacion -> . CONST ID COLON intsize IGUAL INTTYPE ENDCHAR
     (50) asignacion -> . CONST ID COLON intsize IGUAL NINTTYPE ENDCHAR
-    (62) asignacion -> . CONST ID COLON uintsize IGUAL INTTYPE ENDCHAR
-    (71) asignacion -> . CONST ID COLON floatsize IGUAL FLOATTYPE ENDCHAR
+    (58) asignacion -> . CONST ID COLON uintsize IGUAL INTTYPE ENDCHAR
+    (69) asignacion -> . CONST ID COLON floatsize IGUAL FLOATTYPE ENDCHAR
     (78) asignacion -> . CONST ID COLON strsize IGUAL IDSTRING ENDCHAR
-    (87) asignacion -> . CONST ID COLON STRING IGUAL STRING DOSDOBLEPUNTOS FROM LPAREN IDSTRING RPAREN ENDCHAR
-    (92) asignacion -> . CONST ID COLON STRING IGUAL IDSTRING ENDCHAR
-    (96) asignacion -> . CONST ID COLON BOOL IGUAL boolean ENDCHAR
-    (102) asignacion -> . CONST ID COLON CHAR IGUAL IDCHAR ENDCHAR
+    (82) asignacion -> . CONST ID COLON STRING IGUAL STRING DOSDOBLEPUNTOS FROM LPAREN IDSTRING RPAREN ENDCHAR
+    (90) asignacion -> . CONST ID COLON STRING IGUAL IDSTRING ENDCHAR
+    (93) asignacion -> . CONST ID COLON BOOL IGUAL boolean ENDCHAR
+    (99) asignacion -> . CONST ID COLON CHAR IGUAL IDCHAR ENDCHAR
     (112) asignacion -> . LET MUT ID IGUAL valor ENDCHAR
     (113) asignacion -> . LET MUT ID IGUAL estructuras ENDCHAR
     (114) asignacion -> . LET ID IGUAL valor ENDCHAR
     (115) asignacion -> . LET MUT ID IGUAL LINKEDLIST DOSDOBLEPUNTOS NEW LPAREN RPAREN ENDCHAR
     (103) impresion -> . PRINTLN LPAREN IDSTRING RPAREN ENDCHAR
-    (93) loop -> . LOOP LLLAVE metodo RLLAVE
-    (100) ifblock -> . IF LPAREN ifparams RPAREN LLLAVE cuerpof RLLAVE
-    (101) ifblock -> . IF ifparams LLLAVE cuerpof RLLAVE
-    (94) elseifblock -> . ifblock ELSE IF LPAREN ifparams RPAREN LLLAVE cuerpof RLLAVE
-    (95) elseifblock -> . ifblock ELSE IF ifparams LLLAVE cuerpof RLLAVE
-    (90) elseblock -> . ifblock ELSE LLLAVE cuerpof RLLAVE
-    (91) elseblock -> . elseifblock ELSE LLLAVE cuerpof RLLAVE
-    (109) vectorpush -> . ID POINT PUSH LPAREN INTTYPE RPAREN ENDCHAR
+    (94) loop -> . LOOP LLLAVE metodo RLLAVE
+    (101) ifblock -> . IF LPAREN ifparams RPAREN LLLAVE cuerpof RLLAVE
+    (102) ifblock -> . IF ifparams LLLAVE cuerpof RLLAVE
+    (97) elseifblock -> . ifblock ELSE IF LPAREN ifparams RPAREN LLLAVE cuerpof RLLAVE
+    (98) elseifblock -> . ifblock ELSE IF ifparams LLLAVE cuerpof RLLAVE
+    (91) elseblock -> . ifblock ELSE LLLAVE cuerpof RLLAVE
+    (92) elseblock -> . elseifblock ELSE LLLAVE cuerpof RLLAVE
+    (104) vectorpush -> . ID POINT PUSH LPAREN INTTYPE RPAREN ENDCHAR
     (116) llpushfront -> . ID POINT PUSH_FRONT LPAREN INTTYPE RPAREN ENDCHAR
     (117) llpopback -> . ID POINT POP_BACK LPAREN RPAREN ENDCHAR
     (85) entrada -> . IO DOSDOBLEPUNTOS STDIN LPAREN RPAREN POINT READLINE LPAREN AMPERSAND MUT ID RPAREN ENDCHAR
@@ -890,27 +890,27 @@ state 32
 
 state 33
 
-    (100) ifblock -> IF LPAREN . ifparams RPAREN LLLAVE cuerpof RLLAVE
-    (106) ifcondicion -> LPAREN . comparacion RPAREN
-    (107) ifcondicion -> LPAREN . comparacion RPAREN signoconect ifcondicion
-    (108) ifcondicion -> LPAREN . ifcondicion RPAREN
-    (82) ifparams -> . ifcondicion
-    (83) ifparams -> . boolean
-    (84) ifparams -> . ID
-    (33) comparacion -> . ID signocompar ID
-    (34) comparacion -> . IDCHAR signocompar IDCHAR
-    (35) comparacion -> . IDSTRING signocompar IDSTRING
+    (101) ifblock -> IF LPAREN . ifparams RPAREN LLLAVE cuerpof RLLAVE
+    (107) ifcondicion -> LPAREN . comparacion RPAREN
+    (108) ifcondicion -> LPAREN . comparacion RPAREN signoconect ifcondicion
+    (109) ifcondicion -> LPAREN . ifcondicion RPAREN
+    (87) ifparams -> . ifcondicion
+    (88) ifparams -> . boolean
+    (89) ifparams -> . ID
+    (31) comparacion -> . ID signocompar ID
+    (32) comparacion -> . IDCHAR signocompar IDCHAR
+    (33) comparacion -> . IDSTRING signocompar IDSTRING
     (42) comparacion -> . INTTYPE signocompar INTTYPE
     (43) comparacion -> . NINTTYPE signocompar NINTTYPE
     (44) comparacion -> . FLOATTYPE signocompar FLOATTYPE
-    (48) comparacion -> . boolean signocompar boolean
-    (104) ifcondicion -> . comparacion
-    (105) ifcondicion -> . comparacion signoconect ifcondicion
-    (106) ifcondicion -> . LPAREN comparacion RPAREN
-    (107) ifcondicion -> . LPAREN comparacion RPAREN signoconect ifcondicion
-    (108) ifcondicion -> . LPAREN ifcondicion RPAREN
-    (69) boolean -> . TRUE
-    (70) boolean -> . FALSE
+    (46) comparacion -> . boolean signocompar boolean
+    (105) ifcondicion -> . comparacion
+    (106) ifcondicion -> . comparacion signoconect ifcondicion
+    (107) ifcondicion -> . LPAREN comparacion RPAREN
+    (108) ifcondicion -> . LPAREN comparacion RPAREN signoconect ifcondicion
+    (109) ifcondicion -> . LPAREN ifcondicion RPAREN
+    (76) boolean -> . TRUE
+    (77) boolean -> . FALSE
 
     ID              shift and go to state 37
     IDCHAR          shift and go to state 41
@@ -929,31 +929,31 @@ state 33
 
 state 34
 
-    (101) ifblock -> IF ifparams . LLLAVE cuerpof RLLAVE
+    (102) ifblock -> IF ifparams . LLLAVE cuerpof RLLAVE
 
     LLLAVE          shift and go to state 64
 
 
 state 35
 
-    (82) ifparams -> ifcondicion .
+    (87) ifparams -> ifcondicion .
 
-    LLLAVE          reduce using rule 82 (ifparams -> ifcondicion .)
-    ENDCHAR         reduce using rule 82 (ifparams -> ifcondicion .)
+    LLLAVE          reduce using rule 87 (ifparams -> ifcondicion .)
+    ENDCHAR         reduce using rule 87 (ifparams -> ifcondicion .)
 
 
 state 36
 
-    (83) ifparams -> boolean .
-    (48) comparacion -> boolean . signocompar boolean
-    (65) signocompar -> . MAYORQUE
-    (66) signocompar -> . MENORQUE
-    (67) signocompar -> . DIFERENTE
-    (68) signocompar -> . IDENTICO
+    (88) ifparams -> boolean .
+    (46) comparacion -> boolean . signocompar boolean
+    (63) signocompar -> . MAYORQUE
+    (64) signocompar -> . MENORQUE
+    (65) signocompar -> . DIFERENTE
+    (66) signocompar -> . IDENTICO
 
-    LLLAVE          reduce using rule 83 (ifparams -> boolean .)
-    RPAREN          reduce using rule 83 (ifparams -> boolean .)
-    ENDCHAR         reduce using rule 83 (ifparams -> boolean .)
+    LLLAVE          reduce using rule 88 (ifparams -> boolean .)
+    RPAREN          reduce using rule 88 (ifparams -> boolean .)
+    ENDCHAR         reduce using rule 88 (ifparams -> boolean .)
     MAYORQUE        shift and go to state 66
     MENORQUE        shift and go to state 67
     DIFERENTE       shift and go to state 68
@@ -963,16 +963,16 @@ state 36
 
 state 37
 
-    (84) ifparams -> ID .
-    (33) comparacion -> ID . signocompar ID
-    (65) signocompar -> . MAYORQUE
-    (66) signocompar -> . MENORQUE
-    (67) signocompar -> . DIFERENTE
-    (68) signocompar -> . IDENTICO
+    (89) ifparams -> ID .
+    (31) comparacion -> ID . signocompar ID
+    (63) signocompar -> . MAYORQUE
+    (64) signocompar -> . MENORQUE
+    (65) signocompar -> . DIFERENTE
+    (66) signocompar -> . IDENTICO
 
-    LLLAVE          reduce using rule 84 (ifparams -> ID .)
-    RPAREN          reduce using rule 84 (ifparams -> ID .)
-    ENDCHAR         reduce using rule 84 (ifparams -> ID .)
+    LLLAVE          reduce using rule 89 (ifparams -> ID .)
+    RPAREN          reduce using rule 89 (ifparams -> ID .)
+    ENDCHAR         reduce using rule 89 (ifparams -> ID .)
     MAYORQUE        shift and go to state 66
     MENORQUE        shift and go to state 67
     DIFERENTE       shift and go to state 68
@@ -982,14 +982,14 @@ state 37
 
 state 38
 
-    (104) ifcondicion -> comparacion .
-    (105) ifcondicion -> comparacion . signoconect ifcondicion
-    (88) signoconect -> . DAMPERSAND
-    (89) signoconect -> . OR
+    (105) ifcondicion -> comparacion .
+    (106) ifcondicion -> comparacion . signoconect ifcondicion
+    (83) signoconect -> . DAMPERSAND
+    (84) signoconect -> . OR
 
-    LLLAVE          reduce using rule 104 (ifcondicion -> comparacion .)
-    RPAREN          reduce using rule 104 (ifcondicion -> comparacion .)
-    ENDCHAR         reduce using rule 104 (ifcondicion -> comparacion .)
+    LLLAVE          reduce using rule 105 (ifcondicion -> comparacion .)
+    RPAREN          reduce using rule 105 (ifcondicion -> comparacion .)
+    ENDCHAR         reduce using rule 105 (ifcondicion -> comparacion .)
     DAMPERSAND      shift and go to state 72
     OR              shift and go to state 73
 
@@ -997,41 +997,41 @@ state 38
 
 state 39
 
-    (69) boolean -> TRUE .
+    (76) boolean -> TRUE .
 
-    MAYORQUE        reduce using rule 69 (boolean -> TRUE .)
-    MENORQUE        reduce using rule 69 (boolean -> TRUE .)
-    DIFERENTE       reduce using rule 69 (boolean -> TRUE .)
-    IDENTICO        reduce using rule 69 (boolean -> TRUE .)
-    LLLAVE          reduce using rule 69 (boolean -> TRUE .)
-    RPAREN          reduce using rule 69 (boolean -> TRUE .)
-    DAMPERSAND      reduce using rule 69 (boolean -> TRUE .)
-    OR              reduce using rule 69 (boolean -> TRUE .)
-    ENDCHAR         reduce using rule 69 (boolean -> TRUE .)
+    MAYORQUE        reduce using rule 76 (boolean -> TRUE .)
+    MENORQUE        reduce using rule 76 (boolean -> TRUE .)
+    DIFERENTE       reduce using rule 76 (boolean -> TRUE .)
+    IDENTICO        reduce using rule 76 (boolean -> TRUE .)
+    LLLAVE          reduce using rule 76 (boolean -> TRUE .)
+    RPAREN          reduce using rule 76 (boolean -> TRUE .)
+    DAMPERSAND      reduce using rule 76 (boolean -> TRUE .)
+    OR              reduce using rule 76 (boolean -> TRUE .)
+    ENDCHAR         reduce using rule 76 (boolean -> TRUE .)
 
 
 state 40
 
-    (70) boolean -> FALSE .
+    (77) boolean -> FALSE .
 
-    MAYORQUE        reduce using rule 70 (boolean -> FALSE .)
-    MENORQUE        reduce using rule 70 (boolean -> FALSE .)
-    DIFERENTE       reduce using rule 70 (boolean -> FALSE .)
-    IDENTICO        reduce using rule 70 (boolean -> FALSE .)
-    LLLAVE          reduce using rule 70 (boolean -> FALSE .)
-    RPAREN          reduce using rule 70 (boolean -> FALSE .)
-    DAMPERSAND      reduce using rule 70 (boolean -> FALSE .)
-    OR              reduce using rule 70 (boolean -> FALSE .)
-    ENDCHAR         reduce using rule 70 (boolean -> FALSE .)
+    MAYORQUE        reduce using rule 77 (boolean -> FALSE .)
+    MENORQUE        reduce using rule 77 (boolean -> FALSE .)
+    DIFERENTE       reduce using rule 77 (boolean -> FALSE .)
+    IDENTICO        reduce using rule 77 (boolean -> FALSE .)
+    LLLAVE          reduce using rule 77 (boolean -> FALSE .)
+    RPAREN          reduce using rule 77 (boolean -> FALSE .)
+    DAMPERSAND      reduce using rule 77 (boolean -> FALSE .)
+    OR              reduce using rule 77 (boolean -> FALSE .)
+    ENDCHAR         reduce using rule 77 (boolean -> FALSE .)
 
 
 state 41
 
-    (34) comparacion -> IDCHAR . signocompar IDCHAR
-    (65) signocompar -> . MAYORQUE
-    (66) signocompar -> . MENORQUE
-    (67) signocompar -> . DIFERENTE
-    (68) signocompar -> . IDENTICO
+    (32) comparacion -> IDCHAR . signocompar IDCHAR
+    (63) signocompar -> . MAYORQUE
+    (64) signocompar -> . MENORQUE
+    (65) signocompar -> . DIFERENTE
+    (66) signocompar -> . IDENTICO
 
     MAYORQUE        shift and go to state 66
     MENORQUE        shift and go to state 67
@@ -1042,11 +1042,11 @@ state 41
 
 state 42
 
-    (35) comparacion -> IDSTRING . signocompar IDSTRING
-    (65) signocompar -> . MAYORQUE
-    (66) signocompar -> . MENORQUE
-    (67) signocompar -> . DIFERENTE
-    (68) signocompar -> . IDENTICO
+    (33) comparacion -> IDSTRING . signocompar IDSTRING
+    (63) signocompar -> . MAYORQUE
+    (64) signocompar -> . MENORQUE
+    (65) signocompar -> . DIFERENTE
+    (66) signocompar -> . IDENTICO
 
     MAYORQUE        shift and go to state 66
     MENORQUE        shift and go to state 67
@@ -1058,10 +1058,10 @@ state 42
 state 43
 
     (42) comparacion -> INTTYPE . signocompar INTTYPE
-    (65) signocompar -> . MAYORQUE
-    (66) signocompar -> . MENORQUE
-    (67) signocompar -> . DIFERENTE
-    (68) signocompar -> . IDENTICO
+    (63) signocompar -> . MAYORQUE
+    (64) signocompar -> . MENORQUE
+    (65) signocompar -> . DIFERENTE
+    (66) signocompar -> . IDENTICO
 
     MAYORQUE        shift and go to state 66
     MENORQUE        shift and go to state 67
@@ -1073,10 +1073,10 @@ state 43
 state 44
 
     (43) comparacion -> NINTTYPE . signocompar NINTTYPE
-    (65) signocompar -> . MAYORQUE
-    (66) signocompar -> . MENORQUE
-    (67) signocompar -> . DIFERENTE
-    (68) signocompar -> . IDENTICO
+    (63) signocompar -> . MAYORQUE
+    (64) signocompar -> . MENORQUE
+    (65) signocompar -> . DIFERENTE
+    (66) signocompar -> . IDENTICO
 
     MAYORQUE        shift and go to state 66
     MENORQUE        shift and go to state 67
@@ -1088,10 +1088,10 @@ state 44
 state 45
 
     (44) comparacion -> FLOATTYPE . signocompar FLOATTYPE
-    (65) signocompar -> . MAYORQUE
-    (66) signocompar -> . MENORQUE
-    (67) signocompar -> . DIFERENTE
-    (68) signocompar -> . IDENTICO
+    (63) signocompar -> . MAYORQUE
+    (64) signocompar -> . MENORQUE
+    (65) signocompar -> . DIFERENTE
+    (66) signocompar -> . IDENTICO
 
     MAYORQUE        shift and go to state 66
     MENORQUE        shift and go to state 67
@@ -1117,23 +1117,23 @@ state 47
 
 state 48
 
-    (106) ifcondicion -> LPAREN . comparacion RPAREN
-    (107) ifcondicion -> LPAREN . comparacion RPAREN signoconect ifcondicion
-    (108) ifcondicion -> LPAREN . ifcondicion RPAREN
-    (33) comparacion -> . ID signocompar ID
-    (34) comparacion -> . IDCHAR signocompar IDCHAR
-    (35) comparacion -> . IDSTRING signocompar IDSTRING
+    (107) ifcondicion -> LPAREN . comparacion RPAREN
+    (108) ifcondicion -> LPAREN . comparacion RPAREN signoconect ifcondicion
+    (109) ifcondicion -> LPAREN . ifcondicion RPAREN
+    (31) comparacion -> . ID signocompar ID
+    (32) comparacion -> . IDCHAR signocompar IDCHAR
+    (33) comparacion -> . IDSTRING signocompar IDSTRING
     (42) comparacion -> . INTTYPE signocompar INTTYPE
     (43) comparacion -> . NINTTYPE signocompar NINTTYPE
     (44) comparacion -> . FLOATTYPE signocompar FLOATTYPE
-    (48) comparacion -> . boolean signocompar boolean
-    (104) ifcondicion -> . comparacion
-    (105) ifcondicion -> . comparacion signoconect ifcondicion
-    (106) ifcondicion -> . LPAREN comparacion RPAREN
-    (107) ifcondicion -> . LPAREN comparacion RPAREN signoconect ifcondicion
-    (108) ifcondicion -> . LPAREN ifcondicion RPAREN
-    (69) boolean -> . TRUE
-    (70) boolean -> . FALSE
+    (46) comparacion -> . boolean signocompar boolean
+    (105) ifcondicion -> . comparacion
+    (106) ifcondicion -> . comparacion signoconect ifcondicion
+    (107) ifcondicion -> . LPAREN comparacion RPAREN
+    (108) ifcondicion -> . LPAREN comparacion RPAREN signoconect ifcondicion
+    (109) ifcondicion -> . LPAREN ifcondicion RPAREN
+    (76) boolean -> . TRUE
+    (77) boolean -> . FALSE
 
     ID              shift and go to state 82
     IDCHAR          shift and go to state 41
@@ -1151,25 +1151,25 @@ state 48
 
 state 49
 
-    (94) elseifblock -> ifblock ELSE IF . LPAREN ifparams RPAREN LLLAVE cuerpof RLLAVE
-    (95) elseifblock -> ifblock ELSE IF . ifparams LLLAVE cuerpof RLLAVE
-    (82) ifparams -> . ifcondicion
-    (83) ifparams -> . boolean
-    (84) ifparams -> . ID
-    (104) ifcondicion -> . comparacion
-    (105) ifcondicion -> . comparacion signoconect ifcondicion
-    (106) ifcondicion -> . LPAREN comparacion RPAREN
-    (107) ifcondicion -> . LPAREN comparacion RPAREN signoconect ifcondicion
-    (108) ifcondicion -> . LPAREN ifcondicion RPAREN
-    (69) boolean -> . TRUE
-    (70) boolean -> . FALSE
-    (33) comparacion -> . ID signocompar ID
-    (34) comparacion -> . IDCHAR signocompar IDCHAR
-    (35) comparacion -> . IDSTRING signocompar IDSTRING
+    (97) elseifblock -> ifblock ELSE IF . LPAREN ifparams RPAREN LLLAVE cuerpof RLLAVE
+    (98) elseifblock -> ifblock ELSE IF . ifparams LLLAVE cuerpof RLLAVE
+    (87) ifparams -> . ifcondicion
+    (88) ifparams -> . boolean
+    (89) ifparams -> . ID
+    (105) ifcondicion -> . comparacion
+    (106) ifcondicion -> . comparacion signoconect ifcondicion
+    (107) ifcondicion -> . LPAREN comparacion RPAREN
+    (108) ifcondicion -> . LPAREN comparacion RPAREN signoconect ifcondicion
+    (109) ifcondicion -> . LPAREN ifcondicion RPAREN
+    (76) boolean -> . TRUE
+    (77) boolean -> . FALSE
+    (31) comparacion -> . ID signocompar ID
+    (32) comparacion -> . IDCHAR signocompar IDCHAR
+    (33) comparacion -> . IDSTRING signocompar IDSTRING
     (42) comparacion -> . INTTYPE signocompar INTTYPE
     (43) comparacion -> . NINTTYPE signocompar NINTTYPE
     (44) comparacion -> . FLOATTYPE signocompar FLOATTYPE
-    (48) comparacion -> . boolean signocompar boolean
+    (46) comparacion -> . boolean signocompar boolean
 
     LPAREN          shift and go to state 84
     ID              shift and go to state 37
@@ -1188,7 +1188,7 @@ state 49
 
 state 50
 
-    (90) elseblock -> ifblock ELSE LLLAVE . cuerpof RLLAVE
+    (91) elseblock -> ifblock ELSE LLLAVE . cuerpof RLLAVE
     (3) cuerpof -> . metodo
     (4) cuerpof -> . metodo cuerpof
     (5) metodo -> . asignacion
@@ -1205,26 +1205,26 @@ state 50
     (41) asignacion -> . LET MUT ID IGUAL VEC DOSDOBLEPUNTOS NEW LPAREN RPAREN ENDCHAR
     (49) asignacion -> . CONST ID COLON intsize IGUAL INTTYPE ENDCHAR
     (50) asignacion -> . CONST ID COLON intsize IGUAL NINTTYPE ENDCHAR
-    (62) asignacion -> . CONST ID COLON uintsize IGUAL INTTYPE ENDCHAR
-    (71) asignacion -> . CONST ID COLON floatsize IGUAL FLOATTYPE ENDCHAR
+    (58) asignacion -> . CONST ID COLON uintsize IGUAL INTTYPE ENDCHAR
+    (69) asignacion -> . CONST ID COLON floatsize IGUAL FLOATTYPE ENDCHAR
     (78) asignacion -> . CONST ID COLON strsize IGUAL IDSTRING ENDCHAR
-    (87) asignacion -> . CONST ID COLON STRING IGUAL STRING DOSDOBLEPUNTOS FROM LPAREN IDSTRING RPAREN ENDCHAR
-    (92) asignacion -> . CONST ID COLON STRING IGUAL IDSTRING ENDCHAR
-    (96) asignacion -> . CONST ID COLON BOOL IGUAL boolean ENDCHAR
-    (102) asignacion -> . CONST ID COLON CHAR IGUAL IDCHAR ENDCHAR
+    (82) asignacion -> . CONST ID COLON STRING IGUAL STRING DOSDOBLEPUNTOS FROM LPAREN IDSTRING RPAREN ENDCHAR
+    (90) asignacion -> . CONST ID COLON STRING IGUAL IDSTRING ENDCHAR
+    (93) asignacion -> . CONST ID COLON BOOL IGUAL boolean ENDCHAR
+    (99) asignacion -> . CONST ID COLON CHAR IGUAL IDCHAR ENDCHAR
     (112) asignacion -> . LET MUT ID IGUAL valor ENDCHAR
     (113) asignacion -> . LET MUT ID IGUAL estructuras ENDCHAR
     (114) asignacion -> . LET ID IGUAL valor ENDCHAR
     (115) asignacion -> . LET MUT ID IGUAL LINKEDLIST DOSDOBLEPUNTOS NEW LPAREN RPAREN ENDCHAR
     (103) impresion -> . PRINTLN LPAREN IDSTRING RPAREN ENDCHAR
-    (93) loop -> . LOOP LLLAVE metodo RLLAVE
-    (100) ifblock -> . IF LPAREN ifparams RPAREN LLLAVE cuerpof RLLAVE
-    (101) ifblock -> . IF ifparams LLLAVE cuerpof RLLAVE
-    (94) elseifblock -> . ifblock ELSE IF LPAREN ifparams RPAREN LLLAVE cuerpof RLLAVE
-    (95) elseifblock -> . ifblock ELSE IF ifparams LLLAVE cuerpof RLLAVE
-    (90) elseblock -> . ifblock ELSE LLLAVE cuerpof RLLAVE
-    (91) elseblock -> . elseifblock ELSE LLLAVE cuerpof RLLAVE
-    (109) vectorpush -> . ID POINT PUSH LPAREN INTTYPE RPAREN ENDCHAR
+    (94) loop -> . LOOP LLLAVE metodo RLLAVE
+    (101) ifblock -> . IF LPAREN ifparams RPAREN LLLAVE cuerpof RLLAVE
+    (102) ifblock -> . IF ifparams LLLAVE cuerpof RLLAVE
+    (97) elseifblock -> . ifblock ELSE IF LPAREN ifparams RPAREN LLLAVE cuerpof RLLAVE
+    (98) elseifblock -> . ifblock ELSE IF ifparams LLLAVE cuerpof RLLAVE
+    (91) elseblock -> . ifblock ELSE LLLAVE cuerpof RLLAVE
+    (92) elseblock -> . elseifblock ELSE LLLAVE cuerpof RLLAVE
+    (104) vectorpush -> . ID POINT PUSH LPAREN INTTYPE RPAREN ENDCHAR
     (116) llpushfront -> . ID POINT PUSH_FRONT LPAREN INTTYPE RPAREN ENDCHAR
     (117) llpopback -> . ID POINT POP_BACK LPAREN RPAREN ENDCHAR
     (85) entrada -> . IO DOSDOBLEPUNTOS STDIN LPAREN RPAREN POINT READLINE LPAREN AMPERSAND MUT ID RPAREN ENDCHAR
@@ -1256,7 +1256,7 @@ state 50
 
 state 51
 
-    (91) elseblock -> elseifblock ELSE LLLAVE . cuerpof RLLAVE
+    (92) elseblock -> elseifblock ELSE LLLAVE . cuerpof RLLAVE
     (3) cuerpof -> . metodo
     (4) cuerpof -> . metodo cuerpof
     (5) metodo -> . asignacion
@@ -1273,26 +1273,26 @@ state 51
     (41) asignacion -> . LET MUT ID IGUAL VEC DOSDOBLEPUNTOS NEW LPAREN RPAREN ENDCHAR
     (49) asignacion -> . CONST ID COLON intsize IGUAL INTTYPE ENDCHAR
     (50) asignacion -> . CONST ID COLON intsize IGUAL NINTTYPE ENDCHAR
-    (62) asignacion -> . CONST ID COLON uintsize IGUAL INTTYPE ENDCHAR
-    (71) asignacion -> . CONST ID COLON floatsize IGUAL FLOATTYPE ENDCHAR
+    (58) asignacion -> . CONST ID COLON uintsize IGUAL INTTYPE ENDCHAR
+    (69) asignacion -> . CONST ID COLON floatsize IGUAL FLOATTYPE ENDCHAR
     (78) asignacion -> . CONST ID COLON strsize IGUAL IDSTRING ENDCHAR
-    (87) asignacion -> . CONST ID COLON STRING IGUAL STRING DOSDOBLEPUNTOS FROM LPAREN IDSTRING RPAREN ENDCHAR
-    (92) asignacion -> . CONST ID COLON STRING IGUAL IDSTRING ENDCHAR
-    (96) asignacion -> . CONST ID COLON BOOL IGUAL boolean ENDCHAR
-    (102) asignacion -> . CONST ID COLON CHAR IGUAL IDCHAR ENDCHAR
+    (82) asignacion -> . CONST ID COLON STRING IGUAL STRING DOSDOBLEPUNTOS FROM LPAREN IDSTRING RPAREN ENDCHAR
+    (90) asignacion -> . CONST ID COLON STRING IGUAL IDSTRING ENDCHAR
+    (93) asignacion -> . CONST ID COLON BOOL IGUAL boolean ENDCHAR
+    (99) asignacion -> . CONST ID COLON CHAR IGUAL IDCHAR ENDCHAR
     (112) asignacion -> . LET MUT ID IGUAL valor ENDCHAR
     (113) asignacion -> . LET MUT ID IGUAL estructuras ENDCHAR
     (114) asignacion -> . LET ID IGUAL valor ENDCHAR
     (115) asignacion -> . LET MUT ID IGUAL LINKEDLIST DOSDOBLEPUNTOS NEW LPAREN RPAREN ENDCHAR
     (103) impresion -> . PRINTLN LPAREN IDSTRING RPAREN ENDCHAR
-    (93) loop -> . LOOP LLLAVE metodo RLLAVE
-    (100) ifblock -> . IF LPAREN ifparams RPAREN LLLAVE cuerpof RLLAVE
-    (101) ifblock -> . IF ifparams LLLAVE cuerpof RLLAVE
-    (94) elseifblock -> . ifblock ELSE IF LPAREN ifparams RPAREN LLLAVE cuerpof RLLAVE
-    (95) elseifblock -> . ifblock ELSE IF ifparams LLLAVE cuerpof RLLAVE
-    (90) elseblock -> . ifblock ELSE LLLAVE cuerpof RLLAVE
-    (91) elseblock -> . elseifblock ELSE LLLAVE cuerpof RLLAVE
-    (109) vectorpush -> . ID POINT PUSH LPAREN INTTYPE RPAREN ENDCHAR
+    (94) loop -> . LOOP LLLAVE metodo RLLAVE
+    (101) ifblock -> . IF LPAREN ifparams RPAREN LLLAVE cuerpof RLLAVE
+    (102) ifblock -> . IF ifparams LLLAVE cuerpof RLLAVE
+    (97) elseifblock -> . ifblock ELSE IF LPAREN ifparams RPAREN LLLAVE cuerpof RLLAVE
+    (98) elseifblock -> . ifblock ELSE IF ifparams LLLAVE cuerpof RLLAVE
+    (91) elseblock -> . ifblock ELSE LLLAVE cuerpof RLLAVE
+    (92) elseblock -> . elseifblock ELSE LLLAVE cuerpof RLLAVE
+    (104) vectorpush -> . ID POINT PUSH LPAREN INTTYPE RPAREN ENDCHAR
     (116) llpushfront -> . ID POINT PUSH_FRONT LPAREN INTTYPE RPAREN ENDCHAR
     (117) llpopback -> . ID POINT POP_BACK LPAREN RPAREN ENDCHAR
     (85) entrada -> . IO DOSDOBLEPUNTOS STDIN LPAREN RPAREN POINT READLINE LPAREN AMPERSAND MUT ID RPAREN ENDCHAR
@@ -1324,11 +1324,11 @@ state 51
 
 state 52
 
-    (99) funcion -> FN ID LPAREN . params RPAREN LLLAVE metodo RLLAVE
+    (100) funcion -> FN ID LPAREN . params RPAREN LLLAVE metodo RLLAVE
     (110) funcion -> FN ID LPAREN . params RPAREN ARROWOPT datatype LLLAVE cuerpof RETURN ifparams ENDCHAR RLLAVE
     (111) funcion -> FN ID LPAREN . params RPAREN ARROWOPT datatype LLLAVE cuerpof ID RLLAVE
-    (97) params -> . ID COLON datatype
-    (98) params -> . ID COLON datatype COMA params
+    (95) params -> . ID COLON datatype
+    (96) params -> . ID COLON datatype COMA params
 
     ID              shift and go to state 89
 
@@ -1336,7 +1336,7 @@ state 52
 
 state 53
 
-    (109) vectorpush -> ID POINT PUSH . LPAREN INTTYPE RPAREN ENDCHAR
+    (104) vectorpush -> ID POINT PUSH . LPAREN INTTYPE RPAREN ENDCHAR
 
     LPAREN          shift and go to state 91
 
@@ -1377,23 +1377,23 @@ state 57
     (22) valor -> . expresion
     (23) valor -> . conectores
     (24) valor -> . comparacion
-    (58) valornumerico -> . NINTTYPE
-    (59) valornumerico -> . INTTYPE
-    (60) valornumerico -> . FLOATTYPE
-    (61) valornumerico -> . NFLOATTYPE
+    (59) valornumerico -> . NINTTYPE
+    (60) valornumerico -> . INTTYPE
+    (61) valornumerico -> . FLOATTYPE
+    (62) valornumerico -> . NFLOATTYPE
     (57) expresion -> . valornumerico signo valornumerico
     (79) conectores -> . boolean signoconect boolean
     (80) conectores -> . EXCLAM boolean
     (81) conectores -> . ID signoconect ID
-    (33) comparacion -> . ID signocompar ID
-    (34) comparacion -> . IDCHAR signocompar IDCHAR
-    (35) comparacion -> . IDSTRING signocompar IDSTRING
+    (31) comparacion -> . ID signocompar ID
+    (32) comparacion -> . IDCHAR signocompar IDCHAR
+    (33) comparacion -> . IDSTRING signocompar IDSTRING
     (42) comparacion -> . INTTYPE signocompar INTTYPE
     (43) comparacion -> . NINTTYPE signocompar NINTTYPE
     (44) comparacion -> . FLOATTYPE signocompar FLOATTYPE
-    (48) comparacion -> . boolean signocompar boolean
-    (69) boolean -> . TRUE
-    (70) boolean -> . FALSE
+    (46) comparacion -> . boolean signocompar boolean
+    (76) boolean -> . TRUE
+    (77) boolean -> . FALSE
 
     TRUE            shift and go to state 98
     FALSE           shift and go to state 99
@@ -1417,13 +1417,13 @@ state 58
 
     (49) asignacion -> CONST ID COLON . intsize IGUAL INTTYPE ENDCHAR
     (50) asignacion -> CONST ID COLON . intsize IGUAL NINTTYPE ENDCHAR
-    (62) asignacion -> CONST ID COLON . uintsize IGUAL INTTYPE ENDCHAR
-    (71) asignacion -> CONST ID COLON . floatsize IGUAL FLOATTYPE ENDCHAR
+    (58) asignacion -> CONST ID COLON . uintsize IGUAL INTTYPE ENDCHAR
+    (69) asignacion -> CONST ID COLON . floatsize IGUAL FLOATTYPE ENDCHAR
     (78) asignacion -> CONST ID COLON . strsize IGUAL IDSTRING ENDCHAR
-    (87) asignacion -> CONST ID COLON . STRING IGUAL STRING DOSDOBLEPUNTOS FROM LPAREN IDSTRING RPAREN ENDCHAR
-    (92) asignacion -> CONST ID COLON . STRING IGUAL IDSTRING ENDCHAR
-    (96) asignacion -> CONST ID COLON . BOOL IGUAL boolean ENDCHAR
-    (102) asignacion -> CONST ID COLON . CHAR IGUAL IDCHAR ENDCHAR
+    (82) asignacion -> CONST ID COLON . STRING IGUAL STRING DOSDOBLEPUNTOS FROM LPAREN IDSTRING RPAREN ENDCHAR
+    (90) asignacion -> CONST ID COLON . STRING IGUAL IDSTRING ENDCHAR
+    (93) asignacion -> CONST ID COLON . BOOL IGUAL boolean ENDCHAR
+    (99) asignacion -> CONST ID COLON . CHAR IGUAL IDCHAR ENDCHAR
     (36) intsize -> . INT8
     (37) intsize -> . INT16
     (38) intsize -> . INT32
@@ -1434,10 +1434,10 @@ state 58
     (54) uintsize -> . UINT32
     (55) uintsize -> . UINT64
     (56) uintsize -> . UINT128
-    (46) floatsize -> . FLOAT32
-    (47) floatsize -> . FLOAT64
-    (63) strsize -> . AMPERSAND COMILLA STATIC STR
-    (64) strsize -> . AMPERSAND STR
+    (47) floatsize -> . FLOAT32
+    (48) floatsize -> . FLOAT64
+    (67) strsize -> . AMPERSAND COMILLA STATIC STR
+    (68) strsize -> . AMPERSAND STR
 
     STRING          shift and go to state 115
     BOOL            shift and go to state 116
@@ -1470,50 +1470,50 @@ state 59
 
 state 60
 
-    (93) loop -> LOOP LLLAVE metodo . RLLAVE
+    (94) loop -> LOOP LLLAVE metodo . RLLAVE
 
     RLLAVE          shift and go to state 132
 
 
 state 61
 
-    (100) ifblock -> IF LPAREN ifparams . RPAREN LLLAVE cuerpof RLLAVE
+    (101) ifblock -> IF LPAREN ifparams . RPAREN LLLAVE cuerpof RLLAVE
 
     RPAREN          shift and go to state 133
 
 
 state 62
 
-    (106) ifcondicion -> LPAREN comparacion . RPAREN
-    (107) ifcondicion -> LPAREN comparacion . RPAREN signoconect ifcondicion
-    (104) ifcondicion -> comparacion .
-    (105) ifcondicion -> comparacion . signoconect ifcondicion
-    (88) signoconect -> . DAMPERSAND
-    (89) signoconect -> . OR
+    (107) ifcondicion -> LPAREN comparacion . RPAREN
+    (108) ifcondicion -> LPAREN comparacion . RPAREN signoconect ifcondicion
+    (105) ifcondicion -> comparacion .
+    (106) ifcondicion -> comparacion . signoconect ifcondicion
+    (83) signoconect -> . DAMPERSAND
+    (84) signoconect -> . OR
 
   ! shift/reduce conflict for RPAREN resolved as shift
     RPAREN          shift and go to state 134
     DAMPERSAND      shift and go to state 72
     OR              shift and go to state 73
 
-  ! RPAREN          [ reduce using rule 104 (ifcondicion -> comparacion .) ]
+  ! RPAREN          [ reduce using rule 105 (ifcondicion -> comparacion .) ]
 
     signoconect                    shift and go to state 71
 
 state 63
 
-    (108) ifcondicion -> LPAREN ifcondicion . RPAREN
-    (82) ifparams -> ifcondicion .
+    (109) ifcondicion -> LPAREN ifcondicion . RPAREN
+    (87) ifparams -> ifcondicion .
 
   ! shift/reduce conflict for RPAREN resolved as shift
     RPAREN          shift and go to state 135
 
-  ! RPAREN          [ reduce using rule 82 (ifparams -> ifcondicion .) ]
+  ! RPAREN          [ reduce using rule 87 (ifparams -> ifcondicion .) ]
 
 
 state 64
 
-    (101) ifblock -> IF ifparams LLLAVE . cuerpof RLLAVE
+    (102) ifblock -> IF ifparams LLLAVE . cuerpof RLLAVE
     (3) cuerpof -> . metodo
     (4) cuerpof -> . metodo cuerpof
     (5) metodo -> . asignacion
@@ -1530,26 +1530,26 @@ state 64
     (41) asignacion -> . LET MUT ID IGUAL VEC DOSDOBLEPUNTOS NEW LPAREN RPAREN ENDCHAR
     (49) asignacion -> . CONST ID COLON intsize IGUAL INTTYPE ENDCHAR
     (50) asignacion -> . CONST ID COLON intsize IGUAL NINTTYPE ENDCHAR
-    (62) asignacion -> . CONST ID COLON uintsize IGUAL INTTYPE ENDCHAR
-    (71) asignacion -> . CONST ID COLON floatsize IGUAL FLOATTYPE ENDCHAR
+    (58) asignacion -> . CONST ID COLON uintsize IGUAL INTTYPE ENDCHAR
+    (69) asignacion -> . CONST ID COLON floatsize IGUAL FLOATTYPE ENDCHAR
     (78) asignacion -> . CONST ID COLON strsize IGUAL IDSTRING ENDCHAR
-    (87) asignacion -> . CONST ID COLON STRING IGUAL STRING DOSDOBLEPUNTOS FROM LPAREN IDSTRING RPAREN ENDCHAR
-    (92) asignacion -> . CONST ID COLON STRING IGUAL IDSTRING ENDCHAR
-    (96) asignacion -> . CONST ID COLON BOOL IGUAL boolean ENDCHAR
-    (102) asignacion -> . CONST ID COLON CHAR IGUAL IDCHAR ENDCHAR
+    (82) asignacion -> . CONST ID COLON STRING IGUAL STRING DOSDOBLEPUNTOS FROM LPAREN IDSTRING RPAREN ENDCHAR
+    (90) asignacion -> . CONST ID COLON STRING IGUAL IDSTRING ENDCHAR
+    (93) asignacion -> . CONST ID COLON BOOL IGUAL boolean ENDCHAR
+    (99) asignacion -> . CONST ID COLON CHAR IGUAL IDCHAR ENDCHAR
     (112) asignacion -> . LET MUT ID IGUAL valor ENDCHAR
     (113) asignacion -> . LET MUT ID IGUAL estructuras ENDCHAR
     (114) asignacion -> . LET ID IGUAL valor ENDCHAR
     (115) asignacion -> . LET MUT ID IGUAL LINKEDLIST DOSDOBLEPUNTOS NEW LPAREN RPAREN ENDCHAR
     (103) impresion -> . PRINTLN LPAREN IDSTRING RPAREN ENDCHAR
-    (93) loop -> . LOOP LLLAVE metodo RLLAVE
-    (100) ifblock -> . IF LPAREN ifparams RPAREN LLLAVE cuerpof RLLAVE
-    (101) ifblock -> . IF ifparams LLLAVE cuerpof RLLAVE
-    (94) elseifblock -> . ifblock ELSE IF LPAREN ifparams RPAREN LLLAVE cuerpof RLLAVE
-    (95) elseifblock -> . ifblock ELSE IF ifparams LLLAVE cuerpof RLLAVE
-    (90) elseblock -> . ifblock ELSE LLLAVE cuerpof RLLAVE
-    (91) elseblock -> . elseifblock ELSE LLLAVE cuerpof RLLAVE
-    (109) vectorpush -> . ID POINT PUSH LPAREN INTTYPE RPAREN ENDCHAR
+    (94) loop -> . LOOP LLLAVE metodo RLLAVE
+    (101) ifblock -> . IF LPAREN ifparams RPAREN LLLAVE cuerpof RLLAVE
+    (102) ifblock -> . IF ifparams LLLAVE cuerpof RLLAVE
+    (97) elseifblock -> . ifblock ELSE IF LPAREN ifparams RPAREN LLLAVE cuerpof RLLAVE
+    (98) elseifblock -> . ifblock ELSE IF ifparams LLLAVE cuerpof RLLAVE
+    (91) elseblock -> . ifblock ELSE LLLAVE cuerpof RLLAVE
+    (92) elseblock -> . elseifblock ELSE LLLAVE cuerpof RLLAVE
+    (104) vectorpush -> . ID POINT PUSH LPAREN INTTYPE RPAREN ENDCHAR
     (116) llpushfront -> . ID POINT PUSH_FRONT LPAREN INTTYPE RPAREN ENDCHAR
     (117) llpopback -> . ID POINT POP_BACK LPAREN RPAREN ENDCHAR
     (85) entrada -> . IO DOSDOBLEPUNTOS STDIN LPAREN RPAREN POINT READLINE LPAREN AMPERSAND MUT ID RPAREN ENDCHAR
@@ -1581,9 +1581,9 @@ state 64
 
 state 65
 
-    (48) comparacion -> boolean signocompar . boolean
-    (69) boolean -> . TRUE
-    (70) boolean -> . FALSE
+    (46) comparacion -> boolean signocompar . boolean
+    (76) boolean -> . TRUE
+    (77) boolean -> . FALSE
 
     TRUE            shift and go to state 39
     FALSE           shift and go to state 40
@@ -1592,84 +1592,84 @@ state 65
 
 state 66
 
-    (65) signocompar -> MAYORQUE .
+    (63) signocompar -> MAYORQUE .
 
-    TRUE            reduce using rule 65 (signocompar -> MAYORQUE .)
-    FALSE           reduce using rule 65 (signocompar -> MAYORQUE .)
-    ID              reduce using rule 65 (signocompar -> MAYORQUE .)
-    IDCHAR          reduce using rule 65 (signocompar -> MAYORQUE .)
-    IDSTRING        reduce using rule 65 (signocompar -> MAYORQUE .)
-    INTTYPE         reduce using rule 65 (signocompar -> MAYORQUE .)
-    NINTTYPE        reduce using rule 65 (signocompar -> MAYORQUE .)
-    FLOATTYPE       reduce using rule 65 (signocompar -> MAYORQUE .)
+    TRUE            reduce using rule 63 (signocompar -> MAYORQUE .)
+    FALSE           reduce using rule 63 (signocompar -> MAYORQUE .)
+    ID              reduce using rule 63 (signocompar -> MAYORQUE .)
+    IDCHAR          reduce using rule 63 (signocompar -> MAYORQUE .)
+    IDSTRING        reduce using rule 63 (signocompar -> MAYORQUE .)
+    INTTYPE         reduce using rule 63 (signocompar -> MAYORQUE .)
+    NINTTYPE        reduce using rule 63 (signocompar -> MAYORQUE .)
+    FLOATTYPE       reduce using rule 63 (signocompar -> MAYORQUE .)
 
 
 state 67
 
-    (66) signocompar -> MENORQUE .
+    (64) signocompar -> MENORQUE .
 
-    TRUE            reduce using rule 66 (signocompar -> MENORQUE .)
-    FALSE           reduce using rule 66 (signocompar -> MENORQUE .)
-    ID              reduce using rule 66 (signocompar -> MENORQUE .)
-    IDCHAR          reduce using rule 66 (signocompar -> MENORQUE .)
-    IDSTRING        reduce using rule 66 (signocompar -> MENORQUE .)
-    INTTYPE         reduce using rule 66 (signocompar -> MENORQUE .)
-    NINTTYPE        reduce using rule 66 (signocompar -> MENORQUE .)
-    FLOATTYPE       reduce using rule 66 (signocompar -> MENORQUE .)
+    TRUE            reduce using rule 64 (signocompar -> MENORQUE .)
+    FALSE           reduce using rule 64 (signocompar -> MENORQUE .)
+    ID              reduce using rule 64 (signocompar -> MENORQUE .)
+    IDCHAR          reduce using rule 64 (signocompar -> MENORQUE .)
+    IDSTRING        reduce using rule 64 (signocompar -> MENORQUE .)
+    INTTYPE         reduce using rule 64 (signocompar -> MENORQUE .)
+    NINTTYPE        reduce using rule 64 (signocompar -> MENORQUE .)
+    FLOATTYPE       reduce using rule 64 (signocompar -> MENORQUE .)
 
 
 state 68
 
-    (67) signocompar -> DIFERENTE .
+    (65) signocompar -> DIFERENTE .
 
-    TRUE            reduce using rule 67 (signocompar -> DIFERENTE .)
-    FALSE           reduce using rule 67 (signocompar -> DIFERENTE .)
-    ID              reduce using rule 67 (signocompar -> DIFERENTE .)
-    IDCHAR          reduce using rule 67 (signocompar -> DIFERENTE .)
-    IDSTRING        reduce using rule 67 (signocompar -> DIFERENTE .)
-    INTTYPE         reduce using rule 67 (signocompar -> DIFERENTE .)
-    NINTTYPE        reduce using rule 67 (signocompar -> DIFERENTE .)
-    FLOATTYPE       reduce using rule 67 (signocompar -> DIFERENTE .)
+    TRUE            reduce using rule 65 (signocompar -> DIFERENTE .)
+    FALSE           reduce using rule 65 (signocompar -> DIFERENTE .)
+    ID              reduce using rule 65 (signocompar -> DIFERENTE .)
+    IDCHAR          reduce using rule 65 (signocompar -> DIFERENTE .)
+    IDSTRING        reduce using rule 65 (signocompar -> DIFERENTE .)
+    INTTYPE         reduce using rule 65 (signocompar -> DIFERENTE .)
+    NINTTYPE        reduce using rule 65 (signocompar -> DIFERENTE .)
+    FLOATTYPE       reduce using rule 65 (signocompar -> DIFERENTE .)
 
 
 state 69
 
-    (68) signocompar -> IDENTICO .
+    (66) signocompar -> IDENTICO .
 
-    TRUE            reduce using rule 68 (signocompar -> IDENTICO .)
-    FALSE           reduce using rule 68 (signocompar -> IDENTICO .)
-    ID              reduce using rule 68 (signocompar -> IDENTICO .)
-    IDCHAR          reduce using rule 68 (signocompar -> IDENTICO .)
-    IDSTRING        reduce using rule 68 (signocompar -> IDENTICO .)
-    INTTYPE         reduce using rule 68 (signocompar -> IDENTICO .)
-    NINTTYPE        reduce using rule 68 (signocompar -> IDENTICO .)
-    FLOATTYPE       reduce using rule 68 (signocompar -> IDENTICO .)
+    TRUE            reduce using rule 66 (signocompar -> IDENTICO .)
+    FALSE           reduce using rule 66 (signocompar -> IDENTICO .)
+    ID              reduce using rule 66 (signocompar -> IDENTICO .)
+    IDCHAR          reduce using rule 66 (signocompar -> IDENTICO .)
+    IDSTRING        reduce using rule 66 (signocompar -> IDENTICO .)
+    INTTYPE         reduce using rule 66 (signocompar -> IDENTICO .)
+    NINTTYPE        reduce using rule 66 (signocompar -> IDENTICO .)
+    FLOATTYPE       reduce using rule 66 (signocompar -> IDENTICO .)
 
 
 state 70
 
-    (33) comparacion -> ID signocompar . ID
+    (31) comparacion -> ID signocompar . ID
 
     ID              shift and go to state 138
 
 
 state 71
 
-    (105) ifcondicion -> comparacion signoconect . ifcondicion
-    (104) ifcondicion -> . comparacion
-    (105) ifcondicion -> . comparacion signoconect ifcondicion
-    (106) ifcondicion -> . LPAREN comparacion RPAREN
-    (107) ifcondicion -> . LPAREN comparacion RPAREN signoconect ifcondicion
-    (108) ifcondicion -> . LPAREN ifcondicion RPAREN
-    (33) comparacion -> . ID signocompar ID
-    (34) comparacion -> . IDCHAR signocompar IDCHAR
-    (35) comparacion -> . IDSTRING signocompar IDSTRING
+    (106) ifcondicion -> comparacion signoconect . ifcondicion
+    (105) ifcondicion -> . comparacion
+    (106) ifcondicion -> . comparacion signoconect ifcondicion
+    (107) ifcondicion -> . LPAREN comparacion RPAREN
+    (108) ifcondicion -> . LPAREN comparacion RPAREN signoconect ifcondicion
+    (109) ifcondicion -> . LPAREN ifcondicion RPAREN
+    (31) comparacion -> . ID signocompar ID
+    (32) comparacion -> . IDCHAR signocompar IDCHAR
+    (33) comparacion -> . IDSTRING signocompar IDSTRING
     (42) comparacion -> . INTTYPE signocompar INTTYPE
     (43) comparacion -> . NINTTYPE signocompar NINTTYPE
     (44) comparacion -> . FLOATTYPE signocompar FLOATTYPE
-    (48) comparacion -> . boolean signocompar boolean
-    (69) boolean -> . TRUE
-    (70) boolean -> . FALSE
+    (46) comparacion -> . boolean signocompar boolean
+    (76) boolean -> . TRUE
+    (77) boolean -> . FALSE
 
     LPAREN          shift and go to state 48
     ID              shift and go to state 82
@@ -1687,44 +1687,44 @@ state 71
 
 state 72
 
-    (88) signoconect -> DAMPERSAND .
+    (83) signoconect -> DAMPERSAND .
 
-    LPAREN          reduce using rule 88 (signoconect -> DAMPERSAND .)
-    ID              reduce using rule 88 (signoconect -> DAMPERSAND .)
-    IDCHAR          reduce using rule 88 (signoconect -> DAMPERSAND .)
-    IDSTRING        reduce using rule 88 (signoconect -> DAMPERSAND .)
-    INTTYPE         reduce using rule 88 (signoconect -> DAMPERSAND .)
-    NINTTYPE        reduce using rule 88 (signoconect -> DAMPERSAND .)
-    FLOATTYPE       reduce using rule 88 (signoconect -> DAMPERSAND .)
-    TRUE            reduce using rule 88 (signoconect -> DAMPERSAND .)
-    FALSE           reduce using rule 88 (signoconect -> DAMPERSAND .)
+    LPAREN          reduce using rule 83 (signoconect -> DAMPERSAND .)
+    ID              reduce using rule 83 (signoconect -> DAMPERSAND .)
+    IDCHAR          reduce using rule 83 (signoconect -> DAMPERSAND .)
+    IDSTRING        reduce using rule 83 (signoconect -> DAMPERSAND .)
+    INTTYPE         reduce using rule 83 (signoconect -> DAMPERSAND .)
+    NINTTYPE        reduce using rule 83 (signoconect -> DAMPERSAND .)
+    FLOATTYPE       reduce using rule 83 (signoconect -> DAMPERSAND .)
+    TRUE            reduce using rule 83 (signoconect -> DAMPERSAND .)
+    FALSE           reduce using rule 83 (signoconect -> DAMPERSAND .)
 
 
 state 73
 
-    (89) signoconect -> OR .
+    (84) signoconect -> OR .
 
-    LPAREN          reduce using rule 89 (signoconect -> OR .)
-    ID              reduce using rule 89 (signoconect -> OR .)
-    IDCHAR          reduce using rule 89 (signoconect -> OR .)
-    IDSTRING        reduce using rule 89 (signoconect -> OR .)
-    INTTYPE         reduce using rule 89 (signoconect -> OR .)
-    NINTTYPE        reduce using rule 89 (signoconect -> OR .)
-    FLOATTYPE       reduce using rule 89 (signoconect -> OR .)
-    TRUE            reduce using rule 89 (signoconect -> OR .)
-    FALSE           reduce using rule 89 (signoconect -> OR .)
+    LPAREN          reduce using rule 84 (signoconect -> OR .)
+    ID              reduce using rule 84 (signoconect -> OR .)
+    IDCHAR          reduce using rule 84 (signoconect -> OR .)
+    IDSTRING        reduce using rule 84 (signoconect -> OR .)
+    INTTYPE         reduce using rule 84 (signoconect -> OR .)
+    NINTTYPE        reduce using rule 84 (signoconect -> OR .)
+    FLOATTYPE       reduce using rule 84 (signoconect -> OR .)
+    TRUE            reduce using rule 84 (signoconect -> OR .)
+    FALSE           reduce using rule 84 (signoconect -> OR .)
 
 
 state 74
 
-    (34) comparacion -> IDCHAR signocompar . IDCHAR
+    (32) comparacion -> IDCHAR signocompar . IDCHAR
 
     IDCHAR          shift and go to state 140
 
 
 state 75
 
-    (35) comparacion -> IDSTRING signocompar . IDSTRING
+    (33) comparacion -> IDSTRING signocompar . IDSTRING
 
     IDSTRING        shift and go to state 141
 
@@ -1777,26 +1777,26 @@ state 80
     (41) asignacion -> . LET MUT ID IGUAL VEC DOSDOBLEPUNTOS NEW LPAREN RPAREN ENDCHAR
     (49) asignacion -> . CONST ID COLON intsize IGUAL INTTYPE ENDCHAR
     (50) asignacion -> . CONST ID COLON intsize IGUAL NINTTYPE ENDCHAR
-    (62) asignacion -> . CONST ID COLON uintsize IGUAL INTTYPE ENDCHAR
-    (71) asignacion -> . CONST ID COLON floatsize IGUAL FLOATTYPE ENDCHAR
+    (58) asignacion -> . CONST ID COLON uintsize IGUAL INTTYPE ENDCHAR
+    (69) asignacion -> . CONST ID COLON floatsize IGUAL FLOATTYPE ENDCHAR
     (78) asignacion -> . CONST ID COLON strsize IGUAL IDSTRING ENDCHAR
-    (87) asignacion -> . CONST ID COLON STRING IGUAL STRING DOSDOBLEPUNTOS FROM LPAREN IDSTRING RPAREN ENDCHAR
-    (92) asignacion -> . CONST ID COLON STRING IGUAL IDSTRING ENDCHAR
-    (96) asignacion -> . CONST ID COLON BOOL IGUAL boolean ENDCHAR
-    (102) asignacion -> . CONST ID COLON CHAR IGUAL IDCHAR ENDCHAR
+    (82) asignacion -> . CONST ID COLON STRING IGUAL STRING DOSDOBLEPUNTOS FROM LPAREN IDSTRING RPAREN ENDCHAR
+    (90) asignacion -> . CONST ID COLON STRING IGUAL IDSTRING ENDCHAR
+    (93) asignacion -> . CONST ID COLON BOOL IGUAL boolean ENDCHAR
+    (99) asignacion -> . CONST ID COLON CHAR IGUAL IDCHAR ENDCHAR
     (112) asignacion -> . LET MUT ID IGUAL valor ENDCHAR
     (113) asignacion -> . LET MUT ID IGUAL estructuras ENDCHAR
     (114) asignacion -> . LET ID IGUAL valor ENDCHAR
     (115) asignacion -> . LET MUT ID IGUAL LINKEDLIST DOSDOBLEPUNTOS NEW LPAREN RPAREN ENDCHAR
     (103) impresion -> . PRINTLN LPAREN IDSTRING RPAREN ENDCHAR
-    (93) loop -> . LOOP LLLAVE metodo RLLAVE
-    (100) ifblock -> . IF LPAREN ifparams RPAREN LLLAVE cuerpof RLLAVE
-    (101) ifblock -> . IF ifparams LLLAVE cuerpof RLLAVE
-    (94) elseifblock -> . ifblock ELSE IF LPAREN ifparams RPAREN LLLAVE cuerpof RLLAVE
-    (95) elseifblock -> . ifblock ELSE IF ifparams LLLAVE cuerpof RLLAVE
-    (90) elseblock -> . ifblock ELSE LLLAVE cuerpof RLLAVE
-    (91) elseblock -> . elseifblock ELSE LLLAVE cuerpof RLLAVE
-    (109) vectorpush -> . ID POINT PUSH LPAREN INTTYPE RPAREN ENDCHAR
+    (94) loop -> . LOOP LLLAVE metodo RLLAVE
+    (101) ifblock -> . IF LPAREN ifparams RPAREN LLLAVE cuerpof RLLAVE
+    (102) ifblock -> . IF ifparams LLLAVE cuerpof RLLAVE
+    (97) elseifblock -> . ifblock ELSE IF LPAREN ifparams RPAREN LLLAVE cuerpof RLLAVE
+    (98) elseifblock -> . ifblock ELSE IF ifparams LLLAVE cuerpof RLLAVE
+    (91) elseblock -> . ifblock ELSE LLLAVE cuerpof RLLAVE
+    (92) elseblock -> . elseifblock ELSE LLLAVE cuerpof RLLAVE
+    (104) vectorpush -> . ID POINT PUSH LPAREN INTTYPE RPAREN ENDCHAR
     (116) llpushfront -> . ID POINT PUSH_FRONT LPAREN INTTYPE RPAREN ENDCHAR
     (117) llpopback -> . ID POINT POP_BACK LPAREN RPAREN ENDCHAR
     (85) entrada -> . IO DOSDOBLEPUNTOS STDIN LPAREN RPAREN POINT READLINE LPAREN AMPERSAND MUT ID RPAREN ENDCHAR
@@ -1828,18 +1828,18 @@ state 80
 
 state 81
 
-    (108) ifcondicion -> LPAREN ifcondicion . RPAREN
+    (109) ifcondicion -> LPAREN ifcondicion . RPAREN
 
     RPAREN          shift and go to state 135
 
 
 state 82
 
-    (33) comparacion -> ID . signocompar ID
-    (65) signocompar -> . MAYORQUE
-    (66) signocompar -> . MENORQUE
-    (67) signocompar -> . DIFERENTE
-    (68) signocompar -> . IDENTICO
+    (31) comparacion -> ID . signocompar ID
+    (63) signocompar -> . MAYORQUE
+    (64) signocompar -> . MENORQUE
+    (65) signocompar -> . DIFERENTE
+    (66) signocompar -> . IDENTICO
 
     MAYORQUE        shift and go to state 66
     MENORQUE        shift and go to state 67
@@ -1850,11 +1850,11 @@ state 82
 
 state 83
 
-    (48) comparacion -> boolean . signocompar boolean
-    (65) signocompar -> . MAYORQUE
-    (66) signocompar -> . MENORQUE
-    (67) signocompar -> . DIFERENTE
-    (68) signocompar -> . IDENTICO
+    (46) comparacion -> boolean . signocompar boolean
+    (63) signocompar -> . MAYORQUE
+    (64) signocompar -> . MENORQUE
+    (65) signocompar -> . DIFERENTE
+    (66) signocompar -> . IDENTICO
 
     MAYORQUE        shift and go to state 66
     MENORQUE        shift and go to state 67
@@ -1865,27 +1865,27 @@ state 83
 
 state 84
 
-    (94) elseifblock -> ifblock ELSE IF LPAREN . ifparams RPAREN LLLAVE cuerpof RLLAVE
-    (106) ifcondicion -> LPAREN . comparacion RPAREN
-    (107) ifcondicion -> LPAREN . comparacion RPAREN signoconect ifcondicion
-    (108) ifcondicion -> LPAREN . ifcondicion RPAREN
-    (82) ifparams -> . ifcondicion
-    (83) ifparams -> . boolean
-    (84) ifparams -> . ID
-    (33) comparacion -> . ID signocompar ID
-    (34) comparacion -> . IDCHAR signocompar IDCHAR
-    (35) comparacion -> . IDSTRING signocompar IDSTRING
+    (97) elseifblock -> ifblock ELSE IF LPAREN . ifparams RPAREN LLLAVE cuerpof RLLAVE
+    (107) ifcondicion -> LPAREN . comparacion RPAREN
+    (108) ifcondicion -> LPAREN . comparacion RPAREN signoconect ifcondicion
+    (109) ifcondicion -> LPAREN . ifcondicion RPAREN
+    (87) ifparams -> . ifcondicion
+    (88) ifparams -> . boolean
+    (89) ifparams -> . ID
+    (31) comparacion -> . ID signocompar ID
+    (32) comparacion -> . IDCHAR signocompar IDCHAR
+    (33) comparacion -> . IDSTRING signocompar IDSTRING
     (42) comparacion -> . INTTYPE signocompar INTTYPE
     (43) comparacion -> . NINTTYPE signocompar NINTTYPE
     (44) comparacion -> . FLOATTYPE signocompar FLOATTYPE
-    (48) comparacion -> . boolean signocompar boolean
-    (104) ifcondicion -> . comparacion
-    (105) ifcondicion -> . comparacion signoconect ifcondicion
-    (106) ifcondicion -> . LPAREN comparacion RPAREN
-    (107) ifcondicion -> . LPAREN comparacion RPAREN signoconect ifcondicion
-    (108) ifcondicion -> . LPAREN ifcondicion RPAREN
-    (69) boolean -> . TRUE
-    (70) boolean -> . FALSE
+    (46) comparacion -> . boolean signocompar boolean
+    (105) ifcondicion -> . comparacion
+    (106) ifcondicion -> . comparacion signoconect ifcondicion
+    (107) ifcondicion -> . LPAREN comparacion RPAREN
+    (108) ifcondicion -> . LPAREN comparacion RPAREN signoconect ifcondicion
+    (109) ifcondicion -> . LPAREN ifcondicion RPAREN
+    (76) boolean -> . TRUE
+    (77) boolean -> . FALSE
 
     ID              shift and go to state 37
     IDCHAR          shift and go to state 41
@@ -1904,14 +1904,14 @@ state 84
 
 state 85
 
-    (95) elseifblock -> ifblock ELSE IF ifparams . LLLAVE cuerpof RLLAVE
+    (98) elseifblock -> ifblock ELSE IF ifparams . LLLAVE cuerpof RLLAVE
 
     LLLAVE          shift and go to state 148
 
 
 state 86
 
-    (90) elseblock -> ifblock ELSE LLLAVE cuerpof . RLLAVE
+    (91) elseblock -> ifblock ELSE LLLAVE cuerpof . RLLAVE
 
     RLLAVE          shift and go to state 149
 
@@ -1936,26 +1936,26 @@ state 87
     (41) asignacion -> . LET MUT ID IGUAL VEC DOSDOBLEPUNTOS NEW LPAREN RPAREN ENDCHAR
     (49) asignacion -> . CONST ID COLON intsize IGUAL INTTYPE ENDCHAR
     (50) asignacion -> . CONST ID COLON intsize IGUAL NINTTYPE ENDCHAR
-    (62) asignacion -> . CONST ID COLON uintsize IGUAL INTTYPE ENDCHAR
-    (71) asignacion -> . CONST ID COLON floatsize IGUAL FLOATTYPE ENDCHAR
+    (58) asignacion -> . CONST ID COLON uintsize IGUAL INTTYPE ENDCHAR
+    (69) asignacion -> . CONST ID COLON floatsize IGUAL FLOATTYPE ENDCHAR
     (78) asignacion -> . CONST ID COLON strsize IGUAL IDSTRING ENDCHAR
-    (87) asignacion -> . CONST ID COLON STRING IGUAL STRING DOSDOBLEPUNTOS FROM LPAREN IDSTRING RPAREN ENDCHAR
-    (92) asignacion -> . CONST ID COLON STRING IGUAL IDSTRING ENDCHAR
-    (96) asignacion -> . CONST ID COLON BOOL IGUAL boolean ENDCHAR
-    (102) asignacion -> . CONST ID COLON CHAR IGUAL IDCHAR ENDCHAR
+    (82) asignacion -> . CONST ID COLON STRING IGUAL STRING DOSDOBLEPUNTOS FROM LPAREN IDSTRING RPAREN ENDCHAR
+    (90) asignacion -> . CONST ID COLON STRING IGUAL IDSTRING ENDCHAR
+    (93) asignacion -> . CONST ID COLON BOOL IGUAL boolean ENDCHAR
+    (99) asignacion -> . CONST ID COLON CHAR IGUAL IDCHAR ENDCHAR
     (112) asignacion -> . LET MUT ID IGUAL valor ENDCHAR
     (113) asignacion -> . LET MUT ID IGUAL estructuras ENDCHAR
     (114) asignacion -> . LET ID IGUAL valor ENDCHAR
     (115) asignacion -> . LET MUT ID IGUAL LINKEDLIST DOSDOBLEPUNTOS NEW LPAREN RPAREN ENDCHAR
     (103) impresion -> . PRINTLN LPAREN IDSTRING RPAREN ENDCHAR
-    (93) loop -> . LOOP LLLAVE metodo RLLAVE
-    (100) ifblock -> . IF LPAREN ifparams RPAREN LLLAVE cuerpof RLLAVE
-    (101) ifblock -> . IF ifparams LLLAVE cuerpof RLLAVE
-    (94) elseifblock -> . ifblock ELSE IF LPAREN ifparams RPAREN LLLAVE cuerpof RLLAVE
-    (95) elseifblock -> . ifblock ELSE IF ifparams LLLAVE cuerpof RLLAVE
-    (90) elseblock -> . ifblock ELSE LLLAVE cuerpof RLLAVE
-    (91) elseblock -> . elseifblock ELSE LLLAVE cuerpof RLLAVE
-    (109) vectorpush -> . ID POINT PUSH LPAREN INTTYPE RPAREN ENDCHAR
+    (94) loop -> . LOOP LLLAVE metodo RLLAVE
+    (101) ifblock -> . IF LPAREN ifparams RPAREN LLLAVE cuerpof RLLAVE
+    (102) ifblock -> . IF ifparams LLLAVE cuerpof RLLAVE
+    (97) elseifblock -> . ifblock ELSE IF LPAREN ifparams RPAREN LLLAVE cuerpof RLLAVE
+    (98) elseifblock -> . ifblock ELSE IF ifparams LLLAVE cuerpof RLLAVE
+    (91) elseblock -> . ifblock ELSE LLLAVE cuerpof RLLAVE
+    (92) elseblock -> . elseifblock ELSE LLLAVE cuerpof RLLAVE
+    (104) vectorpush -> . ID POINT PUSH LPAREN INTTYPE RPAREN ENDCHAR
     (116) llpushfront -> . ID POINT PUSH_FRONT LPAREN INTTYPE RPAREN ENDCHAR
     (117) llpopback -> . ID POINT POP_BACK LPAREN RPAREN ENDCHAR
     (85) entrada -> . IO DOSDOBLEPUNTOS STDIN LPAREN RPAREN POINT READLINE LPAREN AMPERSAND MUT ID RPAREN ENDCHAR
@@ -1992,22 +1992,22 @@ state 87
 
 state 88
 
-    (91) elseblock -> elseifblock ELSE LLLAVE cuerpof . RLLAVE
+    (92) elseblock -> elseifblock ELSE LLLAVE cuerpof . RLLAVE
 
     RLLAVE          shift and go to state 151
 
 
 state 89
 
-    (97) params -> ID . COLON datatype
-    (98) params -> ID . COLON datatype COMA params
+    (95) params -> ID . COLON datatype
+    (96) params -> ID . COLON datatype COMA params
 
     COLON           shift and go to state 152
 
 
 state 90
 
-    (99) funcion -> FN ID LPAREN params . RPAREN LLLAVE metodo RLLAVE
+    (100) funcion -> FN ID LPAREN params . RPAREN LLLAVE metodo RLLAVE
     (110) funcion -> FN ID LPAREN params . RPAREN ARROWOPT datatype LLLAVE cuerpof RETURN ifparams ENDCHAR RLLAVE
     (111) funcion -> FN ID LPAREN params . RPAREN ARROWOPT datatype LLLAVE cuerpof ID RLLAVE
 
@@ -2016,7 +2016,7 @@ state 90
 
 state 91
 
-    (109) vectorpush -> ID POINT PUSH LPAREN . INTTYPE RPAREN ENDCHAR
+    (104) vectorpush -> ID POINT PUSH LPAREN . INTTYPE RPAREN ENDCHAR
 
     INTTYPE         shift and go to state 154
 
@@ -2050,27 +2050,27 @@ state 94
     (22) valor -> . expresion
     (23) valor -> . conectores
     (24) valor -> . comparacion
-    (31) estructuras -> . linkedlist
-    (32) estructuras -> . hashmap
-    (58) valornumerico -> . NINTTYPE
-    (59) valornumerico -> . INTTYPE
-    (60) valornumerico -> . FLOATTYPE
-    (61) valornumerico -> . NFLOATTYPE
+    (34) estructuras -> . linkedlist
+    (35) estructuras -> . hashmap
+    (59) valornumerico -> . NINTTYPE
+    (60) valornumerico -> . INTTYPE
+    (61) valornumerico -> . FLOATTYPE
+    (62) valornumerico -> . NFLOATTYPE
     (57) expresion -> . valornumerico signo valornumerico
     (79) conectores -> . boolean signoconect boolean
     (80) conectores -> . EXCLAM boolean
     (81) conectores -> . ID signoconect ID
-    (33) comparacion -> . ID signocompar ID
-    (34) comparacion -> . IDCHAR signocompar IDCHAR
-    (35) comparacion -> . IDSTRING signocompar IDSTRING
+    (31) comparacion -> . ID signocompar ID
+    (32) comparacion -> . IDCHAR signocompar IDCHAR
+    (33) comparacion -> . IDSTRING signocompar IDSTRING
     (42) comparacion -> . INTTYPE signocompar INTTYPE
     (43) comparacion -> . NINTTYPE signocompar NINTTYPE
     (44) comparacion -> . FLOATTYPE signocompar FLOATTYPE
-    (48) comparacion -> . boolean signocompar boolean
-    (77) linkedlist -> . LINKEDLIST DOSDOBLEPUNTOS NEW LPAREN RPAREN ENDCHAR
+    (46) comparacion -> . boolean signocompar boolean
+    (75) linkedlist -> . LINKEDLIST DOSDOBLEPUNTOS NEW LPAREN RPAREN ENDCHAR
     (51) hashmap -> . HASHMAP DOSDOBLEPUNTOS NEW LPAREN RPAREN
-    (69) boolean -> . TRUE
-    (70) boolean -> . FALSE
+    (76) boolean -> . TRUE
+    (77) boolean -> . FALSE
 
     VEC             shift and go to state 157
     LINKEDLIST      shift and go to state 160
@@ -2100,13 +2100,13 @@ state 95
 
     (19) valor -> ID .
     (81) conectores -> ID . signoconect ID
-    (33) comparacion -> ID . signocompar ID
-    (88) signoconect -> . DAMPERSAND
-    (89) signoconect -> . OR
-    (65) signocompar -> . MAYORQUE
-    (66) signocompar -> . MENORQUE
-    (67) signocompar -> . DIFERENTE
-    (68) signocompar -> . IDENTICO
+    (31) comparacion -> ID . signocompar ID
+    (83) signoconect -> . DAMPERSAND
+    (84) signoconect -> . OR
+    (63) signocompar -> . MAYORQUE
+    (64) signocompar -> . MENORQUE
+    (65) signocompar -> . DIFERENTE
+    (66) signocompar -> . IDENTICO
 
     ENDCHAR         reduce using rule 19 (valor -> ID .)
     DAMPERSAND      shift and go to state 72
@@ -2130,11 +2130,11 @@ state 97
 
     (16) valor -> valornumerico .
     (57) expresion -> valornumerico . signo valornumerico
-    (72) signo -> . PLUS
-    (73) signo -> . TIMES
-    (74) signo -> . MINUS
-    (75) signo -> . PORCENTAJE
-    (76) signo -> . DIVIDE
+    (70) signo -> . PLUS
+    (71) signo -> . TIMES
+    (72) signo -> . MINUS
+    (73) signo -> . PORCENTAJE
+    (74) signo -> . DIVIDE
 
     ENDCHAR         reduce using rule 16 (valor -> valornumerico .)
     PLUS            shift and go to state 167
@@ -2148,39 +2148,39 @@ state 97
 state 98
 
     (17) valor -> TRUE .
-    (69) boolean -> TRUE .
+    (76) boolean -> TRUE .
 
     ENDCHAR         reduce using rule 17 (valor -> TRUE .)
-    DAMPERSAND      reduce using rule 69 (boolean -> TRUE .)
-    OR              reduce using rule 69 (boolean -> TRUE .)
-    MAYORQUE        reduce using rule 69 (boolean -> TRUE .)
-    MENORQUE        reduce using rule 69 (boolean -> TRUE .)
-    DIFERENTE       reduce using rule 69 (boolean -> TRUE .)
-    IDENTICO        reduce using rule 69 (boolean -> TRUE .)
+    DAMPERSAND      reduce using rule 76 (boolean -> TRUE .)
+    OR              reduce using rule 76 (boolean -> TRUE .)
+    MAYORQUE        reduce using rule 76 (boolean -> TRUE .)
+    MENORQUE        reduce using rule 76 (boolean -> TRUE .)
+    DIFERENTE       reduce using rule 76 (boolean -> TRUE .)
+    IDENTICO        reduce using rule 76 (boolean -> TRUE .)
 
 
 state 99
 
     (18) valor -> FALSE .
-    (70) boolean -> FALSE .
+    (77) boolean -> FALSE .
 
     ENDCHAR         reduce using rule 18 (valor -> FALSE .)
-    DAMPERSAND      reduce using rule 70 (boolean -> FALSE .)
-    OR              reduce using rule 70 (boolean -> FALSE .)
-    MAYORQUE        reduce using rule 70 (boolean -> FALSE .)
-    MENORQUE        reduce using rule 70 (boolean -> FALSE .)
-    DIFERENTE       reduce using rule 70 (boolean -> FALSE .)
-    IDENTICO        reduce using rule 70 (boolean -> FALSE .)
+    DAMPERSAND      reduce using rule 77 (boolean -> FALSE .)
+    OR              reduce using rule 77 (boolean -> FALSE .)
+    MAYORQUE        reduce using rule 77 (boolean -> FALSE .)
+    MENORQUE        reduce using rule 77 (boolean -> FALSE .)
+    DIFERENTE       reduce using rule 77 (boolean -> FALSE .)
+    IDENTICO        reduce using rule 77 (boolean -> FALSE .)
 
 
 state 100
 
     (20) valor -> IDCHAR .
-    (34) comparacion -> IDCHAR . signocompar IDCHAR
-    (65) signocompar -> . MAYORQUE
-    (66) signocompar -> . MENORQUE
-    (67) signocompar -> . DIFERENTE
-    (68) signocompar -> . IDENTICO
+    (32) comparacion -> IDCHAR . signocompar IDCHAR
+    (63) signocompar -> . MAYORQUE
+    (64) signocompar -> . MENORQUE
+    (65) signocompar -> . DIFERENTE
+    (66) signocompar -> . IDENTICO
 
     ENDCHAR         reduce using rule 20 (valor -> IDCHAR .)
     MAYORQUE        shift and go to state 66
@@ -2193,11 +2193,11 @@ state 100
 state 101
 
     (21) valor -> IDSTRING .
-    (35) comparacion -> IDSTRING . signocompar IDSTRING
-    (65) signocompar -> . MAYORQUE
-    (66) signocompar -> . MENORQUE
-    (67) signocompar -> . DIFERENTE
-    (68) signocompar -> . IDENTICO
+    (33) comparacion -> IDSTRING . signocompar IDSTRING
+    (63) signocompar -> . MAYORQUE
+    (64) signocompar -> . MENORQUE
+    (65) signocompar -> . DIFERENTE
+    (66) signocompar -> . IDENTICO
 
     ENDCHAR         reduce using rule 21 (valor -> IDSTRING .)
     MAYORQUE        shift and go to state 66
@@ -2230,19 +2230,19 @@ state 104
 
 state 105
 
-    (58) valornumerico -> NINTTYPE .
+    (59) valornumerico -> NINTTYPE .
     (43) comparacion -> NINTTYPE . signocompar NINTTYPE
-    (65) signocompar -> . MAYORQUE
-    (66) signocompar -> . MENORQUE
-    (67) signocompar -> . DIFERENTE
-    (68) signocompar -> . IDENTICO
+    (63) signocompar -> . MAYORQUE
+    (64) signocompar -> . MENORQUE
+    (65) signocompar -> . DIFERENTE
+    (66) signocompar -> . IDENTICO
 
-    PLUS            reduce using rule 58 (valornumerico -> NINTTYPE .)
-    TIMES           reduce using rule 58 (valornumerico -> NINTTYPE .)
-    MINUS           reduce using rule 58 (valornumerico -> NINTTYPE .)
-    PORCENTAJE      reduce using rule 58 (valornumerico -> NINTTYPE .)
-    DIVIDE          reduce using rule 58 (valornumerico -> NINTTYPE .)
-    ENDCHAR         reduce using rule 58 (valornumerico -> NINTTYPE .)
+    PLUS            reduce using rule 59 (valornumerico -> NINTTYPE .)
+    TIMES           reduce using rule 59 (valornumerico -> NINTTYPE .)
+    MINUS           reduce using rule 59 (valornumerico -> NINTTYPE .)
+    PORCENTAJE      reduce using rule 59 (valornumerico -> NINTTYPE .)
+    DIVIDE          reduce using rule 59 (valornumerico -> NINTTYPE .)
+    ENDCHAR         reduce using rule 59 (valornumerico -> NINTTYPE .)
     MAYORQUE        shift and go to state 66
     MENORQUE        shift and go to state 67
     DIFERENTE       shift and go to state 68
@@ -2252,19 +2252,19 @@ state 105
 
 state 106
 
-    (59) valornumerico -> INTTYPE .
+    (60) valornumerico -> INTTYPE .
     (42) comparacion -> INTTYPE . signocompar INTTYPE
-    (65) signocompar -> . MAYORQUE
-    (66) signocompar -> . MENORQUE
-    (67) signocompar -> . DIFERENTE
-    (68) signocompar -> . IDENTICO
+    (63) signocompar -> . MAYORQUE
+    (64) signocompar -> . MENORQUE
+    (65) signocompar -> . DIFERENTE
+    (66) signocompar -> . IDENTICO
 
-    PLUS            reduce using rule 59 (valornumerico -> INTTYPE .)
-    TIMES           reduce using rule 59 (valornumerico -> INTTYPE .)
-    MINUS           reduce using rule 59 (valornumerico -> INTTYPE .)
-    PORCENTAJE      reduce using rule 59 (valornumerico -> INTTYPE .)
-    DIVIDE          reduce using rule 59 (valornumerico -> INTTYPE .)
-    ENDCHAR         reduce using rule 59 (valornumerico -> INTTYPE .)
+    PLUS            reduce using rule 60 (valornumerico -> INTTYPE .)
+    TIMES           reduce using rule 60 (valornumerico -> INTTYPE .)
+    MINUS           reduce using rule 60 (valornumerico -> INTTYPE .)
+    PORCENTAJE      reduce using rule 60 (valornumerico -> INTTYPE .)
+    DIVIDE          reduce using rule 60 (valornumerico -> INTTYPE .)
+    ENDCHAR         reduce using rule 60 (valornumerico -> INTTYPE .)
     MAYORQUE        shift and go to state 66
     MENORQUE        shift and go to state 67
     DIFERENTE       shift and go to state 68
@@ -2274,19 +2274,19 @@ state 106
 
 state 107
 
-    (60) valornumerico -> FLOATTYPE .
+    (61) valornumerico -> FLOATTYPE .
     (44) comparacion -> FLOATTYPE . signocompar FLOATTYPE
-    (65) signocompar -> . MAYORQUE
-    (66) signocompar -> . MENORQUE
-    (67) signocompar -> . DIFERENTE
-    (68) signocompar -> . IDENTICO
+    (63) signocompar -> . MAYORQUE
+    (64) signocompar -> . MENORQUE
+    (65) signocompar -> . DIFERENTE
+    (66) signocompar -> . IDENTICO
 
-    PLUS            reduce using rule 60 (valornumerico -> FLOATTYPE .)
-    TIMES           reduce using rule 60 (valornumerico -> FLOATTYPE .)
-    MINUS           reduce using rule 60 (valornumerico -> FLOATTYPE .)
-    PORCENTAJE      reduce using rule 60 (valornumerico -> FLOATTYPE .)
-    DIVIDE          reduce using rule 60 (valornumerico -> FLOATTYPE .)
-    ENDCHAR         reduce using rule 60 (valornumerico -> FLOATTYPE .)
+    PLUS            reduce using rule 61 (valornumerico -> FLOATTYPE .)
+    TIMES           reduce using rule 61 (valornumerico -> FLOATTYPE .)
+    MINUS           reduce using rule 61 (valornumerico -> FLOATTYPE .)
+    PORCENTAJE      reduce using rule 61 (valornumerico -> FLOATTYPE .)
+    DIVIDE          reduce using rule 61 (valornumerico -> FLOATTYPE .)
+    ENDCHAR         reduce using rule 61 (valornumerico -> FLOATTYPE .)
     MAYORQUE        shift and go to state 66
     MENORQUE        shift and go to state 67
     DIFERENTE       shift and go to state 68
@@ -2296,26 +2296,26 @@ state 107
 
 state 108
 
-    (61) valornumerico -> NFLOATTYPE .
+    (62) valornumerico -> NFLOATTYPE .
 
-    PLUS            reduce using rule 61 (valornumerico -> NFLOATTYPE .)
-    TIMES           reduce using rule 61 (valornumerico -> NFLOATTYPE .)
-    MINUS           reduce using rule 61 (valornumerico -> NFLOATTYPE .)
-    PORCENTAJE      reduce using rule 61 (valornumerico -> NFLOATTYPE .)
-    DIVIDE          reduce using rule 61 (valornumerico -> NFLOATTYPE .)
-    ENDCHAR         reduce using rule 61 (valornumerico -> NFLOATTYPE .)
+    PLUS            reduce using rule 62 (valornumerico -> NFLOATTYPE .)
+    TIMES           reduce using rule 62 (valornumerico -> NFLOATTYPE .)
+    MINUS           reduce using rule 62 (valornumerico -> NFLOATTYPE .)
+    PORCENTAJE      reduce using rule 62 (valornumerico -> NFLOATTYPE .)
+    DIVIDE          reduce using rule 62 (valornumerico -> NFLOATTYPE .)
+    ENDCHAR         reduce using rule 62 (valornumerico -> NFLOATTYPE .)
 
 
 state 109
 
     (79) conectores -> boolean . signoconect boolean
-    (48) comparacion -> boolean . signocompar boolean
-    (88) signoconect -> . DAMPERSAND
-    (89) signoconect -> . OR
-    (65) signocompar -> . MAYORQUE
-    (66) signocompar -> . MENORQUE
-    (67) signocompar -> . DIFERENTE
-    (68) signocompar -> . IDENTICO
+    (46) comparacion -> boolean . signocompar boolean
+    (83) signoconect -> . DAMPERSAND
+    (84) signoconect -> . OR
+    (63) signocompar -> . MAYORQUE
+    (64) signocompar -> . MENORQUE
+    (65) signocompar -> . DIFERENTE
+    (66) signocompar -> . IDENTICO
 
     DAMPERSAND      shift and go to state 72
     OR              shift and go to state 73
@@ -2330,8 +2330,8 @@ state 109
 state 110
 
     (80) conectores -> EXCLAM . boolean
-    (69) boolean -> . TRUE
-    (70) boolean -> . FALSE
+    (76) boolean -> . TRUE
+    (77) boolean -> . FALSE
 
     TRUE            shift and go to state 39
     FALSE           shift and go to state 40
@@ -2348,14 +2348,14 @@ state 111
 
 state 112
 
-    (62) asignacion -> CONST ID COLON uintsize . IGUAL INTTYPE ENDCHAR
+    (58) asignacion -> CONST ID COLON uintsize . IGUAL INTTYPE ENDCHAR
 
     IGUAL           shift and go to state 175
 
 
 state 113
 
-    (71) asignacion -> CONST ID COLON floatsize . IGUAL FLOATTYPE ENDCHAR
+    (69) asignacion -> CONST ID COLON floatsize . IGUAL FLOATTYPE ENDCHAR
 
     IGUAL           shift and go to state 176
 
@@ -2369,22 +2369,22 @@ state 114
 
 state 115
 
-    (87) asignacion -> CONST ID COLON STRING . IGUAL STRING DOSDOBLEPUNTOS FROM LPAREN IDSTRING RPAREN ENDCHAR
-    (92) asignacion -> CONST ID COLON STRING . IGUAL IDSTRING ENDCHAR
+    (82) asignacion -> CONST ID COLON STRING . IGUAL STRING DOSDOBLEPUNTOS FROM LPAREN IDSTRING RPAREN ENDCHAR
+    (90) asignacion -> CONST ID COLON STRING . IGUAL IDSTRING ENDCHAR
 
     IGUAL           shift and go to state 178
 
 
 state 116
 
-    (96) asignacion -> CONST ID COLON BOOL . IGUAL boolean ENDCHAR
+    (93) asignacion -> CONST ID COLON BOOL . IGUAL boolean ENDCHAR
 
     IGUAL           shift and go to state 179
 
 
 state 117
 
-    (102) asignacion -> CONST ID COLON CHAR . IGUAL IDCHAR ENDCHAR
+    (99) asignacion -> CONST ID COLON CHAR . IGUAL IDCHAR ENDCHAR
 
     IGUAL           shift and go to state 180
 
@@ -2491,28 +2491,28 @@ state 127
 
 state 128
 
-    (46) floatsize -> FLOAT32 .
+    (47) floatsize -> FLOAT32 .
 
-    IGUAL           reduce using rule 46 (floatsize -> FLOAT32 .)
-    COMA            reduce using rule 46 (floatsize -> FLOAT32 .)
-    RPAREN          reduce using rule 46 (floatsize -> FLOAT32 .)
-    LLLAVE          reduce using rule 46 (floatsize -> FLOAT32 .)
+    IGUAL           reduce using rule 47 (floatsize -> FLOAT32 .)
+    COMA            reduce using rule 47 (floatsize -> FLOAT32 .)
+    RPAREN          reduce using rule 47 (floatsize -> FLOAT32 .)
+    LLLAVE          reduce using rule 47 (floatsize -> FLOAT32 .)
 
 
 state 129
 
-    (47) floatsize -> FLOAT64 .
+    (48) floatsize -> FLOAT64 .
 
-    IGUAL           reduce using rule 47 (floatsize -> FLOAT64 .)
-    COMA            reduce using rule 47 (floatsize -> FLOAT64 .)
-    RPAREN          reduce using rule 47 (floatsize -> FLOAT64 .)
-    LLLAVE          reduce using rule 47 (floatsize -> FLOAT64 .)
+    IGUAL           reduce using rule 48 (floatsize -> FLOAT64 .)
+    COMA            reduce using rule 48 (floatsize -> FLOAT64 .)
+    RPAREN          reduce using rule 48 (floatsize -> FLOAT64 .)
+    LLLAVE          reduce using rule 48 (floatsize -> FLOAT64 .)
 
 
 state 130
 
-    (63) strsize -> AMPERSAND . COMILLA STATIC STR
-    (64) strsize -> AMPERSAND . STR
+    (67) strsize -> AMPERSAND . COMILLA STATIC STR
+    (68) strsize -> AMPERSAND . STR
 
     COMILLA         shift and go to state 181
     STR             shift and go to state 182
@@ -2527,38 +2527,38 @@ state 131
 
 state 132
 
-    (93) loop -> LOOP LLLAVE metodo RLLAVE .
+    (94) loop -> LOOP LLLAVE metodo RLLAVE .
 
-    $end            reduce using rule 93 (loop -> LOOP LLLAVE metodo RLLAVE .)
-    RLLAVE          reduce using rule 93 (loop -> LOOP LLLAVE metodo RLLAVE .)
-    LET             reduce using rule 93 (loop -> LOOP LLLAVE metodo RLLAVE .)
-    CONST           reduce using rule 93 (loop -> LOOP LLLAVE metodo RLLAVE .)
-    PRINTLN         reduce using rule 93 (loop -> LOOP LLLAVE metodo RLLAVE .)
-    LOOP            reduce using rule 93 (loop -> LOOP LLLAVE metodo RLLAVE .)
-    IF              reduce using rule 93 (loop -> LOOP LLLAVE metodo RLLAVE .)
-    ID              reduce using rule 93 (loop -> LOOP LLLAVE metodo RLLAVE .)
-    IO              reduce using rule 93 (loop -> LOOP LLLAVE metodo RLLAVE .)
-    WHILE           reduce using rule 93 (loop -> LOOP LLLAVE metodo RLLAVE .)
-    RETURN          reduce using rule 93 (loop -> LOOP LLLAVE metodo RLLAVE .)
+    $end            reduce using rule 94 (loop -> LOOP LLLAVE metodo RLLAVE .)
+    RLLAVE          reduce using rule 94 (loop -> LOOP LLLAVE metodo RLLAVE .)
+    LET             reduce using rule 94 (loop -> LOOP LLLAVE metodo RLLAVE .)
+    CONST           reduce using rule 94 (loop -> LOOP LLLAVE metodo RLLAVE .)
+    PRINTLN         reduce using rule 94 (loop -> LOOP LLLAVE metodo RLLAVE .)
+    LOOP            reduce using rule 94 (loop -> LOOP LLLAVE metodo RLLAVE .)
+    IF              reduce using rule 94 (loop -> LOOP LLLAVE metodo RLLAVE .)
+    ID              reduce using rule 94 (loop -> LOOP LLLAVE metodo RLLAVE .)
+    IO              reduce using rule 94 (loop -> LOOP LLLAVE metodo RLLAVE .)
+    WHILE           reduce using rule 94 (loop -> LOOP LLLAVE metodo RLLAVE .)
+    RETURN          reduce using rule 94 (loop -> LOOP LLLAVE metodo RLLAVE .)
 
 
 state 133
 
-    (100) ifblock -> IF LPAREN ifparams RPAREN . LLLAVE cuerpof RLLAVE
+    (101) ifblock -> IF LPAREN ifparams RPAREN . LLLAVE cuerpof RLLAVE
 
     LLLAVE          shift and go to state 184
 
 
 state 134
 
-    (106) ifcondicion -> LPAREN comparacion RPAREN .
-    (107) ifcondicion -> LPAREN comparacion RPAREN . signoconect ifcondicion
-    (88) signoconect -> . DAMPERSAND
-    (89) signoconect -> . OR
+    (107) ifcondicion -> LPAREN comparacion RPAREN .
+    (108) ifcondicion -> LPAREN comparacion RPAREN . signoconect ifcondicion
+    (83) signoconect -> . DAMPERSAND
+    (84) signoconect -> . OR
 
-    LLLAVE          reduce using rule 106 (ifcondicion -> LPAREN comparacion RPAREN .)
-    RPAREN          reduce using rule 106 (ifcondicion -> LPAREN comparacion RPAREN .)
-    ENDCHAR         reduce using rule 106 (ifcondicion -> LPAREN comparacion RPAREN .)
+    LLLAVE          reduce using rule 107 (ifcondicion -> LPAREN comparacion RPAREN .)
+    RPAREN          reduce using rule 107 (ifcondicion -> LPAREN comparacion RPAREN .)
+    ENDCHAR         reduce using rule 107 (ifcondicion -> LPAREN comparacion RPAREN .)
     DAMPERSAND      shift and go to state 72
     OR              shift and go to state 73
 
@@ -2566,71 +2566,71 @@ state 134
 
 state 135
 
-    (108) ifcondicion -> LPAREN ifcondicion RPAREN .
+    (109) ifcondicion -> LPAREN ifcondicion RPAREN .
 
-    LLLAVE          reduce using rule 108 (ifcondicion -> LPAREN ifcondicion RPAREN .)
-    RPAREN          reduce using rule 108 (ifcondicion -> LPAREN ifcondicion RPAREN .)
-    ENDCHAR         reduce using rule 108 (ifcondicion -> LPAREN ifcondicion RPAREN .)
+    LLLAVE          reduce using rule 109 (ifcondicion -> LPAREN ifcondicion RPAREN .)
+    RPAREN          reduce using rule 109 (ifcondicion -> LPAREN ifcondicion RPAREN .)
+    ENDCHAR         reduce using rule 109 (ifcondicion -> LPAREN ifcondicion RPAREN .)
 
 
 state 136
 
-    (101) ifblock -> IF ifparams LLLAVE cuerpof . RLLAVE
+    (102) ifblock -> IF ifparams LLLAVE cuerpof . RLLAVE
 
     RLLAVE          shift and go to state 186
 
 
 state 137
 
-    (48) comparacion -> boolean signocompar boolean .
+    (46) comparacion -> boolean signocompar boolean .
 
-    DAMPERSAND      reduce using rule 48 (comparacion -> boolean signocompar boolean .)
-    OR              reduce using rule 48 (comparacion -> boolean signocompar boolean .)
-    LLLAVE          reduce using rule 48 (comparacion -> boolean signocompar boolean .)
-    RPAREN          reduce using rule 48 (comparacion -> boolean signocompar boolean .)
-    ENDCHAR         reduce using rule 48 (comparacion -> boolean signocompar boolean .)
+    DAMPERSAND      reduce using rule 46 (comparacion -> boolean signocompar boolean .)
+    OR              reduce using rule 46 (comparacion -> boolean signocompar boolean .)
+    LLLAVE          reduce using rule 46 (comparacion -> boolean signocompar boolean .)
+    RPAREN          reduce using rule 46 (comparacion -> boolean signocompar boolean .)
+    ENDCHAR         reduce using rule 46 (comparacion -> boolean signocompar boolean .)
 
 
 state 138
 
-    (33) comparacion -> ID signocompar ID .
+    (31) comparacion -> ID signocompar ID .
 
-    DAMPERSAND      reduce using rule 33 (comparacion -> ID signocompar ID .)
-    OR              reduce using rule 33 (comparacion -> ID signocompar ID .)
-    LLLAVE          reduce using rule 33 (comparacion -> ID signocompar ID .)
-    RPAREN          reduce using rule 33 (comparacion -> ID signocompar ID .)
-    ENDCHAR         reduce using rule 33 (comparacion -> ID signocompar ID .)
+    DAMPERSAND      reduce using rule 31 (comparacion -> ID signocompar ID .)
+    OR              reduce using rule 31 (comparacion -> ID signocompar ID .)
+    LLLAVE          reduce using rule 31 (comparacion -> ID signocompar ID .)
+    RPAREN          reduce using rule 31 (comparacion -> ID signocompar ID .)
+    ENDCHAR         reduce using rule 31 (comparacion -> ID signocompar ID .)
 
 
 state 139
 
-    (105) ifcondicion -> comparacion signoconect ifcondicion .
+    (106) ifcondicion -> comparacion signoconect ifcondicion .
 
-    LLLAVE          reduce using rule 105 (ifcondicion -> comparacion signoconect ifcondicion .)
-    RPAREN          reduce using rule 105 (ifcondicion -> comparacion signoconect ifcondicion .)
-    ENDCHAR         reduce using rule 105 (ifcondicion -> comparacion signoconect ifcondicion .)
+    LLLAVE          reduce using rule 106 (ifcondicion -> comparacion signoconect ifcondicion .)
+    RPAREN          reduce using rule 106 (ifcondicion -> comparacion signoconect ifcondicion .)
+    ENDCHAR         reduce using rule 106 (ifcondicion -> comparacion signoconect ifcondicion .)
 
 
 state 140
 
-    (34) comparacion -> IDCHAR signocompar IDCHAR .
+    (32) comparacion -> IDCHAR signocompar IDCHAR .
 
-    DAMPERSAND      reduce using rule 34 (comparacion -> IDCHAR signocompar IDCHAR .)
-    OR              reduce using rule 34 (comparacion -> IDCHAR signocompar IDCHAR .)
-    LLLAVE          reduce using rule 34 (comparacion -> IDCHAR signocompar IDCHAR .)
-    RPAREN          reduce using rule 34 (comparacion -> IDCHAR signocompar IDCHAR .)
-    ENDCHAR         reduce using rule 34 (comparacion -> IDCHAR signocompar IDCHAR .)
+    DAMPERSAND      reduce using rule 32 (comparacion -> IDCHAR signocompar IDCHAR .)
+    OR              reduce using rule 32 (comparacion -> IDCHAR signocompar IDCHAR .)
+    LLLAVE          reduce using rule 32 (comparacion -> IDCHAR signocompar IDCHAR .)
+    RPAREN          reduce using rule 32 (comparacion -> IDCHAR signocompar IDCHAR .)
+    ENDCHAR         reduce using rule 32 (comparacion -> IDCHAR signocompar IDCHAR .)
 
 
 state 141
 
-    (35) comparacion -> IDSTRING signocompar IDSTRING .
+    (33) comparacion -> IDSTRING signocompar IDSTRING .
 
-    DAMPERSAND      reduce using rule 35 (comparacion -> IDSTRING signocompar IDSTRING .)
-    OR              reduce using rule 35 (comparacion -> IDSTRING signocompar IDSTRING .)
-    LLLAVE          reduce using rule 35 (comparacion -> IDSTRING signocompar IDSTRING .)
-    RPAREN          reduce using rule 35 (comparacion -> IDSTRING signocompar IDSTRING .)
-    ENDCHAR         reduce using rule 35 (comparacion -> IDSTRING signocompar IDSTRING .)
+    DAMPERSAND      reduce using rule 33 (comparacion -> IDSTRING signocompar IDSTRING .)
+    OR              reduce using rule 33 (comparacion -> IDSTRING signocompar IDSTRING .)
+    LLLAVE          reduce using rule 33 (comparacion -> IDSTRING signocompar IDSTRING .)
+    RPAREN          reduce using rule 33 (comparacion -> IDSTRING signocompar IDSTRING .)
+    ENDCHAR         reduce using rule 33 (comparacion -> IDSTRING signocompar IDSTRING .)
 
 
 state 142
@@ -2683,14 +2683,14 @@ state 146
 
 state 147
 
-    (94) elseifblock -> ifblock ELSE IF LPAREN ifparams . RPAREN LLLAVE cuerpof RLLAVE
+    (97) elseifblock -> ifblock ELSE IF LPAREN ifparams . RPAREN LLLAVE cuerpof RLLAVE
 
     RPAREN          shift and go to state 189
 
 
 state 148
 
-    (95) elseifblock -> ifblock ELSE IF ifparams LLLAVE . cuerpof RLLAVE
+    (98) elseifblock -> ifblock ELSE IF ifparams LLLAVE . cuerpof RLLAVE
     (3) cuerpof -> . metodo
     (4) cuerpof -> . metodo cuerpof
     (5) metodo -> . asignacion
@@ -2707,26 +2707,26 @@ state 148
     (41) asignacion -> . LET MUT ID IGUAL VEC DOSDOBLEPUNTOS NEW LPAREN RPAREN ENDCHAR
     (49) asignacion -> . CONST ID COLON intsize IGUAL INTTYPE ENDCHAR
     (50) asignacion -> . CONST ID COLON intsize IGUAL NINTTYPE ENDCHAR
-    (62) asignacion -> . CONST ID COLON uintsize IGUAL INTTYPE ENDCHAR
-    (71) asignacion -> . CONST ID COLON floatsize IGUAL FLOATTYPE ENDCHAR
+    (58) asignacion -> . CONST ID COLON uintsize IGUAL INTTYPE ENDCHAR
+    (69) asignacion -> . CONST ID COLON floatsize IGUAL FLOATTYPE ENDCHAR
     (78) asignacion -> . CONST ID COLON strsize IGUAL IDSTRING ENDCHAR
-    (87) asignacion -> . CONST ID COLON STRING IGUAL STRING DOSDOBLEPUNTOS FROM LPAREN IDSTRING RPAREN ENDCHAR
-    (92) asignacion -> . CONST ID COLON STRING IGUAL IDSTRING ENDCHAR
-    (96) asignacion -> . CONST ID COLON BOOL IGUAL boolean ENDCHAR
-    (102) asignacion -> . CONST ID COLON CHAR IGUAL IDCHAR ENDCHAR
+    (82) asignacion -> . CONST ID COLON STRING IGUAL STRING DOSDOBLEPUNTOS FROM LPAREN IDSTRING RPAREN ENDCHAR
+    (90) asignacion -> . CONST ID COLON STRING IGUAL IDSTRING ENDCHAR
+    (93) asignacion -> . CONST ID COLON BOOL IGUAL boolean ENDCHAR
+    (99) asignacion -> . CONST ID COLON CHAR IGUAL IDCHAR ENDCHAR
     (112) asignacion -> . LET MUT ID IGUAL valor ENDCHAR
     (113) asignacion -> . LET MUT ID IGUAL estructuras ENDCHAR
     (114) asignacion -> . LET ID IGUAL valor ENDCHAR
     (115) asignacion -> . LET MUT ID IGUAL LINKEDLIST DOSDOBLEPUNTOS NEW LPAREN RPAREN ENDCHAR
     (103) impresion -> . PRINTLN LPAREN IDSTRING RPAREN ENDCHAR
-    (93) loop -> . LOOP LLLAVE metodo RLLAVE
-    (100) ifblock -> . IF LPAREN ifparams RPAREN LLLAVE cuerpof RLLAVE
-    (101) ifblock -> . IF ifparams LLLAVE cuerpof RLLAVE
-    (94) elseifblock -> . ifblock ELSE IF LPAREN ifparams RPAREN LLLAVE cuerpof RLLAVE
-    (95) elseifblock -> . ifblock ELSE IF ifparams LLLAVE cuerpof RLLAVE
-    (90) elseblock -> . ifblock ELSE LLLAVE cuerpof RLLAVE
-    (91) elseblock -> . elseifblock ELSE LLLAVE cuerpof RLLAVE
-    (109) vectorpush -> . ID POINT PUSH LPAREN INTTYPE RPAREN ENDCHAR
+    (94) loop -> . LOOP LLLAVE metodo RLLAVE
+    (101) ifblock -> . IF LPAREN ifparams RPAREN LLLAVE cuerpof RLLAVE
+    (102) ifblock -> . IF ifparams LLLAVE cuerpof RLLAVE
+    (97) elseifblock -> . ifblock ELSE IF LPAREN ifparams RPAREN LLLAVE cuerpof RLLAVE
+    (98) elseifblock -> . ifblock ELSE IF ifparams LLLAVE cuerpof RLLAVE
+    (91) elseblock -> . ifblock ELSE LLLAVE cuerpof RLLAVE
+    (92) elseblock -> . elseifblock ELSE LLLAVE cuerpof RLLAVE
+    (104) vectorpush -> . ID POINT PUSH LPAREN INTTYPE RPAREN ENDCHAR
     (116) llpushfront -> . ID POINT PUSH_FRONT LPAREN INTTYPE RPAREN ENDCHAR
     (117) llpopback -> . ID POINT POP_BACK LPAREN RPAREN ENDCHAR
     (85) entrada -> . IO DOSDOBLEPUNTOS STDIN LPAREN RPAREN POINT READLINE LPAREN AMPERSAND MUT ID RPAREN ENDCHAR
@@ -2758,19 +2758,19 @@ state 148
 
 state 149
 
-    (90) elseblock -> ifblock ELSE LLLAVE cuerpof RLLAVE .
+    (91) elseblock -> ifblock ELSE LLLAVE cuerpof RLLAVE .
 
-    $end            reduce using rule 90 (elseblock -> ifblock ELSE LLLAVE cuerpof RLLAVE .)
-    RLLAVE          reduce using rule 90 (elseblock -> ifblock ELSE LLLAVE cuerpof RLLAVE .)
-    LET             reduce using rule 90 (elseblock -> ifblock ELSE LLLAVE cuerpof RLLAVE .)
-    CONST           reduce using rule 90 (elseblock -> ifblock ELSE LLLAVE cuerpof RLLAVE .)
-    PRINTLN         reduce using rule 90 (elseblock -> ifblock ELSE LLLAVE cuerpof RLLAVE .)
-    LOOP            reduce using rule 90 (elseblock -> ifblock ELSE LLLAVE cuerpof RLLAVE .)
-    IF              reduce using rule 90 (elseblock -> ifblock ELSE LLLAVE cuerpof RLLAVE .)
-    ID              reduce using rule 90 (elseblock -> ifblock ELSE LLLAVE cuerpof RLLAVE .)
-    IO              reduce using rule 90 (elseblock -> ifblock ELSE LLLAVE cuerpof RLLAVE .)
-    WHILE           reduce using rule 90 (elseblock -> ifblock ELSE LLLAVE cuerpof RLLAVE .)
-    RETURN          reduce using rule 90 (elseblock -> ifblock ELSE LLLAVE cuerpof RLLAVE .)
+    $end            reduce using rule 91 (elseblock -> ifblock ELSE LLLAVE cuerpof RLLAVE .)
+    RLLAVE          reduce using rule 91 (elseblock -> ifblock ELSE LLLAVE cuerpof RLLAVE .)
+    LET             reduce using rule 91 (elseblock -> ifblock ELSE LLLAVE cuerpof RLLAVE .)
+    CONST           reduce using rule 91 (elseblock -> ifblock ELSE LLLAVE cuerpof RLLAVE .)
+    PRINTLN         reduce using rule 91 (elseblock -> ifblock ELSE LLLAVE cuerpof RLLAVE .)
+    LOOP            reduce using rule 91 (elseblock -> ifblock ELSE LLLAVE cuerpof RLLAVE .)
+    IF              reduce using rule 91 (elseblock -> ifblock ELSE LLLAVE cuerpof RLLAVE .)
+    ID              reduce using rule 91 (elseblock -> ifblock ELSE LLLAVE cuerpof RLLAVE .)
+    IO              reduce using rule 91 (elseblock -> ifblock ELSE LLLAVE cuerpof RLLAVE .)
+    WHILE           reduce using rule 91 (elseblock -> ifblock ELSE LLLAVE cuerpof RLLAVE .)
+    RETURN          reduce using rule 91 (elseblock -> ifblock ELSE LLLAVE cuerpof RLLAVE .)
 
 
 state 150
@@ -2784,25 +2784,25 @@ state 150
 
 state 151
 
-    (91) elseblock -> elseifblock ELSE LLLAVE cuerpof RLLAVE .
+    (92) elseblock -> elseifblock ELSE LLLAVE cuerpof RLLAVE .
 
-    $end            reduce using rule 91 (elseblock -> elseifblock ELSE LLLAVE cuerpof RLLAVE .)
-    RLLAVE          reduce using rule 91 (elseblock -> elseifblock ELSE LLLAVE cuerpof RLLAVE .)
-    LET             reduce using rule 91 (elseblock -> elseifblock ELSE LLLAVE cuerpof RLLAVE .)
-    CONST           reduce using rule 91 (elseblock -> elseifblock ELSE LLLAVE cuerpof RLLAVE .)
-    PRINTLN         reduce using rule 91 (elseblock -> elseifblock ELSE LLLAVE cuerpof RLLAVE .)
-    LOOP            reduce using rule 91 (elseblock -> elseifblock ELSE LLLAVE cuerpof RLLAVE .)
-    IF              reduce using rule 91 (elseblock -> elseifblock ELSE LLLAVE cuerpof RLLAVE .)
-    ID              reduce using rule 91 (elseblock -> elseifblock ELSE LLLAVE cuerpof RLLAVE .)
-    IO              reduce using rule 91 (elseblock -> elseifblock ELSE LLLAVE cuerpof RLLAVE .)
-    WHILE           reduce using rule 91 (elseblock -> elseifblock ELSE LLLAVE cuerpof RLLAVE .)
-    RETURN          reduce using rule 91 (elseblock -> elseifblock ELSE LLLAVE cuerpof RLLAVE .)
+    $end            reduce using rule 92 (elseblock -> elseifblock ELSE LLLAVE cuerpof RLLAVE .)
+    RLLAVE          reduce using rule 92 (elseblock -> elseifblock ELSE LLLAVE cuerpof RLLAVE .)
+    LET             reduce using rule 92 (elseblock -> elseifblock ELSE LLLAVE cuerpof RLLAVE .)
+    CONST           reduce using rule 92 (elseblock -> elseifblock ELSE LLLAVE cuerpof RLLAVE .)
+    PRINTLN         reduce using rule 92 (elseblock -> elseifblock ELSE LLLAVE cuerpof RLLAVE .)
+    LOOP            reduce using rule 92 (elseblock -> elseifblock ELSE LLLAVE cuerpof RLLAVE .)
+    IF              reduce using rule 92 (elseblock -> elseifblock ELSE LLLAVE cuerpof RLLAVE .)
+    ID              reduce using rule 92 (elseblock -> elseifblock ELSE LLLAVE cuerpof RLLAVE .)
+    IO              reduce using rule 92 (elseblock -> elseifblock ELSE LLLAVE cuerpof RLLAVE .)
+    WHILE           reduce using rule 92 (elseblock -> elseifblock ELSE LLLAVE cuerpof RLLAVE .)
+    RETURN          reduce using rule 92 (elseblock -> elseifblock ELSE LLLAVE cuerpof RLLAVE .)
 
 
 state 152
 
-    (97) params -> ID COLON . datatype
-    (98) params -> ID COLON . datatype COMA params
+    (95) params -> ID COLON . datatype
+    (96) params -> ID COLON . datatype COMA params
     (25) datatype -> . intsize
     (26) datatype -> . uintsize
     (27) datatype -> . floatsize
@@ -2819,10 +2819,10 @@ state 152
     (54) uintsize -> . UINT32
     (55) uintsize -> . UINT64
     (56) uintsize -> . UINT128
-    (46) floatsize -> . FLOAT32
-    (47) floatsize -> . FLOAT64
-    (63) strsize -> . AMPERSAND COMILLA STATIC STR
-    (64) strsize -> . AMPERSAND STR
+    (47) floatsize -> . FLOAT32
+    (48) floatsize -> . FLOAT64
+    (67) strsize -> . AMPERSAND COMILLA STATIC STR
+    (68) strsize -> . AMPERSAND STR
 
     STRING          shift and go to state 196
     BOOL            shift and go to state 197
@@ -2848,7 +2848,7 @@ state 152
 
 state 153
 
-    (99) funcion -> FN ID LPAREN params RPAREN . LLLAVE metodo RLLAVE
+    (100) funcion -> FN ID LPAREN params RPAREN . LLLAVE metodo RLLAVE
     (110) funcion -> FN ID LPAREN params RPAREN . ARROWOPT datatype LLLAVE cuerpof RETURN ifparams ENDCHAR RLLAVE
     (111) funcion -> FN ID LPAREN params RPAREN . ARROWOPT datatype LLLAVE cuerpof ID RLLAVE
 
@@ -2858,7 +2858,7 @@ state 153
 
 state 154
 
-    (109) vectorpush -> ID POINT PUSH LPAREN INTTYPE . RPAREN ENDCHAR
+    (104) vectorpush -> ID POINT PUSH LPAREN INTTYPE . RPAREN ENDCHAR
 
     RPAREN          shift and go to state 200
 
@@ -2901,23 +2901,23 @@ state 159
 state 160
 
     (115) asignacion -> LET MUT ID IGUAL LINKEDLIST . DOSDOBLEPUNTOS NEW LPAREN RPAREN ENDCHAR
-    (77) linkedlist -> LINKEDLIST . DOSDOBLEPUNTOS NEW LPAREN RPAREN ENDCHAR
+    (75) linkedlist -> LINKEDLIST . DOSDOBLEPUNTOS NEW LPAREN RPAREN ENDCHAR
 
     DOSDOBLEPUNTOS  shift and go to state 206
 
 
 state 161
 
-    (31) estructuras -> linkedlist .
+    (34) estructuras -> linkedlist .
 
-    ENDCHAR         reduce using rule 31 (estructuras -> linkedlist .)
+    ENDCHAR         reduce using rule 34 (estructuras -> linkedlist .)
 
 
 state 162
 
-    (32) estructuras -> hashmap .
+    (35) estructuras -> hashmap .
 
-    ENDCHAR         reduce using rule 32 (estructuras -> hashmap .)
+    ENDCHAR         reduce using rule 35 (estructuras -> hashmap .)
 
 
 state 163
@@ -2954,10 +2954,10 @@ state 165
 state 166
 
     (57) expresion -> valornumerico signo . valornumerico
-    (58) valornumerico -> . NINTTYPE
-    (59) valornumerico -> . INTTYPE
-    (60) valornumerico -> . FLOATTYPE
-    (61) valornumerico -> . NFLOATTYPE
+    (59) valornumerico -> . NINTTYPE
+    (60) valornumerico -> . INTTYPE
+    (61) valornumerico -> . FLOATTYPE
+    (62) valornumerico -> . NFLOATTYPE
 
     NINTTYPE        shift and go to state 210
     INTTYPE         shift and go to state 211
@@ -2968,59 +2968,59 @@ state 166
 
 state 167
 
-    (72) signo -> PLUS .
+    (70) signo -> PLUS .
 
-    NINTTYPE        reduce using rule 72 (signo -> PLUS .)
-    INTTYPE         reduce using rule 72 (signo -> PLUS .)
-    FLOATTYPE       reduce using rule 72 (signo -> PLUS .)
-    NFLOATTYPE      reduce using rule 72 (signo -> PLUS .)
+    NINTTYPE        reduce using rule 70 (signo -> PLUS .)
+    INTTYPE         reduce using rule 70 (signo -> PLUS .)
+    FLOATTYPE       reduce using rule 70 (signo -> PLUS .)
+    NFLOATTYPE      reduce using rule 70 (signo -> PLUS .)
 
 
 state 168
 
-    (73) signo -> TIMES .
+    (71) signo -> TIMES .
 
-    NINTTYPE        reduce using rule 73 (signo -> TIMES .)
-    INTTYPE         reduce using rule 73 (signo -> TIMES .)
-    FLOATTYPE       reduce using rule 73 (signo -> TIMES .)
-    NFLOATTYPE      reduce using rule 73 (signo -> TIMES .)
+    NINTTYPE        reduce using rule 71 (signo -> TIMES .)
+    INTTYPE         reduce using rule 71 (signo -> TIMES .)
+    FLOATTYPE       reduce using rule 71 (signo -> TIMES .)
+    NFLOATTYPE      reduce using rule 71 (signo -> TIMES .)
 
 
 state 169
 
-    (74) signo -> MINUS .
+    (72) signo -> MINUS .
 
-    NINTTYPE        reduce using rule 74 (signo -> MINUS .)
-    INTTYPE         reduce using rule 74 (signo -> MINUS .)
-    FLOATTYPE       reduce using rule 74 (signo -> MINUS .)
-    NFLOATTYPE      reduce using rule 74 (signo -> MINUS .)
+    NINTTYPE        reduce using rule 72 (signo -> MINUS .)
+    INTTYPE         reduce using rule 72 (signo -> MINUS .)
+    FLOATTYPE       reduce using rule 72 (signo -> MINUS .)
+    NFLOATTYPE      reduce using rule 72 (signo -> MINUS .)
 
 
 state 170
 
-    (75) signo -> PORCENTAJE .
+    (73) signo -> PORCENTAJE .
 
-    NINTTYPE        reduce using rule 75 (signo -> PORCENTAJE .)
-    INTTYPE         reduce using rule 75 (signo -> PORCENTAJE .)
-    FLOATTYPE       reduce using rule 75 (signo -> PORCENTAJE .)
-    NFLOATTYPE      reduce using rule 75 (signo -> PORCENTAJE .)
+    NINTTYPE        reduce using rule 73 (signo -> PORCENTAJE .)
+    INTTYPE         reduce using rule 73 (signo -> PORCENTAJE .)
+    FLOATTYPE       reduce using rule 73 (signo -> PORCENTAJE .)
+    NFLOATTYPE      reduce using rule 73 (signo -> PORCENTAJE .)
 
 
 state 171
 
-    (76) signo -> DIVIDE .
+    (74) signo -> DIVIDE .
 
-    NINTTYPE        reduce using rule 76 (signo -> DIVIDE .)
-    INTTYPE         reduce using rule 76 (signo -> DIVIDE .)
-    FLOATTYPE       reduce using rule 76 (signo -> DIVIDE .)
-    NFLOATTYPE      reduce using rule 76 (signo -> DIVIDE .)
+    NINTTYPE        reduce using rule 74 (signo -> DIVIDE .)
+    INTTYPE         reduce using rule 74 (signo -> DIVIDE .)
+    FLOATTYPE       reduce using rule 74 (signo -> DIVIDE .)
+    NFLOATTYPE      reduce using rule 74 (signo -> DIVIDE .)
 
 
 state 172
 
     (79) conectores -> boolean signoconect . boolean
-    (69) boolean -> . TRUE
-    (70) boolean -> . FALSE
+    (76) boolean -> . TRUE
+    (77) boolean -> . FALSE
 
     TRUE            shift and go to state 39
     FALSE           shift and go to state 40
@@ -3045,14 +3045,14 @@ state 174
 
 state 175
 
-    (62) asignacion -> CONST ID COLON uintsize IGUAL . INTTYPE ENDCHAR
+    (58) asignacion -> CONST ID COLON uintsize IGUAL . INTTYPE ENDCHAR
 
     INTTYPE         shift and go to state 216
 
 
 state 176
 
-    (71) asignacion -> CONST ID COLON floatsize IGUAL . FLOATTYPE ENDCHAR
+    (69) asignacion -> CONST ID COLON floatsize IGUAL . FLOATTYPE ENDCHAR
 
     FLOATTYPE       shift and go to state 217
 
@@ -3066,8 +3066,8 @@ state 177
 
 state 178
 
-    (87) asignacion -> CONST ID COLON STRING IGUAL . STRING DOSDOBLEPUNTOS FROM LPAREN IDSTRING RPAREN ENDCHAR
-    (92) asignacion -> CONST ID COLON STRING IGUAL . IDSTRING ENDCHAR
+    (82) asignacion -> CONST ID COLON STRING IGUAL . STRING DOSDOBLEPUNTOS FROM LPAREN IDSTRING RPAREN ENDCHAR
+    (90) asignacion -> CONST ID COLON STRING IGUAL . IDSTRING ENDCHAR
 
     STRING          shift and go to state 219
     IDSTRING        shift and go to state 220
@@ -3075,9 +3075,9 @@ state 178
 
 state 179
 
-    (96) asignacion -> CONST ID COLON BOOL IGUAL . boolean ENDCHAR
-    (69) boolean -> . TRUE
-    (70) boolean -> . FALSE
+    (93) asignacion -> CONST ID COLON BOOL IGUAL . boolean ENDCHAR
+    (76) boolean -> . TRUE
+    (77) boolean -> . FALSE
 
     TRUE            shift and go to state 39
     FALSE           shift and go to state 40
@@ -3086,26 +3086,26 @@ state 179
 
 state 180
 
-    (102) asignacion -> CONST ID COLON CHAR IGUAL . IDCHAR ENDCHAR
+    (99) asignacion -> CONST ID COLON CHAR IGUAL . IDCHAR ENDCHAR
 
     IDCHAR          shift and go to state 222
 
 
 state 181
 
-    (63) strsize -> AMPERSAND COMILLA . STATIC STR
+    (67) strsize -> AMPERSAND COMILLA . STATIC STR
 
     STATIC          shift and go to state 223
 
 
 state 182
 
-    (64) strsize -> AMPERSAND STR .
+    (68) strsize -> AMPERSAND STR .
 
-    IGUAL           reduce using rule 64 (strsize -> AMPERSAND STR .)
-    COMA            reduce using rule 64 (strsize -> AMPERSAND STR .)
-    RPAREN          reduce using rule 64 (strsize -> AMPERSAND STR .)
-    LLLAVE          reduce using rule 64 (strsize -> AMPERSAND STR .)
+    IGUAL           reduce using rule 68 (strsize -> AMPERSAND STR .)
+    COMA            reduce using rule 68 (strsize -> AMPERSAND STR .)
+    RPAREN          reduce using rule 68 (strsize -> AMPERSAND STR .)
+    LLLAVE          reduce using rule 68 (strsize -> AMPERSAND STR .)
 
 
 state 183
@@ -3127,7 +3127,7 @@ state 183
 
 state 184
 
-    (100) ifblock -> IF LPAREN ifparams RPAREN LLLAVE . cuerpof RLLAVE
+    (101) ifblock -> IF LPAREN ifparams RPAREN LLLAVE . cuerpof RLLAVE
     (3) cuerpof -> . metodo
     (4) cuerpof -> . metodo cuerpof
     (5) metodo -> . asignacion
@@ -3144,26 +3144,26 @@ state 184
     (41) asignacion -> . LET MUT ID IGUAL VEC DOSDOBLEPUNTOS NEW LPAREN RPAREN ENDCHAR
     (49) asignacion -> . CONST ID COLON intsize IGUAL INTTYPE ENDCHAR
     (50) asignacion -> . CONST ID COLON intsize IGUAL NINTTYPE ENDCHAR
-    (62) asignacion -> . CONST ID COLON uintsize IGUAL INTTYPE ENDCHAR
-    (71) asignacion -> . CONST ID COLON floatsize IGUAL FLOATTYPE ENDCHAR
+    (58) asignacion -> . CONST ID COLON uintsize IGUAL INTTYPE ENDCHAR
+    (69) asignacion -> . CONST ID COLON floatsize IGUAL FLOATTYPE ENDCHAR
     (78) asignacion -> . CONST ID COLON strsize IGUAL IDSTRING ENDCHAR
-    (87) asignacion -> . CONST ID COLON STRING IGUAL STRING DOSDOBLEPUNTOS FROM LPAREN IDSTRING RPAREN ENDCHAR
-    (92) asignacion -> . CONST ID COLON STRING IGUAL IDSTRING ENDCHAR
-    (96) asignacion -> . CONST ID COLON BOOL IGUAL boolean ENDCHAR
-    (102) asignacion -> . CONST ID COLON CHAR IGUAL IDCHAR ENDCHAR
+    (82) asignacion -> . CONST ID COLON STRING IGUAL STRING DOSDOBLEPUNTOS FROM LPAREN IDSTRING RPAREN ENDCHAR
+    (90) asignacion -> . CONST ID COLON STRING IGUAL IDSTRING ENDCHAR
+    (93) asignacion -> . CONST ID COLON BOOL IGUAL boolean ENDCHAR
+    (99) asignacion -> . CONST ID COLON CHAR IGUAL IDCHAR ENDCHAR
     (112) asignacion -> . LET MUT ID IGUAL valor ENDCHAR
     (113) asignacion -> . LET MUT ID IGUAL estructuras ENDCHAR
     (114) asignacion -> . LET ID IGUAL valor ENDCHAR
     (115) asignacion -> . LET MUT ID IGUAL LINKEDLIST DOSDOBLEPUNTOS NEW LPAREN RPAREN ENDCHAR
     (103) impresion -> . PRINTLN LPAREN IDSTRING RPAREN ENDCHAR
-    (93) loop -> . LOOP LLLAVE metodo RLLAVE
-    (100) ifblock -> . IF LPAREN ifparams RPAREN LLLAVE cuerpof RLLAVE
-    (101) ifblock -> . IF ifparams LLLAVE cuerpof RLLAVE
-    (94) elseifblock -> . ifblock ELSE IF LPAREN ifparams RPAREN LLLAVE cuerpof RLLAVE
-    (95) elseifblock -> . ifblock ELSE IF ifparams LLLAVE cuerpof RLLAVE
-    (90) elseblock -> . ifblock ELSE LLLAVE cuerpof RLLAVE
-    (91) elseblock -> . elseifblock ELSE LLLAVE cuerpof RLLAVE
-    (109) vectorpush -> . ID POINT PUSH LPAREN INTTYPE RPAREN ENDCHAR
+    (94) loop -> . LOOP LLLAVE metodo RLLAVE
+    (101) ifblock -> . IF LPAREN ifparams RPAREN LLLAVE cuerpof RLLAVE
+    (102) ifblock -> . IF ifparams LLLAVE cuerpof RLLAVE
+    (97) elseifblock -> . ifblock ELSE IF LPAREN ifparams RPAREN LLLAVE cuerpof RLLAVE
+    (98) elseifblock -> . ifblock ELSE IF ifparams LLLAVE cuerpof RLLAVE
+    (91) elseblock -> . ifblock ELSE LLLAVE cuerpof RLLAVE
+    (92) elseblock -> . elseifblock ELSE LLLAVE cuerpof RLLAVE
+    (104) vectorpush -> . ID POINT PUSH LPAREN INTTYPE RPAREN ENDCHAR
     (116) llpushfront -> . ID POINT PUSH_FRONT LPAREN INTTYPE RPAREN ENDCHAR
     (117) llpopback -> . ID POINT POP_BACK LPAREN RPAREN ENDCHAR
     (85) entrada -> . IO DOSDOBLEPUNTOS STDIN LPAREN RPAREN POINT READLINE LPAREN AMPERSAND MUT ID RPAREN ENDCHAR
@@ -3195,21 +3195,21 @@ state 184
 
 state 185
 
-    (107) ifcondicion -> LPAREN comparacion RPAREN signoconect . ifcondicion
-    (104) ifcondicion -> . comparacion
-    (105) ifcondicion -> . comparacion signoconect ifcondicion
-    (106) ifcondicion -> . LPAREN comparacion RPAREN
-    (107) ifcondicion -> . LPAREN comparacion RPAREN signoconect ifcondicion
-    (108) ifcondicion -> . LPAREN ifcondicion RPAREN
-    (33) comparacion -> . ID signocompar ID
-    (34) comparacion -> . IDCHAR signocompar IDCHAR
-    (35) comparacion -> . IDSTRING signocompar IDSTRING
+    (108) ifcondicion -> LPAREN comparacion RPAREN signoconect . ifcondicion
+    (105) ifcondicion -> . comparacion
+    (106) ifcondicion -> . comparacion signoconect ifcondicion
+    (107) ifcondicion -> . LPAREN comparacion RPAREN
+    (108) ifcondicion -> . LPAREN comparacion RPAREN signoconect ifcondicion
+    (109) ifcondicion -> . LPAREN ifcondicion RPAREN
+    (31) comparacion -> . ID signocompar ID
+    (32) comparacion -> . IDCHAR signocompar IDCHAR
+    (33) comparacion -> . IDSTRING signocompar IDSTRING
     (42) comparacion -> . INTTYPE signocompar INTTYPE
     (43) comparacion -> . NINTTYPE signocompar NINTTYPE
     (44) comparacion -> . FLOATTYPE signocompar FLOATTYPE
-    (48) comparacion -> . boolean signocompar boolean
-    (69) boolean -> . TRUE
-    (70) boolean -> . FALSE
+    (46) comparacion -> . boolean signocompar boolean
+    (76) boolean -> . TRUE
+    (77) boolean -> . FALSE
 
     LPAREN          shift and go to state 48
     ID              shift and go to state 82
@@ -3227,20 +3227,20 @@ state 185
 
 state 186
 
-    (101) ifblock -> IF ifparams LLLAVE cuerpof RLLAVE .
+    (102) ifblock -> IF ifparams LLLAVE cuerpof RLLAVE .
 
-    ELSE            reduce using rule 101 (ifblock -> IF ifparams LLLAVE cuerpof RLLAVE .)
-    $end            reduce using rule 101 (ifblock -> IF ifparams LLLAVE cuerpof RLLAVE .)
-    RLLAVE          reduce using rule 101 (ifblock -> IF ifparams LLLAVE cuerpof RLLAVE .)
-    LET             reduce using rule 101 (ifblock -> IF ifparams LLLAVE cuerpof RLLAVE .)
-    CONST           reduce using rule 101 (ifblock -> IF ifparams LLLAVE cuerpof RLLAVE .)
-    PRINTLN         reduce using rule 101 (ifblock -> IF ifparams LLLAVE cuerpof RLLAVE .)
-    LOOP            reduce using rule 101 (ifblock -> IF ifparams LLLAVE cuerpof RLLAVE .)
-    IF              reduce using rule 101 (ifblock -> IF ifparams LLLAVE cuerpof RLLAVE .)
-    ID              reduce using rule 101 (ifblock -> IF ifparams LLLAVE cuerpof RLLAVE .)
-    IO              reduce using rule 101 (ifblock -> IF ifparams LLLAVE cuerpof RLLAVE .)
-    WHILE           reduce using rule 101 (ifblock -> IF ifparams LLLAVE cuerpof RLLAVE .)
-    RETURN          reduce using rule 101 (ifblock -> IF ifparams LLLAVE cuerpof RLLAVE .)
+    ELSE            reduce using rule 102 (ifblock -> IF ifparams LLLAVE cuerpof RLLAVE .)
+    $end            reduce using rule 102 (ifblock -> IF ifparams LLLAVE cuerpof RLLAVE .)
+    RLLAVE          reduce using rule 102 (ifblock -> IF ifparams LLLAVE cuerpof RLLAVE .)
+    LET             reduce using rule 102 (ifblock -> IF ifparams LLLAVE cuerpof RLLAVE .)
+    CONST           reduce using rule 102 (ifblock -> IF ifparams LLLAVE cuerpof RLLAVE .)
+    PRINTLN         reduce using rule 102 (ifblock -> IF ifparams LLLAVE cuerpof RLLAVE .)
+    LOOP            reduce using rule 102 (ifblock -> IF ifparams LLLAVE cuerpof RLLAVE .)
+    IF              reduce using rule 102 (ifblock -> IF ifparams LLLAVE cuerpof RLLAVE .)
+    ID              reduce using rule 102 (ifblock -> IF ifparams LLLAVE cuerpof RLLAVE .)
+    IO              reduce using rule 102 (ifblock -> IF ifparams LLLAVE cuerpof RLLAVE .)
+    WHILE           reduce using rule 102 (ifblock -> IF ifparams LLLAVE cuerpof RLLAVE .)
+    RETURN          reduce using rule 102 (ifblock -> IF ifparams LLLAVE cuerpof RLLAVE .)
 
 
 state 187
@@ -3270,24 +3270,24 @@ state 188
 
 state 189
 
-    (94) elseifblock -> ifblock ELSE IF LPAREN ifparams RPAREN . LLLAVE cuerpof RLLAVE
+    (97) elseifblock -> ifblock ELSE IF LPAREN ifparams RPAREN . LLLAVE cuerpof RLLAVE
 
     LLLAVE          shift and go to state 227
 
 
 state 190
 
-    (95) elseifblock -> ifblock ELSE IF ifparams LLLAVE cuerpof . RLLAVE
+    (98) elseifblock -> ifblock ELSE IF ifparams LLLAVE cuerpof . RLLAVE
 
     RLLAVE          shift and go to state 228
 
 
 state 191
 
-    (97) params -> ID COLON datatype .
-    (98) params -> ID COLON datatype . COMA params
+    (95) params -> ID COLON datatype .
+    (96) params -> ID COLON datatype . COMA params
 
-    RPAREN          reduce using rule 97 (params -> ID COLON datatype .)
+    RPAREN          reduce using rule 95 (params -> ID COLON datatype .)
     COMA            shift and go to state 229
 
 
@@ -3347,7 +3347,7 @@ state 197
 
 state 198
 
-    (99) funcion -> FN ID LPAREN params RPAREN LLLAVE . metodo RLLAVE
+    (100) funcion -> FN ID LPAREN params RPAREN LLLAVE . metodo RLLAVE
     (5) metodo -> . asignacion
     (6) metodo -> . impresion
     (7) metodo -> . loop
@@ -3362,26 +3362,26 @@ state 198
     (41) asignacion -> . LET MUT ID IGUAL VEC DOSDOBLEPUNTOS NEW LPAREN RPAREN ENDCHAR
     (49) asignacion -> . CONST ID COLON intsize IGUAL INTTYPE ENDCHAR
     (50) asignacion -> . CONST ID COLON intsize IGUAL NINTTYPE ENDCHAR
-    (62) asignacion -> . CONST ID COLON uintsize IGUAL INTTYPE ENDCHAR
-    (71) asignacion -> . CONST ID COLON floatsize IGUAL FLOATTYPE ENDCHAR
+    (58) asignacion -> . CONST ID COLON uintsize IGUAL INTTYPE ENDCHAR
+    (69) asignacion -> . CONST ID COLON floatsize IGUAL FLOATTYPE ENDCHAR
     (78) asignacion -> . CONST ID COLON strsize IGUAL IDSTRING ENDCHAR
-    (87) asignacion -> . CONST ID COLON STRING IGUAL STRING DOSDOBLEPUNTOS FROM LPAREN IDSTRING RPAREN ENDCHAR
-    (92) asignacion -> . CONST ID COLON STRING IGUAL IDSTRING ENDCHAR
-    (96) asignacion -> . CONST ID COLON BOOL IGUAL boolean ENDCHAR
-    (102) asignacion -> . CONST ID COLON CHAR IGUAL IDCHAR ENDCHAR
+    (82) asignacion -> . CONST ID COLON STRING IGUAL STRING DOSDOBLEPUNTOS FROM LPAREN IDSTRING RPAREN ENDCHAR
+    (90) asignacion -> . CONST ID COLON STRING IGUAL IDSTRING ENDCHAR
+    (93) asignacion -> . CONST ID COLON BOOL IGUAL boolean ENDCHAR
+    (99) asignacion -> . CONST ID COLON CHAR IGUAL IDCHAR ENDCHAR
     (112) asignacion -> . LET MUT ID IGUAL valor ENDCHAR
     (113) asignacion -> . LET MUT ID IGUAL estructuras ENDCHAR
     (114) asignacion -> . LET ID IGUAL valor ENDCHAR
     (115) asignacion -> . LET MUT ID IGUAL LINKEDLIST DOSDOBLEPUNTOS NEW LPAREN RPAREN ENDCHAR
     (103) impresion -> . PRINTLN LPAREN IDSTRING RPAREN ENDCHAR
-    (93) loop -> . LOOP LLLAVE metodo RLLAVE
-    (100) ifblock -> . IF LPAREN ifparams RPAREN LLLAVE cuerpof RLLAVE
-    (101) ifblock -> . IF ifparams LLLAVE cuerpof RLLAVE
-    (94) elseifblock -> . ifblock ELSE IF LPAREN ifparams RPAREN LLLAVE cuerpof RLLAVE
-    (95) elseifblock -> . ifblock ELSE IF ifparams LLLAVE cuerpof RLLAVE
-    (90) elseblock -> . ifblock ELSE LLLAVE cuerpof RLLAVE
-    (91) elseblock -> . elseifblock ELSE LLLAVE cuerpof RLLAVE
-    (109) vectorpush -> . ID POINT PUSH LPAREN INTTYPE RPAREN ENDCHAR
+    (94) loop -> . LOOP LLLAVE metodo RLLAVE
+    (101) ifblock -> . IF LPAREN ifparams RPAREN LLLAVE cuerpof RLLAVE
+    (102) ifblock -> . IF ifparams LLLAVE cuerpof RLLAVE
+    (97) elseifblock -> . ifblock ELSE IF LPAREN ifparams RPAREN LLLAVE cuerpof RLLAVE
+    (98) elseifblock -> . ifblock ELSE IF ifparams LLLAVE cuerpof RLLAVE
+    (91) elseblock -> . ifblock ELSE LLLAVE cuerpof RLLAVE
+    (92) elseblock -> . elseifblock ELSE LLLAVE cuerpof RLLAVE
+    (104) vectorpush -> . ID POINT PUSH LPAREN INTTYPE RPAREN ENDCHAR
     (116) llpushfront -> . ID POINT PUSH_FRONT LPAREN INTTYPE RPAREN ENDCHAR
     (117) llpopback -> . ID POINT POP_BACK LPAREN RPAREN ENDCHAR
     (85) entrada -> . IO DOSDOBLEPUNTOS STDIN LPAREN RPAREN POINT READLINE LPAREN AMPERSAND MUT ID RPAREN ENDCHAR
@@ -3430,10 +3430,10 @@ state 199
     (54) uintsize -> . UINT32
     (55) uintsize -> . UINT64
     (56) uintsize -> . UINT128
-    (46) floatsize -> . FLOAT32
-    (47) floatsize -> . FLOAT64
-    (63) strsize -> . AMPERSAND COMILLA STATIC STR
-    (64) strsize -> . AMPERSAND STR
+    (47) floatsize -> . FLOAT32
+    (48) floatsize -> . FLOAT64
+    (67) strsize -> . AMPERSAND COMILLA STATIC STR
+    (68) strsize -> . AMPERSAND STR
 
     STRING          shift and go to state 196
     BOOL            shift and go to state 197
@@ -3459,7 +3459,7 @@ state 199
 
 state 200
 
-    (109) vectorpush -> ID POINT PUSH LPAREN INTTYPE RPAREN . ENDCHAR
+    (104) vectorpush -> ID POINT PUSH LPAREN INTTYPE RPAREN . ENDCHAR
 
     ENDCHAR         shift and go to state 232
 
@@ -3532,7 +3532,7 @@ state 205
 state 206
 
     (115) asignacion -> LET MUT ID IGUAL LINKEDLIST DOSDOBLEPUNTOS . NEW LPAREN RPAREN ENDCHAR
-    (77) linkedlist -> LINKEDLIST DOSDOBLEPUNTOS . NEW LPAREN RPAREN ENDCHAR
+    (75) linkedlist -> LINKEDLIST DOSDOBLEPUNTOS . NEW LPAREN RPAREN ENDCHAR
 
     NEW             shift and go to state 235
 
@@ -3560,23 +3560,23 @@ state 209
 
 state 210
 
-    (58) valornumerico -> NINTTYPE .
+    (59) valornumerico -> NINTTYPE .
 
-    ENDCHAR         reduce using rule 58 (valornumerico -> NINTTYPE .)
+    ENDCHAR         reduce using rule 59 (valornumerico -> NINTTYPE .)
 
 
 state 211
 
-    (59) valornumerico -> INTTYPE .
+    (60) valornumerico -> INTTYPE .
 
-    ENDCHAR         reduce using rule 59 (valornumerico -> INTTYPE .)
+    ENDCHAR         reduce using rule 60 (valornumerico -> INTTYPE .)
 
 
 state 212
 
-    (60) valornumerico -> FLOATTYPE .
+    (61) valornumerico -> FLOATTYPE .
 
-    ENDCHAR         reduce using rule 60 (valornumerico -> FLOATTYPE .)
+    ENDCHAR         reduce using rule 61 (valornumerico -> FLOATTYPE .)
 
 
 state 213
@@ -3602,14 +3602,14 @@ state 215
 
 state 216
 
-    (62) asignacion -> CONST ID COLON uintsize IGUAL INTTYPE . ENDCHAR
+    (58) asignacion -> CONST ID COLON uintsize IGUAL INTTYPE . ENDCHAR
 
     ENDCHAR         shift and go to state 239
 
 
 state 217
 
-    (71) asignacion -> CONST ID COLON floatsize IGUAL FLOATTYPE . ENDCHAR
+    (69) asignacion -> CONST ID COLON floatsize IGUAL FLOATTYPE . ENDCHAR
 
     ENDCHAR         shift and go to state 240
 
@@ -3623,53 +3623,53 @@ state 218
 
 state 219
 
-    (87) asignacion -> CONST ID COLON STRING IGUAL STRING . DOSDOBLEPUNTOS FROM LPAREN IDSTRING RPAREN ENDCHAR
+    (82) asignacion -> CONST ID COLON STRING IGUAL STRING . DOSDOBLEPUNTOS FROM LPAREN IDSTRING RPAREN ENDCHAR
 
     DOSDOBLEPUNTOS  shift and go to state 242
 
 
 state 220
 
-    (92) asignacion -> CONST ID COLON STRING IGUAL IDSTRING . ENDCHAR
+    (90) asignacion -> CONST ID COLON STRING IGUAL IDSTRING . ENDCHAR
 
     ENDCHAR         shift and go to state 243
 
 
 state 221
 
-    (96) asignacion -> CONST ID COLON BOOL IGUAL boolean . ENDCHAR
+    (93) asignacion -> CONST ID COLON BOOL IGUAL boolean . ENDCHAR
 
     ENDCHAR         shift and go to state 244
 
 
 state 222
 
-    (102) asignacion -> CONST ID COLON CHAR IGUAL IDCHAR . ENDCHAR
+    (99) asignacion -> CONST ID COLON CHAR IGUAL IDCHAR . ENDCHAR
 
     ENDCHAR         shift and go to state 245
 
 
 state 223
 
-    (63) strsize -> AMPERSAND COMILLA STATIC . STR
+    (67) strsize -> AMPERSAND COMILLA STATIC . STR
 
     STR             shift and go to state 246
 
 
 state 224
 
-    (100) ifblock -> IF LPAREN ifparams RPAREN LLLAVE cuerpof . RLLAVE
+    (101) ifblock -> IF LPAREN ifparams RPAREN LLLAVE cuerpof . RLLAVE
 
     RLLAVE          shift and go to state 247
 
 
 state 225
 
-    (107) ifcondicion -> LPAREN comparacion RPAREN signoconect ifcondicion .
+    (108) ifcondicion -> LPAREN comparacion RPAREN signoconect ifcondicion .
 
-    LLLAVE          reduce using rule 107 (ifcondicion -> LPAREN comparacion RPAREN signoconect ifcondicion .)
-    RPAREN          reduce using rule 107 (ifcondicion -> LPAREN comparacion RPAREN signoconect ifcondicion .)
-    ENDCHAR         reduce using rule 107 (ifcondicion -> LPAREN comparacion RPAREN signoconect ifcondicion .)
+    LLLAVE          reduce using rule 108 (ifcondicion -> LPAREN comparacion RPAREN signoconect ifcondicion .)
+    RPAREN          reduce using rule 108 (ifcondicion -> LPAREN comparacion RPAREN signoconect ifcondicion .)
+    ENDCHAR         reduce using rule 108 (ifcondicion -> LPAREN comparacion RPAREN signoconect ifcondicion .)
 
 
 state 226
@@ -3682,7 +3682,7 @@ state 226
 
 state 227
 
-    (94) elseifblock -> ifblock ELSE IF LPAREN ifparams RPAREN LLLAVE . cuerpof RLLAVE
+    (97) elseifblock -> ifblock ELSE IF LPAREN ifparams RPAREN LLLAVE . cuerpof RLLAVE
     (3) cuerpof -> . metodo
     (4) cuerpof -> . metodo cuerpof
     (5) metodo -> . asignacion
@@ -3699,26 +3699,26 @@ state 227
     (41) asignacion -> . LET MUT ID IGUAL VEC DOSDOBLEPUNTOS NEW LPAREN RPAREN ENDCHAR
     (49) asignacion -> . CONST ID COLON intsize IGUAL INTTYPE ENDCHAR
     (50) asignacion -> . CONST ID COLON intsize IGUAL NINTTYPE ENDCHAR
-    (62) asignacion -> . CONST ID COLON uintsize IGUAL INTTYPE ENDCHAR
-    (71) asignacion -> . CONST ID COLON floatsize IGUAL FLOATTYPE ENDCHAR
+    (58) asignacion -> . CONST ID COLON uintsize IGUAL INTTYPE ENDCHAR
+    (69) asignacion -> . CONST ID COLON floatsize IGUAL FLOATTYPE ENDCHAR
     (78) asignacion -> . CONST ID COLON strsize IGUAL IDSTRING ENDCHAR
-    (87) asignacion -> . CONST ID COLON STRING IGUAL STRING DOSDOBLEPUNTOS FROM LPAREN IDSTRING RPAREN ENDCHAR
-    (92) asignacion -> . CONST ID COLON STRING IGUAL IDSTRING ENDCHAR
-    (96) asignacion -> . CONST ID COLON BOOL IGUAL boolean ENDCHAR
-    (102) asignacion -> . CONST ID COLON CHAR IGUAL IDCHAR ENDCHAR
+    (82) asignacion -> . CONST ID COLON STRING IGUAL STRING DOSDOBLEPUNTOS FROM LPAREN IDSTRING RPAREN ENDCHAR
+    (90) asignacion -> . CONST ID COLON STRING IGUAL IDSTRING ENDCHAR
+    (93) asignacion -> . CONST ID COLON BOOL IGUAL boolean ENDCHAR
+    (99) asignacion -> . CONST ID COLON CHAR IGUAL IDCHAR ENDCHAR
     (112) asignacion -> . LET MUT ID IGUAL valor ENDCHAR
     (113) asignacion -> . LET MUT ID IGUAL estructuras ENDCHAR
     (114) asignacion -> . LET ID IGUAL valor ENDCHAR
     (115) asignacion -> . LET MUT ID IGUAL LINKEDLIST DOSDOBLEPUNTOS NEW LPAREN RPAREN ENDCHAR
     (103) impresion -> . PRINTLN LPAREN IDSTRING RPAREN ENDCHAR
-    (93) loop -> . LOOP LLLAVE metodo RLLAVE
-    (100) ifblock -> . IF LPAREN ifparams RPAREN LLLAVE cuerpof RLLAVE
-    (101) ifblock -> . IF ifparams LLLAVE cuerpof RLLAVE
-    (94) elseifblock -> . ifblock ELSE IF LPAREN ifparams RPAREN LLLAVE cuerpof RLLAVE
-    (95) elseifblock -> . ifblock ELSE IF ifparams LLLAVE cuerpof RLLAVE
-    (90) elseblock -> . ifblock ELSE LLLAVE cuerpof RLLAVE
-    (91) elseblock -> . elseifblock ELSE LLLAVE cuerpof RLLAVE
-    (109) vectorpush -> . ID POINT PUSH LPAREN INTTYPE RPAREN ENDCHAR
+    (94) loop -> . LOOP LLLAVE metodo RLLAVE
+    (101) ifblock -> . IF LPAREN ifparams RPAREN LLLAVE cuerpof RLLAVE
+    (102) ifblock -> . IF ifparams LLLAVE cuerpof RLLAVE
+    (97) elseifblock -> . ifblock ELSE IF LPAREN ifparams RPAREN LLLAVE cuerpof RLLAVE
+    (98) elseifblock -> . ifblock ELSE IF ifparams LLLAVE cuerpof RLLAVE
+    (91) elseblock -> . ifblock ELSE LLLAVE cuerpof RLLAVE
+    (92) elseblock -> . elseifblock ELSE LLLAVE cuerpof RLLAVE
+    (104) vectorpush -> . ID POINT PUSH LPAREN INTTYPE RPAREN ENDCHAR
     (116) llpushfront -> . ID POINT PUSH_FRONT LPAREN INTTYPE RPAREN ENDCHAR
     (117) llpopback -> . ID POINT POP_BACK LPAREN RPAREN ENDCHAR
     (85) entrada -> . IO DOSDOBLEPUNTOS STDIN LPAREN RPAREN POINT READLINE LPAREN AMPERSAND MUT ID RPAREN ENDCHAR
@@ -3750,27 +3750,27 @@ state 227
 
 state 228
 
-    (95) elseifblock -> ifblock ELSE IF ifparams LLLAVE cuerpof RLLAVE .
+    (98) elseifblock -> ifblock ELSE IF ifparams LLLAVE cuerpof RLLAVE .
 
-    ELSE            reduce using rule 95 (elseifblock -> ifblock ELSE IF ifparams LLLAVE cuerpof RLLAVE .)
-    $end            reduce using rule 95 (elseifblock -> ifblock ELSE IF ifparams LLLAVE cuerpof RLLAVE .)
-    RLLAVE          reduce using rule 95 (elseifblock -> ifblock ELSE IF ifparams LLLAVE cuerpof RLLAVE .)
-    LET             reduce using rule 95 (elseifblock -> ifblock ELSE IF ifparams LLLAVE cuerpof RLLAVE .)
-    CONST           reduce using rule 95 (elseifblock -> ifblock ELSE IF ifparams LLLAVE cuerpof RLLAVE .)
-    PRINTLN         reduce using rule 95 (elseifblock -> ifblock ELSE IF ifparams LLLAVE cuerpof RLLAVE .)
-    LOOP            reduce using rule 95 (elseifblock -> ifblock ELSE IF ifparams LLLAVE cuerpof RLLAVE .)
-    IF              reduce using rule 95 (elseifblock -> ifblock ELSE IF ifparams LLLAVE cuerpof RLLAVE .)
-    ID              reduce using rule 95 (elseifblock -> ifblock ELSE IF ifparams LLLAVE cuerpof RLLAVE .)
-    IO              reduce using rule 95 (elseifblock -> ifblock ELSE IF ifparams LLLAVE cuerpof RLLAVE .)
-    WHILE           reduce using rule 95 (elseifblock -> ifblock ELSE IF ifparams LLLAVE cuerpof RLLAVE .)
-    RETURN          reduce using rule 95 (elseifblock -> ifblock ELSE IF ifparams LLLAVE cuerpof RLLAVE .)
+    ELSE            reduce using rule 98 (elseifblock -> ifblock ELSE IF ifparams LLLAVE cuerpof RLLAVE .)
+    $end            reduce using rule 98 (elseifblock -> ifblock ELSE IF ifparams LLLAVE cuerpof RLLAVE .)
+    RLLAVE          reduce using rule 98 (elseifblock -> ifblock ELSE IF ifparams LLLAVE cuerpof RLLAVE .)
+    LET             reduce using rule 98 (elseifblock -> ifblock ELSE IF ifparams LLLAVE cuerpof RLLAVE .)
+    CONST           reduce using rule 98 (elseifblock -> ifblock ELSE IF ifparams LLLAVE cuerpof RLLAVE .)
+    PRINTLN         reduce using rule 98 (elseifblock -> ifblock ELSE IF ifparams LLLAVE cuerpof RLLAVE .)
+    LOOP            reduce using rule 98 (elseifblock -> ifblock ELSE IF ifparams LLLAVE cuerpof RLLAVE .)
+    IF              reduce using rule 98 (elseifblock -> ifblock ELSE IF ifparams LLLAVE cuerpof RLLAVE .)
+    ID              reduce using rule 98 (elseifblock -> ifblock ELSE IF ifparams LLLAVE cuerpof RLLAVE .)
+    IO              reduce using rule 98 (elseifblock -> ifblock ELSE IF ifparams LLLAVE cuerpof RLLAVE .)
+    WHILE           reduce using rule 98 (elseifblock -> ifblock ELSE IF ifparams LLLAVE cuerpof RLLAVE .)
+    RETURN          reduce using rule 98 (elseifblock -> ifblock ELSE IF ifparams LLLAVE cuerpof RLLAVE .)
 
 
 state 229
 
-    (98) params -> ID COLON datatype COMA . params
-    (97) params -> . ID COLON datatype
-    (98) params -> . ID COLON datatype COMA params
+    (96) params -> ID COLON datatype COMA . params
+    (95) params -> . ID COLON datatype
+    (96) params -> . ID COLON datatype COMA params
 
     ID              shift and go to state 89
 
@@ -3778,7 +3778,7 @@ state 229
 
 state 230
 
-    (99) funcion -> FN ID LPAREN params RPAREN LLLAVE metodo . RLLAVE
+    (100) funcion -> FN ID LPAREN params RPAREN LLLAVE metodo . RLLAVE
 
     RLLAVE          shift and go to state 251
 
@@ -3793,19 +3793,19 @@ state 231
 
 state 232
 
-    (109) vectorpush -> ID POINT PUSH LPAREN INTTYPE RPAREN ENDCHAR .
+    (104) vectorpush -> ID POINT PUSH LPAREN INTTYPE RPAREN ENDCHAR .
 
-    $end            reduce using rule 109 (vectorpush -> ID POINT PUSH LPAREN INTTYPE RPAREN ENDCHAR .)
-    RLLAVE          reduce using rule 109 (vectorpush -> ID POINT PUSH LPAREN INTTYPE RPAREN ENDCHAR .)
-    LET             reduce using rule 109 (vectorpush -> ID POINT PUSH LPAREN INTTYPE RPAREN ENDCHAR .)
-    CONST           reduce using rule 109 (vectorpush -> ID POINT PUSH LPAREN INTTYPE RPAREN ENDCHAR .)
-    PRINTLN         reduce using rule 109 (vectorpush -> ID POINT PUSH LPAREN INTTYPE RPAREN ENDCHAR .)
-    LOOP            reduce using rule 109 (vectorpush -> ID POINT PUSH LPAREN INTTYPE RPAREN ENDCHAR .)
-    IF              reduce using rule 109 (vectorpush -> ID POINT PUSH LPAREN INTTYPE RPAREN ENDCHAR .)
-    ID              reduce using rule 109 (vectorpush -> ID POINT PUSH LPAREN INTTYPE RPAREN ENDCHAR .)
-    IO              reduce using rule 109 (vectorpush -> ID POINT PUSH LPAREN INTTYPE RPAREN ENDCHAR .)
-    WHILE           reduce using rule 109 (vectorpush -> ID POINT PUSH LPAREN INTTYPE RPAREN ENDCHAR .)
-    RETURN          reduce using rule 109 (vectorpush -> ID POINT PUSH LPAREN INTTYPE RPAREN ENDCHAR .)
+    $end            reduce using rule 104 (vectorpush -> ID POINT PUSH LPAREN INTTYPE RPAREN ENDCHAR .)
+    RLLAVE          reduce using rule 104 (vectorpush -> ID POINT PUSH LPAREN INTTYPE RPAREN ENDCHAR .)
+    LET             reduce using rule 104 (vectorpush -> ID POINT PUSH LPAREN INTTYPE RPAREN ENDCHAR .)
+    CONST           reduce using rule 104 (vectorpush -> ID POINT PUSH LPAREN INTTYPE RPAREN ENDCHAR .)
+    PRINTLN         reduce using rule 104 (vectorpush -> ID POINT PUSH LPAREN INTTYPE RPAREN ENDCHAR .)
+    LOOP            reduce using rule 104 (vectorpush -> ID POINT PUSH LPAREN INTTYPE RPAREN ENDCHAR .)
+    IF              reduce using rule 104 (vectorpush -> ID POINT PUSH LPAREN INTTYPE RPAREN ENDCHAR .)
+    ID              reduce using rule 104 (vectorpush -> ID POINT PUSH LPAREN INTTYPE RPAREN ENDCHAR .)
+    IO              reduce using rule 104 (vectorpush -> ID POINT PUSH LPAREN INTTYPE RPAREN ENDCHAR .)
+    WHILE           reduce using rule 104 (vectorpush -> ID POINT PUSH LPAREN INTTYPE RPAREN ENDCHAR .)
+    RETURN          reduce using rule 104 (vectorpush -> ID POINT PUSH LPAREN INTTYPE RPAREN ENDCHAR .)
 
 
 state 233
@@ -3835,7 +3835,7 @@ state 234
 state 235
 
     (115) asignacion -> LET MUT ID IGUAL LINKEDLIST DOSDOBLEPUNTOS NEW . LPAREN RPAREN ENDCHAR
-    (77) linkedlist -> LINKEDLIST DOSDOBLEPUNTOS NEW . LPAREN RPAREN ENDCHAR
+    (75) linkedlist -> LINKEDLIST DOSDOBLEPUNTOS NEW . LPAREN RPAREN ENDCHAR
 
     LPAREN          shift and go to state 254
 
@@ -3883,36 +3883,36 @@ state 238
 
 state 239
 
-    (62) asignacion -> CONST ID COLON uintsize IGUAL INTTYPE ENDCHAR .
+    (58) asignacion -> CONST ID COLON uintsize IGUAL INTTYPE ENDCHAR .
 
-    $end            reduce using rule 62 (asignacion -> CONST ID COLON uintsize IGUAL INTTYPE ENDCHAR .)
-    RLLAVE          reduce using rule 62 (asignacion -> CONST ID COLON uintsize IGUAL INTTYPE ENDCHAR .)
-    LET             reduce using rule 62 (asignacion -> CONST ID COLON uintsize IGUAL INTTYPE ENDCHAR .)
-    CONST           reduce using rule 62 (asignacion -> CONST ID COLON uintsize IGUAL INTTYPE ENDCHAR .)
-    PRINTLN         reduce using rule 62 (asignacion -> CONST ID COLON uintsize IGUAL INTTYPE ENDCHAR .)
-    LOOP            reduce using rule 62 (asignacion -> CONST ID COLON uintsize IGUAL INTTYPE ENDCHAR .)
-    IF              reduce using rule 62 (asignacion -> CONST ID COLON uintsize IGUAL INTTYPE ENDCHAR .)
-    ID              reduce using rule 62 (asignacion -> CONST ID COLON uintsize IGUAL INTTYPE ENDCHAR .)
-    IO              reduce using rule 62 (asignacion -> CONST ID COLON uintsize IGUAL INTTYPE ENDCHAR .)
-    WHILE           reduce using rule 62 (asignacion -> CONST ID COLON uintsize IGUAL INTTYPE ENDCHAR .)
-    RETURN          reduce using rule 62 (asignacion -> CONST ID COLON uintsize IGUAL INTTYPE ENDCHAR .)
+    $end            reduce using rule 58 (asignacion -> CONST ID COLON uintsize IGUAL INTTYPE ENDCHAR .)
+    RLLAVE          reduce using rule 58 (asignacion -> CONST ID COLON uintsize IGUAL INTTYPE ENDCHAR .)
+    LET             reduce using rule 58 (asignacion -> CONST ID COLON uintsize IGUAL INTTYPE ENDCHAR .)
+    CONST           reduce using rule 58 (asignacion -> CONST ID COLON uintsize IGUAL INTTYPE ENDCHAR .)
+    PRINTLN         reduce using rule 58 (asignacion -> CONST ID COLON uintsize IGUAL INTTYPE ENDCHAR .)
+    LOOP            reduce using rule 58 (asignacion -> CONST ID COLON uintsize IGUAL INTTYPE ENDCHAR .)
+    IF              reduce using rule 58 (asignacion -> CONST ID COLON uintsize IGUAL INTTYPE ENDCHAR .)
+    ID              reduce using rule 58 (asignacion -> CONST ID COLON uintsize IGUAL INTTYPE ENDCHAR .)
+    IO              reduce using rule 58 (asignacion -> CONST ID COLON uintsize IGUAL INTTYPE ENDCHAR .)
+    WHILE           reduce using rule 58 (asignacion -> CONST ID COLON uintsize IGUAL INTTYPE ENDCHAR .)
+    RETURN          reduce using rule 58 (asignacion -> CONST ID COLON uintsize IGUAL INTTYPE ENDCHAR .)
 
 
 state 240
 
-    (71) asignacion -> CONST ID COLON floatsize IGUAL FLOATTYPE ENDCHAR .
+    (69) asignacion -> CONST ID COLON floatsize IGUAL FLOATTYPE ENDCHAR .
 
-    $end            reduce using rule 71 (asignacion -> CONST ID COLON floatsize IGUAL FLOATTYPE ENDCHAR .)
-    RLLAVE          reduce using rule 71 (asignacion -> CONST ID COLON floatsize IGUAL FLOATTYPE ENDCHAR .)
-    LET             reduce using rule 71 (asignacion -> CONST ID COLON floatsize IGUAL FLOATTYPE ENDCHAR .)
-    CONST           reduce using rule 71 (asignacion -> CONST ID COLON floatsize IGUAL FLOATTYPE ENDCHAR .)
-    PRINTLN         reduce using rule 71 (asignacion -> CONST ID COLON floatsize IGUAL FLOATTYPE ENDCHAR .)
-    LOOP            reduce using rule 71 (asignacion -> CONST ID COLON floatsize IGUAL FLOATTYPE ENDCHAR .)
-    IF              reduce using rule 71 (asignacion -> CONST ID COLON floatsize IGUAL FLOATTYPE ENDCHAR .)
-    ID              reduce using rule 71 (asignacion -> CONST ID COLON floatsize IGUAL FLOATTYPE ENDCHAR .)
-    IO              reduce using rule 71 (asignacion -> CONST ID COLON floatsize IGUAL FLOATTYPE ENDCHAR .)
-    WHILE           reduce using rule 71 (asignacion -> CONST ID COLON floatsize IGUAL FLOATTYPE ENDCHAR .)
-    RETURN          reduce using rule 71 (asignacion -> CONST ID COLON floatsize IGUAL FLOATTYPE ENDCHAR .)
+    $end            reduce using rule 69 (asignacion -> CONST ID COLON floatsize IGUAL FLOATTYPE ENDCHAR .)
+    RLLAVE          reduce using rule 69 (asignacion -> CONST ID COLON floatsize IGUAL FLOATTYPE ENDCHAR .)
+    LET             reduce using rule 69 (asignacion -> CONST ID COLON floatsize IGUAL FLOATTYPE ENDCHAR .)
+    CONST           reduce using rule 69 (asignacion -> CONST ID COLON floatsize IGUAL FLOATTYPE ENDCHAR .)
+    PRINTLN         reduce using rule 69 (asignacion -> CONST ID COLON floatsize IGUAL FLOATTYPE ENDCHAR .)
+    LOOP            reduce using rule 69 (asignacion -> CONST ID COLON floatsize IGUAL FLOATTYPE ENDCHAR .)
+    IF              reduce using rule 69 (asignacion -> CONST ID COLON floatsize IGUAL FLOATTYPE ENDCHAR .)
+    ID              reduce using rule 69 (asignacion -> CONST ID COLON floatsize IGUAL FLOATTYPE ENDCHAR .)
+    IO              reduce using rule 69 (asignacion -> CONST ID COLON floatsize IGUAL FLOATTYPE ENDCHAR .)
+    WHILE           reduce using rule 69 (asignacion -> CONST ID COLON floatsize IGUAL FLOATTYPE ENDCHAR .)
+    RETURN          reduce using rule 69 (asignacion -> CONST ID COLON floatsize IGUAL FLOATTYPE ENDCHAR .)
 
 
 state 241
@@ -3934,88 +3934,88 @@ state 241
 
 state 242
 
-    (87) asignacion -> CONST ID COLON STRING IGUAL STRING DOSDOBLEPUNTOS . FROM LPAREN IDSTRING RPAREN ENDCHAR
+    (82) asignacion -> CONST ID COLON STRING IGUAL STRING DOSDOBLEPUNTOS . FROM LPAREN IDSTRING RPAREN ENDCHAR
 
     FROM            shift and go to state 256
 
 
 state 243
 
-    (92) asignacion -> CONST ID COLON STRING IGUAL IDSTRING ENDCHAR .
+    (90) asignacion -> CONST ID COLON STRING IGUAL IDSTRING ENDCHAR .
 
-    $end            reduce using rule 92 (asignacion -> CONST ID COLON STRING IGUAL IDSTRING ENDCHAR .)
-    RLLAVE          reduce using rule 92 (asignacion -> CONST ID COLON STRING IGUAL IDSTRING ENDCHAR .)
-    LET             reduce using rule 92 (asignacion -> CONST ID COLON STRING IGUAL IDSTRING ENDCHAR .)
-    CONST           reduce using rule 92 (asignacion -> CONST ID COLON STRING IGUAL IDSTRING ENDCHAR .)
-    PRINTLN         reduce using rule 92 (asignacion -> CONST ID COLON STRING IGUAL IDSTRING ENDCHAR .)
-    LOOP            reduce using rule 92 (asignacion -> CONST ID COLON STRING IGUAL IDSTRING ENDCHAR .)
-    IF              reduce using rule 92 (asignacion -> CONST ID COLON STRING IGUAL IDSTRING ENDCHAR .)
-    ID              reduce using rule 92 (asignacion -> CONST ID COLON STRING IGUAL IDSTRING ENDCHAR .)
-    IO              reduce using rule 92 (asignacion -> CONST ID COLON STRING IGUAL IDSTRING ENDCHAR .)
-    WHILE           reduce using rule 92 (asignacion -> CONST ID COLON STRING IGUAL IDSTRING ENDCHAR .)
-    RETURN          reduce using rule 92 (asignacion -> CONST ID COLON STRING IGUAL IDSTRING ENDCHAR .)
+    $end            reduce using rule 90 (asignacion -> CONST ID COLON STRING IGUAL IDSTRING ENDCHAR .)
+    RLLAVE          reduce using rule 90 (asignacion -> CONST ID COLON STRING IGUAL IDSTRING ENDCHAR .)
+    LET             reduce using rule 90 (asignacion -> CONST ID COLON STRING IGUAL IDSTRING ENDCHAR .)
+    CONST           reduce using rule 90 (asignacion -> CONST ID COLON STRING IGUAL IDSTRING ENDCHAR .)
+    PRINTLN         reduce using rule 90 (asignacion -> CONST ID COLON STRING IGUAL IDSTRING ENDCHAR .)
+    LOOP            reduce using rule 90 (asignacion -> CONST ID COLON STRING IGUAL IDSTRING ENDCHAR .)
+    IF              reduce using rule 90 (asignacion -> CONST ID COLON STRING IGUAL IDSTRING ENDCHAR .)
+    ID              reduce using rule 90 (asignacion -> CONST ID COLON STRING IGUAL IDSTRING ENDCHAR .)
+    IO              reduce using rule 90 (asignacion -> CONST ID COLON STRING IGUAL IDSTRING ENDCHAR .)
+    WHILE           reduce using rule 90 (asignacion -> CONST ID COLON STRING IGUAL IDSTRING ENDCHAR .)
+    RETURN          reduce using rule 90 (asignacion -> CONST ID COLON STRING IGUAL IDSTRING ENDCHAR .)
 
 
 state 244
 
-    (96) asignacion -> CONST ID COLON BOOL IGUAL boolean ENDCHAR .
+    (93) asignacion -> CONST ID COLON BOOL IGUAL boolean ENDCHAR .
 
-    $end            reduce using rule 96 (asignacion -> CONST ID COLON BOOL IGUAL boolean ENDCHAR .)
-    RLLAVE          reduce using rule 96 (asignacion -> CONST ID COLON BOOL IGUAL boolean ENDCHAR .)
-    LET             reduce using rule 96 (asignacion -> CONST ID COLON BOOL IGUAL boolean ENDCHAR .)
-    CONST           reduce using rule 96 (asignacion -> CONST ID COLON BOOL IGUAL boolean ENDCHAR .)
-    PRINTLN         reduce using rule 96 (asignacion -> CONST ID COLON BOOL IGUAL boolean ENDCHAR .)
-    LOOP            reduce using rule 96 (asignacion -> CONST ID COLON BOOL IGUAL boolean ENDCHAR .)
-    IF              reduce using rule 96 (asignacion -> CONST ID COLON BOOL IGUAL boolean ENDCHAR .)
-    ID              reduce using rule 96 (asignacion -> CONST ID COLON BOOL IGUAL boolean ENDCHAR .)
-    IO              reduce using rule 96 (asignacion -> CONST ID COLON BOOL IGUAL boolean ENDCHAR .)
-    WHILE           reduce using rule 96 (asignacion -> CONST ID COLON BOOL IGUAL boolean ENDCHAR .)
-    RETURN          reduce using rule 96 (asignacion -> CONST ID COLON BOOL IGUAL boolean ENDCHAR .)
+    $end            reduce using rule 93 (asignacion -> CONST ID COLON BOOL IGUAL boolean ENDCHAR .)
+    RLLAVE          reduce using rule 93 (asignacion -> CONST ID COLON BOOL IGUAL boolean ENDCHAR .)
+    LET             reduce using rule 93 (asignacion -> CONST ID COLON BOOL IGUAL boolean ENDCHAR .)
+    CONST           reduce using rule 93 (asignacion -> CONST ID COLON BOOL IGUAL boolean ENDCHAR .)
+    PRINTLN         reduce using rule 93 (asignacion -> CONST ID COLON BOOL IGUAL boolean ENDCHAR .)
+    LOOP            reduce using rule 93 (asignacion -> CONST ID COLON BOOL IGUAL boolean ENDCHAR .)
+    IF              reduce using rule 93 (asignacion -> CONST ID COLON BOOL IGUAL boolean ENDCHAR .)
+    ID              reduce using rule 93 (asignacion -> CONST ID COLON BOOL IGUAL boolean ENDCHAR .)
+    IO              reduce using rule 93 (asignacion -> CONST ID COLON BOOL IGUAL boolean ENDCHAR .)
+    WHILE           reduce using rule 93 (asignacion -> CONST ID COLON BOOL IGUAL boolean ENDCHAR .)
+    RETURN          reduce using rule 93 (asignacion -> CONST ID COLON BOOL IGUAL boolean ENDCHAR .)
 
 
 state 245
 
-    (102) asignacion -> CONST ID COLON CHAR IGUAL IDCHAR ENDCHAR .
+    (99) asignacion -> CONST ID COLON CHAR IGUAL IDCHAR ENDCHAR .
 
-    $end            reduce using rule 102 (asignacion -> CONST ID COLON CHAR IGUAL IDCHAR ENDCHAR .)
-    RLLAVE          reduce using rule 102 (asignacion -> CONST ID COLON CHAR IGUAL IDCHAR ENDCHAR .)
-    LET             reduce using rule 102 (asignacion -> CONST ID COLON CHAR IGUAL IDCHAR ENDCHAR .)
-    CONST           reduce using rule 102 (asignacion -> CONST ID COLON CHAR IGUAL IDCHAR ENDCHAR .)
-    PRINTLN         reduce using rule 102 (asignacion -> CONST ID COLON CHAR IGUAL IDCHAR ENDCHAR .)
-    LOOP            reduce using rule 102 (asignacion -> CONST ID COLON CHAR IGUAL IDCHAR ENDCHAR .)
-    IF              reduce using rule 102 (asignacion -> CONST ID COLON CHAR IGUAL IDCHAR ENDCHAR .)
-    ID              reduce using rule 102 (asignacion -> CONST ID COLON CHAR IGUAL IDCHAR ENDCHAR .)
-    IO              reduce using rule 102 (asignacion -> CONST ID COLON CHAR IGUAL IDCHAR ENDCHAR .)
-    WHILE           reduce using rule 102 (asignacion -> CONST ID COLON CHAR IGUAL IDCHAR ENDCHAR .)
-    RETURN          reduce using rule 102 (asignacion -> CONST ID COLON CHAR IGUAL IDCHAR ENDCHAR .)
+    $end            reduce using rule 99 (asignacion -> CONST ID COLON CHAR IGUAL IDCHAR ENDCHAR .)
+    RLLAVE          reduce using rule 99 (asignacion -> CONST ID COLON CHAR IGUAL IDCHAR ENDCHAR .)
+    LET             reduce using rule 99 (asignacion -> CONST ID COLON CHAR IGUAL IDCHAR ENDCHAR .)
+    CONST           reduce using rule 99 (asignacion -> CONST ID COLON CHAR IGUAL IDCHAR ENDCHAR .)
+    PRINTLN         reduce using rule 99 (asignacion -> CONST ID COLON CHAR IGUAL IDCHAR ENDCHAR .)
+    LOOP            reduce using rule 99 (asignacion -> CONST ID COLON CHAR IGUAL IDCHAR ENDCHAR .)
+    IF              reduce using rule 99 (asignacion -> CONST ID COLON CHAR IGUAL IDCHAR ENDCHAR .)
+    ID              reduce using rule 99 (asignacion -> CONST ID COLON CHAR IGUAL IDCHAR ENDCHAR .)
+    IO              reduce using rule 99 (asignacion -> CONST ID COLON CHAR IGUAL IDCHAR ENDCHAR .)
+    WHILE           reduce using rule 99 (asignacion -> CONST ID COLON CHAR IGUAL IDCHAR ENDCHAR .)
+    RETURN          reduce using rule 99 (asignacion -> CONST ID COLON CHAR IGUAL IDCHAR ENDCHAR .)
 
 
 state 246
 
-    (63) strsize -> AMPERSAND COMILLA STATIC STR .
+    (67) strsize -> AMPERSAND COMILLA STATIC STR .
 
-    IGUAL           reduce using rule 63 (strsize -> AMPERSAND COMILLA STATIC STR .)
-    COMA            reduce using rule 63 (strsize -> AMPERSAND COMILLA STATIC STR .)
-    RPAREN          reduce using rule 63 (strsize -> AMPERSAND COMILLA STATIC STR .)
-    LLLAVE          reduce using rule 63 (strsize -> AMPERSAND COMILLA STATIC STR .)
+    IGUAL           reduce using rule 67 (strsize -> AMPERSAND COMILLA STATIC STR .)
+    COMA            reduce using rule 67 (strsize -> AMPERSAND COMILLA STATIC STR .)
+    RPAREN          reduce using rule 67 (strsize -> AMPERSAND COMILLA STATIC STR .)
+    LLLAVE          reduce using rule 67 (strsize -> AMPERSAND COMILLA STATIC STR .)
 
 
 state 247
 
-    (100) ifblock -> IF LPAREN ifparams RPAREN LLLAVE cuerpof RLLAVE .
+    (101) ifblock -> IF LPAREN ifparams RPAREN LLLAVE cuerpof RLLAVE .
 
-    ELSE            reduce using rule 100 (ifblock -> IF LPAREN ifparams RPAREN LLLAVE cuerpof RLLAVE .)
-    $end            reduce using rule 100 (ifblock -> IF LPAREN ifparams RPAREN LLLAVE cuerpof RLLAVE .)
-    RLLAVE          reduce using rule 100 (ifblock -> IF LPAREN ifparams RPAREN LLLAVE cuerpof RLLAVE .)
-    LET             reduce using rule 100 (ifblock -> IF LPAREN ifparams RPAREN LLLAVE cuerpof RLLAVE .)
-    CONST           reduce using rule 100 (ifblock -> IF LPAREN ifparams RPAREN LLLAVE cuerpof RLLAVE .)
-    PRINTLN         reduce using rule 100 (ifblock -> IF LPAREN ifparams RPAREN LLLAVE cuerpof RLLAVE .)
-    LOOP            reduce using rule 100 (ifblock -> IF LPAREN ifparams RPAREN LLLAVE cuerpof RLLAVE .)
-    IF              reduce using rule 100 (ifblock -> IF LPAREN ifparams RPAREN LLLAVE cuerpof RLLAVE .)
-    ID              reduce using rule 100 (ifblock -> IF LPAREN ifparams RPAREN LLLAVE cuerpof RLLAVE .)
-    IO              reduce using rule 100 (ifblock -> IF LPAREN ifparams RPAREN LLLAVE cuerpof RLLAVE .)
-    WHILE           reduce using rule 100 (ifblock -> IF LPAREN ifparams RPAREN LLLAVE cuerpof RLLAVE .)
-    RETURN          reduce using rule 100 (ifblock -> IF LPAREN ifparams RPAREN LLLAVE cuerpof RLLAVE .)
+    ELSE            reduce using rule 101 (ifblock -> IF LPAREN ifparams RPAREN LLLAVE cuerpof RLLAVE .)
+    $end            reduce using rule 101 (ifblock -> IF LPAREN ifparams RPAREN LLLAVE cuerpof RLLAVE .)
+    RLLAVE          reduce using rule 101 (ifblock -> IF LPAREN ifparams RPAREN LLLAVE cuerpof RLLAVE .)
+    LET             reduce using rule 101 (ifblock -> IF LPAREN ifparams RPAREN LLLAVE cuerpof RLLAVE .)
+    CONST           reduce using rule 101 (ifblock -> IF LPAREN ifparams RPAREN LLLAVE cuerpof RLLAVE .)
+    PRINTLN         reduce using rule 101 (ifblock -> IF LPAREN ifparams RPAREN LLLAVE cuerpof RLLAVE .)
+    LOOP            reduce using rule 101 (ifblock -> IF LPAREN ifparams RPAREN LLLAVE cuerpof RLLAVE .)
+    IF              reduce using rule 101 (ifblock -> IF LPAREN ifparams RPAREN LLLAVE cuerpof RLLAVE .)
+    ID              reduce using rule 101 (ifblock -> IF LPAREN ifparams RPAREN LLLAVE cuerpof RLLAVE .)
+    IO              reduce using rule 101 (ifblock -> IF LPAREN ifparams RPAREN LLLAVE cuerpof RLLAVE .)
+    WHILE           reduce using rule 101 (ifblock -> IF LPAREN ifparams RPAREN LLLAVE cuerpof RLLAVE .)
+    RETURN          reduce using rule 101 (ifblock -> IF LPAREN ifparams RPAREN LLLAVE cuerpof RLLAVE .)
 
 
 state 248
@@ -4028,23 +4028,23 @@ state 248
 
 state 249
 
-    (94) elseifblock -> ifblock ELSE IF LPAREN ifparams RPAREN LLLAVE cuerpof . RLLAVE
+    (97) elseifblock -> ifblock ELSE IF LPAREN ifparams RPAREN LLLAVE cuerpof . RLLAVE
 
     RLLAVE          shift and go to state 258
 
 
 state 250
 
-    (98) params -> ID COLON datatype COMA params .
+    (96) params -> ID COLON datatype COMA params .
 
-    RPAREN          reduce using rule 98 (params -> ID COLON datatype COMA params .)
+    RPAREN          reduce using rule 96 (params -> ID COLON datatype COMA params .)
 
 
 state 251
 
-    (99) funcion -> FN ID LPAREN params RPAREN LLLAVE metodo RLLAVE .
+    (100) funcion -> FN ID LPAREN params RPAREN LLLAVE metodo RLLAVE .
 
-    $end            reduce using rule 99 (funcion -> FN ID LPAREN params RPAREN LLLAVE metodo RLLAVE .)
+    $end            reduce using rule 100 (funcion -> FN ID LPAREN params RPAREN LLLAVE metodo RLLAVE .)
 
 
 state 252
@@ -4067,26 +4067,26 @@ state 252
     (41) asignacion -> . LET MUT ID IGUAL VEC DOSDOBLEPUNTOS NEW LPAREN RPAREN ENDCHAR
     (49) asignacion -> . CONST ID COLON intsize IGUAL INTTYPE ENDCHAR
     (50) asignacion -> . CONST ID COLON intsize IGUAL NINTTYPE ENDCHAR
-    (62) asignacion -> . CONST ID COLON uintsize IGUAL INTTYPE ENDCHAR
-    (71) asignacion -> . CONST ID COLON floatsize IGUAL FLOATTYPE ENDCHAR
+    (58) asignacion -> . CONST ID COLON uintsize IGUAL INTTYPE ENDCHAR
+    (69) asignacion -> . CONST ID COLON floatsize IGUAL FLOATTYPE ENDCHAR
     (78) asignacion -> . CONST ID COLON strsize IGUAL IDSTRING ENDCHAR
-    (87) asignacion -> . CONST ID COLON STRING IGUAL STRING DOSDOBLEPUNTOS FROM LPAREN IDSTRING RPAREN ENDCHAR
-    (92) asignacion -> . CONST ID COLON STRING IGUAL IDSTRING ENDCHAR
-    (96) asignacion -> . CONST ID COLON BOOL IGUAL boolean ENDCHAR
-    (102) asignacion -> . CONST ID COLON CHAR IGUAL IDCHAR ENDCHAR
+    (82) asignacion -> . CONST ID COLON STRING IGUAL STRING DOSDOBLEPUNTOS FROM LPAREN IDSTRING RPAREN ENDCHAR
+    (90) asignacion -> . CONST ID COLON STRING IGUAL IDSTRING ENDCHAR
+    (93) asignacion -> . CONST ID COLON BOOL IGUAL boolean ENDCHAR
+    (99) asignacion -> . CONST ID COLON CHAR IGUAL IDCHAR ENDCHAR
     (112) asignacion -> . LET MUT ID IGUAL valor ENDCHAR
     (113) asignacion -> . LET MUT ID IGUAL estructuras ENDCHAR
     (114) asignacion -> . LET ID IGUAL valor ENDCHAR
     (115) asignacion -> . LET MUT ID IGUAL LINKEDLIST DOSDOBLEPUNTOS NEW LPAREN RPAREN ENDCHAR
     (103) impresion -> . PRINTLN LPAREN IDSTRING RPAREN ENDCHAR
-    (93) loop -> . LOOP LLLAVE metodo RLLAVE
-    (100) ifblock -> . IF LPAREN ifparams RPAREN LLLAVE cuerpof RLLAVE
-    (101) ifblock -> . IF ifparams LLLAVE cuerpof RLLAVE
-    (94) elseifblock -> . ifblock ELSE IF LPAREN ifparams RPAREN LLLAVE cuerpof RLLAVE
-    (95) elseifblock -> . ifblock ELSE IF ifparams LLLAVE cuerpof RLLAVE
-    (90) elseblock -> . ifblock ELSE LLLAVE cuerpof RLLAVE
-    (91) elseblock -> . elseifblock ELSE LLLAVE cuerpof RLLAVE
-    (109) vectorpush -> . ID POINT PUSH LPAREN INTTYPE RPAREN ENDCHAR
+    (94) loop -> . LOOP LLLAVE metodo RLLAVE
+    (101) ifblock -> . IF LPAREN ifparams RPAREN LLLAVE cuerpof RLLAVE
+    (102) ifblock -> . IF ifparams LLLAVE cuerpof RLLAVE
+    (97) elseifblock -> . ifblock ELSE IF LPAREN ifparams RPAREN LLLAVE cuerpof RLLAVE
+    (98) elseifblock -> . ifblock ELSE IF ifparams LLLAVE cuerpof RLLAVE
+    (91) elseblock -> . ifblock ELSE LLLAVE cuerpof RLLAVE
+    (92) elseblock -> . elseifblock ELSE LLLAVE cuerpof RLLAVE
+    (104) vectorpush -> . ID POINT PUSH LPAREN INTTYPE RPAREN ENDCHAR
     (116) llpushfront -> . ID POINT PUSH_FRONT LPAREN INTTYPE RPAREN ENDCHAR
     (117) llpopback -> . ID POINT POP_BACK LPAREN RPAREN ENDCHAR
     (85) entrada -> . IO DOSDOBLEPUNTOS STDIN LPAREN RPAREN POINT READLINE LPAREN AMPERSAND MUT ID RPAREN ENDCHAR
@@ -4126,7 +4126,7 @@ state 253
 state 254
 
     (115) asignacion -> LET MUT ID IGUAL LINKEDLIST DOSDOBLEPUNTOS NEW LPAREN . RPAREN ENDCHAR
-    (77) linkedlist -> LINKEDLIST DOSDOBLEPUNTOS NEW LPAREN . RPAREN ENDCHAR
+    (75) linkedlist -> LINKEDLIST DOSDOBLEPUNTOS NEW LPAREN . RPAREN ENDCHAR
 
     RPAREN          shift and go to state 261
 
@@ -4140,7 +4140,7 @@ state 255
 
 state 256
 
-    (87) asignacion -> CONST ID COLON STRING IGUAL STRING DOSDOBLEPUNTOS FROM . LPAREN IDSTRING RPAREN ENDCHAR
+    (82) asignacion -> CONST ID COLON STRING IGUAL STRING DOSDOBLEPUNTOS FROM . LPAREN IDSTRING RPAREN ENDCHAR
 
     LPAREN          shift and go to state 263
 
@@ -4155,20 +4155,20 @@ state 257
 
 state 258
 
-    (94) elseifblock -> ifblock ELSE IF LPAREN ifparams RPAREN LLLAVE cuerpof RLLAVE .
+    (97) elseifblock -> ifblock ELSE IF LPAREN ifparams RPAREN LLLAVE cuerpof RLLAVE .
 
-    ELSE            reduce using rule 94 (elseifblock -> ifblock ELSE IF LPAREN ifparams RPAREN LLLAVE cuerpof RLLAVE .)
-    $end            reduce using rule 94 (elseifblock -> ifblock ELSE IF LPAREN ifparams RPAREN LLLAVE cuerpof RLLAVE .)
-    RLLAVE          reduce using rule 94 (elseifblock -> ifblock ELSE IF LPAREN ifparams RPAREN LLLAVE cuerpof RLLAVE .)
-    LET             reduce using rule 94 (elseifblock -> ifblock ELSE IF LPAREN ifparams RPAREN LLLAVE cuerpof RLLAVE .)
-    CONST           reduce using rule 94 (elseifblock -> ifblock ELSE IF LPAREN ifparams RPAREN LLLAVE cuerpof RLLAVE .)
-    PRINTLN         reduce using rule 94 (elseifblock -> ifblock ELSE IF LPAREN ifparams RPAREN LLLAVE cuerpof RLLAVE .)
-    LOOP            reduce using rule 94 (elseifblock -> ifblock ELSE IF LPAREN ifparams RPAREN LLLAVE cuerpof RLLAVE .)
-    IF              reduce using rule 94 (elseifblock -> ifblock ELSE IF LPAREN ifparams RPAREN LLLAVE cuerpof RLLAVE .)
-    ID              reduce using rule 94 (elseifblock -> ifblock ELSE IF LPAREN ifparams RPAREN LLLAVE cuerpof RLLAVE .)
-    IO              reduce using rule 94 (elseifblock -> ifblock ELSE IF LPAREN ifparams RPAREN LLLAVE cuerpof RLLAVE .)
-    WHILE           reduce using rule 94 (elseifblock -> ifblock ELSE IF LPAREN ifparams RPAREN LLLAVE cuerpof RLLAVE .)
-    RETURN          reduce using rule 94 (elseifblock -> ifblock ELSE IF LPAREN ifparams RPAREN LLLAVE cuerpof RLLAVE .)
+    ELSE            reduce using rule 97 (elseifblock -> ifblock ELSE IF LPAREN ifparams RPAREN LLLAVE cuerpof RLLAVE .)
+    $end            reduce using rule 97 (elseifblock -> ifblock ELSE IF LPAREN ifparams RPAREN LLLAVE cuerpof RLLAVE .)
+    RLLAVE          reduce using rule 97 (elseifblock -> ifblock ELSE IF LPAREN ifparams RPAREN LLLAVE cuerpof RLLAVE .)
+    LET             reduce using rule 97 (elseifblock -> ifblock ELSE IF LPAREN ifparams RPAREN LLLAVE cuerpof RLLAVE .)
+    CONST           reduce using rule 97 (elseifblock -> ifblock ELSE IF LPAREN ifparams RPAREN LLLAVE cuerpof RLLAVE .)
+    PRINTLN         reduce using rule 97 (elseifblock -> ifblock ELSE IF LPAREN ifparams RPAREN LLLAVE cuerpof RLLAVE .)
+    LOOP            reduce using rule 97 (elseifblock -> ifblock ELSE IF LPAREN ifparams RPAREN LLLAVE cuerpof RLLAVE .)
+    IF              reduce using rule 97 (elseifblock -> ifblock ELSE IF LPAREN ifparams RPAREN LLLAVE cuerpof RLLAVE .)
+    ID              reduce using rule 97 (elseifblock -> ifblock ELSE IF LPAREN ifparams RPAREN LLLAVE cuerpof RLLAVE .)
+    IO              reduce using rule 97 (elseifblock -> ifblock ELSE IF LPAREN ifparams RPAREN LLLAVE cuerpof RLLAVE .)
+    WHILE           reduce using rule 97 (elseifblock -> ifblock ELSE IF LPAREN ifparams RPAREN LLLAVE cuerpof RLLAVE .)
+    RETURN          reduce using rule 97 (elseifblock -> ifblock ELSE IF LPAREN ifparams RPAREN LLLAVE cuerpof RLLAVE .)
 
 
 state 259
@@ -4190,7 +4190,7 @@ state 260
 state 261
 
     (115) asignacion -> LET MUT ID IGUAL LINKEDLIST DOSDOBLEPUNTOS NEW LPAREN RPAREN . ENDCHAR
-    (77) linkedlist -> LINKEDLIST DOSDOBLEPUNTOS NEW LPAREN RPAREN . ENDCHAR
+    (75) linkedlist -> LINKEDLIST DOSDOBLEPUNTOS NEW LPAREN RPAREN . ENDCHAR
 
     ENDCHAR         shift and go to state 268
 
@@ -4204,7 +4204,7 @@ state 262
 
 state 263
 
-    (87) asignacion -> CONST ID COLON STRING IGUAL STRING DOSDOBLEPUNTOS FROM LPAREN . IDSTRING RPAREN ENDCHAR
+    (82) asignacion -> CONST ID COLON STRING IGUAL STRING DOSDOBLEPUNTOS FROM LPAREN . IDSTRING RPAREN ENDCHAR
 
     IDSTRING        shift and go to state 269
 
@@ -4227,23 +4227,23 @@ state 265
 state 266
 
     (110) funcion -> FN ID LPAREN params RPAREN ARROWOPT datatype LLLAVE cuerpof RETURN . ifparams ENDCHAR RLLAVE
-    (82) ifparams -> . ifcondicion
-    (83) ifparams -> . boolean
-    (84) ifparams -> . ID
-    (104) ifcondicion -> . comparacion
-    (105) ifcondicion -> . comparacion signoconect ifcondicion
-    (106) ifcondicion -> . LPAREN comparacion RPAREN
-    (107) ifcondicion -> . LPAREN comparacion RPAREN signoconect ifcondicion
-    (108) ifcondicion -> . LPAREN ifcondicion RPAREN
-    (69) boolean -> . TRUE
-    (70) boolean -> . FALSE
-    (33) comparacion -> . ID signocompar ID
-    (34) comparacion -> . IDCHAR signocompar IDCHAR
-    (35) comparacion -> . IDSTRING signocompar IDSTRING
+    (87) ifparams -> . ifcondicion
+    (88) ifparams -> . boolean
+    (89) ifparams -> . ID
+    (105) ifcondicion -> . comparacion
+    (106) ifcondicion -> . comparacion signoconect ifcondicion
+    (107) ifcondicion -> . LPAREN comparacion RPAREN
+    (108) ifcondicion -> . LPAREN comparacion RPAREN signoconect ifcondicion
+    (109) ifcondicion -> . LPAREN ifcondicion RPAREN
+    (76) boolean -> . TRUE
+    (77) boolean -> . FALSE
+    (31) comparacion -> . ID signocompar ID
+    (32) comparacion -> . IDCHAR signocompar IDCHAR
+    (33) comparacion -> . IDSTRING signocompar IDSTRING
     (42) comparacion -> . INTTYPE signocompar INTTYPE
     (43) comparacion -> . NINTTYPE signocompar NINTTYPE
     (44) comparacion -> . FLOATTYPE signocompar FLOATTYPE
-    (48) comparacion -> . boolean signocompar boolean
+    (46) comparacion -> . boolean signocompar boolean
 
     ID              shift and go to state 37
     LPAREN          shift and go to state 48
@@ -4280,7 +4280,7 @@ state 267
 state 268
 
     (115) asignacion -> LET MUT ID IGUAL LINKEDLIST DOSDOBLEPUNTOS NEW LPAREN RPAREN ENDCHAR .
-    (77) linkedlist -> LINKEDLIST DOSDOBLEPUNTOS NEW LPAREN RPAREN ENDCHAR .
+    (75) linkedlist -> LINKEDLIST DOSDOBLEPUNTOS NEW LPAREN RPAREN ENDCHAR .
 
     $end            reduce using rule 115 (asignacion -> LET MUT ID IGUAL LINKEDLIST DOSDOBLEPUNTOS NEW LPAREN RPAREN ENDCHAR .)
     RLLAVE          reduce using rule 115 (asignacion -> LET MUT ID IGUAL LINKEDLIST DOSDOBLEPUNTOS NEW LPAREN RPAREN ENDCHAR .)
@@ -4293,12 +4293,12 @@ state 268
     IO              reduce using rule 115 (asignacion -> LET MUT ID IGUAL LINKEDLIST DOSDOBLEPUNTOS NEW LPAREN RPAREN ENDCHAR .)
     WHILE           reduce using rule 115 (asignacion -> LET MUT ID IGUAL LINKEDLIST DOSDOBLEPUNTOS NEW LPAREN RPAREN ENDCHAR .)
     RETURN          reduce using rule 115 (asignacion -> LET MUT ID IGUAL LINKEDLIST DOSDOBLEPUNTOS NEW LPAREN RPAREN ENDCHAR .)
-    ENDCHAR         reduce using rule 77 (linkedlist -> LINKEDLIST DOSDOBLEPUNTOS NEW LPAREN RPAREN ENDCHAR .)
+    ENDCHAR         reduce using rule 75 (linkedlist -> LINKEDLIST DOSDOBLEPUNTOS NEW LPAREN RPAREN ENDCHAR .)
 
 
 state 269
 
-    (87) asignacion -> CONST ID COLON STRING IGUAL STRING DOSDOBLEPUNTOS FROM LPAREN IDSTRING . RPAREN ENDCHAR
+    (82) asignacion -> CONST ID COLON STRING IGUAL STRING DOSDOBLEPUNTOS FROM LPAREN IDSTRING . RPAREN ENDCHAR
 
     RPAREN          shift and go to state 273
 
@@ -4327,7 +4327,7 @@ state 272
 
 state 273
 
-    (87) asignacion -> CONST ID COLON STRING IGUAL STRING DOSDOBLEPUNTOS FROM LPAREN IDSTRING RPAREN . ENDCHAR
+    (82) asignacion -> CONST ID COLON STRING IGUAL STRING DOSDOBLEPUNTOS FROM LPAREN IDSTRING RPAREN . ENDCHAR
 
     ENDCHAR         shift and go to state 276
 
@@ -4349,19 +4349,19 @@ state 275
 
 state 276
 
-    (87) asignacion -> CONST ID COLON STRING IGUAL STRING DOSDOBLEPUNTOS FROM LPAREN IDSTRING RPAREN ENDCHAR .
+    (82) asignacion -> CONST ID COLON STRING IGUAL STRING DOSDOBLEPUNTOS FROM LPAREN IDSTRING RPAREN ENDCHAR .
 
-    $end            reduce using rule 87 (asignacion -> CONST ID COLON STRING IGUAL STRING DOSDOBLEPUNTOS FROM LPAREN IDSTRING RPAREN ENDCHAR .)
-    RLLAVE          reduce using rule 87 (asignacion -> CONST ID COLON STRING IGUAL STRING DOSDOBLEPUNTOS FROM LPAREN IDSTRING RPAREN ENDCHAR .)
-    LET             reduce using rule 87 (asignacion -> CONST ID COLON STRING IGUAL STRING DOSDOBLEPUNTOS FROM LPAREN IDSTRING RPAREN ENDCHAR .)
-    CONST           reduce using rule 87 (asignacion -> CONST ID COLON STRING IGUAL STRING DOSDOBLEPUNTOS FROM LPAREN IDSTRING RPAREN ENDCHAR .)
-    PRINTLN         reduce using rule 87 (asignacion -> CONST ID COLON STRING IGUAL STRING DOSDOBLEPUNTOS FROM LPAREN IDSTRING RPAREN ENDCHAR .)
-    LOOP            reduce using rule 87 (asignacion -> CONST ID COLON STRING IGUAL STRING DOSDOBLEPUNTOS FROM LPAREN IDSTRING RPAREN ENDCHAR .)
-    IF              reduce using rule 87 (asignacion -> CONST ID COLON STRING IGUAL STRING DOSDOBLEPUNTOS FROM LPAREN IDSTRING RPAREN ENDCHAR .)
-    ID              reduce using rule 87 (asignacion -> CONST ID COLON STRING IGUAL STRING DOSDOBLEPUNTOS FROM LPAREN IDSTRING RPAREN ENDCHAR .)
-    IO              reduce using rule 87 (asignacion -> CONST ID COLON STRING IGUAL STRING DOSDOBLEPUNTOS FROM LPAREN IDSTRING RPAREN ENDCHAR .)
-    WHILE           reduce using rule 87 (asignacion -> CONST ID COLON STRING IGUAL STRING DOSDOBLEPUNTOS FROM LPAREN IDSTRING RPAREN ENDCHAR .)
-    RETURN          reduce using rule 87 (asignacion -> CONST ID COLON STRING IGUAL STRING DOSDOBLEPUNTOS FROM LPAREN IDSTRING RPAREN ENDCHAR .)
+    $end            reduce using rule 82 (asignacion -> CONST ID COLON STRING IGUAL STRING DOSDOBLEPUNTOS FROM LPAREN IDSTRING RPAREN ENDCHAR .)
+    RLLAVE          reduce using rule 82 (asignacion -> CONST ID COLON STRING IGUAL STRING DOSDOBLEPUNTOS FROM LPAREN IDSTRING RPAREN ENDCHAR .)
+    LET             reduce using rule 82 (asignacion -> CONST ID COLON STRING IGUAL STRING DOSDOBLEPUNTOS FROM LPAREN IDSTRING RPAREN ENDCHAR .)
+    CONST           reduce using rule 82 (asignacion -> CONST ID COLON STRING IGUAL STRING DOSDOBLEPUNTOS FROM LPAREN IDSTRING RPAREN ENDCHAR .)
+    PRINTLN         reduce using rule 82 (asignacion -> CONST ID COLON STRING IGUAL STRING DOSDOBLEPUNTOS FROM LPAREN IDSTRING RPAREN ENDCHAR .)
+    LOOP            reduce using rule 82 (asignacion -> CONST ID COLON STRING IGUAL STRING DOSDOBLEPUNTOS FROM LPAREN IDSTRING RPAREN ENDCHAR .)
+    IF              reduce using rule 82 (asignacion -> CONST ID COLON STRING IGUAL STRING DOSDOBLEPUNTOS FROM LPAREN IDSTRING RPAREN ENDCHAR .)
+    ID              reduce using rule 82 (asignacion -> CONST ID COLON STRING IGUAL STRING DOSDOBLEPUNTOS FROM LPAREN IDSTRING RPAREN ENDCHAR .)
+    IO              reduce using rule 82 (asignacion -> CONST ID COLON STRING IGUAL STRING DOSDOBLEPUNTOS FROM LPAREN IDSTRING RPAREN ENDCHAR .)
+    WHILE           reduce using rule 82 (asignacion -> CONST ID COLON STRING IGUAL STRING DOSDOBLEPUNTOS FROM LPAREN IDSTRING RPAREN ENDCHAR .)
+    RETURN          reduce using rule 82 (asignacion -> CONST ID COLON STRING IGUAL STRING DOSDOBLEPUNTOS FROM LPAREN IDSTRING RPAREN ENDCHAR .)
 
 
 state 277

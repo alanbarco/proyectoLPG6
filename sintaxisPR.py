@@ -14,6 +14,7 @@ def p_valor(p):
   | conectores
   | comparacion
   '''
+  p[0] = p[1 ]
 
 #Conjunto de estructuras de datos
 def p_estructuras(p):
@@ -21,6 +22,7 @@ def p_estructuras(p):
     estructuras : linkedlist
     | hashmap
     '''
+
 
 # Estructura de control While
 def p_while(p):
@@ -43,6 +45,7 @@ def p_valornumerico(p):
   | FLOATTYPE
   | NFLOATTYPE
   '''
+  p[0] = p[1]
   
 def p_signo(p):
   '''

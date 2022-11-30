@@ -16,6 +16,7 @@ def p_datatype(p):
   | strsize
   | STRING
   | BOOL'''
+  p[0] = p[1]
 
 def p_intsize(p):
   '''
@@ -24,11 +25,14 @@ def p_intsize(p):
   | INT32
   | INT64
   | INT128'''
+  p[0] = p[1]
 
 def p_floatsize(p):
   '''
   floatsize : FLOAT32
   | FLOAT64'''
+
+  p[0] = p[1]
 
 def p_uintsize(p):
   '''
@@ -37,6 +41,7 @@ def p_uintsize(p):
   | UINT32
   | UINT64
   | UINT128'''
+  p[0] = p[1]
 
 def p_strsize(p):
   '''
@@ -48,7 +53,7 @@ def p_boolean(p):
   boolean : TRUE
   | FALSE
   '''
-  
+  p[0] = p[1]
 #VEC
 
 #CONDICION IF ELSE
