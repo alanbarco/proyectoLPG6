@@ -55,6 +55,7 @@ def p_signo(p):
   | PORCENTAJE
   | DIVIDE
   '''
+  p[0] = p[1]
 
 def p_entrada(p):
   '''

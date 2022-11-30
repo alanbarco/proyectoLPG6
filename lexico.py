@@ -12,6 +12,7 @@ import ply.lex as lex
 # List of token names
 reserved = {  #Empieza Alan Barco
   "async": 'ASYNC',
+  "as": 'AS',
   "await": 'AWAIT',
   "break": 'BREAK',
   "const": 'CONST',
@@ -85,6 +86,7 @@ reserved = {  #Empieza Alan Barco
   "Ok": 'OK',
   "main": 'MAINFN',
   "push": 'PUSH',
+  "push_str": 'PUSH_STR',
   "push_front" : "PUSH_FRONT",
   "pop_back" : "POP_BACK",
 
@@ -192,21 +194,16 @@ def t_newline(t):
 t_ignore = ' \t'
 
 
-# Error handling rule
-def t_error(t):
-  print("Illegal character '%s'" % t.value[0])
-  t.lexer.skip(1)
-
-
 def t_COMMENT(t):
   r'(//.*|/\*(.*|\n*)*\*/)'
   pass
 
 # Build the lexer
-lexer = lex.lex()
+
 
 # Tokenize
 if __name__ == '__main__':
+  lexer = lex.lex()
   file = open("source.txt")
   cadena = file.read()
   file.close()

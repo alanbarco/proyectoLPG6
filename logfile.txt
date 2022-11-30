@@ -1649,3 +1649,1547 @@ ERROR SEMï¿½NTICO: NO SE PUEDE SUMAR ENTEROS DIFERENTES TAMAï¿½OS
 -----Anï¿½lisis Sintï¿½ctico/Semï¿½ntico - Timestamp: 2022-11-29 19:08:37.330960-05:00
 Entrada: a+b
  Linea: 1 Correcto
+
+----------Análisis Léxico - Timestamp: 2022-11-29 19:51:09.152699-05:00
+ Entrada: let a = 20;Resultado:  LET 
+-----Análisis Sintáctico/Semántico - Timestamp: 2022-11-29 20:04:17.004654-05:00
+Entrada: const a:i32 = 20;
+let a  =30;
+ Linea: 1 Correcto
+ERROR SEMÁNTICO: REASIGNACIÓN DE CONSTANTE
+-----Análisis Sintáctico/Semántico - Timestamp: 2022-11-29 20:04:30.232425-05:00
+Entrada: const a:i32 = "dwad ";
+Error de sintaxis - Token: IDSTRING, Línea: 1, Col: 14
+Error de sintaxis - Token: ENDCHAR, Línea: 1, Col: 21
+Error de sintaxis Fin de Linea
+ Linea: 1 Correcto
+-----Análisis Sintáctico/Semántico - Timestamp: 2022-11-29 20:05:55.583161-05:00
+Entrada: let a =20
+Error de sintaxis Fin de Linea
+ Linea: 1 Correcto
+-----Análisis Sintáctico/Semántico - Timestamp: 2022-11-29 20:07:07.034020-05:00
+Entrada: dad  adawda;
+Error de sintaxis - Token: ID, Línea: 1, Col: 5
+Error de sintaxis - Token: ENDCHAR, Línea: 1, Col: 11
+Error de sintaxis Fin de Linea
+-----Análisis Sintáctico/Semántico - Timestamp: 2022-11-29 20:07:26.011257-05:00
+Entrada: const a:i32 = 20;
+let a  =40;
+ Linea: 1 Correcto
+ERROR SEMÁNTICO: REASIGNACIÓN DE CONSTANTE
+-----Análisis Sintáctico/Semántico - Timestamp: 2022-11-29 20:07:33.130563-05:00
+Entrada: a wda 'd ad[da d
+Error de sintaxis - Token: ID, Línea: 1, Col: 2
+Error de sintaxis - Token: COMILLA, Línea: 1, Col: 6
+Error de sintaxis - Token: ID, Línea: 1, Col: 7
+Error de sintaxis - Token: ID, Línea: 1, Col: 9
+Error de sintaxis - Token: LCOR, Línea: 1, Col: 11
+Error de sintaxis - Token: ID, Línea: 1, Col: 12
+Error de sintaxis - Token: ID, Línea: 1, Col: 15
+Error de sintaxis Fin de Linea
+----------Análisis Léxico - Timestamp: 2022-11-29 20:10:59.050086-05:00
+ Entrada: let a =20;Resultado: 
+LET 
+----------Análisis Léxico - Timestamp: 2022-11-29 20:11:39.538388-05:00
+ Entrada: let a =20;Resultado: 
+LET 
+----------Análisis Léxico - Timestamp: 2022-11-29 20:12:14.122232-05:00
+ Entrada: let a =20;Resultado: 
+ID ID ID Ilegal ID Ilegal IGUAL INTTYPE INTTYPE ENDCHAR 
+----------Análisis Léxico - Timestamp: 2022-11-29 20:12:23.021039-05:00
+ Entrada: let a =20;
+let b = 30;Resultado: 
+ID ID ID Ilegal ID Ilegal IGUAL INTTYPE INTTYPE ENDCHAR Ilegal 
+ID ID ID Ilegal ID Ilegal IGUAL Ilegal INTTYPE INTTYPE ENDCHAR 
+-----Análisis Sintáctico/Semántico - Timestamp: 2022-11-29 20:12:31.062104-05:00
+Entrada: let a =20;
+let b = 30;
+ Linea: 1 Correcto
+ Linea: 2 Correcto
+----------Análisis Léxico - Timestamp: 2022-11-29 20:12:32.661786-05:00
+ Entrada: let a =20;
+let b = 30;Resultado: 
+
+ID ID ID Ilegal ID Ilegal IGUAL INTTYPE INTTYPE ENDCHAR Ilegal 
+ID ID ID Ilegal ID Ilegal IGUAL Ilegal INTTYPE INTTYPE ENDCHAR 
+----------Análisis Léxico - Timestamp: 2022-11-29 20:27:57.195028-05:00
+ Entrada: let a =20;Resultado: 
+LET 
+----------Análisis Léxico - Timestamp: 2022-11-29 20:30:01.624471-05:00
+ Entrada: let a =20;Resultado: 
+
+----------Análisis Léxico - Timestamp: 2022-11-29 20:30:43.062512-05:00
+ Entrada: let a =20;Resultado: 
+
+----------Análisis Léxico - Timestamp: 2022-11-29 20:31:12.884062-05:00
+ Entrada: let a =20;Resultado: 
+
+----------Análisis Léxico - Timestamp: 2022-11-29 20:32:11.786397-05:00
+ Entrada: let a=20;Resultado: 
+
+----------Análisis Léxico - Timestamp: 2022-11-29 20:32:44.224001-05:00
+ Entrada: let a =20;Resultado: 
+LET  ID  IGUAL  INTTYPE  ENDCHAR  
+----------Análisis Léxico - Timestamp: 2022-11-29 20:32:49.579686-05:00
+ Entrada: let a =20;^Resultado: 
+LET  ID  IGUAL  INTTYPE  ENDCHAR  
+----------Análisis Léxico - Timestamp: 2022-11-29 20:33:20.125939-05:00
+ Entrada: ^ holaResultado: 
+ID  
+----------Análisis Léxico - Timestamp: 2022-11-29 20:38:36.838642-05:00
+ Entrada: let a =20;Resultado: 
+LET ID IGUAL INTTYPE ENDCHAR
+----------Análisis Léxico - Timestamp: 2022-11-29 20:38:45.048034-05:00
+ Entrada: let a =20;
+let b =340;Resultado: 
+LET ID IGUAL INTTYPE ENDCHAR 
+ LET ID IGUAL INTTYPE ENDCHAR
+----------Análisis Léxico - Timestamp: 2022-11-29 20:38:49.903063-05:00
+ Entrada: let a =20;
+let b =340; ^Resultado: 
+
+ LET ID IGUAL INTTYPE ENDCHAR 
+ LET ID IGUAL INTTYPE ENDCHAR
+----------Análisis Léxico - Timestamp: 2022-11-29 20:39:00.999493-05:00
+ Entrada: let a =20;
+let b =340; ^^
+Resultado: 
+
+ LET ID IGUAL INTTYPE ENDCHAR 
+ LET ID IGUAL INTTYPE ENDCHAR
+----------Análisis Léxico - Timestamp: 2022-11-29 20:39:50.095520-05:00
+ Entrada: ^ Resultado: 
+
+----------Análisis Léxico - Timestamp: 2022-11-29 20:40:28.141173-05:00
+ Entrada: ^ Resultado: 
+
+----------Análisis Léxico - Timestamp: 2022-11-29 20:43:03.357399-05:00
+ Entrada: let a= 20;Resultado: 
+LET ID IGUAL INTTYPE ENDCHAR
+----------Análisis Léxico - Timestamp: 2022-11-29 20:43:09.466452-05:00
+ Entrada: let a= 20; $ ^Resultado: 
+LET ID IGUAL INTTYPE ENDCHAR DOLAR ILEGAL 
+-----Análisis Sintáctico/Semántico - Timestamp: 2022-11-29 20:50:58.026766-05:00
+Entrada: const a:i32=10;
+const b:i32 = 30;
+a + b
+ Linea: 1 Correcto
+ Linea: 2 Correcto
+ Linea: 3 Correcto
+-----Análisis Sintáctico/Semántico - Timestamp: 2022-11-29 20:51:11.383032-05:00
+Entrada: const a:i32=10;
+const b:i64 = 30;
+a + b
+ Linea: 1 Correcto
+ Linea: 2 Correcto
+ERROR SEMÁNTICO: NO SE PUEDE SUMAR TIPO DE DATO DIFERENTE
+-----Análisis Sintáctico/Semántico - Timestamp: 2022-11-29 20:51:24.869479-05:00
+Entrada: const a:i32=10;
+const b:i64 = 30;
+a - b
+ Linea: 1 Correcto
+ Linea: 2 Correcto
+ERROR SEMÁNTICO: NO SE PUEDE SUMAR TIPO DE DATO DIFERENTE
+-----Análisis Sintáctico/Semántico - Timestamp: 2022-11-29 20:52:32.278882-05:00
+Entrada: const a:i32 = 20;
+ Linea: 1 Correcto
+-----Análisis Sintáctico/Semántico - Timestamp: 2022-11-29 20:52:38.146154-05:00
+Entrada: a + b
+ERROR SEMÁNTICO: VARIABLE NO DEFINIDA
+ Linea: 1 Correcto
+-----Análisis Sintáctico/Semántico - Timestamp: 2022-11-29 20:53:24.802266-05:00
+Entrada: let a =20;
+let b =30;
+a+ b
+ Linea: 1 Correcto
+ Linea: 2 Correcto
+ Linea: 3 Correcto
+-----Análisis Sintáctico/Semántico - Timestamp: 2022-11-29 20:56:22.438309-05:00
+Entrada: let a =20;
+let b =30;
+let c = a + b; 
+ Linea: 1 Correcto
+ Linea: 2 Correcto
+ Linea: 3 Correcto
+-----Análisis Sintáctico/Semántico - Timestamp: 2022-11-29 20:57:14.042631-05:00
+Entrada: const a:i32= 20;
+const b:i32 = 30;
+let c = a + b; 
+ Linea: 1 Correcto
+ Linea: 2 Correcto
+ Linea: 3 Correcto
+-----Análisis Sintáctico/Semántico - Timestamp: 2022-11-29 20:57:19.154154-05:00
+Entrada: const a:i32= 20;
+const b:i64 = 30;
+let c = a + b; 
+ Linea: 1 Correcto
+ Linea: 2 Correcto
+ERROR SEMÁNTICO: NO SE PUEDE OPERAR ENTRE TIPO DE DATOS DIFERENTES
+-----Análisis Sintáctico/Semántico - Timestamp: 2022-11-29 21:02:10.044145-05:00
+Entrada: let a = 20;
+a = 30;
+ Linea: 1 Correcto
+Error de sintaxis - Token: IGUAL, Línea: 1, Col: 2
+Error de sintaxis - Token: INTTYPE, Línea: 1, Col: 4
+Error de sintaxis - Token: ENDCHAR, Línea: 1, Col: 6
+Error de sintaxis Fin de Linea
+-----Análisis Sintáctico/Semántico - Timestamp: 2022-11-29 21:03:52.973262-05:00
+Entrada: let a = 20;
+a =30;
+ Linea: 1 Correcto
+ERROR SEMÁNTICO: TIPO DE VARIABLE NO ES MUTABLE
+-----Análisis Sintáctico/Semántico - Timestamp: 2022-11-29 21:04:15.265254-05:00
+Entrada: let mut a =20;
+a =20;
+ Linea: 1 Correcto
+ Linea: 2 Correcto
+-----Análisis Sintáctico/Semántico - Timestamp: 2022-11-29 21:04:25.439281-05:00
+Entrada: let a =20;
+a =30;
+ Linea: 1 Correcto
+ERROR SEMÁNTICO: TIPO DE VARIABLE NO ES MUTABLE
+-----Análisis Sintáctico/Semántico - Timestamp: 2022-11-29 21:05:19.527439-05:00
+Entrada: let a =20;
+
+ Linea: 1 Correcto
+Error de sintaxis Fin de Linea
+-----Análisis Sintáctico/Semántico - Timestamp: 2022-11-29 21:07:41.263474-05:00
+Entrada: let a =20;
+let b =40;
+ Linea: 1 Correcto
+ Linea: 2 Correcto
+-----Análisis Sintáctico/Semántico - Timestamp: 2022-11-29 21:09:03.258573-05:00
+Entrada: let a =20;
+let b=30;
+ Correcto
+ Correcto
+-----Análisis Sintáctico/Semántico - Timestamp: 2022-11-29 21:09:13.718254-05:00
+Entrada: let a =20;
+let b=30;
+const c =30;
+ Correcto
+ Correcto
+Error de sintaxis - Token: IGUAL, Línea: 1, Col: 8
+Error de sintaxis - Token: INTTYPE, Línea: 1, Col: 9
+Error de sintaxis - Token: ENDCHAR, Línea: 1, Col: 11
+Error de sintaxis Fin de Linea
+-----Análisis Sintáctico/Semántico - Timestamp: 2022-11-29 21:18:52.785500-05:00
+Entrada: let mut a = String::("HOLA");
+Error de sintaxis - Token: LPAREN, Línea: 1, Col: 20
+Error de sintaxis - Token: IDSTRING, Línea: 1, Col: 21
+Error de sintaxis - Token: RPAREN, Línea: 1, Col: 27
+Error de sintaxis - Token: ENDCHAR, Línea: 1, Col: 28
+Error de sintaxis Fin de Linea
+-----Análisis Sintáctico/Semántico - Timestamp: 2022-11-29 21:20:53.471532-05:00
+Entrada: let mut a = String::from("HOLA");
+ Linea: 1 Correcto
+-----Análisis Sintáctico/Semántico - Timestamp: 2022-11-29 21:21:08.493710-05:00
+Entrada: let mut a = String::from("HOLA");
+a.push_str("CHAO");
+ Linea: 1 Correcto
+ERROR SEMÁNTICO: TIPO DE VARIABLE NO ES STRING
+-----Análisis Sintáctico/Semántico - Timestamp: 2022-11-29 21:22:21.372905-05:00
+Entrada: let mut cadena = String::from("GOLA");
+cadena.push_str("CHAO");
+cadena.push_str('c');
+ Linea: 1 Correcto
+ Linea: 2 Correcto
+ Linea: 3 Correcto
+-----Análisis Sintáctico/Semántico - Timestamp: 2022-11-29 21:22:28.465772-05:00
+Entrada: let mut cadena = String::from("GOLA");
+a.push_str("CHAO");
+a.push_str('c');
+ Linea: 1 Correcto
+ERROR SEMÁNTICO: ID NO DECLARADO
+ERROR SEMÁNTICO: ID NO DECLARADO
+-----Análisis Sintáctico/Semántico - Timestamp: 2022-11-29 21:22:49.940025-05:00
+Entrada: let mut cadena = String::from("GOLA");
+let mut a = Vec::new();
+a.push_str("CHAO");
+a.push_str('c');
+ Linea: 1 Correcto
+ Linea: 2 Correcto
+ERROR SEMÁNTICO: TIPO DE VARIABLE NO ES STRING
+ERROR SEMÁNTICO: TIPO DE VARIABLE NO ES STRING
+-----Análisis Sintáctico/Semántico - Timestamp: 2022-11-29 21:43:00.512565-05:00
+Entrada: const a:f32 = 4.5;
+let b:i32 = a as i32
+ Linea: 1 Correcto
+Error de sintaxis - Token: COLON, Línea: 1, Col: 5
+Error de sintaxis - Token: INT32, Línea: 1, Col: 6
+Error de sintaxis - Token: INT32, Línea: 1, Col: 17
+Error de sintaxis Fin de Linea
+-----Análisis Sintáctico/Semántico - Timestamp: 2022-11-29 21:43:08.647620-05:00
+Entrada: const a:f32 = 4.5;
+let b = a as i32
+ERROR SEMÁNTICO: REASIGNACIÓN DE CONSTANTE
+Error de sintaxis - Token: INT32, Línea: 1, Col: 13
+Error de sintaxis Fin de Linea
+-----Análisis Sintáctico/Semántico - Timestamp: 2022-11-29 21:43:12.304235-05:00
+Entrada: const a:f32 = 4.5;
+let b = a as i32
+ Linea: 1 Correcto
+Error de sintaxis - Token: INT32, Línea: 1, Col: 13
+Error de sintaxis Fin de Linea
+-----Análisis Sintáctico/Semántico - Timestamp: 2022-11-29 21:43:28.286503-05:00
+Entrada: const a:f32 = 4.5;
+let b = a as u32
+ERROR SEMÁNTICO: REASIGNACIÓN DE CONSTANTE
+ERROR SEMÁNTICO: ID NO DECLARADO
+-----Análisis Sintáctico/Semántico - Timestamp: 2022-11-29 21:43:30.494059-05:00
+Entrada: const a:f32 = 4.5;
+let b = a as u32
+ Linea: 1 Correcto
+ERROR SEMÁNTICO: ID NO DECLARADO
+-----Análisis Sintáctico/Semántico - Timestamp: 2022-11-29 21:43:52.701431-05:00
+Entrada: const a:f32 = 4.5;
+let b = a as u32
+ERROR SEMÁNTICO: REASIGNACIÓN DE CONSTANTE
+ERROR SEMÁNTICO: ID NO DECLARADO
+-----Análisis Sintáctico/Semántico - Timestamp: 2022-11-29 21:45:39.487367-05:00
+Entrada: const a:f32 = 20.4;
+let mut b:u32 = 10;
+let b = a as u32
+ Linea: 1 Correcto
+Error de sintaxis - Token: COLON, Línea: 1, Col: 9
+Error de sintaxis - Token: UINT32, Línea: 1, Col: 10
+ Linea: 3 Correcto
+-----Análisis Sintáctico/Semántico - Timestamp: 2022-11-29 21:47:11.188988-05:00
+Entrada: const a:f32 =40.5;
+let b:u32 = 20;
+let b = a as u32;
+ Linea: 1 Correcto
+Error de sintaxis - Token: COLON, Línea: 1, Col: 5
+Error de sintaxis - Token: UINT32, Línea: 1, Col: 6
+Error de sintaxis - Token: ENDCHAR, Línea: 1, Col: 16
+-----Análisis Sintáctico/Semántico - Timestamp: 2022-11-29 21:48:26.597056-05:00
+Entrada: const a : f32 = 20.5;
+let b =20;
+let b = a as u32
+ Linea: 1 Correcto
+ Linea: 2 Correcto
+ Linea: 3 Correcto
+-----Análisis Sintáctico/Semántico - Timestamp: 2022-11-29 21:48:42.606761-05:00
+Entrada: const a : str = "gla";
+let b =20;
+let b = a as u32
+Error de sintaxis - Token: STR, Línea: 1, Col: 10
+Error de sintaxis - Token: IGUAL, Línea: 1, Col: 14
+Error de sintaxis - Token: IDSTRING, Línea: 1, Col: 16
+Error de sintaxis - Token: ENDCHAR, Línea: 1, Col: 21
+Error de sintaxis Fin de Linea
+ Linea: 2 Correcto
+ Linea: 3 Correcto
+-----Análisis Sintáctico/Semántico - Timestamp: 2022-11-29 21:48:45.615734-05:00
+Entrada: const a : str = "gla";
+let b =20;
+let b = a as u32
+Error de sintaxis - Token: STR, Línea: 1, Col: 10
+Error de sintaxis - Token: IGUAL, Línea: 1, Col: 14
+Error de sintaxis - Token: IDSTRING, Línea: 1, Col: 16
+Error de sintaxis - Token: ENDCHAR, Línea: 1, Col: 21
+Error de sintaxis Fin de Linea
+ Linea: 2 Correcto
+ERROR SEMÁNTICO: ID NO DECLARADO
+-----Análisis Sintáctico/Semántico - Timestamp: 2022-11-29 21:49:14.158487-05:00
+Entrada: let mut a = Vec::new();
+let b =20;
+let b = a as u32
+ Linea: 1 Correcto
+ Linea: 2 Correcto
+ERROR SEMÁNTICO: NO SE PUEDE HACER CASTING
+-----Análisis Sintáctico/Semántico - Timestamp: 2022-11-29 21:52:40.132056-05:00
+Entrada: 
+Error de sintaxis Fin de Linea
+-----Análisis Sintáctico/Semántico - Timestamp: 2022-11-29 21:53:18.152702-05:00
+Entrada: //Algoritmo ejemplo Alan Barco
+let n = 5;
+    if n < 0 {
+        print!("{} is negative", n);
+    } else if n > 0 {
+        print!("{} is positive", n);
+    } else {
+        print!("{} is zero", n);
+    }
+
+    let big_n =
+        if n < 10 && n > -10 {
+            println!(", and is a small number, increase ten-fold");
+
+            10 * n
+        } else {
+            println!(", and is a big number, halve the number");
+            n / 2
+        };
+
+    println!("{} -> {}", n, big_n);
+
+
+//Algoritmo ejemplo Jose Jaramillo
+
+use std::io;
+
+fn main() {
+
+    let name:String= input("What is your name? ").expect("Something went wrong!!!");
+
+    let age:i32 = input("What is your age? ")
+        .expect("Failed to get age.")
+        .parse::<i32>()
+        .expect("Invalid age.");
+
+    let current_year:i32 = 2022;
+    let hundred_year:i32 = 100 - age + current_year;
+
+    let repeat:i32 = input("How many times do you want to repeat the message? ")
+        .expect("Failed to get repeat.")
+        .parse::<i32>()
+        .unwrap_or(1);
+
+    let finalMsg: &'static str = "Goodbye!"; 
+
+    for _ in 0..repeat {
+        if age > 100 {
+            println!(
+                "Hey, {}! You turned 100 in the year: {}.",
+                name, hundred_year
+            );
+        } else {
+            println!(
+                "Hey, {}! You'll turn 100 in the year: {}.",
+                name, hundred_year
+            );
+        }
+    }
+
+    println!("{}",finalMsg);
+
+}
+
+
+fn input(user_message: &str) -> io::Result<String> {
+    use std::io::Write;
+
+    print!("{}", user_message);
+
+    io::stdout().flush()?;
+
+    let mut buffer: String = String::new();
+    io::stdin().read_line(&mut buffer)?;
+
+    Ok(buffer.trim_end().to_owned())
+}
+
+
+//Algoritmo ejemplo Pamela Rugel
+
+
+use csv::{ReaderBuilder, StringRecord};
+use std::collections::HashMap;
+use std::fs;
+
+const FILENAME: &str = "history.csv";
+const FIRST_TAG: &str = "INICIO";
+
+struct DatoHistoria {
+    tipo_dato: String,
+    tag: String,
+    texto: String,
+    vida: i32,
+    opciones: Vec<DatoHistoria>,
+}
+
+impl DatoHistoria {
+    fn new(row: StringRecord) -> DatoHistoria {
+        let vida = row.get(3).unwrap().trim().trim();
+        let vida: i32 = vida.parse().unwrap_or(0);
+        return DatoHistoria {
+            tipo_dato: row.get(0).unwrap().trim().to_string(),
+            tag: row.get(1).unwrap().trim().to_string(),
+            texto: row.get(2).unwrap().trim().to_string(),
+            vida: vida,
+            opciones: vec![],
+        };
+    }
+}
+
+fn main() {
+    let mut vida = 100;
+    let mut tag_actual = FIRST_TAG;
+    let mut last_record: String = "".to_string();
+    let mut datos_historia: HashMap<String, DatoHistoria> = HashMap::new();
+
+    let content = fs::read_to_string(FILENAME).unwrap();
+    let mut rdr = ReaderBuilder::new()
+        .delimiter(b';')
+        .from_reader(content.as_bytes());
+    for result in rdr.records() {
+        let result = result.unwrap();
+        let dato = DatoHistoria::new(result);
+        if dato.tipo_dato == "SITUACION" {
+            let record_tag = dato.tag.clone();
+            datos_historia.insert(record_tag.clone(), dato);
+            last_record = record_tag;
+        } else if dato.tipo_dato == "OPCION" {
+            if let Some(data) = datos_historia.get_mut(&last_record) {
+                (*data).opciones.push(dato);
+            }
+        }
+    }
+    // Game loop
+    loop {
+        println!("Tienes {} de vida", vida);
+        if let Some(data) = datos_historia.get(tag_actual) {
+            println!("{}", data.texto);
+            for (indice, option) in data.opciones.iter().enumerate() {
+                println!("[{}] {}", indice, option.texto);
+            }
+            let mut seleccion = String::new();
+            std::io::stdin().read_line(&mut seleccion).unwrap();
+            let seleccion = seleccion.trim().parse().unwrap_or(99);
+            if let Some(opcion_elegida) = &data.opciones.get(seleccion) {
+                tag_actual = &opcion_elegida.tag;
+            } else {
+                println!("Comando no valido")
+            }
+            vida += data.vida;
+            println!("");
+        } else {
+            break;
+        }
+        // Si la vida es <= 0 entonces termina el juego
+        if vida <= 0 {
+            println!("Has perdido!");
+            break;
+        }
+    }
+}
+
+/*
+Comentario de varias lineas
+aqui se comenta la primera
+aqui la segunda
+*/
+Error de sintaxis Fin de Linea
+ Linea: 2 Correcto
+Error de sintaxis - Token: INTTYPE, Línea: 1, Col: 11
+Error de sintaxis - Token: LLLAVE, Línea: 1, Col: 13
+Error de sintaxis Fin de Linea
+Error de sintaxis - Token: LPAREN, Línea: 1, Col: 14
+Error de sintaxis - Token: IDSTRING, Línea: 1, Col: 15
+Error de sintaxis - Token: COMA, Línea: 1, Col: 31
+Error de sintaxis - Token: ID, Línea: 1, Col: 33
+Error de sintaxis - Token: RPAREN, Línea: 1, Col: 34
+Error de sintaxis - Token: ENDCHAR, Línea: 1, Col: 35
+Error de sintaxis Fin de Linea
+Error de sintaxis - Token: RLLAVE, Línea: 1, Col: 4
+Error de sintaxis - Token: ELSE, Línea: 1, Col: 6
+Error de sintaxis - Token: INTTYPE, Línea: 1, Col: 18
+Error de sintaxis - Token: LLLAVE, Línea: 1, Col: 20
+Error de sintaxis Fin de Linea
+Error de sintaxis - Token: LPAREN, Línea: 1, Col: 14
+Error de sintaxis - Token: IDSTRING, Línea: 1, Col: 15
+Error de sintaxis - Token: COMA, Línea: 1, Col: 31
+Error de sintaxis - Token: ID, Línea: 1, Col: 33
+Error de sintaxis - Token: RPAREN, Línea: 1, Col: 34
+Error de sintaxis - Token: ENDCHAR, Línea: 1, Col: 35
+Error de sintaxis Fin de Linea
+Error de sintaxis - Token: RLLAVE, Línea: 1, Col: 4
+Error de sintaxis - Token: ELSE, Línea: 1, Col: 6
+Error de sintaxis - Token: LLLAVE, Línea: 1, Col: 11
+Error de sintaxis Fin de Linea
+Error de sintaxis - Token: LPAREN, Línea: 1, Col: 14
+Error de sintaxis - Token: IDSTRING, Línea: 1, Col: 15
+Error de sintaxis - Token: COMA, Línea: 1, Col: 27
+Error de sintaxis - Token: ID, Línea: 1, Col: 29
+Error de sintaxis - Token: RPAREN, Línea: 1, Col: 30
+Error de sintaxis - Token: ENDCHAR, Línea: 1, Col: 31
+Error de sintaxis Fin de Linea
+Error de sintaxis - Token: RLLAVE, Línea: 1, Col: 4
+Error de sintaxis Fin de Linea
+Error de sintaxis Fin de Linea
+Error de sintaxis Fin de Linea
+Error de sintaxis - Token: INTTYPE, Línea: 1, Col: 15
+Error de sintaxis - Token: DAMPERSAND, Línea: 1, Col: 18
+Error de sintaxis - Token: MAYORQUE, Línea: 1, Col: 23
+Error de sintaxis - Token: NINTTYPE, Línea: 1, Col: 25
+Error de sintaxis Fin de Linea
+ Linea: 13 Correcto
+Error de sintaxis Fin de Linea
+Error de sintaxis - Token: INTTYPE, Línea: 1, Col: 12
+Error de sintaxis - Token: TIMES, Línea: 1, Col: 15
+Error de sintaxis Fin de Linea
+Error de sintaxis - Token: RLLAVE, Línea: 1, Col: 8
+Error de sintaxis - Token: ELSE, Línea: 1, Col: 10
+Error de sintaxis - Token: LLLAVE, Línea: 1, Col: 15
+Error de sintaxis Fin de Linea
+ Linea: 17 Correcto
+Error de sintaxis - Token: INTTYPE, Línea: 1, Col: 16
+Error de sintaxis Fin de Linea
+Error de sintaxis - Token: RLLAVE, Línea: 1, Col: 8
+Error de sintaxis - Token: ENDCHAR, Línea: 1, Col: 9
+Error de sintaxis Fin de Linea
+Error de sintaxis Fin de Linea
+Error de sintaxis - Token: COMA, Línea: 1, Col: 23
+Error de sintaxis - Token: ID, Línea: 1, Col: 25
+Error de sintaxis - Token: COMA, Línea: 1, Col: 26
+Error de sintaxis - Token: ID, Línea: 1, Col: 28
+Error de sintaxis Fin de Linea
+Error de sintaxis Fin de Linea
+Error de sintaxis Fin de Linea
+Error de sintaxis Fin de Linea
+Error de sintaxis - Token: USE, Línea: 1, Col: 0
+Error de sintaxis - Token: DOSDOBLEPUNTOS, Línea: 1, Col: 7
+Error de sintaxis - Token: IO, Línea: 1, Col: 9
+Error de sintaxis - Token: ENDCHAR, Línea: 1, Col: 11
+Error de sintaxis Fin de Linea
+Error de sintaxis Fin de Linea
+Error de sintaxis - Token: MAINFN, Línea: 1, Col: 3
+Error de sintaxis - Token: LPAREN, Línea: 1, Col: 7
+Error de sintaxis - Token: RPAREN, Línea: 1, Col: 8
+Error de sintaxis - Token: LLLAVE, Línea: 1, Col: 10
+Error de sintaxis Fin de Linea
+Error de sintaxis Fin de Linea
+Error de sintaxis - Token: COLON, Línea: 1, Col: 12
+Error de sintaxis - Token: STRING, Línea: 1, Col: 13
+Error de sintaxis - Token: INPUT, Línea: 1, Col: 21
+Error de sintaxis - Token: LPAREN, Línea: 1, Col: 26
+Error de sintaxis - Token: RPAREN, Línea: 1, Col: 48
+Error de sintaxis - Token: POINT, Línea: 1, Col: 49
+Error de sintaxis - Token: EXPECT, Línea: 1, Col: 50
+Error de sintaxis - Token: LPAREN, Línea: 1, Col: 56
+Error de sintaxis - Token: IDSTRING, Línea: 1, Col: 57
+Error de sintaxis - Token: RPAREN, Línea: 1, Col: 82
+Error de sintaxis Fin de Linea
+Error de sintaxis - Token: COLON, Línea: 1, Col: 11
+Error de sintaxis - Token: INT32, Línea: 1, Col: 12
+Error de sintaxis - Token: INPUT, Línea: 1, Col: 18
+Error de sintaxis - Token: LPAREN, Línea: 1, Col: 23
+Error de sintaxis - Token: RPAREN, Línea: 1, Col: 44
+Error de sintaxis Fin de Linea
+Error de sintaxis - Token: POINT, Línea: 1, Col: 8
+Error de sintaxis - Token: EXPECT, Línea: 1, Col: 9
+Error de sintaxis - Token: LPAREN, Línea: 1, Col: 15
+Error de sintaxis - Token: IDSTRING, Línea: 1, Col: 16
+Error de sintaxis - Token: RPAREN, Línea: 1, Col: 36
+Error de sintaxis Fin de Linea
+Error de sintaxis - Token: POINT, Línea: 1, Col: 8
+Error de sintaxis - Token: PARSE, Línea: 1, Col: 9
+Error de sintaxis - Token: DOSDOBLEPUNTOS, Línea: 1, Col: 14
+Error de sintaxis - Token: MENORQUE, Línea: 1, Col: 16
+Error de sintaxis - Token: INT32, Línea: 1, Col: 17
+Error de sintaxis - Token: MAYORQUE, Línea: 1, Col: 20
+Error de sintaxis - Token: LPAREN, Línea: 1, Col: 21
+Error de sintaxis - Token: RPAREN, Línea: 1, Col: 22
+Error de sintaxis Fin de Linea
+Error de sintaxis - Token: POINT, Línea: 1, Col: 8
+Error de sintaxis - Token: EXPECT, Línea: 1, Col: 9
+Error de sintaxis - Token: LPAREN, Línea: 1, Col: 15
+Error de sintaxis - Token: IDSTRING, Línea: 1, Col: 16
+Error de sintaxis - Token: RPAREN, Línea: 1, Col: 30
+Error de sintaxis - Token: ENDCHAR, Línea: 1, Col: 31
+Error de sintaxis Fin de Linea
+Error de sintaxis Fin de Linea
+Error de sintaxis - Token: COLON, Línea: 1, Col: 20
+Error de sintaxis - Token: INT32, Línea: 1, Col: 21
+Error de sintaxis - Token: COLON, Línea: 1, Col: 20
+Error de sintaxis - Token: INT32, Línea: 1, Col: 21
+Error de sintaxis - Token: ID, Línea: 1, Col: 33
+Error de sintaxis - Token: PLUS, Línea: 1, Col: 37
+Error de sintaxis - Token: ID, Línea: 1, Col: 39
+Error de sintaxis - Token: ENDCHAR, Línea: 1, Col: 51
+Error de sintaxis Fin de Linea
+Error de sintaxis Fin de Linea
+Error de sintaxis - Token: COLON, Línea: 1, Col: 14
+Error de sintaxis - Token: INT32, Línea: 1, Col: 15
+Error de sintaxis - Token: INPUT, Línea: 1, Col: 21
+Error de sintaxis - Token: LPAREN, Línea: 1, Col: 26
+Error de sintaxis - Token: RPAREN, Línea: 1, Col: 79
+Error de sintaxis Fin de Linea
+Error de sintaxis - Token: POINT, Línea: 1, Col: 8
+Error de sintaxis - Token: EXPECT, Línea: 1, Col: 9
+Error de sintaxis - Token: LPAREN, Línea: 1, Col: 15
+Error de sintaxis - Token: IDSTRING, Línea: 1, Col: 16
+Error de sintaxis - Token: RPAREN, Línea: 1, Col: 39
+Error de sintaxis Fin de Linea
+Error de sintaxis - Token: POINT, Línea: 1, Col: 8
+Error de sintaxis - Token: PARSE, Línea: 1, Col: 9
+Error de sintaxis - Token: DOSDOBLEPUNTOS, Línea: 1, Col: 14
+Error de sintaxis - Token: MENORQUE, Línea: 1, Col: 16
+Error de sintaxis - Token: INT32, Línea: 1, Col: 17
+Error de sintaxis - Token: MAYORQUE, Línea: 1, Col: 20
+Error de sintaxis - Token: LPAREN, Línea: 1, Col: 21
+Error de sintaxis - Token: RPAREN, Línea: 1, Col: 22
+Error de sintaxis Fin de Linea
+Error de sintaxis - Token: POINT, Línea: 1, Col: 8
+Error de sintaxis - Token: UNWRAPOR, Línea: 1, Col: 9
+Error de sintaxis - Token: LPAREN, Línea: 1, Col: 18
+Error de sintaxis - Token: INTTYPE, Línea: 1, Col: 19
+Error de sintaxis - Token: RPAREN, Línea: 1, Col: 20
+Error de sintaxis - Token: ENDCHAR, Línea: 1, Col: 21
+Error de sintaxis Fin de Linea
+Error de sintaxis Fin de Linea
+Error de sintaxis - Token: COLON, Línea: 1, Col: 16
+Error de sintaxis - Token: AMPERSAND, Línea: 1, Col: 18
+Error de sintaxis - Token: COMILLA, Línea: 1, Col: 19
+Error de sintaxis - Token: STATIC, Línea: 1, Col: 20
+Error de sintaxis - Token: STR, Línea: 1, Col: 27
+Error de sintaxis Fin de Linea
+Error de sintaxis - Token: FOR, Línea: 1, Col: 4
+Error de sintaxis - Token: IN, Línea: 1, Col: 10
+Error de sintaxis - Token: FLOATTYPE, Línea: 1, Col: 13
+Error de sintaxis - Token: ID, Línea: 1, Col: 16
+Error de sintaxis - Token: LLLAVE, Línea: 1, Col: 23
+Error de sintaxis Fin de Linea
+Error de sintaxis - Token: INTTYPE, Línea: 1, Col: 17
+Error de sintaxis - Token: LLLAVE, Línea: 1, Col: 21
+Error de sintaxis Fin de Linea
+Error de sintaxis Fin de Linea
+Error de sintaxis - Token: IDSTRING, Línea: 1, Col: 16
+Error de sintaxis - Token: COMA, Línea: 1, Col: 58
+Error de sintaxis Fin de Linea
+Error de sintaxis - Token: COMA, Línea: 1, Col: 20
+Error de sintaxis - Token: ID, Línea: 1, Col: 22
+Error de sintaxis Fin de Linea
+Error de sintaxis - Token: RPAREN, Línea: 1, Col: 12
+Error de sintaxis - Token: ENDCHAR, Línea: 1, Col: 13
+Error de sintaxis Fin de Linea
+Error de sintaxis - Token: RLLAVE, Línea: 1, Col: 8
+Error de sintaxis - Token: ELSE, Línea: 1, Col: 10
+Error de sintaxis - Token: LLLAVE, Línea: 1, Col: 15
+Error de sintaxis Fin de Linea
+Error de sintaxis Fin de Linea
+Error de sintaxis - Token: IDSTRING, Línea: 1, Col: 16
+Error de sintaxis - Token: COMA, Línea: 1, Col: 59
+Error de sintaxis Fin de Linea
+Error de sintaxis - Token: COMA, Línea: 1, Col: 20
+Error de sintaxis - Token: ID, Línea: 1, Col: 22
+Error de sintaxis Fin de Linea
+Error de sintaxis - Token: RPAREN, Línea: 1, Col: 12
+Error de sintaxis - Token: ENDCHAR, Línea: 1, Col: 13
+Error de sintaxis Fin de Linea
+Error de sintaxis - Token: RLLAVE, Línea: 1, Col: 8
+Error de sintaxis Fin de Linea
+Error de sintaxis - Token: RLLAVE, Línea: 1, Col: 4
+Error de sintaxis Fin de Linea
+Error de sintaxis Fin de Linea
+Error de sintaxis - Token: COMA, Línea: 1, Col: 17
+Error de sintaxis - Token: ID, Línea: 1, Col: 18
+Error de sintaxis Fin de Linea
+Error de sintaxis - Token: RLLAVE, Línea: 1, Col: 0
+Error de sintaxis Fin de Linea
+Error de sintaxis Fin de Linea
+Error de sintaxis Fin de Linea
+Error de sintaxis - Token: INPUT, Línea: 1, Col: 3
+Error de sintaxis - Token: LPAREN, Línea: 1, Col: 8
+Error de sintaxis - Token: COLON, Línea: 1, Col: 21
+Error de sintaxis - Token: AMPERSAND, Línea: 1, Col: 23
+Error de sintaxis - Token: STR, Línea: 1, Col: 24
+Error de sintaxis - Token: RPAREN, Línea: 1, Col: 27
+Error de sintaxis - Token: ARROWOPT, Línea: 1, Col: 29
+Error de sintaxis - Token: IO, Línea: 1, Col: 32
+Error de sintaxis - Token: DOSDOBLEPUNTOS, Línea: 1, Col: 34
+Error de sintaxis - Token: ID, Línea: 1, Col: 36
+Error de sintaxis - Token: MENORQUE, Línea: 1, Col: 42
+Error de sintaxis - Token: STRING, Línea: 1, Col: 43
+Error de sintaxis - Token: MAYORQUE, Línea: 1, Col: 49
+Error de sintaxis - Token: LLLAVE, Línea: 1, Col: 51
+Error de sintaxis Fin de Linea
+Error de sintaxis - Token: USE, Línea: 1, Col: 4
+Error de sintaxis - Token: DOSDOBLEPUNTOS, Línea: 1, Col: 11
+Error de sintaxis - Token: IO, Línea: 1, Col: 13
+Error de sintaxis - Token: DOSDOBLEPUNTOS, Línea: 1, Col: 15
+Error de sintaxis - Token: ID, Línea: 1, Col: 17
+Error de sintaxis - Token: ENDCHAR, Línea: 1, Col: 22
+Error de sintaxis Fin de Linea
+Error de sintaxis Fin de Linea
+Error de sintaxis - Token: LPAREN, Línea: 1, Col: 10
+Error de sintaxis - Token: IDSTRING, Línea: 1, Col: 11
+Error de sintaxis - Token: COMA, Línea: 1, Col: 15
+Error de sintaxis - Token: ID, Línea: 1, Col: 17
+Error de sintaxis - Token: RPAREN, Línea: 1, Col: 29
+Error de sintaxis - Token: ENDCHAR, Línea: 1, Col: 30
+Error de sintaxis Fin de Linea
+Error de sintaxis Fin de Linea
+Error de sintaxis - Token: ID, Línea: 1, Col: 8
+Error de sintaxis - Token: LPAREN, Línea: 1, Col: 14
+Error de sintaxis - Token: RPAREN, Línea: 1, Col: 15
+Error de sintaxis - Token: POINT, Línea: 1, Col: 16
+Error de sintaxis - Token: ID, Línea: 1, Col: 17
+Error de sintaxis - Token: LPAREN, Línea: 1, Col: 22
+Error de sintaxis - Token: RPAREN, Línea: 1, Col: 23
+Error de sintaxis - Token: INTERRO, Línea: 1, Col: 24
+Error de sintaxis - Token: ENDCHAR, Línea: 1, Col: 25
+Error de sintaxis Fin de Linea
+Error de sintaxis Fin de Linea
+Error de sintaxis - Token: COLON, Línea: 1, Col: 18
+Error de sintaxis - Token: STRING, Línea: 1, Col: 20
+Error de sintaxis - Token: NEW, Línea: 1, Col: 37
+Error de sintaxis - Token: LPAREN, Línea: 1, Col: 40
+Error de sintaxis - Token: RPAREN, Línea: 1, Col: 41
+Error de sintaxis - Token: ENDCHAR, Línea: 1, Col: 42
+Error de sintaxis Fin de Linea
+Error de sintaxis - Token: INTERRO, Línea: 1, Col: 38
+Error de sintaxis Fin de Linea
+Error de sintaxis - Token: OK, Línea: 1, Col: 4
+Error de sintaxis - Token: LPAREN, Línea: 1, Col: 6
+Error de sintaxis - Token: ID, Línea: 1, Col: 14
+Error de sintaxis - Token: LPAREN, Línea: 1, Col: 22
+Error de sintaxis - Token: RPAREN, Línea: 1, Col: 23
+Error de sintaxis - Token: POINT, Línea: 1, Col: 24
+Error de sintaxis - Token: ID, Línea: 1, Col: 25
+Error de sintaxis - Token: LPAREN, Línea: 1, Col: 33
+Error de sintaxis - Token: RPAREN, Línea: 1, Col: 34
+Error de sintaxis - Token: RPAREN, Línea: 1, Col: 35
+Error de sintaxis Fin de Linea
+Error de sintaxis - Token: RLLAVE, Línea: 1, Col: 0
+Error de sintaxis Fin de Linea
+Error de sintaxis Fin de Linea
+Error de sintaxis Fin de Linea
+Error de sintaxis Fin de Linea
+Error de sintaxis Fin de Linea
+Error de sintaxis Fin de Linea
+Error de sintaxis - Token: USE, Línea: 1, Col: 0
+Error de sintaxis - Token: DOSDOBLEPUNTOS, Línea: 1, Col: 7
+Error de sintaxis - Token: LLLAVE, Línea: 1, Col: 9
+Error de sintaxis - Token: ID, Línea: 1, Col: 10
+Error de sintaxis - Token: COMA, Línea: 1, Col: 23
+Error de sintaxis - Token: ID, Línea: 1, Col: 25
+Error de sintaxis - Token: RLLAVE, Línea: 1, Col: 37
+Error de sintaxis - Token: ENDCHAR, Línea: 1, Col: 38
+Error de sintaxis Fin de Linea
+Error de sintaxis - Token: USE, Línea: 1, Col: 0
+Error de sintaxis - Token: DOSDOBLEPUNTOS, Línea: 1, Col: 7
+Error de sintaxis - Token: ID, Línea: 1, Col: 9
+Error de sintaxis - Token: DOSDOBLEPUNTOS, Línea: 1, Col: 20
+Error de sintaxis - Token: HASHMAP, Línea: 1, Col: 22
+Error de sintaxis - Token: ENDCHAR, Línea: 1, Col: 29
+Error de sintaxis Fin de Linea
+Error de sintaxis - Token: USE, Línea: 1, Col: 0
+Error de sintaxis - Token: DOSDOBLEPUNTOS, Línea: 1, Col: 7
+Error de sintaxis - Token: ID, Línea: 1, Col: 9
+Error de sintaxis - Token: ENDCHAR, Línea: 1, Col: 11
+Error de sintaxis Fin de Linea
+Error de sintaxis Fin de Linea
+ Linea: 87 Correcto
+ Linea: 88 Correcto
+Error de sintaxis Fin de Linea
+Error de sintaxis - Token: STRUCT, Línea: 1, Col: 0
+Error de sintaxis - Token: LLLAVE, Línea: 1, Col: 20
+Error de sintaxis Fin de Linea
+Error de sintaxis - Token: COLON, Línea: 1, Col: 13
+Error de sintaxis - Token: STRING, Línea: 1, Col: 15
+Error de sintaxis - Token: COMA, Línea: 1, Col: 21
+Error de sintaxis Fin de Linea
+Error de sintaxis - Token: COLON, Línea: 1, Col: 7
+Error de sintaxis - Token: STRING, Línea: 1, Col: 9
+Error de sintaxis - Token: COMA, Línea: 1, Col: 15
+Error de sintaxis Fin de Linea
+Error de sintaxis - Token: COLON, Línea: 1, Col: 9
+Error de sintaxis - Token: STRING, Línea: 1, Col: 11
+Error de sintaxis - Token: COMA, Línea: 1, Col: 17
+Error de sintaxis Fin de Linea
+Error de sintaxis - Token: COLON, Línea: 1, Col: 8
+Error de sintaxis - Token: INT32, Línea: 1, Col: 10
+Error de sintaxis - Token: COMA, Línea: 1, Col: 13
+Error de sintaxis Fin de Linea
+Error de sintaxis - Token: COLON, Línea: 1, Col: 12
+Error de sintaxis - Token: VEC, Línea: 1, Col: 14
+Error de sintaxis - Token: MENORQUE, Línea: 1, Col: 17
+Error de sintaxis - Token: ID, Línea: 1, Col: 18
+Error de sintaxis - Token: MAYORQUE, Línea: 1, Col: 30
+Error de sintaxis - Token: COMA, Línea: 1, Col: 31
+Error de sintaxis Fin de Linea
+Error de sintaxis - Token: RLLAVE, Línea: 1, Col: 0
+Error de sintaxis Fin de Linea
+Error de sintaxis Fin de Linea
+Error de sintaxis - Token: IMPL, Línea: 1, Col: 0
+Error de sintaxis - Token: LLLAVE, Línea: 1, Col: 18
+Error de sintaxis Fin de Linea
+Error de sintaxis - Token: NEW, Línea: 1, Col: 7
+Error de sintaxis - Token: LPAREN, Línea: 1, Col: 10
+Error de sintaxis - Token: COLON, Línea: 1, Col: 14
+Error de sintaxis - Token: ID, Línea: 1, Col: 16
+Error de sintaxis - Token: RPAREN, Línea: 1, Col: 28
+Error de sintaxis - Token: ARROWOPT, Línea: 1, Col: 30
+Error de sintaxis - Token: ID, Línea: 1, Col: 33
+Error de sintaxis - Token: LLLAVE, Línea: 1, Col: 46
+Error de sintaxis Fin de Linea
+Error de sintaxis - Token: POINT, Línea: 1, Col: 22
+Error de sintaxis - Token: ID, Línea: 1, Col: 23
+Error de sintaxis - Token: LPAREN, Línea: 1, Col: 26
+Error de sintaxis - Token: INTTYPE, Línea: 1, Col: 27
+Error de sintaxis - Token: RPAREN, Línea: 1, Col: 28
+Error de sintaxis - Token: POINT, Línea: 1, Col: 29
+Error de sintaxis - Token: ID, Línea: 1, Col: 30
+Error de sintaxis - Token: LPAREN, Línea: 1, Col: 36
+Error de sintaxis - Token: RPAREN, Línea: 1, Col: 37
+Error de sintaxis - Token: POINT, Línea: 1, Col: 38
+Error de sintaxis - Token: ID, Línea: 1, Col: 39
+Error de sintaxis - Token: LPAREN, Línea: 1, Col: 43
+Error de sintaxis - Token: RPAREN, Línea: 1, Col: 44
+Error de sintaxis - Token: POINT, Línea: 1, Col: 45
+Error de sintaxis - Token: ID, Línea: 1, Col: 46
+Error de sintaxis - Token: LPAREN, Línea: 1, Col: 50
+Error de sintaxis - Token: RPAREN, Línea: 1, Col: 51
+Error de sintaxis - Token: COLON, Línea: 1, Col: 16
+Error de sintaxis - Token: INT32, Línea: 1, Col: 18
+Error de sintaxis - Token: POINT, Línea: 1, Col: 28
+Error de sintaxis - Token: PARSE, Línea: 1, Col: 29
+Error de sintaxis - Token: LPAREN, Línea: 1, Col: 34
+Error de sintaxis - Token: RPAREN, Línea: 1, Col: 35
+Error de sintaxis - Token: POINT, Línea: 1, Col: 36
+Error de sintaxis - Token: UNWRAPOR, Línea: 1, Col: 37
+Error de sintaxis - Token: LPAREN, Línea: 1, Col: 46
+Error de sintaxis - Token: INTTYPE, Línea: 1, Col: 47
+Error de sintaxis - Token: RPAREN, Línea: 1, Col: 48
+Error de sintaxis - Token: RETURN, Línea: 1, Col: 8
+Error de sintaxis - Token: LLLAVE, Línea: 1, Col: 28
+Error de sintaxis Fin de Linea
+Error de sintaxis - Token: COLON, Línea: 1, Col: 21
+Error de sintaxis - Token: ID, Línea: 1, Col: 23
+Error de sintaxis - Token: ID, Línea: 1, Col: 27
+Error de sintaxis - Token: LPAREN, Línea: 1, Col: 30
+Error de sintaxis - Token: INTTYPE, Línea: 1, Col: 31
+Error de sintaxis - Token: RPAREN, Línea: 1, Col: 32
+Error de sintaxis - Token: POINT, Línea: 1, Col: 33
+Error de sintaxis - Token: ID, Línea: 1, Col: 34
+Error de sintaxis - Token: LPAREN, Línea: 1, Col: 40
+Error de sintaxis - Token: RPAREN, Línea: 1, Col: 41
+Error de sintaxis - Token: POINT, Línea: 1, Col: 42
+Error de sintaxis - Token: ID, Línea: 1, Col: 43
+Error de sintaxis - Token: LPAREN, Línea: 1, Col: 47
+Error de sintaxis - Token: RPAREN, Línea: 1, Col: 48
+Error de sintaxis - Token: POINT, Línea: 1, Col: 49
+Error de sintaxis - Token: ID, Línea: 1, Col: 50
+Error de sintaxis - Token: LPAREN, Línea: 1, Col: 59
+Error de sintaxis - Token: RPAREN, Línea: 1, Col: 60
+Error de sintaxis - Token: COMA, Línea: 1, Col: 61
+Error de sintaxis Fin de Linea
+Error de sintaxis - Token: COLON, Línea: 1, Col: 15
+Error de sintaxis - Token: ID, Línea: 1, Col: 17
+Error de sintaxis - Token: ID, Línea: 1, Col: 21
+Error de sintaxis - Token: LPAREN, Línea: 1, Col: 24
+Error de sintaxis - Token: INTTYPE, Línea: 1, Col: 25
+Error de sintaxis - Token: RPAREN, Línea: 1, Col: 26
+Error de sintaxis - Token: POINT, Línea: 1, Col: 27
+Error de sintaxis - Token: ID, Línea: 1, Col: 28
+Error de sintaxis - Token: LPAREN, Línea: 1, Col: 34
+Error de sintaxis - Token: RPAREN, Línea: 1, Col: 35
+Error de sintaxis - Token: POINT, Línea: 1, Col: 36
+Error de sintaxis - Token: ID, Línea: 1, Col: 37
+Error de sintaxis - Token: LPAREN, Línea: 1, Col: 41
+Error de sintaxis - Token: RPAREN, Línea: 1, Col: 42
+Error de sintaxis - Token: POINT, Línea: 1, Col: 43
+Error de sintaxis - Token: ID, Línea: 1, Col: 44
+Error de sintaxis - Token: LPAREN, Línea: 1, Col: 53
+Error de sintaxis - Token: RPAREN, Línea: 1, Col: 54
+Error de sintaxis - Token: COMA, Línea: 1, Col: 55
+Error de sintaxis Fin de Linea
+Error de sintaxis - Token: COLON, Línea: 1, Col: 17
+Error de sintaxis - Token: ID, Línea: 1, Col: 19
+Error de sintaxis - Token: ID, Línea: 1, Col: 23
+Error de sintaxis - Token: LPAREN, Línea: 1, Col: 26
+Error de sintaxis - Token: INTTYPE, Línea: 1, Col: 27
+Error de sintaxis - Token: RPAREN, Línea: 1, Col: 28
+Error de sintaxis - Token: POINT, Línea: 1, Col: 29
+Error de sintaxis - Token: ID, Línea: 1, Col: 30
+Error de sintaxis - Token: LPAREN, Línea: 1, Col: 36
+Error de sintaxis - Token: RPAREN, Línea: 1, Col: 37
+Error de sintaxis - Token: POINT, Línea: 1, Col: 38
+Error de sintaxis - Token: ID, Línea: 1, Col: 39
+Error de sintaxis - Token: LPAREN, Línea: 1, Col: 43
+Error de sintaxis - Token: RPAREN, Línea: 1, Col: 44
+Error de sintaxis - Token: POINT, Línea: 1, Col: 45
+Error de sintaxis - Token: ID, Línea: 1, Col: 46
+Error de sintaxis - Token: LPAREN, Línea: 1, Col: 55
+Error de sintaxis - Token: RPAREN, Línea: 1, Col: 56
+Error de sintaxis - Token: COMA, Línea: 1, Col: 57
+Error de sintaxis Fin de Linea
+Error de sintaxis - Token: COLON, Línea: 1, Col: 16
+Error de sintaxis - Token: ID, Línea: 1, Col: 18
+Error de sintaxis - Token: COMA, Línea: 1, Col: 22
+Error de sintaxis Fin de Linea
+Error de sintaxis - Token: COLON, Línea: 1, Col: 20
+Error de sintaxis - Token: ID, Línea: 1, Col: 22
+Error de sintaxis - Token: LCOR, Línea: 1, Col: 26
+Error de sintaxis - Token: RCOR, Línea: 1, Col: 27
+Error de sintaxis - Token: COMA, Línea: 1, Col: 28
+Error de sintaxis Fin de Linea
+Error de sintaxis - Token: RLLAVE, Línea: 1, Col: 8
+Error de sintaxis - Token: ENDCHAR, Línea: 1, Col: 9
+Error de sintaxis Fin de Linea
+Error de sintaxis - Token: RLLAVE, Línea: 1, Col: 4
+Error de sintaxis Fin de Linea
+Error de sintaxis - Token: RLLAVE, Línea: 1, Col: 0
+Error de sintaxis Fin de Linea
+Error de sintaxis Fin de Linea
+Error de sintaxis - Token: MAINFN, Línea: 1, Col: 3
+Error de sintaxis - Token: LPAREN, Línea: 1, Col: 7
+Error de sintaxis - Token: RPAREN, Línea: 1, Col: 8
+Error de sintaxis - Token: LLLAVE, Línea: 1, Col: 10
+Error de sintaxis Fin de Linea
+ Linea: 113 Correcto
+ Linea: 114 Correcto
+Error de sintaxis - Token: COLON, Línea: 1, Col: 23
+Error de sintaxis - Token: STRING, Línea: 1, Col: 25
+Error de sintaxis - Token: POINT, Línea: 1, Col: 36
+Error de sintaxis - Token: ID, Línea: 1, Col: 37
+Error de sintaxis - Token: LPAREN, Línea: 1, Col: 46
+Error de sintaxis - Token: RPAREN, Línea: 1, Col: 47
+Error de sintaxis - Token: COLON, Línea: 1, Col: 26
+Error de sintaxis - Token: HASHMAP, Línea: 1, Col: 28
+Error de sintaxis - Token: MENORQUE, Línea: 1, Col: 35
+Error de sintaxis - Token: STRING, Línea: 1, Col: 36
+Error de sintaxis - Token: COMA, Línea: 1, Col: 42
+Error de sintaxis - Token: ID, Línea: 1, Col: 44
+Error de sintaxis - Token: MAYORQUE, Línea: 1, Col: 56
+Error de sintaxis Fin de Linea
+Error de sintaxis - Token: DOSDOBLEPUNTOS, Línea: 1, Col: 20
+Error de sintaxis - Token: ID, Línea: 1, Col: 22
+Error de sintaxis - Token: LPAREN, Línea: 1, Col: 36
+Error de sintaxis - Token: ID, Línea: 1, Col: 37
+Error de sintaxis - Token: RPAREN, Línea: 1, Col: 45
+Error de sintaxis - Token: POINT, Línea: 1, Col: 46
+Error de sintaxis - Token: ID, Línea: 1, Col: 47
+Error de sintaxis - Token: LPAREN, Línea: 1, Col: 53
+Error de sintaxis - Token: RPAREN, Línea: 1, Col: 54
+Error de sintaxis - Token: DOSDOBLEPUNTOS, Línea: 1, Col: 31
+Error de sintaxis - Token: NEW, Línea: 1, Col: 33
+Error de sintaxis - Token: LPAREN, Línea: 1, Col: 36
+Error de sintaxis - Token: RPAREN, Línea: 1, Col: 37
+Error de sintaxis Fin de Linea
+Error de sintaxis - Token: POINT, Línea: 1, Col: 8
+Error de sintaxis - Token: LPAREN, Línea: 1, Col: 18
+Error de sintaxis - Token: ID, Línea: 1, Col: 19
+Error de sintaxis - Token: IDCHAR, Línea: 1, Col: 20
+Error de sintaxis - Token: RPAREN, Línea: 1, Col: 23
+Error de sintaxis Fin de Linea
+Error de sintaxis - Token: POINT, Línea: 1, Col: 8
+Error de sintaxis - Token: LPAREN, Línea: 1, Col: 20
+Error de sintaxis - Token: ID, Línea: 1, Col: 21
+Error de sintaxis - Token: ID, Línea: 1, Col: 29
+Error de sintaxis - Token: LPAREN, Línea: 1, Col: 37
+Error de sintaxis - Token: RPAREN, Línea: 1, Col: 38
+Error de sintaxis - Token: RPAREN, Línea: 1, Col: 39
+Error de sintaxis - Token: ENDCHAR, Línea: 1, Col: 40
+Error de sintaxis Fin de Linea
+Error de sintaxis - Token: FOR, Línea: 1, Col: 4
+Error de sintaxis - Token: IN, Línea: 1, Col: 15
+Error de sintaxis - Token: ID, Línea: 1, Col: 18
+Error de sintaxis - Token: ID, Línea: 1, Col: 22
+Error de sintaxis - Token: LPAREN, Línea: 1, Col: 29
+Error de sintaxis - Token: RPAREN, Línea: 1, Col: 30
+Error de sintaxis - Token: LLLAVE, Línea: 1, Col: 32
+Error de sintaxis Fin de Linea
+Error de sintaxis - Token: POINT, Línea: 1, Col: 27
+Error de sintaxis - Token: ID, Línea: 1, Col: 28
+Error de sintaxis - Token: LPAREN, Línea: 1, Col: 34
+Error de sintaxis - Token: RPAREN, Línea: 1, Col: 35
+Error de sintaxis - Token: DOSDOBLEPUNTOS, Línea: 1, Col: 31
+Error de sintaxis - Token: NEW, Línea: 1, Col: 33
+Error de sintaxis - Token: LPAREN, Línea: 1, Col: 36
+Error de sintaxis - Token: ID, Línea: 1, Col: 37
+Error de sintaxis - Token: RPAREN, Línea: 1, Col: 43
+Error de sintaxis - Token: POINT, Línea: 1, Col: 15
+Error de sintaxis - Token: ID, Línea: 1, Col: 16
+Error de sintaxis - Token: IDSTRING, Línea: 1, Col: 29
+Error de sintaxis - Token: LLLAVE, Línea: 1, Col: 41
+Error de sintaxis Fin de Linea
+Error de sintaxis - Token: POINT, Línea: 1, Col: 33
+Error de sintaxis - Token: ID, Línea: 1, Col: 34
+Error de sintaxis - Token: POINT, Línea: 1, Col: 37
+Error de sintaxis - Token: ID, Línea: 1, Col: 38
+Error de sintaxis - Token: LPAREN, Línea: 1, Col: 43
+Error de sintaxis - Token: RPAREN, Línea: 1, Col: 44
+Error de sintaxis - Token: ID, Línea: 1, Col: 27
+Error de sintaxis - Token: LPAREN, Línea: 1, Col: 33
+Error de sintaxis - Token: ID, Línea: 1, Col: 34
+Error de sintaxis - Token: POINT, Línea: 1, Col: 44
+Error de sintaxis - Token: ID, Línea: 1, Col: 45
+Error de sintaxis - Token: LPAREN, Línea: 1, Col: 50
+Error de sintaxis - Token: RPAREN, Línea: 1, Col: 51
+Error de sintaxis - Token: COMA, Línea: 1, Col: 52
+Error de sintaxis - Token: ID, Línea: 1, Col: 54
+Error de sintaxis - Token: RPAREN, Línea: 1, Col: 58
+Error de sintaxis - Token: ENDCHAR, Línea: 1, Col: 59
+Error de sintaxis Fin de Linea
+ Linea: 128 Correcto
+Error de sintaxis - Token: RLLAVE, Línea: 1, Col: 8
+Error de sintaxis - Token: ELSE, Línea: 1, Col: 10
+Error de sintaxis - Token: POINT, Línea: 1, Col: 22
+Error de sintaxis - Token: ID, Línea: 1, Col: 23
+Error de sintaxis - Token: IDSTRING, Línea: 1, Col: 36
+Error de sintaxis - Token: LLLAVE, Línea: 1, Col: 45
+Error de sintaxis Fin de Linea
+Error de sintaxis - Token: LET, Línea: 1, Col: 15
+Error de sintaxis - Token: LPAREN, Línea: 1, Col: 23
+Error de sintaxis - Token: ID, Línea: 1, Col: 24
+Error de sintaxis - Token: RPAREN, Línea: 1, Col: 28
+Error de sintaxis - Token: IGUAL, Línea: 1, Col: 30
+Error de sintaxis - Token: ID, Línea: 1, Col: 32
+Error de sintaxis - Token: POINT, Línea: 1, Col: 46
+Error de sintaxis - Token: ID, Línea: 1, Col: 47
+Error de sintaxis - Token: LPAREN, Línea: 1, Col: 54
+Error de sintaxis - Token: AMPERSAND, Línea: 1, Col: 55
+Error de sintaxis - Token: ID, Línea: 1, Col: 56
+Error de sintaxis - Token: RPAREN, Línea: 1, Col: 67
+Error de sintaxis Fin de Linea
+Error de sintaxis - Token: LPAREN, Línea: 1, Col: 16
+Error de sintaxis - Token: TIMES, Línea: 1, Col: 17
+Error de sintaxis - Token: RPAREN, Línea: 1, Col: 22
+Error de sintaxis - Token: ID, Línea: 1, Col: 24
+Error de sintaxis - Token: POINT, Línea: 1, Col: 32
+Error de sintaxis - Token: ID, Línea: 1, Col: 38
+Error de sintaxis - Token: RPAREN, Línea: 1, Col: 42
+Error de sintaxis - Token: ENDCHAR, Línea: 1, Col: 43
+Error de sintaxis Fin de Linea
+Error de sintaxis - Token: RLLAVE, Línea: 1, Col: 12
+Error de sintaxis Fin de Linea
+Error de sintaxis - Token: RLLAVE, Línea: 1, Col: 8
+Error de sintaxis Fin de Linea
+Error de sintaxis - Token: RLLAVE, Línea: 1, Col: 4
+Error de sintaxis Fin de Linea
+Error de sintaxis Fin de Linea
+Error de sintaxis Fin de Linea
+Error de sintaxis - Token: COMA, Línea: 1, Col: 36
+Error de sintaxis - Token: ID, Línea: 1, Col: 38
+Error de sintaxis - Token: LET, Línea: 1, Col: 11
+Error de sintaxis - Token: LPAREN, Línea: 1, Col: 19
+Error de sintaxis - Token: ID, Línea: 1, Col: 20
+Error de sintaxis - Token: RPAREN, Línea: 1, Col: 24
+Error de sintaxis - Token: IGUAL, Línea: 1, Col: 26
+Error de sintaxis - Token: ID, Línea: 1, Col: 28
+Error de sintaxis - Token: POINT, Línea: 1, Col: 42
+Error de sintaxis - Token: ID, Línea: 1, Col: 43
+Error de sintaxis - Token: LPAREN, Línea: 1, Col: 46
+Error de sintaxis - Token: ID, Línea: 1, Col: 47
+Error de sintaxis - Token: RPAREN, Línea: 1, Col: 57
+Error de sintaxis Fin de Linea
+Error de sintaxis - Token: COMA, Línea: 1, Col: 25
+Error de sintaxis - Token: ID, Línea: 1, Col: 27
+Error de sintaxis - Token: POINT, Línea: 1, Col: 31
+Error de sintaxis - Token: ID, Línea: 1, Col: 32
+Error de sintaxis - Token: FOR, Línea: 1, Col: 12
+Error de sintaxis - Token: LPAREN, Línea: 1, Col: 16
+Error de sintaxis - Token: COMA, Línea: 1, Col: 23
+Error de sintaxis - Token: ID, Línea: 1, Col: 25
+Error de sintaxis - Token: RPAREN, Línea: 1, Col: 31
+Error de sintaxis - Token: IN, Línea: 1, Col: 33
+Error de sintaxis - Token: ID, Línea: 1, Col: 36
+Error de sintaxis - Token: ID, Línea: 1, Col: 41
+Error de sintaxis - Token: POINT, Línea: 1, Col: 49
+Error de sintaxis - Token: ID, Línea: 1, Col: 50
+Error de sintaxis - Token: LPAREN, Línea: 1, Col: 54
+Error de sintaxis - Token: RPAREN, Línea: 1, Col: 55
+Error de sintaxis - Token: POINT, Línea: 1, Col: 56
+Error de sintaxis - Token: ID, Línea: 1, Col: 57
+Error de sintaxis - Token: LPAREN, Línea: 1, Col: 66
+Error de sintaxis - Token: RPAREN, Línea: 1, Col: 67
+Error de sintaxis - Token: LLLAVE, Línea: 1, Col: 69
+Error de sintaxis Fin de Linea
+Error de sintaxis - Token: COMA, Línea: 1, Col: 34
+Error de sintaxis - Token: ID, Línea: 1, Col: 36
+Error de sintaxis - Token: COMA, Línea: 1, Col: 42
+Error de sintaxis - Token: ID, Línea: 1, Col: 44
+Error de sintaxis - Token: POINT, Línea: 1, Col: 50
+Error de sintaxis - Token: ID, Línea: 1, Col: 51
+Error de sintaxis - Token: RLLAVE, Línea: 1, Col: 12
+Error de sintaxis Fin de Linea
+Error de sintaxis - Token: NEW, Línea: 1, Col: 40
+Error de sintaxis - Token: LPAREN, Línea: 1, Col: 43
+Error de sintaxis - Token: RPAREN, Línea: 1, Col: 44
+Error de sintaxis - Token: ENDCHAR, Línea: 1, Col: 45
+Error de sintaxis Fin de Linea
+Error de sintaxis - Token: DOSDOBLEPUNTOS, Línea: 1, Col: 15
+Error de sintaxis - Token: IO, Línea: 1, Col: 17
+Error de sintaxis - Token: DOSDOBLEPUNTOS, Línea: 1, Col: 19
+Error de sintaxis - Token: STDIN, Línea: 1, Col: 21
+Error de sintaxis - Token: LPAREN, Línea: 1, Col: 26
+Error de sintaxis - Token: RPAREN, Línea: 1, Col: 27
+Error de sintaxis - Token: READLINE, Línea: 1, Col: 29
+Error de sintaxis - Token: LPAREN, Línea: 1, Col: 38
+Error de sintaxis - Token: AMPERSAND, Línea: 1, Col: 39
+Error de sintaxis - Token: MUT, Línea: 1, Col: 40
+Error de sintaxis - Token: ID, Línea: 1, Col: 44
+Error de sintaxis - Token: RPAREN, Línea: 1, Col: 53
+Error de sintaxis - Token: POINT, Línea: 1, Col: 54
+Error de sintaxis - Token: ID, Línea: 1, Col: 55
+Error de sintaxis - Token: LPAREN, Línea: 1, Col: 61
+Error de sintaxis - Token: RPAREN, Línea: 1, Col: 62
+Error de sintaxis - Token: ENDCHAR, Línea: 1, Col: 63
+Error de sintaxis Fin de Linea
+Error de sintaxis - Token: POINT, Línea: 1, Col: 37
+Error de sintaxis - Token: ID, Línea: 1, Col: 38
+Error de sintaxis - Token: LPAREN, Línea: 1, Col: 42
+Error de sintaxis - Token: RPAREN, Línea: 1, Col: 43
+Error de sintaxis - Token: POINT, Línea: 1, Col: 44
+Error de sintaxis - Token: PARSE, Línea: 1, Col: 45
+Error de sintaxis - Token: LPAREN, Línea: 1, Col: 50
+Error de sintaxis - Token: RPAREN, Línea: 1, Col: 51
+Error de sintaxis - Token: POINT, Línea: 1, Col: 52
+Error de sintaxis - Token: UNWRAPOR, Línea: 1, Col: 53
+Error de sintaxis - Token: LPAREN, Línea: 1, Col: 62
+Error de sintaxis - Token: INTTYPE, Línea: 1, Col: 63
+Error de sintaxis - Token: RPAREN, Línea: 1, Col: 65
+Error de sintaxis - Token: LET, Línea: 1, Col: 15
+Error de sintaxis - Token: LPAREN, Línea: 1, Col: 23
+Error de sintaxis - Token: ID, Línea: 1, Col: 24
+Error de sintaxis - Token: RPAREN, Línea: 1, Col: 38
+Error de sintaxis - Token: IGUAL, Línea: 1, Col: 40
+Error de sintaxis - Token: AMPERSAND, Línea: 1, Col: 42
+Error de sintaxis - Token: ID, Línea: 1, Col: 43
+Error de sintaxis - Token: POINT, Línea: 1, Col: 47
+Error de sintaxis - Token: ID, Línea: 1, Col: 48
+Error de sintaxis - Token: POINT, Línea: 1, Col: 56
+Error de sintaxis - Token: ID, Línea: 1, Col: 57
+Error de sintaxis - Token: LPAREN, Línea: 1, Col: 60
+Error de sintaxis - Token: ID, Línea: 1, Col: 61
+Error de sintaxis - Token: RPAREN, Línea: 1, Col: 70
+Error de sintaxis Fin de Linea
+Error de sintaxis - Token: AMPERSAND, Línea: 1, Col: 29
+Error de sintaxis - Token: POINT, Línea: 1, Col: 44
+Error de sintaxis - Token: ID, Línea: 1, Col: 45
+Error de sintaxis - Token: RLLAVE, Línea: 1, Col: 12
+Error de sintaxis - Token: ELSE, Línea: 1, Col: 14
+Error de sintaxis - Token: LLLAVE, Línea: 1, Col: 19
+Error de sintaxis Fin de Linea
+Error de sintaxis Fin de Linea
+Error de sintaxis - Token: RLLAVE, Línea: 1, Col: 12
+Error de sintaxis Fin de Linea
+Error de sintaxis - Token: SUMAASIGN, Línea: 1, Col: 17
+Error de sintaxis - Token: ID, Línea: 1, Col: 20
+Error de sintaxis - Token: ID, Línea: 1, Col: 25
+Error de sintaxis - Token: ENDCHAR, Línea: 1, Col: 29
+Error de sintaxis Fin de Linea
+ Linea: 152 Correcto
+Error de sintaxis - Token: RLLAVE, Línea: 1, Col: 8
+Error de sintaxis - Token: ELSE, Línea: 1, Col: 10
+Error de sintaxis - Token: LLLAVE, Línea: 1, Col: 15
+Error de sintaxis Fin de Linea
+Error de sintaxis - Token: BREAK, Línea: 1, Col: 12
+Error de sintaxis - Token: ENDCHAR, Línea: 1, Col: 17
+Error de sintaxis Fin de Linea
+Error de sintaxis - Token: RLLAVE, Línea: 1, Col: 8
+Error de sintaxis Fin de Linea
+Error de sintaxis Fin de Linea
+Error de sintaxis - Token: IGUAL, Línea: 1, Col: 17
+Error de sintaxis - Token: INTTYPE, Línea: 1, Col: 19
+Error de sintaxis - Token: LLLAVE, Línea: 1, Col: 21
+Error de sintaxis Fin de Linea
+ Linea: 158 Correcto
+Error de sintaxis - Token: BREAK, Línea: 1, Col: 12
+Error de sintaxis - Token: ENDCHAR, Línea: 1, Col: 17
+Error de sintaxis Fin de Linea
+Error de sintaxis - Token: RLLAVE, Línea: 1, Col: 8
+Error de sintaxis Fin de Linea
+Error de sintaxis - Token: RLLAVE, Línea: 1, Col: 4
+Error de sintaxis Fin de Linea
+Error de sintaxis - Token: RLLAVE, Línea: 1, Col: 0
+Error de sintaxis Fin de Linea
+Error de sintaxis Fin de Linea
+Error de sintaxis - Token: DIVIDE, Línea: 1, Col: 0
+Error de sintaxis - Token: TIMES, Línea: 1, Col: 1
+Error de sintaxis Fin de Linea
+Error de sintaxis - Token: ID, Línea: 1, Col: 11
+Error de sintaxis - Token: ID, Línea: 1, Col: 14
+Error de sintaxis - Token: ID, Línea: 1, Col: 21
+Error de sintaxis Fin de Linea
+Error de sintaxis - Token: ID, Línea: 1, Col: 5
+Error de sintaxis - Token: ID, Línea: 1, Col: 8
+Error de sintaxis - Token: ID, Línea: 1, Col: 16
+Error de sintaxis - Token: ID, Línea: 1, Col: 19
+Error de sintaxis Fin de Linea
+Error de sintaxis - Token: ID, Línea: 1, Col: 5
+Error de sintaxis - Token: ID, Línea: 1, Col: 8
+Error de sintaxis Fin de Linea
+Error de sintaxis - Token: TIMES, Línea: 1, Col: 0
+Error de sintaxis - Token: DIVIDE, Línea: 1, Col: 1
+Error de sintaxis Fin de Linea
+-----Análisis Sintáctico/Semántico - Timestamp: 2022-11-29 21:54:56.004493-05:00
+Entrada: 
+fn main() {
+    let b: i64 = 60;
+    let valor:bool= true;
+    let mut c: i32 = 40;
+    if b < c {
+      println!("holo");
+    }
+
+    let c = b as i32;
+    println!("Hello, world!");
+  
+}
+
+fn num() -> i32 {
+  let a = 10;
+  a
+}
+Error de sintaxis Fin de Linea
+Error de sintaxis - Token: MAINFN, Línea: 1, Col: 3
+Error de sintaxis - Token: LPAREN, Línea: 1, Col: 7
+Error de sintaxis - Token: RPAREN, Línea: 1, Col: 8
+Error de sintaxis - Token: LLLAVE, Línea: 1, Col: 10
+Error de sintaxis Fin de Linea
+Error de sintaxis - Token: COLON, Línea: 1, Col: 9
+Error de sintaxis - Token: INT64, Línea: 1, Col: 11
+Error de sintaxis - Token: COLON, Línea: 1, Col: 13
+Error de sintaxis - Token: BOOL, Línea: 1, Col: 14
+Error de sintaxis - Token: COLON, Línea: 1, Col: 13
+Error de sintaxis - Token: INT32, Línea: 1, Col: 15
+Error de sintaxis Fin de Linea
+ Linea: 7 Correcto
+Error de sintaxis - Token: RLLAVE, Línea: 1, Col: 4
+Error de sintaxis Fin de Linea
+Error de sintaxis Fin de Linea
+Error de sintaxis - Token: ENDCHAR, Línea: 1, Col: 20
+ Linea: 11 Correcto
+Error de sintaxis Fin de Linea
+Error de sintaxis - Token: RLLAVE, Línea: 1, Col: 0
+Error de sintaxis Fin de Linea
+Error de sintaxis Fin de Linea
+Error de sintaxis - Token: RPAREN, Línea: 1, Col: 7
+Error de sintaxis - Token: ARROWOPT, Línea: 1, Col: 9
+Error de sintaxis - Token: INT32, Línea: 1, Col: 12
+Error de sintaxis - Token: LLLAVE, Línea: 1, Col: 16
+Error de sintaxis Fin de Linea
+ Linea: 16 Correcto
+Error de sintaxis Fin de Linea
+Error de sintaxis - Token: RLLAVE, Línea: 1, Col: 0
+Error de sintaxis Fin de Linea
+-----Análisis Sintáctico/Semántico - Timestamp: 2022-11-29 21:55:19.447488-05:00
+Entrada: 
+    let b: i64 = 60;
+    let valor:bool= true;
+    let mut c: i32 = 40;
+    if b < c {
+      println!("holo");
+    }
+
+    let c = b as i32;
+    println!("Hello, world!");
+
+fn num() -> i32 {
+  let a = 10;
+  a
+}
+Error de sintaxis Fin de Linea
+Error de sintaxis - Token: COLON, Línea: 1, Col: 9
+Error de sintaxis - Token: INT64, Línea: 1, Col: 11
+Error de sintaxis - Token: COLON, Línea: 1, Col: 13
+Error de sintaxis - Token: BOOL, Línea: 1, Col: 14
+Error de sintaxis - Token: COLON, Línea: 1, Col: 13
+Error de sintaxis - Token: INT32, Línea: 1, Col: 15
+Error de sintaxis Fin de Linea
+ Linea: 6 Correcto
+Error de sintaxis - Token: RLLAVE, Línea: 1, Col: 4
+Error de sintaxis Fin de Linea
+Error de sintaxis Fin de Linea
+Error de sintaxis - Token: ENDCHAR, Línea: 1, Col: 20
+ Linea: 10 Correcto
+Error de sintaxis Fin de Linea
+Error de sintaxis - Token: RPAREN, Línea: 1, Col: 7
+Error de sintaxis - Token: ARROWOPT, Línea: 1, Col: 9
+Error de sintaxis - Token: INT32, Línea: 1, Col: 12
+Error de sintaxis - Token: LLLAVE, Línea: 1, Col: 16
+Error de sintaxis Fin de Linea
+ Linea: 13 Correcto
+Error de sintaxis Fin de Linea
+Error de sintaxis - Token: RLLAVE, Línea: 1, Col: 0
+Error de sintaxis Fin de Linea
+-----Análisis Sintáctico/Semántico - Timestamp: 2022-11-29 21:56:02.220652-05:00
+Entrada: 
+let b: i64 = 60
+fn num() -> i32 {
+  let a = 10;
+  a
+}
+Error de sintaxis Fin de Linea
+Error de sintaxis - Token: COLON, Línea: 1, Col: 5
+Error de sintaxis - Token: INT64, Línea: 1, Col: 7
+Error de sintaxis Fin de Linea
+Error de sintaxis - Token: RPAREN, Línea: 1, Col: 7
+Error de sintaxis - Token: ARROWOPT, Línea: 1, Col: 9
+Error de sintaxis - Token: INT32, Línea: 1, Col: 12
+Error de sintaxis - Token: LLLAVE, Línea: 1, Col: 16
+Error de sintaxis Fin de Linea
+ Linea: 4 Correcto
+Error de sintaxis Fin de Linea
+Error de sintaxis - Token: RLLAVE, Línea: 1, Col: 0
+Error de sintaxis Fin de Linea
+-----Análisis Sintáctico/Semántico - Timestamp: 2022-11-29 21:56:36.874955-05:00
+Entrada: 
+let b: i64 = 60
+fn num(a:i32) -> i32 {
+  let a = 10;
+  a
+}
+Error de sintaxis Fin de Linea
+Error de sintaxis - Token: COLON, Línea: 1, Col: 5
+Error de sintaxis - Token: INT64, Línea: 1, Col: 7
+Error de sintaxis Fin de Linea
+Error de sintaxis Fin de Linea
+ Linea: 4 Correcto
+Error de sintaxis Fin de Linea
+Error de sintaxis - Token: RLLAVE, Línea: 1, Col: 0
+Error de sintaxis Fin de Linea
+-----Análisis Sintáctico/Semántico - Timestamp: 2022-11-29 21:56:52.243386-05:00
+Entrada: 
+let b: i64 = 60;
+fn num(a:i32) -> i32 {
+  let a = 10;
+  a
+}
+Error de sintaxis Fin de Linea
+Error de sintaxis - Token: COLON, Línea: 1, Col: 5
+Error de sintaxis - Token: INT64, Línea: 1, Col: 7
+Error de sintaxis Fin de Linea
+ Linea: 4 Correcto
+Error de sintaxis Fin de Linea
+Error de sintaxis - Token: RLLAVE, Línea: 1, Col: 0
+Error de sintaxis Fin de Linea
+-----Análisis Sintáctico/Semántico - Timestamp: 2022-11-29 21:57:04.313494-05:00
+Entrada: 
+let b: i64 = 60;
+fn num(a:i32) -> i32 {
+  let a = 10;
+  a
+}
+Error de sintaxis Fin de Linea
+Error de sintaxis - Token: COLON, Línea: 1, Col: 5
+Error de sintaxis - Token: INT64, Línea: 1, Col: 7
+Error de sintaxis Fin de Linea
+ Linea: 4 Correcto
+Error de sintaxis Fin de Linea
+Error de sintaxis - Token: RLLAVE, Línea: 1, Col: 0
+Error de sintaxis Fin de Linea
+-----Análisis Sintáctico/Semántico - Timestamp: 2022-11-29 21:57:05.945753-05:00
+Entrada: 
+let b: i64 = 60;
+fn num(a:i32) -> i32 {
+  let a = 10;
+  a
+}
+Error de sintaxis Fin de Linea
+Error de sintaxis - Token: COLON, Línea: 1, Col: 5
+Error de sintaxis - Token: INT64, Línea: 1, Col: 7
+Error de sintaxis Fin de Linea
+ Linea: 4 Correcto
+Error de sintaxis Fin de Linea
+Error de sintaxis - Token: RLLAVE, Línea: 1, Col: 0
+Error de sintaxis Fin de Linea
+-----Análisis Sintáctico/Semántico - Timestamp: 2022-11-29 21:57:26.593363-05:00
+Entrada: 
+let  b= 60;
+fn num(a:i32) -> i32 {
+  let a = 10;
+  a
+}
+Error de sintaxis Fin de Linea
+ Linea: 2 Correcto
+Error de sintaxis Fin de Linea
+ Linea: 4 Correcto
+Error de sintaxis Fin de Linea
+Error de sintaxis - Token: RLLAVE, Línea: 1, Col: 0
+Error de sintaxis Fin de Linea
+-----Análisis Sintáctico/Semántico - Timestamp: 2022-11-29 21:57:39.879958-05:00
+Entrada: 
+let  b = 60;
+fn num(a:i32) -> i32 {
+  let a = 10;
+  a
+}
+Error de sintaxis Fin de Linea
+ Linea: 2 Correcto
+Error de sintaxis Fin de Linea
+ Linea: 4 Correcto
+Error de sintaxis Fin de Linea
+Error de sintaxis - Token: RLLAVE, Línea: 1, Col: 0
+Error de sintaxis Fin de Linea
+-----Análisis Sintáctico/Semántico - Timestamp: 2022-11-29 21:59:01.923852-05:00
+Entrada: fn num(a:i32) -> i32 {
+  let a = 10;
+  a
+}
+Error de sintaxis Fin de Linea
+ Linea: 2 Correcto
+Error de sintaxis Fin de Linea
+Error de sintaxis - Token: RLLAVE, Línea: 1, Col: 0
+Error de sintaxis Fin de Linea
+-----Análisis Sintáctico/Semántico - Timestamp: 2022-11-29 21:59:04.692750-05:00
+Entrada: fn num(a:i32) -> i32 {
+  let a = 10;
+  a
+}
+Error de sintaxis Fin de Linea
+ Linea: 2 Correcto
+Error de sintaxis Fin de Linea
+Error de sintaxis - Token: RLLAVE, Línea: 1, Col: 0
+Error de sintaxis Fin de Linea
+-----Análisis Sintáctico/Semántico - Timestamp: 2022-11-29 21:59:47.681567-05:00
+Entrada: fn num(a:i32) -> i32 { let a = 10;a}
+Error de sintaxis - Token: RLLAVE, Línea: 1, Col: 35
+Error de sintaxis Fin de Linea
+-----Análisis Sintáctico/Semántico - Timestamp: 2022-11-29 21:59:55.745419-05:00
+Entrada: fn num(a:i32) -> i32 {let a = 10;}
+Error de sintaxis - Token: RLLAVE, Línea: 1, Col: 33
+Error de sintaxis Fin de Linea
+-----Análisis Sintáctico/Semántico - Timestamp: 2022-11-29 21:59:57.168919-05:00
+Entrada: fn num(a:i32) -> i32 {let a = 10;}
+Error de sintaxis - Token: RLLAVE, Línea: 1, Col: 33
+Error de sintaxis Fin de Linea
+-----Análisis Sintáctico/Semántico - Timestamp: 2022-11-29 22:00:26.415569-05:00
+Entrada: fn num(a:i32) -> i32 {let a = 10;return a}
+Error de sintaxis - Token: RLLAVE, Línea: 1, Col: 41
+Error de sintaxis Fin de Linea
+-----Análisis Sintáctico/Semántico - Timestamp: 2022-11-29 22:00:33.191187-05:00
+Entrada: fn num(a:i32) -> i32 {let a = 10;return a;}
+ Linea: 1 Correcto
+-----Análisis Sintáctico/Semántico - Timestamp: 2022-11-29 22:01:11.966290-05:00
+Entrada: fn num(a:i32) -> i32 {let a = 10; a}
+Error de sintaxis - Token: RLLAVE, Línea: 1, Col: 35
+Error de sintaxis Fin de Linea
+-----Análisis Sintáctico/Semántico - Timestamp: 2022-11-29 22:01:40.402845-05:00
+Entrada: fn num(a:i32) -> i32 {let a = 10;a}
+Error de sintaxis - Token: RLLAVE, Línea: 1, Col: 34
+Error de sintaxis Fin de Linea
+-----Análisis Sintáctico/Semántico - Timestamp: 2022-11-29 22:02:34.276475-05:00
+Entrada: fn num() -> i32 {let a = 10;a}
+Error de sintaxis - Token: RPAREN, Línea: 1, Col: 7
+Error de sintaxis - Token: ARROWOPT, Línea: 1, Col: 9
+Error de sintaxis - Token: INT32, Línea: 1, Col: 12
+Error de sintaxis - Token: LLLAVE, Línea: 1, Col: 16
+Error de sintaxis - Token: LET, Línea: 1, Col: 17
+Error de sintaxis - Token: IGUAL, Línea: 1, Col: 23
+Error de sintaxis - Token: INTTYPE, Línea: 1, Col: 25
+Error de sintaxis - Token: ENDCHAR, Línea: 1, Col: 27
+Error de sintaxis - Token: ID, Línea: 1, Col: 28
+Error de sintaxis - Token: RLLAVE, Línea: 1, Col: 29
+Error de sintaxis Fin de Linea
+-----Análisis Sintáctico/Semántico - Timestamp: 2022-11-29 22:02:50.065144-05:00
+Entrada: fn num(a:i32) -> i32 {let a = 10;a}
+Error de sintaxis - Token: RLLAVE, Línea: 1, Col: 34
+Error de sintaxis Fin de Linea
+-----Análisis Sintáctico/Semántico - Timestamp: 2022-11-29 22:05:03.051576-05:00
+Entrada: fn num(A:i32) -> i32 {let a = 10;a}
+Error de sintaxis - Token: RLLAVE, Línea: 1, Col: 34
+Error de sintaxis Fin de Linea
+-----Análisis Sintáctico/Semántico - Timestamp: 2022-11-29 22:07:26.127525-05:00
+Entrada: fn num(a:i32) -> i32 {let a = 10;a}
+Error de sintaxis - Token: RLLAVE, Línea: 1, Col: 34
+Error de sintaxis Fin de Linea
+-----Análisis Sintáctico/Semántico - Timestamp: 2022-11-29 22:07:57.623242-05:00
+Entrada: fn num(a:i32)->i32 {let a = 10;a}
+Error de sintaxis - Token: RLLAVE, Línea: 1, Col: 32
+Error de sintaxis Fin de Linea
+-----Análisis Sintáctico/Semántico - Timestamp: 2022-11-29 22:08:13.559630-05:00
+Entrada: fn num(a:i32)->i32{let a = 10;a}
+Error de sintaxis - Token: RLLAVE, Línea: 1, Col: 31
+Error de sintaxis Fin de Linea
+----------Análisis Léxico - Timestamp: 2022-11-29 22:08:14.414607-05:00
+ Entrada: fn num(a:i32)->i32{let a = 10;a}Resultado: 
+FN ID LPAREN ID COLON INT32 RPAREN ARROWOPT INT32 LLLAVE LET ID IGUAL INTTYPE ENDCHAR ID RLLAVE
+-----Análisis Sintáctico/Semántico - Timestamp: 2022-11-29 22:09:46.950393-05:00
+Entrada: fn num(a:i32)->i32{let a = 10;a}
+Error de sintaxis - Token: RLLAVE, Línea: 1, Col: 31
+Error de sintaxis Fin de Linea

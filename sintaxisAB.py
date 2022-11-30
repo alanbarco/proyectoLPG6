@@ -16,6 +16,9 @@ def p_metodo(p):
   | sumaint
   | entrada
   | while
+  | reasignacion
+  | pushString
+  | casting
   '''
 
 def p_comparacion_id(p):
@@ -67,7 +70,7 @@ def p_boolean(p):
   | FALSE
   '''
   p[0] =  p[1]
-  
+
 def p_loop(p):
   'loop : LOOP LLLAVE metodo RLLAVE'
 
@@ -75,8 +78,6 @@ def p_params(p):
   '''params : ID COLON datatype 
   | ID COLON datatype COMA params'''
 
-def p_funcion_sinreturn(p):
-  'funcion : FN ID LPAREN params RPAREN LLLAVE metodo RLLAVE'
 
 def p_impresion(p):
   'impresion : PRINTLN LPAREN IDSTRING RPAREN ENDCHAR'

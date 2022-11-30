@@ -1,25 +1,26 @@
 from tkinter.ttk import Scrollbar
 import ply.lex as lex
 import ply.yacc as yacc
-from lexico import tokens
+from lexico import *
 from sintaxis import *
 from datetime import datetime
 from pytz import timezone
-import lexico
 import tkinter as tk
 
 res_sintactico = []
+res_lexer = []
 dicc = {}
 errorSemantico = False
 
 #=========================PARTE SEMANTICO JJ=============================
 def asignacionConstCheck(p_clave):
   global res_sintactico , errorSemantico, dicc
-  print(dicc)
+
   if dicc.get(p_clave,False):
-    res_sintactico.append("ERROR SEMÁNTICO: REASIGNACIÓN DE CONSTANTE")
-    errorSemantico = True
-    return False
+    if(dicc.get(p_clave).get("asig") == "const"):
+      res_sintactico.append("ERROR SEMÁNTICO: REASIGNACIÓN DE CONSTANTE")
+      errorSemantico = True
+      return False
   return True
 
 def p_asignacion_let_mut_vec(p):
@@ -108,6 +109,8 @@ def p_asignacion_let_mut(p):
   global dicc
   if asignacionConstCheck(p[3]):
     dicc[p[3]] = {"asig":"mut", "tipo": "nd","valor": p[5]}
+
+
   
 #Asignacion con let
 def p_asignacion_let_int(p):
@@ -115,6 +118,70 @@ def p_asignacion_let_int(p):
   global dicc
   if asignacionConstCheck(p[2]):
     dicc[p[2]] = {"asig":"let", "tipo": "i32" , "valor" : p[4]}
+
+def p_reasignacion(p):
+  '''
+  reasignacion : ID IGUAL valor ENDCHAR
+  '''
+  global res_sintactico , dicc, errorSemantico
+  if dicc.get(p[1],False):
+    if dicc.get(p[1]).get("asig") != "mut":
+      errorSemantico = True
+      res_sintactico.append( "ERROR SEMÁNTICO: TIPO DE VARIABLE NO ES MUTABLE")
+  else:
+    errorSemantico = True
+    res_sintactico.append("ERROR SEMÁNTICO: ID NO DECLARADO PREVIAMENTE")
+
+def p_asignacion_let_mut_string(p):
+  '''asignacion : LET MUT ID IGUAL STRING DOSDOBLEPUNTOS FROM LPAREN IDSTRING RPAREN ENDCHAR'''
+  global dicc
+  if asignacionConstCheck(p[3]):
+    dicc[p[3]] = {"asig":"mut", "tipo": p[5], "valor": '" "'}
+
+def p_pushString(p):
+  '''
+  pushString : ID POINT PUSH_STR LPAREN IDSTRING RPAREN ENDCHAR
+  | ID POINT PUSH_STR LPAREN IDCHAR RPAREN ENDCHAR
+  '''
+  global res_sintactico, dicc, errorSemantico
+
+  if dicc.get(p[1],False):
+    if dicc.get(p[1]).get("tipo") != "String":
+      errorSemantico = True
+      res_sintactico.append( "ERROR SEMÁNTICO: TIPO DE VARIABLE NO ES STRING")
+  else:
+    errorSemantico = True
+    res_sintactico.append("ERROR SEMÁNTICO: ID NO DECLARADO")
+
+def p_casting_decimal(p):
+  '''
+    casting : LET ID IGUAL ID AS uintsize
+    | LET ID IGUAL ID AS intsize
+  '''
+  global res_sintactico, dicc, errorSemantico
+
+  if asignacionConstCheck(p[2]):
+    if dicc.get(p[2],False) and dicc.get(p[4],False):
+      if dicc.get(p[4]).get("tipo") not in ["f64", "f32","bool", "i8", "i16","i32","i64","i128","u8","u16","u32","u64","u128"]:
+        errorSemantico = True
+        res_sintactico.append( "ERROR SEMÁNTICO: NO SE PUEDE HACER CASTING")
+    else:
+      errorSemantico = True
+      res_sintactico.append("ERROR SEMÁNTICO: ID NO DECLARADO")
+
+def p_casting_char(p):
+  '''
+    casting : LET ID IGUAL ID AS CHAR
+  '''
+  global res_sintactico, dicc, errorSemantico
+  if asignacionConstCheck(p[2]):
+    if dicc.get(p[2],False) and dicc.get(p[4],False):
+      if dicc.get(p[2]).get("tipo") not in ["i8", "i16","i32","i64","i128","u8","u16","u32","u64","u128"]:
+        errorSemantico = True
+        res_sintactico.append( "ERROR SEMÁNTICO: NO SE PUEDE HACER CASTING DE CHAR")
+    else:
+      errorSemantico = True
+      res_sintactico.append("ERROR SEMÁNTICO: ID NO DECLARADO")
 
 #=======================================================================
 
@@ -124,7 +191,7 @@ def p_asignacion_let_mut_ll(p):
   '''asignacion : LET MUT ID IGUAL LINKEDLIST DOSDOBLEPUNTOS NEW LPAREN RPAREN ENDCHAR'''
   global dicc
   if asignacionConstCheck(p[2]):
-    dicc[p[3]] = {"asig":"mut", "tipo": p[5]}
+    dicc[p[3]] = {"asig":"mut", "tipo": p[5], "valor": "["}
 
 def p_llpushfront(p):
   '''
@@ -152,120 +219,61 @@ def p_llpopback(p):
     errorSemantico = True
     res_sintactico.append("ERROR SEMÁNTICO: ID NO DECLARADO")
 
-def p_asignacion_const_i8(p):
-  '''
-  asignacion : CONST ID COLON INT8 IGUAL INTTYPE ENDCHAR
-  '''
-  global dicc
-  dicc[p[2]] = p[4]
-
-def p_asignacion_const_i16(p):
-  '''
-  asignacion : CONST ID COLON INT16 IGUAL INTTYPE ENDCHAR
-  '''
-  global dicc
-  dicc[p[2]] = p[4]
-
-def p_asignacion_const_i32(p):
-  '''
-  asignacion : CONST ID COLON INT32 IGUAL INTTYPE ENDCHAR
-  '''
-  global dicc
-  dicc[p[2]] = p[4]
-
-def p_asignacion_const_i64(p):
-  '''
-  asignacion : CONST ID COLON INT64 IGUAL INTTYPE ENDCHAR
-  '''
-  global dicc
-  dicc[p[2]] = p[4]
-
-def p_asignacion_const_i128(p):
-  '''
-  asignacion : CONST ID COLON INT128 IGUAL INTTYPE ENDCHAR
-  '''
-  global dicc
-  dicc[p[2]] = p[4]
-
-def p_asignacion_const_ui8(p):
-  '''
-  asignacion : CONST ID COLON UINT8 IGUAL INTTYPE ENDCHAR
-  '''
-  global dicc
-  dicc[p[2]] = p[4]
-
-def p_asignacion_const_ui16(p):
-  '''
-  asignacion : CONST ID COLON UINT16 IGUAL INTTYPE ENDCHAR
-  '''
-  global dicc
-  dicc[p[2]] = p[4]
-
-def p_asignacion_const_ui32(p):
-  '''
-  asignacion : CONST ID COLON UINT32 IGUAL INTTYPE ENDCHAR
-  '''
-  global dicc
-  dicc[p[2]] = p[4]
-
-def p_asignacion_const_ui64(p):
-  '''
-  asignacion : CONST ID COLON UINT64 IGUAL INTTYPE ENDCHAR
-  '''
-  global dicc
-  dicc[p[2]] = p[4]
-def p_asignacion_const_ui128(p):
-  '''
-  asignacion : CONST ID COLON UINT128 IGUAL INTTYPE ENDCHAR
-  '''
-  global dicc
-  dicc[p[2]] = p[4]
-
-def p_asignacion_const_f32(p):
-  '''
-  asignacion : CONST ID COLON FLOAT32 IGUAL INTTYPE ENDCHAR
-  '''
-  global dicc
-  dicc[p[2]] = p[4]
-
-def p_asignacion_const_f64(p):
-  '''
-  asignacion : CONST ID COLON FLOAT64 IGUAL INTTYPE ENDCHAR
-  '''
-  global dicc
-  dicc[p[2]] = p[4]
-
 def p_sumaint(p):
-  'sumaint : ID PLUS ID'
-  global res_sintactico
-  global dicc
-  global errorSemantico
-  if dicc.get(p[1])!=dicc.get(p[3]):
+  'sumaint : ID signo ID'
+  global res_sintactico, dicc , errorSemantico
+  if dicc.get(p[1], False) and dicc.get(p[3], False):
+    if dicc.get(p[1]).get("tipo") != dicc.get(p[3]).get("tipo"):
+      errorSemantico = True
+      res_sintactico.append( "ERROR SEMÁNTICO: NO SE PUEDE OPERAR\n ENTRE TIPO DE DATOS DIFERENTES")
+  else:
     errorSemantico = True
-    res_sintactico.append( "ERROR SEMÁNTICO: NO SE PUEDE SUMAR ENTEROS DIFERENTES TAMAÑOS")
+    res_sintactico.append( "ERROR SEMÁNTICO: VARIABLE NO DEFINIDA")
 
+def p_sumaint_asignacion(p):
+  '''
+   sumaint : LET ID IGUAL ID signo ID ENDCHAR
+  '''
+  global res_sintactico, dicc , errorSemantico
+  if asignacionConstCheck(p[2]):
+    if dicc.get(p[4], False) and dicc.get(p[6], False):
+      if dicc.get(p[4]).get("tipo") != dicc.get(p[6]).get("tipo"):
+        errorSemantico = True
+        res_sintactico.append( "ERROR SEMÁNTICO: NO SE PUEDE OPERAR\n ENTRE TIPO DE DATOS DIFERENTES")
+    else:
+      errorSemantico = True
+      res_sintactico.append( "ERROR SEMÁNTICO: VARIABLE NO DEFINIDA")
 
 
 #=======================================================================
 
 def p_error(p):
-  global res_sintactico
+  global res_sintactico, errorSemantico
   cadena = " "
   if p:
     cadena =  f"Error de sintaxis - Token: {p.type}, Línea: {p.lineno}, Col: {p.lexpos}"
     res_sintactico.append(str(cadena))
+    errorSemantico = True
     parser.errok()
   else:
     print("Error de sintaxis Fin de Linea")
+    errorSemantico = True
     res_sintactico.append("Error de sintaxis Fin de Linea")
 
+ # Error handling rule
+def t_error(t):
+    global res_lexer
+    res_lexer.append("ILEGAL ")
+    t.lexer.skip(1)
+
 parser = yacc.yacc()
+lexer = lex.lex()
 
 #Llama las funciones del analizador, y lo que recibe el input como cadena de entrada
 def validacion(f):
     global res_sintactico, errorSemantico
     entrada = input.get("1.0","end-1c")
-    print(entrada)
+
     numeroLinea=1
     f.write(entrada + "\n") 
 
@@ -290,32 +298,34 @@ def sintactico():
     file.close()
 
 def lex():
+    global res_lexer
     now = datetime.now(timezone('EST')) 
     file = open('logfile.txt', 'a')
     file.write("\n----------Análisis Léxico - Timestamp: "+  str(now) + "\n Entrada: ")
     entrada = input.get("1.0","end-1c")
+
     file.write(entrada)
-    entrada = entrada.split("\n")
+    file.write("Resultado: \n")
 
-    file.write("Resultado:  ")
-
+    res_lexer = []
     resultado["text"] = " "
     line_number = 1
-    for cadena in entrada:
-      lexico.lexer.input(cadena)
-      tok = lexico.lexer.token()
-      if tok:
-        if line_number != tok.lineno:
-          file.write("\n")
-          line_number = tok.lineno
-        file.write(tok.type)
-        resultado["text"] += tok.type
-      else:
-        file.write("Ilegal")
-        resultado["text"] += "Ilegal"
-      resultado["text"] += "  "
-      file.write(" ")
-    file.w
+    lexer.input(entrada)
+
+    while True:
+      tok = lexer.token()
+      if not tok:
+        break  # No more input
+      if line_number != tok.lineno:
+        res_lexer.append("\n")
+        line_number = tok.lineno
+      res_lexer.append(tok.type)
+
+    file.write(" ".join(res_lexer))
+    resultado["text"] = " ".join(res_lexer)
+
+    file.close()
+
 
 def limpiar():
   global dicc
@@ -347,14 +357,12 @@ resultado = tk.Label(second_frame,  bg="#67948a", font="Helvetica 15", fg="#ffff
 resultado.pack(pady=20)
 
 
-botonSemantic = tk.Button(second_frame, text = "Análisis semántico", padx=60,pady=10, command=sintactico, bg="#3b554f", fg="#d4eee8", font="Helvetica 12") #pasar funcion sin parentesis con command =
+botonSemantic = tk.Button(second_frame, text = "Análisis semántico/semántico", padx=60,pady=10, command=sintactico, bg="#3b554f", fg="#d4eee8", font="Helvetica 12") #pasar funcion sin parentesis con command =
 botonSemantic.pack(pady=8)
-botonSintac = tk.Button(second_frame, text = "Análisis sintáctico", padx=60,pady=10, command=sintactico, bg="#3b554f", fg="#d4eee8", font="Helvetica 12") #pasar funcion sin parentesis con command =
-botonSintac.pack(pady=8)
 botonLex = tk.Button(second_frame, text = "Análisis léxico", padx=60,pady=10, command=lex, bg="#3b554f", fg="#d4eee8", font="Helvetica 12") #pasar funcion sin parentesis con command =
 botonLex.pack(pady=8)
 botonDicc = tk.Button(second_frame, text = "Limpiar Variables", padx=60,pady=10, command=limpiar, bg="#3b554f", fg="#d4eee8", font="Helvetica 12") 
 botonDicc.pack()
-root.title("bg attribute")
+root.title("Intérprete Rust G6")
 root['bg'] = '#f4fbf9'
 root.mainloop()

@@ -123,15 +123,16 @@ def p_ifcondicion(p):
 #TIPO DE FUNCION
 
 #2. Definicion de funcion
-  
+
 
 def p_funcion_retorno(p):
   '''
   funcion : FN ID LPAREN params RPAREN ARROWOPT datatype LLLAVE cuerpof RETURN ifparams ENDCHAR  RLLAVE
   '''
 
-def p_funcion_returnimplicito(p):
-  '''
-  funcion : FN ID LPAREN params RPAREN ARROWOPT datatype LLLAVE cuerpof ID RLLAVE
-  '''
+def p_funcion_sinreturn(p):
+  'funcion : FN ID LPAREN params RPAREN LLLAVE cuerpof RLLAVE'
+
+
+
 
