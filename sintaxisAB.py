@@ -13,6 +13,7 @@ def p_metodo(p):
   | vectorpush
   | llpushfront
   | llpopback
+  | sumaint
   | entrada
   | while
   '''

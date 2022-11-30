@@ -151,6 +151,101 @@ def p_llpopback(p):
   else:
     errorSemantico = True
     res_sintactico.append("ERROR SEMÁNTICO: ID NO DECLARADO")
+
+def p_asignacion_const_i8(p):
+  '''
+  asignacion : CONST ID COLON INT8 IGUAL INTTYPE ENDCHAR
+  '''
+  global dicc
+  dicc[p[2]] = p[4]
+
+def p_asignacion_const_i16(p):
+  '''
+  asignacion : CONST ID COLON INT16 IGUAL INTTYPE ENDCHAR
+  '''
+  global dicc
+  dicc[p[2]] = p[4]
+
+def p_asignacion_const_i32(p):
+  '''
+  asignacion : CONST ID COLON INT32 IGUAL INTTYPE ENDCHAR
+  '''
+  global dicc
+  dicc[p[2]] = p[4]
+
+def p_asignacion_const_i64(p):
+  '''
+  asignacion : CONST ID COLON INT64 IGUAL INTTYPE ENDCHAR
+  '''
+  global dicc
+  dicc[p[2]] = p[4]
+
+def p_asignacion_const_i128(p):
+  '''
+  asignacion : CONST ID COLON INT128 IGUAL INTTYPE ENDCHAR
+  '''
+  global dicc
+  dicc[p[2]] = p[4]
+
+def p_asignacion_const_ui8(p):
+  '''
+  asignacion : CONST ID COLON UINT8 IGUAL INTTYPE ENDCHAR
+  '''
+  global dicc
+  dicc[p[2]] = p[4]
+
+def p_asignacion_const_ui16(p):
+  '''
+  asignacion : CONST ID COLON UINT16 IGUAL INTTYPE ENDCHAR
+  '''
+  global dicc
+  dicc[p[2]] = p[4]
+
+def p_asignacion_const_ui32(p):
+  '''
+  asignacion : CONST ID COLON UINT32 IGUAL INTTYPE ENDCHAR
+  '''
+  global dicc
+  dicc[p[2]] = p[4]
+
+def p_asignacion_const_ui64(p):
+  '''
+  asignacion : CONST ID COLON UINT64 IGUAL INTTYPE ENDCHAR
+  '''
+  global dicc
+  dicc[p[2]] = p[4]
+def p_asignacion_const_ui128(p):
+  '''
+  asignacion : CONST ID COLON UINT128 IGUAL INTTYPE ENDCHAR
+  '''
+  global dicc
+  dicc[p[2]] = p[4]
+
+def p_asignacion_const_f32(p):
+  '''
+  asignacion : CONST ID COLON FLOAT32 IGUAL INTTYPE ENDCHAR
+  '''
+  global dicc
+  dicc[p[2]] = p[4]
+
+def p_asignacion_const_f64(p):
+  '''
+  asignacion : CONST ID COLON FLOAT64 IGUAL INTTYPE ENDCHAR
+  '''
+  global dicc
+  dicc[p[2]] = p[4]
+
+def p_sumaint(p):
+  'sumaint : ID PLUS ID'
+  global res_sintactico
+  global dicc
+  global errorSemantico
+  if dicc.get(p[1])!=dicc.get(p[3]):
+    errorSemantico = True
+    res_sintactico.append( "ERROR SEMÁNTICO: NO SE PUEDE SUMAR ENTEROS DIFERENTES TAMAÑOS")
+
+
+
 #=======================================================================
 
 def p_error(p):
@@ -170,6 +265,7 @@ parser = yacc.yacc()
 def validacion(f):
     global res_sintactico, errorSemantico
     entrada = input.get("1.0","end-1c")
+    print(entrada)
     numeroLinea=1
     f.write(entrada + "\n") 
 
@@ -248,15 +344,15 @@ input = tk.Text(second_frame, font="Helvetica 18",highlightthickness=2)
 input.config(width=80, height=15, font=("Consolas",12),pady=20)
 input.pack()
 resultado = tk.Label(second_frame,  bg="#67948a", font="Helvetica 15", fg="#ffffff", text="Resultado...")
-resultado.pack()
+resultado.pack(pady=20)
 
 
 botonSemantic = tk.Button(second_frame, text = "Análisis semántico", padx=60,pady=10, command=sintactico, bg="#3b554f", fg="#d4eee8", font="Helvetica 12") #pasar funcion sin parentesis con command =
-botonSemantic.pack()
+botonSemantic.pack(pady=8)
 botonSintac = tk.Button(second_frame, text = "Análisis sintáctico", padx=60,pady=10, command=sintactico, bg="#3b554f", fg="#d4eee8", font="Helvetica 12") #pasar funcion sin parentesis con command =
-botonSintac.pack()
+botonSintac.pack(pady=8)
 botonLex = tk.Button(second_frame, text = "Análisis léxico", padx=60,pady=10, command=lex, bg="#3b554f", fg="#d4eee8", font="Helvetica 12") #pasar funcion sin parentesis con command =
-botonLex.pack()
+botonLex.pack(pady=8)
 botonDicc = tk.Button(second_frame, text = "Limpiar Variables", padx=60,pady=10, command=limpiar, bg="#3b554f", fg="#d4eee8", font="Helvetica 12") 
 botonDicc.pack()
 root.title("bg attribute")
