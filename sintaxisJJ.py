@@ -7,6 +7,36 @@ def p_cuerpof(p):
   | metodo cuerpof
   ''' 
   
+def p_asignacion_const_int(p):
+  '''
+  asignacion : CONST ID COLON intsize IGUAL INTTYPE ENDCHAR
+  | CONST ID COLON intsize IGUAL NINTTYPE ENDCHAR
+  '''
+
+def p_asignacion_const_uint(p):
+  'asignacion : CONST ID COLON uintsize IGUAL INTTYPE ENDCHAR'
+  
+def p_asignacion_const_float(p):
+  'asignacion : CONST ID COLON floatsize IGUAL FLOATTYPE ENDCHAR'
+  
+def p_asignacion_const_str(p):
+  'asignacion : CONST ID COLON strsize IGUAL IDSTRING ENDCHAR'
+
+def p_asignacion_const_string(p):
+  'asignacion : CONST ID COLON STRING IGUAL STRING DOSDOBLEPUNTOS FROM LPAREN IDSTRING RPAREN ENDCHAR'
+
+def p_asignacion_const_string2(p):
+    'asignacion : CONST ID COLON STRING IGUAL IDSTRING ENDCHAR'
+
+#const hola:String  = String::from("gola");
+  
+def p_asignacion_const_bool(p):
+  'asignacion : CONST ID COLON BOOL IGUAL boolean ENDCHAR'
+
+def p_asignacion_const_char(p):
+  'asignacion : CONST ID COLON CHAR IGUAL IDCHAR ENDCHAR'
+
+
 def p_datatype(p):
   '''
   datatype : intsize
